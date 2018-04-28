@@ -8,12 +8,12 @@ router.get('/', (req, res) => {
     res.send('Hello Roe4');
 });
 
-// router.post('/api/vendor', (req, res) => {
+// router.post('/api/vendors', (req, res) => {
 //     // call model to create data => callback to display json result
 //     res.json({ "json": "object" });
 // });
 
-// router.put('/api/vendor/:id', (req, res) => {
+// router.put('/api/vendors/:id', (req, res) => {
 //     call model to update data => callback to send res.status
 // });
 

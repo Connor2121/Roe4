@@ -10,10 +10,10 @@ app.use(express.static('public'));
 
 // app.use(bodyParser.json());
 
-// import exphbs from 'express-handlebars';
+ import exphbs from 'express-handlebars';
 
-// app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
-// app.set('view engine', 'handlebars');
+ app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+ app.set('view engine', 'handlebars');
 
 // const router = require('./controllers/vendorController.js');
 import router from './controllers/vendorController.js';

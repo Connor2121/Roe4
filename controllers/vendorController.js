@@ -4,8 +4,9 @@ const router = express.Router();
 // import db model 
 
 router.get('/', (req, res) => {
-    // pass in home page with res.render('index')
-    res.send('Hello Roe4');
+    // pass in home page with 
+    res.render('index')
+    //res.send('Hello Roe4');
 });
 
 // router.post('/api/vendor', (req, res) => {

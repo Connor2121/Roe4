@@ -1,8 +1,8 @@
 {
   "development": {
     "username": "root",
-    "password": "47Nakizon!",
-    "database": "project3test",
+    "password": null,
+    "database": "vfm",
     "host": "127.0.0.1",
     "dialect": "mysql"
   },

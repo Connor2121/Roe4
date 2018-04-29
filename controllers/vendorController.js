@@ -1,6 +1,8 @@
 import express from 'express';
 const router = express.Router();
 
+import db from '../models';
+
 // import db model 
 
 router.get('/', (req, res) => {

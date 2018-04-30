@@ -1,0 +1,168 @@
+<nav class="nav-extended hoverable">
+    <div class="nav-wrapper container">
+        <a href="/" class="brand-logo header-font sizing">Home</a>
+        <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+            <i class="material-icons">menu</i>
+        </a>
+        <ul id="nav-mobile" class="right hide-on-med-and-down header-font">
+            <li>
+                <a href="/buyer">Profile</a>
+            </li>
+            <li>
+                <a href="/buyer/search">Search</a>
+            </li>
+            <li>
+                <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
+            </li>
+            <li>
+                <a href="/buyer" class='image-div'>
+                    <img id="img-circle" src="/images/man1.png">
+                </a>
+            </li>
+            <li>
+                <a href="#" class="logoutBtn">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav>
+
+<ul class="sidenav header-font" id="mobile-demo">
+
+    <li>
+        <a href="/buyer">Profile</a>
+    </li>
+    <li>
+        <a href="/buyer/search">Search</a>
+    </li>
+    <li>
+        <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
+    </li>
+    <li>
+        <a href="#" class="logoutBtn">Logout</a>
+    </li>
+</ul>
+
+<br>
+<br>
+<div class="container profile">
+    {{!-- Photo and Name --}}
+    <div class="row">
+        <input type='file' id='fileButton'>
+    </div>
+
+    <div class="row">
+        <h3 id='firstName' class='header-font'>Name</h3>
+        <h3 id='lastName' class='header-font'>Here</h3>
+    </div>    
+
+    <div class="row">
+        <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" style='width:200px;height:200px;' alt="User Photo" id='userPhoto'>
+    </div>    
+
+    {{!-- Display previous serches here from Firebase --}}
+    <div class="row">
+        {{!-- Need to add JS to dynamically load this info from firebase --}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Vendor</th>
+                </tr>
+            </thead>
+
+            <tbody id="searched">
+                <tr>
+                    <td>Carrots</td>
+                    <td>Farmer John</td>
+                    
+                </tr>
+                <tr>
+                    <td>Beets</td>
+                    <td>Dwight Schrute</td>
+                </tr>
+                <tr>
+                    <td>Corn</td>
+                    <td>Farmer Joe</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
+<script>
+    $(document).ready(function () {
+        $('.sidenav').sidenav();
+    });
+</script> 
+
+{{!-- TODO: Firebase code goes below --}} {{!--
+<script>
+    // Link to firebase js file for profile
+    $(document).ready(function () {
+        // Button added to execute firebase calls
+        $("#history").on("click", function (event) {
+        });
+        firebase.auth().onAuthStateChanged(function (user) {
+            if (user) {
+                displaySearches();
+                displayUser();
+                displayPic();
+            }
+            // else clear out profile
+        })
+        // get elements    
+        var fileButton = document.getElementById('fileButton');
+        // Listen for file selection
+        fileButton.addEventListener('change', function (e) {
+            // Get file
+            var file = e.target.files[0];
+            // Create a storage ref
+            var storageRef = firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid);
+            // substitute file.name with uid
+            // Upload file then use promise to display pic
+            storageRef.put(file).then(function (snap) {
+                displayPic();
+            });
+
+        });
+        // use url of image uploaded by user to display profile picture
+        function displayPic() {
+            firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function (url) {
+                console.log(url);
+
+                // insert url into image src
+                var img = document.getElementById('userPhoto');
+                img.src = url;
+            }).catch(function (error) {
+                // Handle any errors
+            });
+        }
+        // displays first name and last name
+        function displayUser() {
+            var userId = firebase.auth().currentUser.uid;
+            firebase.database().ref('users/' + userId).once('value', function (snap) {
+                var first = snap.val().firstName;
+                var last = snap.val().lastName;
+                $('#firstName').text(first);
+                $('#lastName').text(last);
+            })
+        }
+        // displays last 5 search criteria from form
+        function displaySearches() {
+            var userId = firebase.auth().currentUser.uid;
+            firebase.database().ref('users/' + userId).child('searches').limitToLast(5).on('child_added', function (snap) {
+                var count = $('#searched tr').length;
+                if (count > 4) {
+                    $('#searched tr:last').remove();
+                }
+                $('#searched').prepend('<tr class="trow"><td> ' +
+                    snap.val().degree_type + ' </td><td> ' +
+                    snap.val().program + ' </td><td> ' +
+                    snap.val().max_tuition + ' </td></tr>');
+            }, function (errorObject) {
+                console.log('The read failed: ' + errorObject.code);
+            });
+        };
+    });
+</script> --}}

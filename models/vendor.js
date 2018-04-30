@@ -10,10 +10,10 @@ module.exports = function(sequelize, DataTypes) {
         phone: DataTypes.STRING,
         email: DataTypes.STRING,
         certified: DataTypes.STRING,
-        crops: DataTypes.STRING,
-        livestock: DataTypes.STRING,
-        wildcrops: DataTypes.STRING,
-        handling: DataTypes.STRING
+        crops: DataTypes.STRING(5000),
+        livestock: DataTypes.STRING(1000),
+        wildcrops: DataTypes.STRING(1000),
+        handling: DataTypes.STRING(5000)
     }, {
         timestamps: false
     });

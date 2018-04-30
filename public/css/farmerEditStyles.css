@@ -1,0 +1,25 @@
+/*------- For Nav Bar See farmerStyles.css ---------*/
+/*--------------------------------------------------*/
+.edit{
+    border: 2px solid #cacaca;
+    margin: 0 0 1.25rem;
+    padding: 3rem;
+    background: #fefefe;
+    box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    
+
+}
+.product-edit {
+    padding-top: 15px;
+}
+.title{
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 15px;
+}
+.descript {
+    padding-bottom: 20px;
+}
+.regular-descript {
+    padding-bottom: 20px;
+}

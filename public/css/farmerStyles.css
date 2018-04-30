@@ -1,0 +1,84 @@
+/*------------------- Nav Bar -----------------*/
+.hover-underline-menu {
+    width: 100%;
+  }
+  
+  .hover-underline-menu .menu {
+    background-color: #2C3840;
+  }
+  
+  .hover-underline-menu .menu a {
+    color: #fefefe;
+    padding: 1.2rem 1.5rem;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center {
+    position: relative;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center::after {
+    content: "";
+    position: absolute;
+    top: calc(100% - 0.125rem);
+    border-bottom: 0.125rem solid #fefefe;
+    left: 50%;
+    right: 50%;
+    transition: all 0.5s ease;
+  }
+  
+  .hover-underline-menu .menu .underline-from-center:hover::after {
+    left: 0;
+    right: 0;
+    transition: all 0.5s ease;
+  }
+  
+.farmNav{
+    display: inline;
+    padding: 5px;
+   
+}  
+.farmer {
+    list-style-type: none;
+    padding: 16px;
+}
+
+/*------------ Header -------------------------------*/
+.update{
+    text-align: center;
+}
+/*------------Vendor Image Container---------------*/
+.farmer-info-basic {
+    padding-top: 20px;
+}
+.vendor-profile-basic {
+    border: 1px solid #cacaca;
+    margin: 0 0 1.25rem;
+    padding: 1.25rem;
+    background: #fefefe;
+  }
+  .vendor-profile-basic .vendor-profile-basic-intro .vendor-profile-basic-intro-pic {
+    border-radius: 10%;
+    margin: 0 0 1.25rem;
+  }
+
+  .vendor-profile-basic-more {
+      padding-left: 50px;
+  }
+  .vendor-profile-basic-name {
+      text-align: center;
+  }
+  /*------------ Vendor Products and Contact Info ---------------*/
+  .box {
+    border: 1px solid #cacaca;
+    margin: 0 0 1.25rem;
+    padding: 1.25rem;
+    background: #fefefe;
+  }
+  /*------------ Footer ------------------------------*/
+  .vendor-footer {
+    border: 1px solid #cacaca;
+    margin: 0 0 1.25rem;
+    padding: 2rem;
+    background: #fefefe;
+  }
+  

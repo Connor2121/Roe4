@@ -1,120 +1,50 @@
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Document</title>
-
-
-    {{!-- jQuery CDN --}}
-    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-    {{!-- Linked materialize to use SASS for new tech requirements --}}
-    <!-- Compiled and minified CSS -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-    <!-- Compiled and minified JavaScript -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> {{!-- link for materialize icons --}}
-    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
-    <!-- CSS -->
-    <link rel="stylesheet" href="../css/styles.css" media="screen" title="no title">
-   
-</head>
-
-<body>
-    <nav class="nav-extended hoverable">
-        <div class="nav-wrapper container">
-            <a href="/" class="brand-logo header-font sizing">Home</a>
-            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
-                <i class="material-icons">menu</i>
-            </a>
-            <ul id="nav-mobile" class="right hide-on-med-and-down header-font">
-                <li>
-                    <a href="/buyer">Profile</a>
-                </li>
-                <li>
-                    <a href="/buyer/search">Search</a>
-                </li>
-                <li>
-                    <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
-                </li>
-                <li>
-                    <a href="/buyer" class='image-div'>
-                        <img id="img-circle" src="/images/man1.png">
-                    </a>
-                </li>
-                <li>
-                    <a href="#" class="logoutBtn">Logout</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
-
-    <ul class="sidenav header-font" id="mobile-demo">
-
-        <li>
-            <a href="/buyer">Profile</a>
-        </li>
-        <li>
-            <a href="/buyer/search">Search</a>
-        </li>
-        <li>
-            <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
-        </li>
-        <li>
-            <a href="#" class="logoutBtn">Logout</a>
-        </li>
-    </ul>
-
-    <br>
-    <br>
-    <div class="container profile">
-        {{!-- Photo and Name --}}
-        <div class="row">
-            <input type='file' id='fileButton'>
-        </div>
-
-        <div class="row">
-            <h3 id='firstName' class='header-font'>Name</h3>
-            <h3 id='lastName' class='header-font'>Here</h3>
-        </div>
-
-        <div class="row">
-            <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" style='width:200px;height:200px;'
-                alt="User Photo" id='userPhoto'>
-        </div>
-
-        {{!-- Display previous serches here from Firebase --}}
-        <div class="row">
-            {{!-- Need to add JS to dynamically load this info from firebase --}}
-            <table>
-                <thead>
-                    <tr>
-                        <th>Product</th>
-                        <th>Vendor</th>
-                    </tr>
-                </thead>
-
-                <tbody id="searched">
-                    <tr>
-                        <td>Carrots</td>
-                        <td>Farmer John</td>
-
-                    </tr>
-                    <tr>
-                        <td>Beets</td>
-                        <td>Dwight Schrute</td>
-                    </tr>
-                    <tr>
-                        <td>Corn</td>
-                        <td>Farmer Joe</td>
-                    </tr>
-                </tbody>
-            </table>
-        </div>
-
+<div class="container profile">
+    {{!-- Photo and Name --}}
+    <div class="row">
+        <input type='file' id='fileButton'>
     </div>
-</body>
+
+    <div class="row">
+        <h3 id='firstName' class='header-font'>Name</h3>
+        <h3 id='lastName' class='header-font'>Here</h3>
+    </div>
+
+    <div class="row">
+        <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" style='width:200px;height:200px;'
+            alt="User Photo" id='userPhoto'>
+    </div>
+
+    {{!-- Display previous serches here from Firebase --}}
+    <div class="row">
+        {{!-- Need to add JS to dynamically load this info from firebase --}}
+        <table>
+            <thead>
+                <tr>
+                    <th>Product</th>
+                    <th>Vendor</th>
+                </tr>
+            </thead>
+
+            <tbody id="searched">
+                <tr>
+                    <td>Carrots</td>
+                    <td>Farmer John</td>
+
+                </tr>
+                <tr>
+                    <td>Beets</td>
+                    <td>Dwight Schrute</td>
+                </tr>
+                <tr>
+                    <td>Corn</td>
+                    <td>Farmer Joe</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+</div>
+
 
 
 <script>

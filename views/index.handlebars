@@ -1,142 +1,28 @@
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-
-
-  {{!-- jQuery CDN --}}
-  <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script>
-
-  <!-- Bootstrap CSS -->
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-    crossorigin="anonymous">
-  <!-- Bootstrap Javascript -->
-  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-    crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-    crossorigin="anonymous"></script> 
-    
-  {{!-- Linked materialize to use SASS for new tech requirements --}}
-  <!-- Compiled and minified CSS -->
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
-
-  <!-- Compiled and minified JavaScript -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> {{!-- link for materialize icons --}}
-  <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-  <!-- CSS -->
-  <link rel="stylesheet" href="../css/styles.css" media="screen" title="no title">
-  <link rel="stylesheet" href="../css/farmerStyles.css" media="screen" title="no title">
-  <link rel="stylesheet" href="../css/farmerEditStyles.css" media="screen" title="no title">
-
-</head>
-
-<body>
-  <div class="hero-full-screen">
-
-    <div class="top-content-section">
-      <div class="top-bar fixed-top">
-        <div class="top-bar-left">
-          <ul class="menu">
-            <li class="menu-text comp">
-              <img src="http://placehold.it/75x30" alt="logo">
-            </li>
-            <li class="comp">
-              <a href="#">One</a>
-            </li>
-            <li class="comp">
-              <a href="#">Two</a>
-            </li>
-            <li class="comp">
-              <a href="#">Three</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </div>
-
-    <div class="middle-content-section">
-      <h1>Virtual Farmers Market</h1>
-      <a href="/buyer">
-      <button><a class='modal-trigger login button large' href="#modal1">Buyer</a></button>
-      </a>
-      <a href="/vendor">
-      <button><a class='modal-trigger login button large' href="#modal1">Vendor</a></button>
-      </a>
-    </div>
-
-    <div class="bottom-content-section" data-magellan data-threshold="0">
-      <a href="#main-content-section">
-        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
-          <path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"
-          />
-        </svg>
-      </a>
-    </div>
+<div class="hero-full-screen">
+  <div class="middle-content-section">
+    <h1>Virtual Farmers Market</h1>
 
   </div>
 
-  <div id="main-content-section" data-magellan-target="main-content-section">
-    <div class="card">
-      <div class="card-body">
-        Bridging the gap between organic, local vendors and consumers who are looking for a quality food source. The virtual farmers
-        market gives it users the opportunity to better their health and wellness by allowing more convenient access to fresh
-        organic foods.
-      </div>
+  <div class="bottom-content-section" data-magellan data-threshold="0">
+    <a href="#main-content-section">
+      <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24">
+        <path d="M24 12c0-6.627-5.373-12-12-12s-12 5.373-12 12 5.373 12 12 12 12-5.373 12-12zm-18.005-1.568l1.415-1.414 4.59 4.574 4.579-4.574 1.416 1.414-5.995 5.988-6.005-5.988z"
+        />
+      </svg>
+    </a>
+  </div>
+</div>
+
+<div id="main-content-section" data-magellan-target="main-content-section">
+  <div class="card">
+    <div class="card-body">
+      Bridging the gap between organic, local vendors and consumers who are looking for a quality food source. The virtual farmers
+      market gives it users the opportunity to better their health and wellness by allowing more convenient access to fresh
+      organic foods.
     </div>
   </div>
-
-  <!-- Login Modal-->
-  <div id="modal1" class="modal fade">
-    <form class="login-form">
-      <div class="row">
-        <div class="input-field col s12 center">
-          <p class="center login-form-text header-font">Login Or Create An Account</p>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s2">
-          <i class="medium material-icons" style='color:steelblue;'>person_outline</i>
-        </div>
-
-        <div class="input-field col s9">
-          <input id="modal-email" type="text">
-          <label for="modal-email" class="center-align">Email</label>
-        </div>
-      </div>
-
-      <div class="row">
-        <div class="col s2">
-          <i class="medium material-icons" style='color:steelblue;'>enhanced_encryption</i>
-        </div>
-
-        <div class="input-field col s9">
-          <input id="modal-password" type="password">
-          <label for="modal-password">Password</label>
-        </div>
-
-      </div>
-
-      <div class="row">
-        <div class="input-field col s12 center-align">
-          <a href="#" class="btn waves-effect waves-light loginBtn" style='background-color:steelblue;'>Login</a>
-        </div>
-      </div>
-      <div class="row">
-        <div class="input-field col s6 m6 l6">
-          <p class="medium">
-            <a href="/signup">Register Now!</a>
-          </p>
-        </div>
-      </div>
-    </form>
-
-  </div>
-
-</body>
+</div>
 
 <script>
   // Initializing modal

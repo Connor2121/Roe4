@@ -191,23 +191,23 @@
                 console.log(firebase.auth().currentUser.email + ' is currently logged in.');
                 $('.logoutBtn').show();
                 $('.login').hide();
-                firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {
-                    console.log(url);            
-                    insert url into image src
-                    var img = document.getElementById('img-circle');
-                    img.src = url;
-                    })
-                    .catch(function(error) {
+                //firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {
+                //    console.log(url);            
+                //    insert url into image src
+                //    var img = document.getElementById('img-circle');
+                //    img.src = url;
+                //    })
+                //    .catch(function(error) {
                     // Handle any errors
-                    });
+                //    });
                 } else {
                 console.log('Not logged in.');
                 $('.logoutBtn').hide();
                 $('.login').show();
-                var img = document.getElementById('img-circle');
-                img.src = "/images/man1.png";
+                //var img = document.getElementById('img-circle');
+                //img.src = "/images/man1.png";
             };
-            $('.modal').modal('close');
+            $('#modal1').modal('close');
         });
     })
     </script>
@@ -218,7 +218,7 @@
 <script>
   // Initializing modal
   $(document).ready(function () {
-    $('.modal').modal();
+    $('#modal1').modal();
     $('.parallax').parallax();
   });
 </script>

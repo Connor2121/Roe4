@@ -25,6 +25,10 @@ router.get('/api/city/:city', (req, res) => {
     .then(result => res.json(result));
 });
 
+router.get('/api/users', (req, res) => {
+    db.Users.findAll({}).then(result => res.json(result));
+});
+
 // router.post('/api/vendors', (req, res) => {
 //     // call model to create data => callback to display json result
 //     res.json({ "json": "object" });

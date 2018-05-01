@@ -29,20 +29,11 @@
         </div>
 
         <div class="row">
-            <button id="btnSignUp" data-target="confirmation" class="btn modal-trigger waves-effect waves-light blue content-font" type="submit"
+            <button id="btnSignUp" data-target="confirmation" class="btn waves-effect waves-light blue content-font" type="submit"
                 name="action">Submit
             </button>
         </div>
 
-        <div id="confirmation" class="modal">
-            <div class="modal-content">
-                <h4>You are now logged in!</h4>
-                <p>Thanks for being apart of the community.</p>
-            </div>
-            <div class="modal-footer">
-                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
-            </div>
-        </div>
     </form>
 
     <!-- link firebase javascript -->
@@ -50,7 +41,7 @@
     <script src='../js/signup.js'></script> --}}
     <script>
         $(document).ready(function() {
-    
+            $('#confirmation').modal();
             // Add sign-in event
             $('#btnSignUp').on('click', function(event) {
                 event.preventDefault();

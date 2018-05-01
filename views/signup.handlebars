@@ -1,0 +1,51 @@
+<div class="container">
+
+    <h3 class="center-align header-font">Sign up here!</h3>
+
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="email" type="text" class="validate">
+                <label for="email">Email</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button id="btnSignUp" data-target="confirmation" class="btn modal-trigger waves-effect waves-light blue content-font" type="submit"
+                name="action">Submit
+            </button>
+        </div>
+
+        <div id="confirmation" class="modal">
+            <div class="modal-content">
+                <h4>You are now logged in!</h4>
+                <p>Thanks for being apart of the community.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- link firebase javascript -->
+    {{!--
+    <script src='../js/signup.js'></script> --}}
+</div>

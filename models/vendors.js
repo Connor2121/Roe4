@@ -1,6 +1,6 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
-  var Vendors = sequelize.define('Vendors', {
+  var Vendor = sequelize.define('Vendor', {
     vendor: DataTypes.STRING,
     contact: DataTypes.STRING,
     address: DataTypes.STRING,
@@ -14,9 +14,11 @@ module.exports = (sequelize, DataTypes) => {
     livestock: DataTypes.TEXT,
     wildcrops: DataTypes.TEXT,
     handling: DataTypes.TEXT
-  }, {});
-  Vendors.associate = function(models) {
+  }, {
+    timestamps: false
+  });
+  Vendor.associate = function(models) {
     // associations can be defined here
   };
-  return Vendors;
+  return Vendor;
 };

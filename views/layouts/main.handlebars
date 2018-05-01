@@ -16,6 +16,8 @@
     <!-- Compiled and minified JavaScript -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> {{!-- link for materialize icons --}}
     <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css" media="screen" title="no title">
     <link rel="stylesheet" href="../css/farmerStyles.css" media="screen" title="no title">
@@ -130,7 +132,82 @@
   </div>
 
     {{{ body }}}
+        
+
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
+        authDomain: "nc-vfm.firebaseapp.com",
+        databaseURL: "https://nc-vfm.firebaseio.com",
+        projectId: "nc-vfm",
+        storageBucket: "nc-vfm.appspot.com",
+        messagingSenderId: "987355521805"
+    };
+    firebase.initializeApp(config);
+
+    $(document).ready(function() {
+        // log-out button
+        $('.logoutBtn').on('click', function (event) {
+            firebase.auth().signOut();
+            console.log('logout');
+        });
+
+        // Add log-in event
+        $('.loginBtn').on('click', function(event) {
+            // get email and pass
+            var email = $('#modal-email').val().trim();
+            var pass = $('#modal-password').val().trim();
+
+            // validate email and password aren't blank
+            function validateForm() {
+                var isValid = true;
+                if (email === '' || pass === '') {
+                    // alert user to fill out txt inputs with alert div
+                    alert('Email and Password must be filled out');
+                    isValid = false;
+                }
+                return isValid;
+            };
+            if(!validateForm()) {
+                return;
+            };
+            
+            // sign-in
+            var promise = firebase.auth().signInWithEmailAndPassword(email, pass);
+            // promise.catch(e => console.log(e.message));
+            promise.catch(function(event) {
+                console.log(event.message);
+            });            
+        });
+
+        // add realtime listener to check if a user is logged in
+        // find conditional to see if logged in or not
+        firebase.auth().onAuthStateChanged(function (firebaseUser) {
+            if(firebaseUser) {
+                console.log(firebase.auth().currentUser.email + ' is currently logged in.');
+                $('.logoutBtn').show();
+                $('.login').hide();
+                firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {
+                    console.log(url);            
+                    insert url into image src
+                    var img = document.getElementById('img-circle');
+                    img.src = url;
+                    })
+                    .catch(function(error) {
+                    // Handle any errors
+                    });
+                } else {
+                console.log('Not logged in.');
+                $('.logoutBtn').hide();
+                $('.login').show();
+                var img = document.getElementById('img-circle');
+                img.src = "/images/man1.png";
+            };
+            $('.modal').modal('close');
+        });
+    })
+    </script>
+    
 </body>
-
-
 </html>

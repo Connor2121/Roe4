@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+
 <html lang="en">
 
 <head>
@@ -6,25 +7,221 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+
+    {{!-- jQuery CDN --}}
+    <script src="https://code.jquery.com/jquery-3.3.1.js" integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60=" crossorigin="anonymous"></script> {{!-- Linked materialize to use SASS for new tech requirements --}}
+    <!-- Compiled and minified CSS -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/css/materialize.min.css">
+
+    <!-- Compiled and minified JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0-beta/js/materialize.min.js"></script> {{!-- link for materialize icons --}}
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <!-- Firebase -->
+    <script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script>
     <!-- CSS -->
     <link rel="stylesheet" href="../css/styles.css" media="screen" title="no title">
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/css/bootstrap.min.css" integrity="sha384-9gVQ4dYFwwWSjIDZnLEWnxCjeSWFphJiwGPXr1jddIhOegiu1FwO5qRGvFXOdJZ4"
-        crossorigin="anonymous">
-    <!-- Bootstrap Javascript -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
-        crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.0/umd/popper.min.js" integrity="sha384-cs/chFZiN24E4KMATLdqdvsezGxaGsi4hLGOzlXwp5UZB1LY//20VyM2taTB4QvJ"
-        crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
-        crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="../css/farmerStyles.css" media="screen" title="no title">
+    <link rel="stylesheet" href="../css/farmerEditStyles.css" media="screen" title="no title">
+    <link rel="stylesheet" href="../css/sassStyles.css" media="screen" title="no title">
+
+    {{!-- Google Fonts --}}
+    <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 
 </head>
 
 <body>
+    <nav class="nav-extended hoverable">
+        <div class="nav-wrapper container">
+            <a href="/" class="brand-logo header-font sizing">Home</a>
+            <a href="#" data-target="mobile-demo" class="sidenav-trigger">
+                <i class="material-icons">menu</i>
+            </a>
+            <ul id="nav-mobile" class="right hide-on-med-and-down header-font">
+                <li>
+                    <a href="/buyer">Buyer Profile</a>
+                </li>
+                <li>
+                    <a href="/vendor">Vendor Profile</a>
+                </li>
+                <li>
+                    <a href="/buyer/search">Search</a>
+                </li>
+                <li>
+                    <a href="/vendor/manageproducts">Manage Products</a>
+                </li>
+                <li>
+                    <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
+                </li>
+                <li>
+                    <a href="/buyer" class='image-div'>
+                        <img id="img-circle" src="/images/man1.png">
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="logoutBtn">Logout</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
 
-    {{{body}}}
+    <ul class="sidenav header-font" id="mobile-demo">
 
+        <li>
+            <a href="/buyer">Buyer Profile</a>
+        </li>
+        <li>
+            <a href="/vendor">Vendor Profile</a>
+        </li>
+        <li>
+            <a href="/buyer/search">Search</a>
+        </li>
+        <li>
+            <a href="/vendor/manageproducts">Manage Products</a>
+        </li>
+        <li>
+            <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
+        </li>
+        <li>
+            <a href="#" class="logoutBtn">Logout</a>
+        </li>
+    </ul>
+
+     <!-- Login Modal-->
+  <div id="modal1" class="modal fade">
+    <form class="login-form">
+      <div class="row">
+        <div class="input-field col s12 center">
+          <p class="center login-form-text header-font">Login Or Create An Account</p>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s2">
+          <i class="medium material-icons" style='color:steelblue;'>person_outline</i>
+        </div>
+
+        <div class="input-field col s9">
+          <input id="modal-email" type="text">
+          <label for="modal-email" class="center-align">Email</label>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="col s2">
+          <i class="medium material-icons" style='color:steelblue;'>enhanced_encryption</i>
+        </div>
+
+        <div class="input-field col s9">
+          <input id="modal-password" type="password">
+          <label for="modal-password">Password</label>
+        </div>
+
+      </div>
+
+      <div class="row">
+        <div class="input-field col s12 center-align">
+          <a href="#" class="btn waves-effect waves-light loginBtn" style='background-color:steelblue;'>Login</a>
+        </div>
+      </div>
+      <div class="row">
+        <div class="input-field col s6 m6 l6">
+          <p class="medium">
+            <a href="/signup">Register Now!</a>
+          </p>
+        </div>
+      </div>
+    </form>
+
+  </div>
+
+    {{{ body }}}
+        
+
+    <script>
+    // Initialize Firebase
+    var config = {
+        apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
+        authDomain: "nc-vfm.firebaseapp.com",
+        databaseURL: "https://nc-vfm.firebaseio.com",
+        projectId: "nc-vfm",
+        storageBucket: "nc-vfm.appspot.com",
+        messagingSenderId: "987355521805"
+    };
+    firebase.initializeApp(config);
+
+    $(document).ready(function() {
+        // log-out button
+        $('.logoutBtn').on('click', function (event) {
+            firebase.auth().signOut();
+            console.log('logout');
+        });
+
+        // Add log-in event
+        $('.loginBtn').on('click', function(event) {
+            // get email and pass
+            var email = $('#modal-email').val().trim();
+            var pass = $('#modal-password').val().trim();
+
+            // validate email and password aren't blank
+            function validateForm() {
+                var isValid = true;
+                if (email === '' || pass === '') {
+                    // alert user to fill out txt inputs with alert div
+                    alert('Email and Password must be filled out');
+                    isValid = false;
+                }
+                return isValid;
+            };
+            if(!validateForm()) {
+                return;
+            };
+            
+            // sign-in
+            var promise = firebase.auth().signInWithEmailAndPassword(email, pass);
+            // promise.catch(e => console.log(e.message));
+            promise.catch(function(event) {
+                console.log(event.message);
+            });            
+        });
+
+        // add realtime listener to check if a user is logged in
+        // find conditional to see if logged in or not
+        firebase.auth().onAuthStateChanged(function (firebaseUser) {
+            if(firebaseUser) {
+                console.log(firebase.auth().currentUser.email + ' is currently logged in.');
+                $('.logoutBtn').show();
+                $('.login').hide();
+                firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {
+                    console.log(url);            
+                    insert url into image src
+                    var img = document.getElementById('img-circle');
+                    img.src = url;
+                    })
+                    .catch(function(error) {
+                    // Handle any errors
+                    });
+                } else {
+                console.log('Not logged in.');
+                $('.logoutBtn').hide();
+                $('.login').show();
+                var img = document.getElementById('img-circle');
+                img.src = "/images/man1.png";
+            };
+            $('.modal').modal('close');
+        });
+    })
+    </script>
+    
 </body>
+
+
+<script>
+  // Initializing modal
+  $(document).ready(function () {
+    $('.modal').modal();
+    $('.parallax').parallax();
+  });
+</script>
+
 
 </html>

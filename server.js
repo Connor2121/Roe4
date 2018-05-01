@@ -1,23 +1,27 @@
 import express from 'express';
-// import bodyParser from 'body-parser';
+import db from './models';
+import bodyParser from 'body-parser';
 
 const app = express();
 const PORT = process.env.PORT || 8080;
 
 app.use(express.static('public'));
 
-// app.use(bodyParser.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 
-// app.use(bodyParser.json());
+app.use(bodyParser.json());
 
- import exphbs from 'express-handlebars';
+import exphbs from 'express-handlebars';
 
- app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
- app.set('view engine', 'handlebars');
+app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.set('view engine', 'handlebars');
 
-// const router = require('./controllers/vendorController.js');
-import router from './controllers/vendorController.js';
+import pages from './controllers/htmlController.js';
+import vendors from './controllers/vendorController.js';
 
-app.use(router);
+app.use(pages);
+app.use(vendors);
 
-app.listen(PORT, () => console.log('App now listening at localhost: ', PORT));
+db.sequelize.sync().then( () => {
+    app.listen(PORT, () => console.log('App now listening at localhost: ', PORT));
+});

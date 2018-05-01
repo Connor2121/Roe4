@@ -1,0 +1,122 @@
+<br>
+<div class="container">
+
+    <h3 class="center-align header-font">Sign up here!</h3>
+
+    <form class="col s12">
+        <div class="row">
+            <div class="input-field col s6">
+                <input id="first_name" type="text" class="validate">
+                <label for="first_name">First Name</label>
+            </div>
+            <div class="input-field col s6">
+                <input id="last_name" type="text" class="validate">
+                <label for="last_name">Last Name</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="email" type="text" class="validate">
+                <label for="email">Email</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="input-field col s12">
+                <input id="password" type="password" class="validate">
+                <label for="password">Password</label>
+            </div>
+        </div>
+
+        <div class="row">
+            <button id="btnSignUp" data-target="confirmation" class="btn modal-trigger waves-effect waves-light blue content-font" type="submit"
+                name="action">Submit
+            </button>
+        </div>
+
+        <div id="confirmation" class="modal">
+            <div class="modal-content">
+                <h4>You are now logged in!</h4>
+                <p>Thanks for being apart of the community.</p>
+            </div>
+            <div class="modal-footer">
+                <a href="#!" class="modal-action modal-close waves-effect waves-green btn-flat">Dismiss</a>
+            </div>
+        </div>
+    </form>
+
+    <!-- link firebase javascript -->
+    {{!--
+    <script src='../js/signup.js'></script> --}}
+    <script>
+        $(document).ready(function() {
+    
+            // Add sign-in event
+            $('#btnSignUp').on('click', function(event) {
+                event.preventDefault();
+                // get user info
+                var firstName = $('#first_name').val().trim();
+                var lastName = $('#last_name').val().trim();
+                var email = $('#email').val().trim();
+                var pass = $('#password').val().trim();
+
+                function validateForm() {
+                    var isValid = true;
+                    if (firstName === '' || lastName === '' || email === '' || pass === '') {
+                        // alert user to fill out txt inputs with alert div
+                        alert('Please complete entire form!');
+                        isValid = false;
+                    }
+                    return isValid;
+                }
+                if(!validateForm()) {
+                    return;
+                };
+
+                var auth = firebase.auth();
+            
+                // sign-up
+                var promise = auth.createUserWithEmailAndPassword(email, pass);
+                promise.then(function (event) {
+                    console.log('new uid: ' + firebase.auth().currentUser.uid);
+                    writeUserData(firebase.auth().currentUser.uid, firstName, lastName, email);
+                    // user data is not being sent to firebase when 
+                    
+                }).catch(function (event) {            
+                    console.log(event.message)
+                });      
+
+                // clear form inputs
+                clrTxt();
+            });
+
+            // log-out button
+            $('#btnLogout').on('click', function(event) {
+                event.preventDefault();
+                firebase.auth().signOut();
+                console.log('logout');
+            });
+
+            // save the user's profile into Firebase so we can list users,
+            // use them in Security and Firebase Rules, and show profiles
+            function writeUserData(userId, firstName, lastName, email) {
+                firebase.database().ref('users/' + userId).set({
+                    firstName: firstName,
+                    lastName: lastName,
+                    email: email
+                }, function (err) {
+                    window.location.replace('/');
+                });
+            };
+
+            // function to clear email and password inputs
+            function clrTxt() {
+                $('#first_name').val('');
+                $('#last_name').val('');
+                $('#email').val('');
+                $('#password').val('');
+            };
+        });
+    </script>
+</div>

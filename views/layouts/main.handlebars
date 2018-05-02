@@ -49,16 +49,16 @@
 
                     </li>
                     <li>
-                        <a href="/buyer">Buyer Profile</a>
+                        <a class="buyer" href="/buyer">Buyer Profile</a>
                     </li>
                     <li>
-                        <a href="/vendor">Vendor Profile</a>
+                        <a class="vendor" href="/vendor">Vendor Profile</a>
                     </li>
                     <li>
                         <a href="/buyer/search">Search</a>
                     </li>
                     <li>
-                        <a href="/vendor/manageproducts">Manage Products</a>
+                        <a class="manage" href="/vendor/manageproducts">Manage Products</a>
                     </li>
                     <li>
                         <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
@@ -157,76 +157,93 @@
 
     <script>
         ReactDOM.render(React.createElement(Icon), document.getElementById('react')); 
-    </script>        
-
-
+    </script>
+    
     <script>
-        // Initialize Firebase
-        const config = {
-            apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
-            authDomain: "nc-vfm.firebaseapp.com",
-            databaseURL: "https://nc-vfm.firebaseio.com",
-            projectId: "nc-vfm",
-            storageBucket: "nc-vfm.appspot.com",
-            messagingSenderId: "987355521805"
-        };
-        firebase.initializeApp(config);
+    // Initialize Firebase
+    const config = {
+        apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
+        authDomain: "nc-vfm.firebaseapp.com",
+        databaseURL: "https://nc-vfm.firebaseio.com",
+        projectId: "nc-vfm",
+        storageBucket: "nc-vfm.appspot.com",
+        messagingSenderId: "987355521805"
+    };
+    firebase.initializeApp(config);
 
-        $(document).ready(() => {
-            // log-out button
-            $('.logoutBtn').on('click', e => {
-                firebase.auth().signOut();
-                console.log('logout');
-            });
+    $(document).ready( () => {
+        // log-out button
+        $('.logoutBtn').on('click', e => {
+            firebase.auth().signOut();
+            console.log('logout');
+        });
 
-            // Add log-in event
-            $('.loginBtn').on('click', e => {
-                // get email and pass
-                let email = $('#modal-email').val().trim();
-                let pass = $('#modal-password').val().trim();
+        // Add log-in event
+        $('.loginBtn').on('click', e => {
+            // get email and pass
+            let email = $('#modal-email').val().trim();
+            let pass = $('#modal-password').val().trim();
 
-                // validate email and password aren't blank
-                validateForm = () => {
-                    let isValid = true;
-                    if (email === '' || pass === '') {
-                        // alert user to fill out txt inputs with alert div
-                        alert('Email and Password must be filled out');
-                        isValid = false;
-                    }
-                    return isValid;
-                };
-                if (!validateForm()) {
-                    return;
-                };
+            // validate email and password aren't blank
+            validateForm = () => {
+                let isValid = true;
+                if (email === '' || pass === '') {
+                    // alert user to fill out txt inputs with alert div
+                    alert('Email and Password must be filled out');
+                    isValid = false;
+                }
+                return isValid;
+            };
+            if(!validateForm()) {
+                return;
+            };
+            
+            // sign-in
+            const promise = firebase.auth().signInWithEmailAndPassword(email, pass);
+            // promise.catch(e => console.log(e.message));
+            promise.catch(function(event) {
+                console.log(event.message);
+            });            
+        });
 
-                // sign-in
-                const promise = firebase.auth().signInWithEmailAndPassword(email, pass);
-                // promise.catch(e => console.log(e.message));
-                promise.catch(function (event) {
-                    console.log(event.message);
+        // add realtime listener to check if a user is logged in
+        // find conditional to see if logged in or not
+        firebase.auth().onAuthStateChanged(firebaseUser => {
+            if(firebaseUser) {
+                let userId = firebase.auth().currentUser.uid;
+                firebase.database().ref('users/' + userId).once('value', snap => {
+                    let vendor = snap.val().vendor;
+                    if(vendor === "true") {
+                        $('.vendor').show();
+                        $('.manage').show();
+                        $('.buyer').hide();
+                    } else if (vendor === "false"){
+                        $('.vendor').hide();
+                        $('.manage').hide();
+                        $('.buyer').show();
+                    };
                 });
-            });
+                console.log(firebase.auth().currentUser.email, ' is currently logged in.');
+                $('.logoutBtn').show();
+                $('.login').hide();
+                firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {
+                    console.log(url);            
+                    // insert url into image src
+                    let img = document.getElementById('img-circle');
+                    img.src = url;
 
-            // add realtime listener to check if a user is logged in
-            // find conditional to see if logged in or not
-            firebase.auth().onAuthStateChanged(firebaseUser => {
-                if (firebaseUser) {
-                    console.log(firebase.auth().currentUser.email, ' is currently logged in.');
-                    $('.logoutBtn').show();
-                    $('.login').hide();
-                    firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function (url) {
-                        console.log(url);
-                        // insert url into image src
-                        let img = document.getElementById('img-circle');
-                        img.src = url;
+
                     })
 
                     .catch(err => {
                     // Handle any errors
                     console.log('Error: ', err);
-                    });
-                } else {
+                });
+            } else {
                 console.log('Not logged in.');
+                $('.manage').hide();
+                $('.vendor').hide();
+                $('.buyer').hide();
                 $('.logoutBtn').hide();
                 $('.login').show();
                 let img = document.getElementById('img-circle');

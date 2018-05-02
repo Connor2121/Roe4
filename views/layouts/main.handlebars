@@ -153,9 +153,12 @@
     <footer class="footer">
 
     </footer>
+
+
     <script>
         ReactDOM.render(React.createElement(Icon), document.getElementById('react')); 
-    </script>
+    </script>        
+
 
     <script>
         // Initialize Firebase
@@ -217,24 +220,25 @@
                         let img = document.getElementById('img-circle');
                         img.src = url;
                     })
-                        .catch(function (error) {
-                            // Handle any errors
-                        });
+
+                    .catch(err => {
+                    // Handle any errors
+                    console.log('Error: ', err);
+                    });
                 } else {
-                    console.log('Not logged in.');
-                    $('.logoutBtn').hide();
-                    $('.login').show();
-                    let img = document.getElementById('img-circle');
-                    img.src = "/images/man1.png";
-                };
-                $('#modal1').modal('close');
-            });
-        })
-    </script>
+                console.log('Not logged in.');
+                $('.logoutBtn').hide();
+                $('.login').show();
+                let img = document.getElementById('img-circle');
+                img.src = "/images/man1.png";
+            };
+            $('#modal1').modal('close');
+        });
+    })
+    </script>    
 
 
 </body>
-
 
 <script>
     // Initializing modal

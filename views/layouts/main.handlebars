@@ -27,9 +27,7 @@
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="/js/react-loading-button.js"></script>
-
-    {{!-- Google Fonts --}}
+    <script src="/js/react-loading-button.js"></script> {{!-- Google Fonts --}}
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 
 </head>
@@ -38,27 +36,29 @@
     <div class="navbar-fixed">
         <nav class="nav-extended hoverable">
             <div class="nav-wrapper container">
-  
-                <a href="/" class="brand-logo header-font sizing"><div id="react"></div> </a>
+
+                <a href="/" class="brand-logo header-font sizing">
+                    <div id="react"></div>
+                </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
                 </a>
-                
+
                 <ul id="nav-mobile" class="right hide-on-med-and-down header-font">
                     <li>
-                        
+
                     </li>
                     <li>
-                        <a href="/buyer">Buyer Profile</a>
+                        <a class="buyer" href="/buyer">Buyer Profile</a>
                     </li>
                     <li>
-                        <a href="/vendor">Vendor Profile</a>
+                        <a class="vendor" href="/vendor">Vendor Profile</a>
                     </li>
                     <li>
                         <a href="/buyer/search">Search</a>
                     </li>
                     <li>
-                        <a href="/vendor/manageproducts">Manage Products</a>
+                        <a class="manage" href="/vendor/manageproducts">Manage Products</a>
                     </li>
                     <li>
                         <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
@@ -145,7 +145,7 @@
         </form>
 
     </div>
-    
+
 
     {{{ body }}}
 
@@ -154,10 +154,11 @@
 
     </footer>
 
+
     <script>
         ReactDOM.render(React.createElement(Icon), document.getElementById('react')); 
-    </script>        
-
+    </script>
+    
     <script>
     // Initialize Firebase
     const config = {
@@ -209,6 +210,19 @@
         // find conditional to see if logged in or not
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if(firebaseUser) {
+                let userId = firebase.auth().currentUser.uid;
+                firebase.database().ref('users/' + userId).once('value', snap => {
+                    let vendor = snap.val().vendor;
+                    if(vendor === "true") {
+                        $('.vendor').show();
+                        $('.manage').show();
+                        $('.buyer').hide();
+                    } else if (vendor === "false"){
+                        $('.vendor').hide();
+                        $('.manage').hide();
+                        $('.buyer').show();
+                    };
+                });
                 console.log(firebase.auth().currentUser.email, ' is currently logged in.');
                 $('.logoutBtn').show();
                 $('.login').hide();
@@ -217,13 +231,16 @@
                     // insert url into image src
                     let img = document.getElementById('img-circle');
                     img.src = url;
-                    })
-                    .catch(err => {
+                })
+                .catch(err => {
                     // Handle any errors
                     console.log('Error: ', err);
-                    });
-                } else {
+                });
+            } else {
                 console.log('Not logged in.');
+                $('.manage').hide();
+                $('.vendor').hide();
+                $('.buyer').hide();
                 $('.logoutBtn').hide();
                 $('.login').show();
                 let img = document.getElementById('img-circle');
@@ -232,16 +249,15 @@
             $('#modal1').modal('close');
         });
     })
-    </script>    
-
+    </script>
 </body>
 
 <script>
-  // Initializing modal
-  $(document).ready(function () {
-    $('#modal1').modal();
-    $('.parallax').parallax();
-  });
+    // Initializing modal
+    $(document).ready(function () {
+        $('#modal1').modal();
+        $('.parallax').parallax();
+    });
 </script>
 
 

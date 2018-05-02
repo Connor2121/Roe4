@@ -35,6 +35,8 @@
 
 .hero-full-screen .bottom-content-section {
   padding: 1rem;
+  position: relative;
+  bottom: 50px;
 }
 
 .hero-full-screen .bottom-content-section svg {
@@ -42,7 +44,7 @@
   width: 3.75rem;
   fill: #fefefe;
   position: relative;
-  bottom: 50px;
+  bottom: 0px;
 }
 
 .main-title{

@@ -139,7 +139,7 @@
 
     <script>
     // Initialize Firebase
-    var config = {
+    const config = {
         apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
         authDomain: "nc-vfm.firebaseapp.com",
         databaseURL: "https://nc-vfm.firebaseio.com",
@@ -149,22 +149,22 @@
     };
     firebase.initializeApp(config);
 
-    $(document).ready(function() {
+    $(document).ready( () => {
         // log-out button
-        $('.logoutBtn').on('click', function (event) {
+        $('.logoutBtn').on('click', e => {
             firebase.auth().signOut();
             console.log('logout');
         });
 
         // Add log-in event
-        $('.loginBtn').on('click', function(event) {
+        $('.loginBtn').on('click', e => {
             // get email and pass
-            var email = $('#modal-email').val().trim();
-            var pass = $('#modal-password').val().trim();
+            let email = $('#modal-email').val().trim();
+            let pass = $('#modal-password').val().trim();
 
             // validate email and password aren't blank
-            function validateForm() {
-                var isValid = true;
+            validateForm = () => {
+                let isValid = true;
                 if (email === '' || pass === '') {
                     // alert user to fill out txt inputs with alert div
                     alert('Email and Password must be filled out');
@@ -177,7 +177,7 @@
             };
             
             // sign-in
-            var promise = firebase.auth().signInWithEmailAndPassword(email, pass);
+            const promise = firebase.auth().signInWithEmailAndPassword(email, pass);
             // promise.catch(e => console.log(e.message));
             promise.catch(function(event) {
                 console.log(event.message);
@@ -186,26 +186,26 @@
 
         // add realtime listener to check if a user is logged in
         // find conditional to see if logged in or not
-        firebase.auth().onAuthStateChanged(function (firebaseUser) {
+        firebase.auth().onAuthStateChanged(firebaseUser => {
             if(firebaseUser) {
-                console.log(firebase.auth().currentUser.email + ' is currently logged in.');
+                console.log(firebase.auth().currentUser.email, ' is currently logged in.');
                 $('.logoutBtn').show();
                 $('.login').hide();
-                //firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {
-                //    console.log(url);            
-                //    insert url into image src
-                //    var img = document.getElementById('img-circle');
-                //    img.src = url;
-                //    })
-                //    .catch(function(error) {
+                firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {
+                    console.log(url);            
+                    // insert url into image src
+                    let img = document.getElementById('img-circle');
+                    img.src = url;
+                    })
+                    .catch(function(error) {
                     // Handle any errors
-                //    });
+                    });
                 } else {
                 console.log('Not logged in.');
                 $('.logoutBtn').hide();
                 $('.login').show();
-                //var img = document.getElementById('img-circle');
-                //img.src = "/images/man1.png";
+                let img = document.getElementById('img-circle');
+                img.src = "/images/man1.png";
             };
             $('#modal1').modal('close');
         });

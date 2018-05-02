@@ -1,69 +1,119 @@
 
-.hero-full-screen {
-    height: 100vh;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-justify-content: space-between;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
-    background: url("https://images.pexels.com/photos/378273/pexels-photo-378273.jpeg?w=1260&h=750&auto=compress&cs=tinysrgb") center center no-repeat;
-    background-size: cover;
-  }
-  
-  .hero-full-screen .middle-content-section {
-    text-align: center;
-    color: #fefefe;
-  }
-  
-  .hero-full-screen .top-content-section {
-    width: 100%;
-  }
-  
-  .hero-full-screen .bottom-content-section {
-    padding: 1rem;
-  }
-  
-  .hero-full-screen .bottom-content-section svg {
-    height: 3.75rem;
-    width: 3.75rem;
-    fill: #fefefe;
-  }
-  
-  .hero-full-screen .top-bar {
-    background: transparent;
-  }
-  
-  .hero-full-screen .top-bar .menu {
-    background: transparent;
-  }
-  
-  .hero-full-screen .top-bar .menu-text {
-    color: #fefefe;
-  }
-  
-  .hero-full-screen .top-bar .menu li {
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-align-items: center;
-        -ms-flex-align: center;
-            align-items: center;
-  }
-  
-  .hero-full-screen .top-bar .menu a {
-    color: #fefefe;
-    font-weight: bold;
-  }
-  
 .comp {
     float: left;
     margin: 5px;
 }  
 
+
+.hero-full-screen {
+  height: 100vh;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-justify-content: space-between;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: url("http://cdn.skim.gs/image/upload/v1456339314/msi/organic-produce-from-farmers-market_oa3cy3.jpg") center center no-repeat;
+  background-size: cover;
+  
+}
+
+.hero-full-screen .middle-content-section {
+  text-align: center;
+  color: whitesmoke;
+}
+
+.hero-full-screen .top-content-section {
+  width: 100%;
+}
+
+.hero-full-screen .bottom-content-section {
+  padding: 1rem;
+}
+
+.hero-full-screen .bottom-content-section svg {
+  height: 3.75rem;
+  width: 3.75rem;
+  fill: #fefefe;
+  position: relative;
+  bottom: 50px;
+}
+
+.main-title{
+position: relative;
+top: 130px;
+color: black;
+background: rgba(0, 0, 0, 0.15); 
+padding: 5px; 
+}
+ .para{
+  width: 100%; 
+}
+
+.button-rounded-hover {
+  
+  border: 0;
+  border-radius: 5000px;
+  padding: 1rem 2rem;
+  text-transform: uppercase;
+  position: relative;
+  overflow: hidden;
+  font-size: 1rem;
+  letter-spacing: 1px;
+  transition: all 0.35s ease;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
+}
+
+.button-rounded-hover:before {
+  opacity: 0;
+  content: "";
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border-radius: inherit;
+  background-color: #fefefe;
+  transition: all 0.3s;
+  -webkit-transform: translateX(-100%);
+      -ms-transform: translateX(-100%);
+          transform: translateX(-100%);
+}
+
+.button-rounded-hover:after {
+  position: absolute;
+  top: 0px;
+  bottom: 0px;
+  left: 0px;
+  right: 0px;
+  border: 5px solid #115b8d;
+  content: '';
+  border-radius: inherit;
+}
+
+.button-rounded-hover:hover,
+.button-rounded-hover:focus {
+  background-color: #115b8d;
+}
+
+.button-rounded-hover:hover:before,
+.button-rounded-hover:focus:before {
+  -webkit-transform: translateX(0%);
+      -ms-transform: translateX(0%);
+          transform: translateX(0%);
+  opacity: 0.25;
+}
+
+
+
+#react {
+  position: relative;
+  top: 2px;
+}

@@ -52,16 +52,14 @@
     $(document).ready(function () {
         $('.sidenav').sidenav();
     });
-</script> {{!-- TODO: Firebase code goes below --}} {{!--
-<script>
+
     // Link to firebase js file for profile
     $(document).ready(function () {
-        // Button added to execute firebase calls
-        $("#history").on("click", function (event) {
-        });
+        
         firebase.auth().onAuthStateChanged(function (user) {
             if (user) {
-                displaySearches();
+                console.log('profile firing..')
+                // displaySearches();
                 displayUser();
                 displayPic();
             }
@@ -121,4 +119,4 @@
             });
         };
     });
-</script> --}}
+</script>

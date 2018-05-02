@@ -74,8 +74,9 @@
                     writeUserData(firebase.auth().currentUser.uid, firstName, lastName, email);
                     // user data is not being sent to firebase when 
                     
-                }).catch(e => {            
-                    console.log(e.message)
+                }).catch(e => {
+                    alert(e.message);            
+                    console.log(e.message);
                 });      
 
                 // clear form inputs
@@ -96,7 +97,7 @@
                     firstName: firstName,
                     lastName: lastName,
                     email: email,
-                    vendor: false
+                    vendor: "false"
                 }, err => {
                     window.location.replace('/');
                 });

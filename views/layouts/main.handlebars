@@ -49,16 +49,16 @@
                         
                     </li>
                     <li>
-                        <a href="/buyer">Buyer Profile</a>
+                        <a class="buyer" href="/buyer">Buyer Profile</a>
                     </li>
                     <li>
-                        <a href="/vendor">Vendor Profile</a>
+                        <a class="vendor" href="/vendor">Vendor Profile</a>
                     </li>
                     <li>
                         <a href="/buyer/search">Search</a>
                     </li>
                     <li>
-                        <a href="/vendor/manageproducts">Manage Products</a>
+                        <a class="manage" href="/vendor/manageproducts">Manage Products</a>
                     </li>
                     <li>
                         <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
@@ -209,6 +209,19 @@
         // find conditional to see if logged in or not
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if(firebaseUser) {
+                let userId = firebase.auth().currentUser.uid;
+                firebase.database().ref('users/' + userId).once('value', snap => {
+                    let vendor = snap.val().vendor;
+                    if(vendor === "true") {
+                        $('.vendor').show();
+                        $('.manage').show();
+                        $('.buyer').hide();
+                    } else if (vendor === "false"){
+                        $('.vendor').hide();
+                        $('.manage').hide();
+                        $('.buyer').show();
+                    };
+                });
                 console.log(firebase.auth().currentUser.email, ' is currently logged in.');
                 $('.logoutBtn').show();
                 $('.login').hide();
@@ -221,9 +234,12 @@
                     .catch(err => {
                     // Handle any errors
                     console.log('Error: ', err);
-                    });
-                } else {
+                });
+            } else {
                 console.log('Not logged in.');
+                $('.manage').hide();
+                $('.vendor').hide();
+                $('.buyer').hide();
                 $('.logoutBtn').hide();
                 $('.login').show();
                 let img = document.getElementById('img-circle');

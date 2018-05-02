@@ -23,4 +23,8 @@ router.get('/buyer/search', (req, res) => {
     res.render('buyerSearch');
 });
 
+router.get('/signup', (req, res) => {
+    res.render('signup');
+});
+
 export default router;

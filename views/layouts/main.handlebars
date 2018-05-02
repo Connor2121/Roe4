@@ -27,9 +27,7 @@
     <link rel="stylesheet" href="/css/main.css" media="screen" title="no title">
     <script crossorigin src="https://unpkg.com/react@16/umd/react.development.js"></script>
     <script crossorigin src="https://unpkg.com/react-dom@16/umd/react-dom.development.js"></script>
-    <script src="/js/react-loading-button.js"></script>
-
-    {{!-- Google Fonts --}}
+    <script src="/js/react-loading-button.js"></script> {{!-- Google Fonts --}}
     <link href="https://fonts.googleapis.com/css?family=Cabin+Sketch" rel="stylesheet">
 
 </head>
@@ -38,15 +36,17 @@
     <div class="navbar-fixed">
         <nav class="nav-extended hoverable">
             <div class="nav-wrapper container">
-  
-                <a href="/" class="brand-logo header-font sizing"><div id="react"></div> </a>
+
+                <a href="/" class="brand-logo header-font sizing">
+                    <div id="react"></div>
+                </a>
                 <a href="#" data-target="mobile-demo" class="sidenav-trigger">
                     <i class="material-icons">menu</i>
                 </a>
-                
+
                 <ul id="nav-mobile" class="right hide-on-med-and-down header-font">
                     <li>
-                        
+
                     </li>
                     <li>
                         <a class="buyer" href="/buyer">Buyer Profile</a>
@@ -145,7 +145,7 @@
         </form>
 
     </div>
-    
+
 
     {{{ body }}}
 
@@ -154,10 +154,11 @@
 
     </footer>
 
+
     <script>
         ReactDOM.render(React.createElement(Icon), document.getElementById('react')); 
-    </script>        
-
+    </script>
+    
     <script>
     // Initialize Firebase
     const config = {
@@ -230,7 +231,10 @@
                     // insert url into image src
                     let img = document.getElementById('img-circle');
                     img.src = url;
+
+
                     })
+
                     .catch(err => {
                     // Handle any errors
                     console.log('Error: ', err);
@@ -250,14 +254,15 @@
     })
     </script>    
 
+
 </body>
 
 <script>
-  // Initializing modal
-  $(document).ready(function () {
-    $('#modal1').modal();
-    $('.parallax').parallax();
-  });
+    // Initializing modal
+    $(document).ready(function () {
+        $('#modal1').modal();
+        $('.parallax').parallax();
+    });
 </script>
 
 

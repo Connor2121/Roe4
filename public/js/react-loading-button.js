@@ -1942,7 +1942,7 @@ module.exports = ReactPropTypesSecret;
 /* 11 */
 /***/ (function(module, exports, __webpack_require__) {
 
-module.exports = __webpack_require__.p + "logo.5d5d9eef.svg";
+module.exports = __webpack_require__.p + "/logo.5d5d9eef.svg";
 
 /***/ }),
 /* 12 */

@@ -154,15 +154,9 @@
 
     </footer>
 
-
-
     <script>
         ReactDOM.render(React.createElement(Icon), document.getElementById('react')); 
-    </script>
-
-
-
-        
+    </script>        
 
     <script>
     // Initialize Firebase
@@ -224,8 +218,9 @@
                     let img = document.getElementById('img-circle');
                     img.src = url;
                     })
-                    .catch(function(error) {
+                    .catch(err => {
                     // Handle any errors
+                    console.log('Error: ', err);
                     });
                 } else {
                 console.log('Not logged in.');
@@ -237,11 +232,9 @@
             $('#modal1').modal('close');
         });
     })
-    </script>
-    
+    </script>    
 
 </body>
-
 
 <script>
   // Initializing modal

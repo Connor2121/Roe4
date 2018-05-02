@@ -44,16 +44,16 @@
         $(document).ready(function() {
             $('#confirmation').modal();
             // Add sign-in event
-            $('#btnSignUp').on('click', function(event) {
-                event.preventDefault();
+            $('#btnSignUp').on('click', e => {
+                e.preventDefault();
                 // get user info
-                var firstName = $('#first_name').val().trim();
-                var lastName = $('#last_name').val().trim();
-                var email = $('#email').val().trim();
-                var pass = $('#password').val().trim();
+                let firstName = $('#first_name').val().trim();
+                let lastName = $('#last_name').val().trim();
+                let email = $('#email').val().trim();
+                let pass = $('#password').val().trim();
 
-                function validateForm() {
-                    var isValid = true;
+                validateForm = () => {
+                    let isValid = true;
                     if (firstName === '' || lastName === '' || email === '' || pass === '') {
                         // alert user to fill out txt inputs with alert div
                         alert('Please complete entire form!');
@@ -65,17 +65,17 @@
                     return;
                 };
 
-                var auth = firebase.auth();
+                const auth = firebase.auth();
             
                 // sign-up
-                var promise = auth.createUserWithEmailAndPassword(email, pass);
-                promise.then(function (event) {
+                const promise = auth.createUserWithEmailAndPassword(email, pass);
+                promise.then(e => {
                     console.log('new uid: ' + firebase.auth().currentUser.uid);
                     writeUserData(firebase.auth().currentUser.uid, firstName, lastName, email);
                     // user data is not being sent to firebase when 
                     
-                }).catch(function (event) {            
-                    console.log(event.message)
+                }).catch(e => {            
+                    console.log(e.message)
                 });      
 
                 // clear form inputs
@@ -83,26 +83,27 @@
             });
 
             // log-out button
-            $('#btnLogout').on('click', function(event) {
-                event.preventDefault();
+            $('#btnLogout').on('click', e => {
+                e.preventDefault();
                 firebase.auth().signOut();
                 console.log('logout');
             });
 
             // save the user's profile into Firebase so we can list users,
             // use them in Security and Firebase Rules, and show profiles
-            function writeUserData(userId, firstName, lastName, email) {
+            writeUserData = (userId, firstName, lastName, email) => {
                 firebase.database().ref('users/' + userId).set({
                     firstName: firstName,
                     lastName: lastName,
-                    email: email
-                }, function (err) {
+                    email: email,
+                    vendor: false
+                }, err => {
                     window.location.replace('/');
                 });
             };
 
             // function to clear email and password inputs
-            function clrTxt() {
+            clrTxt = () => {
                 $('#first_name').val('');
                 $('#last_name').val('');
                 $('#email').val('');

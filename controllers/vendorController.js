@@ -45,3 +45,31 @@ export default router;
 
 
 // Send grid
+// require("dotenv").config();
+
+// var keys = require('../keys.js');
+// const sgMail = require('@sendgrid/mail');
+// console.log('This is the key(should be undefined): ' +keys.apiKey);
+// sgMail.setApiKey(keys.apiKey);
+
+// const msg = {
+//     to: 'mnolen5670@gmail.com',
+//     from: 'test@example.com',
+//     subject: 'Sending with SendGrid is Fun',
+//     text: 'and easy to do anywhere, even with Node.js',
+//     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+// };
+// sgMail.send(msg).then(() => {
+//     Celebrate
+// })
+//     .catch(error => {
+
+//         //Log friendly error
+//         console.error(error.toString());
+
+//         //Extract error msg
+//         const { message, code, response } = error;
+
+//         //Extract response msg
+//         const { headers, body } = response;
+//     });;

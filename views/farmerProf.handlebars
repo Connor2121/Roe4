@@ -2,17 +2,17 @@
     <div class="vendor-profile-basic row">
         <div class="col s5">
             <div class="vendor-profile-basic-intro">
-                <img class="vendor-profile-basic-intro-pic" src="http://www.yourdictionary.com/images/definitions/lg/4320.farmer.jpg" alt="profile-image"
+                <img id="vendorProfPhoto" class="vendor-profile-basic-intro-pic" src="http://www.yourdictionary.com/images/definitions/lg/4320.farmer.jpg" alt="profile-image"
                 />
                 <div class="vendor-profile-basic-name">
-                    <h3>Vendor Name</h3>
+                    <h3 class="venName">Vendor Name</h3>
                 </div>
             </div>
         </div>
         <div class="col s7">
             <div class="vendor-profile-basic-more">Bio
                 <div class="vendor-profile-basic-about">
-                    <p>
+                    <p class="venBio">
                         Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem libero fugit, pariatur maxime! Optio enim, deserunt
                         quia molestiae fugiat delectus, dolore et esse nostrum, quod autem necessitatibus fugit soluta repellendus.
                     </p>
@@ -26,7 +26,7 @@
             Products
             <div class="product-card">
                 <div class="card-body">
-                    <h6 class="product">Sweet Potatoes. A lot of them.</h6>
+                    <h6 class="venProduct">Sweet Potatoes. A lot of them.</h6>
                 </div>
             </div>
 
@@ -37,13 +37,17 @@
             <div class="product-card">
                 <div class="card-body">
                     Phone:
-                    <h6 class="phone-number"> 777-777-7777</h6>
+                    <h6 class="venPhone"> 777-777-7777</h6>
                     Email:
-                    <h6 class="email"> connorgreed@gmail.com</h6>
+                    <h6 class="venEmail"> connorgreed@gmail.com</h6>
                     Address:
+<<<<<<< HEAD
                     <h6 class="address"> </h6>
                     <!-- Modal Trigger -->
                     <button data-target="modal-contact" class="btn modal-trigger">Email Me!</button>
+=======
+                    <h6 class="venAddress"> </h6>
+>>>>>>> 8e886c948aa1a0fb8ec70f2dd5d473c1f7a32048
                 </div>
             </div>
 
@@ -107,9 +111,52 @@
 </div>
 
 <script>
+<<<<<<< HEAD
     $(document).ready(function () {
         $('.modal').modal();
         $('input#input_text, textarea#textarea2').characterCounter();
         $("[data-menu-underline-from-center] a").addClass("underline-from-center");
     });
+=======
+    $("[data-menu-underline-from-center] a").addClass("underline-from-center");
+
+    $(document).ready(() => {
+        firebase.auth().onAuthStateChanged( user => {
+            displayVendor();
+            displayVendorPic();
+        });
+
+        displayVendor = () => {
+            let userId = firebase.auth().currentUser.uid;
+            firebase.database().ref('users/' + userId).once('value', snap => {
+                let bio = snap.val().bio;
+                let vendorName = snap.val().vendorName;
+                let products = snap.val().products;
+                let phoneNum = snap.val().phoneNum;
+                let email = snap.val().email;
+                let address = snap.val().address;
+                $('.venBio').text(bio);
+                $('.venName').text(vendorName);
+                $('.venProduct').text(products);
+                $('.venPhone').text(phoneNum);
+                $('.venEmail').text(email);
+                $('.venAddress').text(address);
+            });
+        };
+
+        displayVendorPic = () => {
+            firebase.storage().ref('vendor_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(url => {
+                console.log(url);
+
+                // insert url into image src
+                let img = document.getElementById('vendorProfPhoto');
+                img.src = url;
+            }).catch(function (error) {
+                // Handle any errors
+                console.log('Error: ', error);
+            });
+        }
+    });
+
+>>>>>>> 8e886c948aa1a0fb8ec70f2dd5d473c1f7a32048
 </script>

@@ -4,9 +4,9 @@
     <div class="vendor-profile-basic row">
         <div class="col s5">
             <div class="vendor-profile-basic-intro">
-                <img class="vendor-profile-basic-intro-pic" src="http://www.yourdictionary.com/images/definitions/lg/4320.farmer.jpg" alt="profile-image"
+                <img id="vendorPhoto" class="vendor-profile-basic-intro-pic" src="http://www.yourdictionary.com/images/definitions/lg/4320.farmer.jpg" alt="profile-image"
                 /> 
-                <input type='file' id='fileButtonFarmer'>
+                <input type='file' id='fileButtonVendor'>
                 <div class="vendor-profile-basic-name">
                     <textarea id="vendor-name" class="materialize-textarea">Vendor Name</textarea>
                 </div>
@@ -16,10 +16,7 @@
             <div class="vendor-profile-basic-more">
                 <div class="vendor-profile-basic-about">Bio
                     <div class="input-field ">
-                        <textarea id="vendor-bio" class="materialize-textarea">Lorem ipsum dolor 
-                        sit amet, consectetur adipisicing elit. Voluptatem libero fugit, pariatur maxime! 
-                        Optio enim, deserunquia molestiae fugiat delectus, dolore et esse nostrum, quod 
-                        autem necessitatibus fugit soluta repellendus.</textarea>
+                        <textarea id="vendor-bio" class="materialize-textarea"></textarea>
                     </div>
                 </div>
             </div>
@@ -59,78 +56,58 @@
     </div>
 </div>
 
-
-{{!--
-<div class="container edit">
-    <div class="descript">
-        <h6>Featured/Seasonal Products</h6>
-    </div>
-    <div class="product-popup row">
-        <div class="col-md-6">
-            New Entry Here
-            <br> And Here
-            <br> And Here
-        </div>
-    </div>
-    <div class="product-edit row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Product</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-
-            </div>
-        </div>
-        <div class="product-edit row">
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Product</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                </div>
-            </div>
-            <div class="col-md-6">
-                <div class="form-group">
-                    <label for="exampleFormControlTextarea1">Description</label>
-                    <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-                </div>
-            </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </div>
-</div>
-<div class="container edit">
-    <div class="regular-descript">
-        <h6>Products</h6>
-    </div>
-    <div class="product-popup row">
-        <div class="col-md-6">
-            New Entry Here
-            <br> And Here
-            <br> And Here
-        </div>
-    </div>
-    <div class="product-edit row">
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Product</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-            </div>
-        </div>
-        <div class="col-md-6">
-            <div class="form-group">
-                <label for="exampleFormControlTextarea1">Description</label>
-                <textarea class="form-control" id="exampleFormControlTextarea1" rows="2"></textarea>
-            </div>
-        </div>
-    </div>
-    <button type="submit" class="btn btn-primary">Submit</button>
-</div> --}}
-
-
-
-
-
-
-
 <script>
     $("[data-menu-underline-from-center] a").addClass("underline-from-center");
+
+    $(document).ready(() => {
+        $('#farmer-edit-btn').on('click', e => {
+            e.preventDefault();
+
+            let bio = $('#vendor-bio').val().trim();
+            let vendorName = $('#vendor-name').val().trim();
+            let products = $('#vendor-product').val().trim();
+            let phoneNum = $('#vendor-phone').val().trim();
+            // use reg expression to validate email format
+            let email = $('#vendor-email').val().trim();
+            let address = $('#vendor-address').val().trim();
+            // TO DO: add form validation
+
+            // post vendor profile data to firebase
+            writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+        });
+
+        const imageButton = document.getElementById('fileButtonVendor');
+        // Listen for file selection
+        imageButton.addEventListener('change', e => {
+            // Get file
+            let file = e.target.files[0];
+            // Create a storage ref
+            let storageRef = firebase.storage().ref('vendor_photo/' + firebase.auth().currentUser.uid);
+            // substitute file.name with uid
+            // Upload file then use promise to display pic
+            storageRef.put(file).then(snap => {
+                displayPic();
+            });
+        });
+        // use url of image uploaded by user to display profile picture
+        displayPic = () => {
+            firebase.storage().ref('vendor_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(url => {
+                console.log(url);
+
+                // insert url into image src
+                let img = document.getElementById('vendorPhoto');
+                img.src = url;
+            }).catch(function (error) {
+                // Handle any errors
+                console.log('Error: ', error);
+            });
+        }
+
+        writeVendorData = (userId, bio, vendorName, products, phoneNum, email, address) => {
+            firebase.database().ref('users/' + userId).update({ bio, vendorName, products, phoneNum, email, address }, 
+            err => {
+                window.location.replace('/vendor');
+            });
+        };
+    })
 </script>

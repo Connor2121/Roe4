@@ -1,55 +1,43 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('Vendors', {
+    return queryInterface.createTable('vendorData', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      vendor: {
+      Vendor: {
         type: Sequelize.STRING
       },
-      contact: {
+      Contact: {
         type: Sequelize.STRING
       },
-      address: {
+      Address: {
         type: Sequelize.STRING
       },
-      city: {
+      City: {
         type: Sequelize.STRING
       },
-      state: {
+      State: {
         type: Sequelize.STRING
       },
-      zip: {
+      Zip: {
         type: Sequelize.INTEGER
       },
-      phone: {
+      Phone: {
         type: Sequelize.STRING
       },
-      email: {
+      Email: {
         type: Sequelize.STRING
       },
-      certified: {
+      Certified: {
         type: Sequelize.STRING
-      },
-      crops: {
-        type: Sequelize.TEXT
-      },
-      livestock: {
-        type: Sequelize.TEXT
-      },
-      wildcrops: {
-        type: Sequelize.TEXT
-      },
-      handling: {
-        type: Sequelize.TEXT
       }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('Vendors');
+    return queryInterface.dropTable('vendorData');
   }
 };

@@ -2,7 +2,17 @@
 
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.bulkInsert('Vendors', [
+    /*
+      Add altering commands here.
+      Return a promise to correctly handle asynchronicity.
+
+      Example:
+      return queryInterface.bulkInsert('Person', [{
+        name: 'John Doe',
+        isBetaMember: false
+      }], {});
+    */
+    return queryInterface.bulkInsert("vendorData", [
       {
         "id": 1,
         "Vendor": "A & H Organic Farm, Inc.",
@@ -13,11 +23,7 @@ module.exports = {
         "Zip": 27589,
         "Phone": "252-213-1083",
         "Email": "",
-        "Certified": "8/1/2017",
-        "Crops": "Tobacco, vegetables, wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/1/2017"
       },
       {
         "id": 2,
@@ -29,11 +35,7 @@ module.exports = {
         "Zip": 27541,
         "Phone": "336-592-1142",
         "Email": "",
-        "Certified": "9/19/2013",
-        "Crops": "Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/19/2013"
       },
       {
         "id": 3,
@@ -45,11 +47,7 @@ module.exports = {
         "Zip": 28019,
         "Phone": "828-287-1253",
         "Email": "",
-        "Certified": "7/17/2017",
-        "Crops": "Vegetables, mushrooms, microgreens",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/17/2017"
       },
       {
         "id": 4,
@@ -61,11 +59,7 @@ module.exports = {
         "Zip": 27312,
         "Phone": "919-742-5046",
         "Email": "",
-        "Certified": "3/2/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/2/2017"
       },
       {
         "id": 5,
@@ -77,11 +71,7 @@ module.exports = {
         "Zip": 27020,
         "Phone": "336-428-6460",
         "Email": "vanhoybrothers@gmail.com",
-        "Certified": "9/28/2015",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/28/2015"
       },
       {
         "id": 6,
@@ -93,11 +83,7 @@ module.exports = {
         "Zip": 28451,
         "Phone": "",
         "Email": "",
-        "Certified": "11/7/2002",
-        "Crops": "Butternut Squash, Grape Tomatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/7/2002"
       },
       {
         "id": 7,
@@ -109,11 +95,7 @@ module.exports = {
         "Zip": 28698,
         "Phone": "828-406-4439",
         "Email": "",
-        "Certified": "6/3/2016",
-        "Crops": "Basil, Beans, Beets, Bok Choy, Braising Mix, Kohlrabi, Napa Cabbage, Salad Mix, Sorghum, Broccoli, Cabbage, Carrots, Cauliflower, Celery, Chard, Cilantro, Corn, Cucumbers, Dill, Eggplants, Fennel, Garlic, Kale, Leeks, Lettuce, Melons, Onions, Parsley, Peas, Peppers, Potatoes, Radishes, Spinach, Squash, Sweet Potatoes, Tomatoes, Turnips",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/3/2016"
       },
       {
         "id": 8,
@@ -125,11 +107,7 @@ module.exports = {
         "Zip": 27215,
         "Phone": "",
         "Email": "",
-        "Certified": "6/8/2004",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Whipped Cream, Brown Sugar, Whipped Cream, Light, Whipped Cream, No Sugar Added, Whipped Cream, Sweetened"
+        "Certified": "6/8/2004"
       },
       {
         "id": 9,
@@ -141,11 +119,7 @@ module.exports = {
         "Zip": 28273,
         "Phone": "",
         "Email": "",
-        "Certified": "9/14/2009",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Apples, Ambrosia, Apples, Braeburn, Apples, Cameo, Apples, Fuji, Apples, Gala, Apples, Gold, Apples, Granny, Apples, HoneyCrisp, Apples, Jonagold, Apples, Macintosh, Apples, Other, Apples, Pink Lady, Apples, Red Delicious, Apricots, Artichokes, Asparagus, Avocados, Bananas, Beans, Beef, Beets, Berries, Blackberries, Berries, Blueberries, Berries, Cranberries, Berries, Other, Berries, Raspberries, Berries, Strawberries, Beverages, Bread, Broccoli, Brussels Sprouts, Butter, Cabbage, Carrots, Carrots, Baby Peeled, Cauliflower, Celery, Cheese, Cherries, Chicken, Chips, Cilantro, Citrus, Grapefruit, Citrus, Lemons, Citrus, Limes, Citrus, Oranges, Citrus, Other, Citrus, Tangerines, Coconuts, Condiments, Corn, Cream, Croutons, Cucumbers, Dairy, Other, Dates, Deli, Meats, Deli, Other, Dips, Dressings, Dried Fruit, Fruit, Dried Fruit, Vegetable, Dried Fruit, Vegetable, Non-Produce, Eggplant, Eggs, Exotics, Fruit, Exotics, Vegetable, Figs, Floral, Flowers, Frozen Items, Fruit, Garlic, Grapes, Greens, Cooking, Greens, Salad, Herbs, Hummus, Juice, Juice - Lemon Shot, Juice - Lime Shot, Kiwifruit, Lamb, Lettuce, Lettuce, Leaf, Lettuce, Other, Lettuce, Romaine, Mangos, Meat, Other, Melons, Melons, Watermelon, Milk, Miscellaneous, Miscellaneous-Fruit, Mushrooms, Nectarines, Non-Dairy Beverages, Nuts, Nuts & Seeds, Oil, Vinegar, Onions, Papaya, Parsley, Parsnips, Pasta, Peaches, Pears, Peas, Peppers, Bell, Peppers, Hot, Peppers, Other, Persimmons, Pineapples, Plums, Pluots, Pork, Ham, Potatoes, Poultry, Other, Pre-Cut, Fruit, Pre-Cut, Vegetables, Prepared Meals, Proflowers, Pudding, Radish, Salads, Salads, Fruit, Sauce, Sausage, Snacks, Soup, Spices, Spinach, Spreads, Sprouts, Squash, Summer, Squash, Winter, Stir Fry, Vegetables, Supplements, Tofu, Tomatoes, Tomatoes, Cherry, Tortilla, Turkey, Turnips, Vegetable Tray, Vegetables, Yams, Yogurt"
+        "Certified": "9/14/2009"
       },
       {
         "id": 10,
@@ -157,11 +131,7 @@ module.exports = {
         "Zip": 27522,
         "Phone": "919-395-2739",
         "Email": "",
-        "Certified": "9/4/2014",
-        "Crops": "Tobacco (Tobacco and Tobacco Transplants), Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/4/2014"
       },
       {
         "id": 11,
@@ -173,11 +143,7 @@ module.exports = {
         "Zip": 27893,
         "Phone": "252-293-5280",
         "Email": "",
-        "Certified": "1/26/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tobacco"
+        "Certified": "1/26/2016"
       },
       {
         "id": 12,
@@ -189,11 +155,7 @@ module.exports = {
         "Zip": 28792,
         "Phone": "608-516-2416",
         "Email": "bvoss@all-juice.com",
-        "Certified": "3/27/2007",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Juice (Processing of Juices and Lemonades), Harvest Farms Organic Apple Juice, Langers Lemonade, Langers Organic Cucumber Limeade with Mint, Member's Mark Organic Lemonade, Orchard Hill Juices Organic 100% Apple Juice, Pure Nature Organic Ginger Lemonade Zing, Seven Farms Organic 100%: Apple Juice, Cranberry Juice Blend, White Grape Juice, Seven Farms Organic Lemonade Drink, Simple Nature Organic 100% Apple Juice, Trader Joe's Organic: Lemonade, Mango Lemonade, Strawberry Lemonade, Trader Joe's Low Calorie: Lemonade Made with Organic Lemon Juice, Pink Lemonade Made with Organic Lemon Juice, Trader Joe's:  Organic Lemonade, Organic Mango Lemonade, Organic Strawberry Lemonade"
+        "Certified": "3/27/2007"
       },
       {
         "id": 13,
@@ -205,11 +167,7 @@ module.exports = {
         "Zip": 28139,
         "Phone": "",
         "Email": "",
-        "Certified": "2/23/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Barley Koji, Brown Rice Miso, Brown Rice Miso Tamari, Chickpea Miso, Mellow White Miso, Red Miso Tamari, Rice Koji, Sweet White Miso, Traditional Country Barley Miso, Traditional Red Miso"
+        "Certified": "2/23/2016"
       },
       {
         "id": 14,
@@ -221,11 +179,7 @@ module.exports = {
         "Zip": 28748,
         "Phone": "828-683-2656",
         "Email": "",
-        "Certified": "9/4/2012",
-        "Crops": "Potted Plants, Seedlings, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/4/2012"
       },
       {
         "id": 15,
@@ -237,11 +191,7 @@ module.exports = {
         "Zip": 27886,
         "Phone": "252-908-4791",
         "Email": "richard@rcafarms.com",
-        "Certified": "3/14/2018",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/14/2018"
       },
       {
         "id": 16,
@@ -253,11 +203,7 @@ module.exports = {
         "Zip": 27288,
         "Phone": "336-344-9993",
         "Email": "angellfarms@yahoo.com",
-        "Certified": "10/12/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/12/2015"
       },
       {
         "id": 17,
@@ -269,11 +215,7 @@ module.exports = {
         "Zip": 28326,
         "Phone": "919-258-5748",
         "Email": "",
-        "Certified": "3/23/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/23/2017"
       },
       {
         "id": 18,
@@ -285,11 +227,7 @@ module.exports = {
         "Zip": 28092,
         "Phone": "704-276-7113",
         "Email": "cdysart@activeconceptsllc.com",
-        "Certified": "5/5/2010",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Aloe, Aloe Gel, Aloe Juice, Avocado Oil Butter, Avocado Oil, Cinnamon, Chamomile, Comfrey, Green Tea, Rooibos Tea, White Tea, Cranberry, Rice Extract, Lycii Berry, Mango, Pomegranate, Pomegranate Juice, Rice Solution, Arnica, Citrus Herbal Blend, Corn Silk, Eyebright, Ginger Root, Gotu Kola, Hemp Seed and Oil, Honeysuckle, Horsetail, Juniper Berry, Olive Leaf, Passionflower, Organic Rosemary Chamomile Herbal Blend, Rosemary, Wheatgrass, Willow Bark, Yerba Mate, Apple Juice, Banana Juice, Concord Grape Juice, Lemon Juice, Peach Juice, Pineapple Juice, Dehydrasome Yogurt Plus, Soy Lecithin, Organic Soy, Acai, Acai Juice, Acerola Ferment, Acerola, Agave Ferment, Algae, Bearberry, Bio-Orange Water, Black Tea, Blue Agave Ferment, Blueberry, Buckwheat, Calendula, Cherry Juice, Coconut Water, Coconut Oil, Colloidal Oatmeal, Concord Grape, DehydraSome, DehydraSome Acai Goji, DehydraSome Chamomile Mushroom, DehydraSome Plump, DehydraSome Pumpkin Mushroom, DehydraSome Pumpkin Papaya, DehydraSome Yogurt Berry, Ginkgo Leaf, Ginseng, Gooseberry, Grapeseed, Hops, Horse Chestnut, Irish Moss, Kelp, Lavender Nourishing Herbal Blend, Lavender, Lemon, Lemongrass, Licorice, Mandarin, Neroli Blossom, Nettle, Papaya, Physician's Blend 1, Raspberry, Rose Geranium, Rose Hip, Sake, SiO2 Matrix, Strawberry, Vitis Vinifera, Yogurt Plus, Cosmetic Labs Organic Blend 1 RS, Cosmetic Labs Organic Blend 2, Seseme Oil, Shiitake Mushroom, Sunflower Oil, Organic Skin Saver Blend, Processing - Processing Organic Products"
+        "Certified": "5/5/2010"
       },
       {
         "id": 19,
@@ -301,11 +239,7 @@ module.exports = {
         "Zip": 28704,
         "Phone": "828-684-3556",
         "Email": "",
-        "Certified": "1/12/2018",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Juice"
+        "Certified": "1/12/2018"
       },
       {
         "id": 20,
@@ -317,11 +251,7 @@ module.exports = {
         "Zip": 27320,
         "Phone": "336-616-3074",
         "Email": "ashefarms@aol.com",
-        "Certified": "10/14/2015",
-        "Crops": "Rye, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/14/2015"
       },
       {
         "id": 21,
@@ -333,11 +263,7 @@ module.exports = {
         "Zip": 28753,
         "Phone": "828-484-8229",
         "Email": "katelyn@drinkbuchi.com",
-        "Certified": "5/27/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Beverage (Ginger Turmeric Cayenne Kefir Soda), Beverage (Lemon Lime Echinacea Kefir Soda), Beverage (Pear Ginger Chamomile Kefir Soda), Beverage (Pumpkin Chai Masala Kefir Soda), Beverage (Strawberry Coconut Passionflower Kefir Soda), Beverage (Watermelon Mint Tulsi Kefir Soda), Kombucha (Air), Kombucha (Avonlea), Kombucha (Earth), Kombucha (Fire), Kombucha (Holiday), Kombucha (Seed), Kombucha (Sovereign), Kombucha (Unlimited), Kombucha (Water)"
+        "Certified": "5/27/2016"
       },
       {
         "id": 22,
@@ -349,11 +275,7 @@ module.exports = {
         "Zip": 27919,
         "Phone": "252-333-7905",
         "Email": "",
-        "Certified": "11/4/2015",
-        "Crops": "Corn, Soybeans, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/4/2015"
       },
       {
         "id": 23,
@@ -365,11 +287,7 @@ module.exports = {
         "Zip": 28443,
         "Phone": "910-270-4446",
         "Email": "",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "Fish, Shrimp, Oysters, Octopus, Crawfish, Frog Legs, Clams and more",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
         "id": 24,
@@ -381,11 +299,7 @@ module.exports = {
         "Zip": 27504,
         "Phone": "919-894-2527",
         "Email": "",
-        "Certified": "11/28/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Curing, Washing, Packing, Storing of Organic Sweet Potatoes"
+        "Certified": "11/28/2017"
       },
       {
         "id": 25,
@@ -397,11 +311,7 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-837-0028",
         "Email": "",
-        "Certified": "4/14/2016",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/14/2016"
       },
       {
         "id": 26,
@@ -413,11 +323,7 @@ module.exports = {
         "Zip": 27807,
         "Phone": "252-205-8154",
         "Email": "",
-        "Certified": "11/18/2016",
-        "Crops": "Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/18/2016"
       },
       {
         "id": 27,
@@ -429,11 +335,7 @@ module.exports = {
         "Zip": 27541,
         "Phone": "336-266-9641",
         "Email": "",
-        "Certified": "9/7/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/7/2016"
       },
       {
         "id": 28,
@@ -445,11 +347,7 @@ module.exports = {
         "Zip": 27055,
         "Phone": "",
         "Email": "",
-        "Certified": "4/29/2002",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Melba Rounds, Classic, Melba Rounds, Garlic, Melba Rounds, Sesame, Melba Toast, Classic, Melba Toast, Classic Unsalted, Melba Toast, Rye, Melba Toast, Sesame, Melba Toast, Wheat"
+        "Certified": "4/29/2002"
       },
       {
         "id": 29,
@@ -461,11 +359,7 @@ module.exports = {
         "Zip": 27521,
         "Phone": "919-894-5300",
         "Email": "",
-        "Certified": "4/3/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/3/2017"
       },
       {
         "id": 30,
@@ -477,11 +371,7 @@ module.exports = {
         "Zip": 27521,
         "Phone": "919-278-8808",
         "Email": "",
-        "Certified": "4/7/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/7/2017"
       },
       {
         "id": 31,
@@ -493,11 +383,7 @@ module.exports = {
         "Zip": 27521,
         "Phone": "919-278-8808",
         "Email": "",
-        "Certified": "3/27/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/27/2017"
       },
       {
         "id": 32,
@@ -509,11 +395,7 @@ module.exports = {
         "Zip": 27807,
         "Phone": "252-236-8585",
         "Email": "",
-        "Certified": "11/26/2013",
-        "Crops": "Sweet Potatoes, Soybeans, Wheat, Sweet Potato Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/26/2013"
       },
       {
         "id": 33,
@@ -525,11 +407,7 @@ module.exports = {
         "Zip": 27615,
         "Phone": "919-847-8699",
         "Email": "thomasyates333@yahoo.com",
-        "Certified": "6/28/2011",
-        "Crops": "Grapes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/28/2011"
       },
       {
         "id": 34,
@@ -541,11 +419,7 @@ module.exports = {
         "Zip": 27537,
         "Phone": "252-432-1470",
         "Email": "",
-        "Certified": "10/21/2002",
-        "Crops": "Herbs, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/21/2002"
       },
       {
         "id": 35,
@@ -557,11 +431,7 @@ module.exports = {
         "Zip": 28801,
         "Phone": "828-713-0450",
         "Email": "steven@balsamgardens.com",
-        "Certified": "4/21/2015",
-        "Crops": "Cabbage, Kale, Lettuce, Peppers, Squash, Tomatoes, Broccoli, Cauliflower",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/21/2015"
       },
       {
         "id": 36,
@@ -573,11 +443,7 @@ module.exports = {
         "Zip": 28670,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "9/3/2015",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest run eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/3/2015"
       },
       {
         "id": 37,
@@ -589,11 +455,7 @@ module.exports = {
         "Zip": 28356,
         "Phone": "910-980-0112",
         "Email": "",
-        "Certified": "3/6/2016",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/6/2016"
       },
       {
         "id": 38,
@@ -605,11 +467,7 @@ module.exports = {
         "Zip": 27882,
         "Phone": "252-459-3101",
         "Email": "maggie@farmpak.com",
-        "Certified": "7/14/2014",
-        "Crops": "Sweet Potatoes, Soybeans, Tobacco, Wheat, Persimmons",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "FarmPak Sweet Potatoes, Packing - Washing, Packaging, and Labeling Sweet Potatoes"
+        "Certified": "7/14/2014"
       },
       {
         "id": 39,
@@ -621,11 +479,7 @@ module.exports = {
         "Zip": null,
         "Phone": "(704) 614-9654",
         "Email": "kyle.pearce@barnhardt.net",
-        "Certified": "8/5/2009",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cotton Products (Cleaned Organic Cotton), Cotton Products (Organic Cotton Balls), Cotton Products (Organic Cotton Balls med), Cotton Products (Organic Cotton Coil), Cotton Products (Organic Esthetic Wipes), Cotton Products (Organic Roll Cotton), Cotton Products (Purified Organic #1 - COG), Cotton Products (Purified Organic High Q), Cotton Products (Purified Organic High Q - COG), Cotton Products (Purified Organic High- Q Blend), Cotton Products (Purified Organic High Q Ultra), Cotton Products (Purified Organic HyDRI), Cotton Products (Purified Organic HyDRI Ultra), Cotton Products (Purified Organic Ultraclean Comber), Cotton Products (Purified Organic Ultraclean Comber - Low Moisture)"
+        "Certified": "8/5/2009"
       },
       {
         "id": 40,
@@ -637,11 +491,7 @@ module.exports = {
         "Zip": 27527,
         "Phone": "919-634-7740",
         "Email": "",
-        "Certified": "5/15/2017",
-        "Crops": "Squash (Butternut, Yellow), Zucchini",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/15/2017"
       },
       {
         "id": 41,
@@ -653,11 +503,7 @@ module.exports = {
         "Zip": 28217,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "6/2/2017",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/2/2017"
       },
       {
         "id": 42,
@@ -669,11 +515,7 @@ module.exports = {
         "Zip": 28328,
         "Phone": "910-590-2408",
         "Email": "sjbass@intrstar.net",
-        "Certified": "11/6/2009",
-        "Crops": "Soybeans, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/6/2009"
       },
       {
         "id": 43,
@@ -685,11 +527,7 @@ module.exports = {
         "Zip": 27560,
         "Phone": "919-371-0329",
         "Email": "",
-        "Certified": "6/25/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Spice Rubs"
+        "Certified": "6/25/2015"
       },
       {
         "id": 44,
@@ -701,11 +539,7 @@ module.exports = {
         "Zip": 27809,
         "Phone": "252-450-9093",
         "Email": "crth60@gmail.com",
-        "Certified": "10/24/2014",
-        "Crops": "Soybeans, Sweet Potatoes, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/24/2014"
       },
       {
         "id": 45,
@@ -717,11 +551,7 @@ module.exports = {
         "Zip": 28115,
         "Phone": "",
         "Email": "",
-        "Certified": "1/24/2007",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Bread Flour, High Gluten Flour, Whole Wheat Flour"
+        "Certified": "1/24/2007"
       },
       {
         "id": 46,
@@ -733,11 +563,7 @@ module.exports = {
         "Zip": 28341,
         "Phone": "",
         "Email": "",
-        "Certified": "4/17/2008",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Baby Dill Pickles, Baby Dill Pickles, Whole, Bread & Butter Chip Pickles, Bread & Butter Pickle Chips, Bread & Butter Pickle Chips, Fresh Pack, Classic Kosher Whole Dill Pickles, Dill Pickle Spears, Dill Relish, Jalapeno Relish, Kosher Baby Dill Pickles, Kosher Baby Dill Pickles, Fresh Pack, Kosher Dill Baby Pickles, Fresh Pack, Kosher Dill Pickle Sandwich Slicer, Kosher Dill Pickle Sandwich Slices, Kosher Dill Pickle Sliced, Kosher Dill Pickle Slices, Kosher Dill Pickle Spears, Kosher Dill Pickle Spears (Kosher Pickle Spears), Kosher Dill Pickle Spears, Fresh Pack, Kosher Dill Pickles, Kosher Dill Pickles - Reduced Sodium, Kosher Dill Pickles - Reduced Sodium, Kosher Dill Sandwich Slices, Kosher Dill Spears, Kosher Dill Whole Pickles, Kosher Dill Whole Pickles, Less Sodium, Kosher Pickle Sandwich Slices, Kosher Pickle Spears, Kosher Sandwich Pickles, Kosher Whole Dill Pickles, Kosher Whole Dill Pickles, Fresh Pack, Mango Habanero Pickle Chips, Relish, Sweet Bread & Butter Chips, Sweet Bread & Butter Pickle Slices, Fresh Pack, Sweet Relish, Sweet Relish - 64oz"
+        "Certified": "4/17/2008"
       },
       {
         "id": 47,
@@ -749,11 +575,7 @@ module.exports = {
         "Zip": 28056,
         "Phone": "704-825-0197",
         "Email": "",
-        "Certified": "9/9/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Rice, Beans, Grains, Berries"
+        "Certified": "9/9/2016"
       },
       {
         "id": 48,
@@ -765,11 +587,7 @@ module.exports = {
         "Zip": null,
         "Phone": "",
         "Email": "",
-        "Certified": "4/30/2015",
-        "Crops": "Organic Fennel, Romaine Lettuce, Winter Squash, Pumpkins, Acorn Squash, Turnips, Radish, Kale, Chard, Parsley, Cilantro, Beets, Cabbage, Greens, Cucumbers, Summer Squash, Tomatoes, Collards.",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/30/2015"
       },
       {
         "id": 49,
@@ -781,11 +599,7 @@ module.exports = {
         "Zip": 28711,
         "Phone": "",
         "Email": "",
-        "Certified": "4/30/2015",
-        "Crops": "Fennel, Romaine Lettuce, Pumpkins, Turnips, Radish, Parsley, Beets, Dandelion Greens, Bok Choy, Broccoli, Scallions, Carrots, Brussels Sprouts, Sunflowers, Salad Mix.",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/30/2015"
       },
       {
         "id": 50,
@@ -797,11 +611,7 @@ module.exports = {
         "Zip": 27252,
         "Phone": "919-837-5947",
         "Email": "",
-        "Certified": "4/4/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/4/2017"
       },
       {
         "id": 51,
@@ -813,11 +623,7 @@ module.exports = {
         "Zip": 27282,
         "Phone": "336-476-6644",
         "Email": "",
-        "Certified": "4/19/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/19/2017"
       },
       {
         "id": 52,
@@ -829,11 +635,7 @@ module.exports = {
         "Zip": 27360,
         "Phone": "336-475-6243",
         "Email": "",
-        "Certified": "8/15/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/15/2017"
       },
       {
         "id": 53,
@@ -845,11 +647,7 @@ module.exports = {
         "Zip": 27549,
         "Phone": "919-291-9199",
         "Email": "flucure1@gmail.com",
-        "Certified": "9/5/2014",
-        "Crops": "Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/5/2014"
       },
       {
         "id": 54,
@@ -861,11 +659,7 @@ module.exports = {
         "Zip": 27581,
         "Phone": "919-690-2643",
         "Email": "",
-        "Certified": "6/12/2008",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/12/2008"
       },
       {
         "id": 55,
@@ -877,11 +671,7 @@ module.exports = {
         "Zip": 27869,
         "Phone": "",
         "Email": "",
-        "Certified": "1/11/2018",
-        "Crops": "Fallow",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/11/2018"
       },
       {
         "id": 56,
@@ -893,11 +683,7 @@ module.exports = {
         "Zip": 28124,
         "Phone": "",
         "Email": "",
-        "Certified": "9/28/2009",
-        "Crops": "Hay and Pasture",
-        "Livestock": "Beef Brood Cows, all eligible for organic slaughter, Beef Replacements, all eligible for organic slaughter, Beef Steers, all eligible for organic slaughter, Beef Bulls, all eligible for organic slaughter, Dairy Cows for milk, all eligible for organic slaughter, Dairy Replacements, all eligible for organic slaughter",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/28/2009"
       },
       {
         "id": 57,
@@ -909,11 +695,7 @@ module.exports = {
         "Zip": 27263,
         "Phone": "336-345-1161",
         "Email": "lavinia@bigbossbaking.com",
-        "Certified": "1/13/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Granola (Ancient Grains Granola), Granola (Honey Vanilla), Granola (Maple), Granola (Probiotic Chickpea Granola Clusters Almond Butter Walnut (nonretail)), Granola (Probiotic Chickpea Granola Clusters Pecan & Pumpkin (nonretail)), Granola (Probiotic Chickpea Granola Clusters Wholesome Raspberry (nonretail))"
+        "Certified": "1/13/2017"
       },
       {
         "id": 58,
@@ -925,11 +707,7 @@ module.exports = {
         "Zip": 27549,
         "Phone": "919-495-3052",
         "Email": "",
-        "Certified": "8/23/2015",
-        "Crops": "Tobacco, Transplants (Tobacco Transplants)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/23/2015"
       },
       {
         "id": 59,
@@ -941,11 +719,7 @@ module.exports = {
         "Zip": 28054,
         "Phone": "",
         "Email": "",
-        "Certified": "7/20/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "100% Whole Wheat, 22 Grains & Seeds Bread, Rustic White Bread"
+        "Certified": "7/20/2017"
       },
       {
         "id": 60,
@@ -957,11 +731,7 @@ module.exports = {
         "Zip": 28690,
         "Phone": "",
         "Email": "",
-        "Certified": "8/28/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/28/2017"
       },
       {
         "id": 61,
@@ -973,11 +743,7 @@ module.exports = {
         "Zip": 27597,
         "Phone": "252-230-1886",
         "Email": "bissettefarms@centurylink.net",
-        "Certified": "9/26/2015",
-        "Crops": "Sweet Potatoes, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/26/2015"
       },
       {
         "id": 62,
@@ -989,11 +755,7 @@ module.exports = {
         "Zip": 28447,
         "Phone": "910-532-2437",
         "Email": "",
-        "Certified": "10/21/2002",
-        "Crops": "flowers, fruits and vegetables, Herbs, Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/21/2002"
       },
       {
         "id": 63,
@@ -1005,11 +767,7 @@ module.exports = {
         "Zip": 28428,
         "Phone": "910-458-9001",
         "Email": "",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
         "id": 64,
@@ -1021,11 +779,7 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-776-5788",
         "Email": "",
-        "Certified": "3/22/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/22/2017"
       },
       {
         "id": 65,
@@ -1037,11 +791,7 @@ module.exports = {
         "Zip": 27591,
         "Phone": "919-365-4355",
         "Email": "",
-        "Certified": "1/28/2015",
-        "Crops": "Mushrooms",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/28/2015"
       },
       {
         "id": 66,
@@ -1053,11 +803,7 @@ module.exports = {
         "Zip": 28394,
         "Phone": "910-245-4937",
         "Email": "",
-        "Certified": "5/5/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/5/2017"
       },
       {
         "id": 67,
@@ -1069,11 +815,7 @@ module.exports = {
         "Zip": 28606,
         "Phone": "803-372-7582",
         "Email": "",
-        "Certified": "6/8/2017",
-        "Crops": "Blueberries, asparagus",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/8/2017"
       },
       {
         "id": 68,
@@ -1085,11 +827,7 @@ module.exports = {
         "Zip": 27341,
         "Phone": "336-879-6054",
         "Email": "",
-        "Certified": "8/10/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/10/2017"
       },
       {
         "id": 69,
@@ -1101,11 +839,7 @@ module.exports = {
         "Zip": 28105,
         "Phone": "704-650-3434",
         "Email": "info@rawcrunchbar.com",
-        "Certified": "7/19/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Food Bar (Blueberry Lemon), Food Bar (Cranberry Orange), Food Bar (Dark Chocolate), Food Bar (Dark Chocolate Cherry), Food Bar (Goji Berry), Food Bar (Mango Coconut)"
+        "Certified": "7/19/2017"
       },
       {
         "id": 70,
@@ -1117,11 +851,7 @@ module.exports = {
         "Zip": 28106,
         "Phone": "",
         "Email": "",
-        "Certified": "10/18/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/18/2014"
       },
       {
         "id": 71,
@@ -1133,11 +863,7 @@ module.exports = {
         "Zip": 27581,
         "Phone": "919-482-0535",
         "Email": "",
-        "Certified": "8/25/2009",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/25/2009"
       },
       {
         "id": 72,
@@ -1149,11 +875,7 @@ module.exports = {
         "Zip": 27893,
         "Phone": "252-206-0737",
         "Email": "reboyette@gmail.com",
-        "Certified": "10/29/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Storage and Processing (Washing, Grading, Packing and Labeling)  of Sweet Potatoes"
+        "Certified": "10/29/2014"
       },
       {
         "id": 73,
@@ -1165,11 +887,7 @@ module.exports = {
         "Zip": 28334,
         "Phone": "910-987-3147",
         "Email": "bradcofarms@gmail.com",
-        "Certified": "9/16/2014",
-        "Crops": "Sweet Potatoes, Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/16/2014"
       },
       {
         "id": 74,
@@ -1181,11 +899,7 @@ module.exports = {
         "Zip": 27589,
         "Phone": "252-425-7385",
         "Email": "",
-        "Certified": "9/27/2016",
-        "Crops": "Soybeans, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/27/2016"
       },
       {
         "id": 75,
@@ -1197,11 +911,7 @@ module.exports = {
         "Zip": 27212,
         "Phone": "336-234-8974",
         "Email": "",
-        "Certified": "8/16/2017",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/16/2017"
       },
       {
         "id": 76,
@@ -1213,11 +923,7 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "1/25/2011",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Canola, Soy Oil, Animal Feed: Alfalfa meal, Canola Meal, Soymeal, Custom Organic Poultry Feed, Yellow corn, Flax seed, Wheat midds"
+        "Certified": "1/25/2011"
       },
       {
         "id": 77,
@@ -1229,11 +935,7 @@ module.exports = {
         "Zip": 27549,
         "Phone": "252-213-2667",
         "Email": "tobacco119@yahoo.com",
-        "Certified": "9/11/2012",
-        "Crops": "Cucumbers, Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/11/2012"
       },
       {
         "id": 78,
@@ -1245,11 +947,7 @@ module.exports = {
         "Zip": 27326,
         "Phone": "336-613-6450",
         "Email": "",
-        "Certified": "6/19/2008",
-        "Crops": "Tobacco, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/19/2008"
       },
       {
         "id": 79,
@@ -1261,11 +959,7 @@ module.exports = {
         "Zip": 27349,
         "Phone": "336-263-4284",
         "Email": "",
-        "Certified": "4/20/2014",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/20/2014"
       },
       {
         "id": 80,
@@ -1277,11 +971,7 @@ module.exports = {
         "Zip": 27214,
         "Phone": "336-312-6242",
         "Email": "",
-        "Certified": "10/28/2013",
-        "Crops": "Barley, Corn, Oats, Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/28/2013"
       },
       {
         "id": 81,
@@ -1293,11 +983,7 @@ module.exports = {
         "Zip": 27230,
         "Phone": "336-626-9100",
         "Email": "",
-        "Certified": "3/3/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/3/2017"
       },
       {
         "id": 82,
@@ -1309,11 +995,7 @@ module.exports = {
         "Zip": 27208,
         "Phone": "336-581-3431",
         "Email": "",
-        "Certified": "4/4/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/4/2017"
       },
       {
         "id": 83,
@@ -1325,11 +1007,7 @@ module.exports = {
         "Zip": 27537,
         "Phone": "252-432-6901",
         "Email": "",
-        "Certified": "9/23/2014",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/23/2014"
       },
       {
         "id": 84,
@@ -1341,11 +1019,7 @@ module.exports = {
         "Zip": 27880,
         "Phone": "252-399-9157",
         "Email": "",
-        "Certified": "9/26/2016",
-        "Crops": "Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/26/2016"
       },
       {
         "id": 85,
@@ -1357,11 +1031,7 @@ module.exports = {
         "Zip": 27208,
         "Phone": "336-879-1701",
         "Email": "",
-        "Certified": "4/11/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/11/2017"
       },
       {
         "id": 86,
@@ -1373,11 +1043,7 @@ module.exports = {
         "Zip": 28341,
         "Phone": "910-267-5781",
         "Email": "burch@intrstar.net",
-        "Certified": "2/1/2008",
-        "Crops": "Beets, Rutabaga, Sweet Potatoes, Turnips, Collards, Kale, Pumpkins, Squash (Butternut), Sweet Potatoes, Wheat, Sweet Potato Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Washing and Packing Sweet Potatoes (Tomorrow's Organics Sweet Potatoes)"
+        "Certified": "2/1/2008"
       },
       {
         "id": 87,
@@ -1389,11 +1055,7 @@ module.exports = {
         "Zip": 27546,
         "Phone": "910-709-2343",
         "Email": "",
-        "Certified": "3/15/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/15/2017"
       },
       {
         "id": 88,
@@ -1405,11 +1067,7 @@ module.exports = {
         "Zip": 27316,
         "Phone": "336-963-5852",
         "Email": "",
-        "Certified": "4/28/2016",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/28/2016"
       },
       {
         "id": 89,
@@ -1421,30 +1079,10 @@ module.exports = {
         "Zip": 27317,
         "Phone": "336-953-2902",
         "Email": "",
-        "Certified": "4/14/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/14/2017"
       },
       {
         "id": 90,
-        "Vendor": "Butler, Walter S.",
-        "Contact": "Walter S. Butler",
-        "Address": "1548 Prospect Church RD",
-        "City": "Mebane",
-        "State": "North Carolina",
-        "Zip": 27302,
-        "Phone": "336-260-6845",
-        "Email": "butler121805@gmail.com",
-        "Certified": "9/9/2015",
-        "Crops": "Tobacco, Transplants (Tobacco Transplants)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
-      },
-      {
-        "id": 91,
         "Vendor": "Butterball LLC",
         "Contact": "Alice Johnson",
         "Address": "1628 Garner Chapel Road",
@@ -1453,14 +1091,10 @@ module.exports = {
         "Zip": 28365,
         "Phone": "919-255-7905",
         "Email": "",
-        "Certified": "2/14/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Ground Turkey (Back, Drumsticks, Neck, Thigh Meat, Wing), Skinless Turkey (Breast Meat, Tenderloins and Thigh Meat), Turkey Breast, Turkey Drumsticks, Turkey Scapula, Turkey Tenderloin, Turkey Thigh Meat, Turkey Wing Meat, Turkey Hearts, Turkey Livers, Skin On Turkey Thigh Meant, Skin On Turkey Breast Meat with Tenderloin Attached, Turkey Gizzards, Slaughtering and Processing Turkey for Parts and Ground Meat"
+        "Certified": "2/14/2017"
       },
       {
-        "id": 92,
+        "id": 91,
         "Vendor": "Butterball LLC - Raeford Loccation",
         "Contact": "Yuliza Davilla",
         "Address": "1000 East Central Avenue",
@@ -1469,14 +1103,10 @@ module.exports = {
         "Zip": 28376,
         "Phone": "910565-4837",
         "Email": "",
-        "Certified": "2/14/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Ground Turkey, Process, Pack and Label Ground Turkey"
+        "Certified": "2/14/2017"
       },
       {
-        "id": 93,
+        "id": 92,
         "Vendor": "Butterball, LLC",
         "Contact": "Molly Parker",
         "Address": "938 Millers Chapel Road",
@@ -1485,14 +1115,10 @@ module.exports = {
         "Zip": 27534,
         "Phone": "919-802-6759",
         "Email": "mparker@butterball.com",
-        "Certified": "7/26/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Meat Products: Poults, Turkeys, Animal Feed: Livestock Feed"
+        "Certified": "7/26/2017"
       },
       {
-        "id": 94,
+        "id": 93,
         "Vendor": "Butterfields Butter LLC",
         "Contact": "",
         "Address": "1201 Pitt Street",
@@ -1501,14 +1127,10 @@ module.exports = {
         "Zip": 27801,
         "Phone": "917-499-6499",
         "Email": "james@butterfieldsbutter.com",
-        "Certified": "6/20/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Butter, Butter"
+        "Certified": "6/20/2017"
       },
       {
-        "id": 95,
+        "id": 94,
         "Vendor": "C & F Foods, Inc.",
         "Contact": "",
         "Address": "5201 Departure Drive",
@@ -1517,14 +1139,10 @@ module.exports = {
         "Zip": 27616,
         "Phone": "",
         "Email": "",
-        "Certified": "6/23/2011",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Arborio Rice, Basmati Rice, Black Beans, Black Beans, Black Beans, Pre-washed, Black Chia Seeds, Black Eye Peas, Brown Basmati Rice, Brown Jasmine Rice, Cannellini Beans, Dark Red Kidney Beans, Flax Seed, French Green Lentils, Garbanzo Bean, Garbanzo Beans, Great Northern Beans, Green Lentils, Green Split Peas, Ground Flax Seed, Jasmine Rice, Lentils, Light Red Kidney Beans, Long Grain & Wild Rice Blend, Long Grain Brown Rice, Long Grain Brown Rice, Long Grain White Rice, Long Grain White Rice, Milled Flax Seed, Navy Beans, Pearl Farro, Pinto Beans, Pinto Beans, Pre-washed, Quinoa, Quinoa, Quinoa & Brown Rice Blend, Quinoa, Red, Quinoa, White, Red Kidney Beans, Red Lentils, Red Quinoa, Short Grain Brown Rice, Super Grain Blend, Tri-Color Quinoa, White Basmati Rice, White Jasmine Rice, White Quinoa"
+        "Certified": "6/23/2011"
       },
       {
-        "id": 96,
+        "id": 95,
         "Vendor": "Cain, Mitch dba Cain Farm",
         "Contact": "Mitch Cain",
         "Address": "2594 Shady Grove Ch. Rd.",
@@ -1533,14 +1151,10 @@ module.exports = {
         "Zip": 27355,
         "Phone": "919-545-4123",
         "Email": "",
-        "Certified": "4/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Broiler Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/24/2017"
       },
       {
-        "id": 97,
+        "id": 96,
         "Vendor": "Cal Maine Foods - Israel Farms",
         "Contact": "Thomas Furlough",
         "Address": "4828 Cedar Cliff Rd.",
@@ -1549,14 +1163,10 @@ module.exports = {
         "Zip": 27253,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "3/12/2015",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/12/2015"
       },
       {
-        "id": 98,
+        "id": 97,
         "Vendor": "Cal Maine Foods Inc. - Bowman Poultry",
         "Contact": "Thomas Furlough",
         "Address": "4410 Plainfield Rd.",
@@ -1565,14 +1175,10 @@ module.exports = {
         "Zip": 27350,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "3/12/2015",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/12/2015"
       },
       {
-        "id": 99,
+        "id": 98,
         "Vendor": "Cal Maine Foods, Inc. - Gordon Bright",
         "Contact": "Tommy Furlough",
         "Address": "1024 Walter Bright Rd.",
@@ -1581,14 +1187,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "7/9/2012",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/9/2012"
       },
       {
-        "id": 100,
+        "id": 99,
         "Vendor": "Cal Maine Foods, Inc. - William Henry Vines Jr.",
         "Contact": "Tommy Furlough",
         "Address": "3450 Isley Drive",
@@ -1597,14 +1199,10 @@ module.exports = {
         "Zip": 27349,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "6/25/2013",
-        "Crops": "",
-        "Livestock": "Egg Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/25/2013"
       },
       {
-        "id": 101,
+        "id": 100,
         "Vendor": "Cal Maine Foods, Inc.- Ashleigh Lemons",
         "Contact": "Thomas Furlough",
         "Address": "1210 Deep Creek Church Rd.",
@@ -1613,14 +1211,10 @@ module.exports = {
         "Zip": 27055,
         "Phone": "252-717-2089",
         "Email": "",
-        "Certified": "7/30/2014",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/30/2014"
       },
       {
-        "id": 102,
+        "id": 101,
         "Vendor": "Cal Maine Foods, Inc.- Cameron Sizemore",
         "Contact": "Thomas Furlough",
         "Address": "1210 Deep Creek Church Rd.",
@@ -1629,14 +1223,10 @@ module.exports = {
         "Zip": 27055,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "7/28/2014",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/28/2014"
       },
       {
-        "id": 103,
+        "id": 102,
         "Vendor": "Cal Maine Foods, Inc.- Chad Clark Farm",
         "Contact": "Thomas Furlough",
         "Address": "51602 Jessie Bridges Rd.",
@@ -1645,14 +1235,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "252-717-2089",
         "Email": "",
-        "Certified": "10/8/2014",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/8/2014"
       },
       {
-        "id": 104,
+        "id": 103,
         "Vendor": "Cal Maine Foods, Inc.- Cynthia Vestal Farm",
         "Contact": "Thomas Furlough",
         "Address": "2812 Luke Dr.",
@@ -1661,14 +1247,10 @@ module.exports = {
         "Zip": 27055,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "7/28/2014",
-        "Crops": "",
-        "Livestock": "Laying hens, Nest run eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/28/2014"
       },
       {
-        "id": 105,
+        "id": 104,
         "Vendor": "Cal Maine Foods, Inc.- Farlow Farms",
         "Contact": "Tommy Furlough",
         "Address": "4055 Old Marlboro Rd.",
@@ -1677,14 +1259,10 @@ module.exports = {
         "Zip": 27350,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "10/3/2012",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/3/2012"
       },
       {
-        "id": 106,
+        "id": 105,
         "Vendor": "Cal Maine Foods, Inc.- High Pine Farm",
         "Contact": "Thomas Furlough",
         "Address": "4180 High Pine Church Rd.",
@@ -1693,30 +1271,22 @@ module.exports = {
         "Zip": 27203,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "1/12/2015",
-        "Crops": "",
-        "Livestock": "Laying hens, nest run eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/12/2015"
       },
       {
-        "id": 107,
+        "id": 106,
         "Vendor": "Cal Maine Foods, Inc.- Jackie Rives Farm",
         "Contact": "Tommy Furlough",
-        "Address": "5284 Pittsboro � Goldston Rd.",
+        "Address": "5284 Pittsboro – Goldston Rd.",
         "City": "Bear Creek",
         "State": "North Carolina",
         "Zip": 27207,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "4/15/2013",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/15/2013"
       },
       {
-        "id": 108,
+        "id": 107,
         "Vendor": "Cal Maine Foods, Inc.- Paul Shaffner",
         "Contact": "Thomas Furlough",
         "Address": "5121 Howell School Rd.",
@@ -1725,14 +1295,10 @@ module.exports = {
         "Zip": 28642,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "10/8/2014",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/8/2014"
       },
       {
-        "id": 109,
+        "id": 108,
         "Vendor": "Cal Maine Foods, Inc.- Rae-Lee Farm",
         "Contact": "Thomas Furlough",
         "Address": "5871 Deer Trail",
@@ -1741,14 +1307,10 @@ module.exports = {
         "Zip": 27239,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "8/13/2014",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/13/2014"
       },
       {
-        "id": 110,
+        "id": 109,
         "Vendor": "Cal Maine Foods, Inc.- Rex Childress",
         "Contact": "Thomas Furlough",
         "Address": "1432 Johnson Branch Rd.",
@@ -1757,14 +1319,10 @@ module.exports = {
         "Zip": 27020,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "7/29/2014",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/29/2014"
       },
       {
-        "id": 111,
+        "id": 110,
         "Vendor": "Cal Maine Foods, Inc.- Swaney Farm",
         "Contact": "Thomas Furlough",
         "Address": "7014-A Mt. Hermon-Rock Creek Rd",
@@ -1773,14 +1331,10 @@ module.exports = {
         "Zip": 27349,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "12/11/2012",
-        "Crops": "",
-        "Livestock": "Egg Layers, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/11/2012"
       },
       {
-        "id": 112,
+        "id": 111,
         "Vendor": "Cal Maine Foods, Inc.- Welborn Farms",
         "Contact": "Thomas Furlough",
         "Address": "6095 Davis Country Rd.",
@@ -1789,14 +1343,10 @@ module.exports = {
         "Zip": 27317,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "1/12/2015",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/12/2015"
       },
       {
-        "id": 113,
+        "id": 112,
         "Vendor": "Cal Maine Foods, Inc./Cheek Family Farms",
         "Contact": "Thomas Furlough",
         "Address": "5044 Sparks Rd.",
@@ -1805,14 +1355,10 @@ module.exports = {
         "Zip": 27020,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "10/28/2014",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/28/2014"
       },
       {
-        "id": 114,
+        "id": 113,
         "Vendor": "Cal Maine Foods, Inc./Fogleman Poultry",
         "Contact": "Tommy Furlough",
         "Address": "4880 Yank Martin Rd.",
@@ -1821,14 +1367,10 @@ module.exports = {
         "Zip": 27298,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "6/24/2013",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/24/2013"
       },
       {
-        "id": 115,
+        "id": 114,
         "Vendor": "Cal Maine Foods, Inc./Hickory Grove Farm",
         "Contact": "Thomas Furlough",
         "Address": "18486 NC HWY 902",
@@ -1837,14 +1379,10 @@ module.exports = {
         "Zip": 27027,
         "Phone": "252-717-2089",
         "Email": "",
-        "Certified": "7/30/2014",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/30/2014"
       },
       {
-        "id": 116,
+        "id": 115,
         "Vendor": "Cal Maine Foods, Inc.-Bumper's Fork Farm",
         "Contact": "Tommy Furlough",
         "Address": "812 Maness Rd",
@@ -1853,14 +1391,10 @@ module.exports = {
         "Zip": 27349,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "7/6/2012",
-        "Crops": "",
-        "Livestock": "Eggs, laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/6/2012"
       },
       {
-        "id": 117,
+        "id": 116,
         "Vendor": "Cal-Maine Foods Inc.",
         "Contact": "Thomas Furlough",
         "Address": "342 Spring Run Rd.",
@@ -1869,14 +1403,10 @@ module.exports = {
         "Zip": 27020,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "3/1/2016",
-        "Crops": "",
-        "Livestock": "Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/1/2016"
       },
       {
-        "id": 118,
+        "id": 117,
         "Vendor": "Cal-Maine Foods Inc. -- Dawn Johnson",
         "Contact": "Thomas Furlough",
         "Address": "6592 Lou Cranford Rd.",
@@ -1885,14 +1415,10 @@ module.exports = {
         "Zip": 27239,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "4/4/2016",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/4/2016"
       },
       {
-        "id": 119,
+        "id": 118,
         "Vendor": "Cal-Maine Foods Inc. - Perry Chappell Farm",
         "Contact": "Thomas Furlough",
         "Address": "1308 Buck Shoal Rd",
@@ -1901,14 +1427,10 @@ module.exports = {
         "Zip": 27020,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "1/17/2018",
-        "Crops": "",
-        "Livestock": "Hens and Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/17/2018"
       },
       {
-        "id": 120,
+        "id": 119,
         "Vendor": "Cal-Maine Foods Inc./KLP Farm",
         "Contact": "Thomas Furlough",
         "Address": "1117 McCarter Road",
@@ -1917,14 +1439,10 @@ module.exports = {
         "Zip": 28689,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "9/2/2015",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/2/2015"
       },
       {
-        "id": 121,
+        "id": 120,
         "Vendor": "Cal-Maine Foods Inc.-JKS Farms LLC",
         "Contact": "Thomas Furlough",
         "Address": "1436 Mountain View Church Rd.",
@@ -1933,14 +1451,10 @@ module.exports = {
         "Zip": 27020,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "3/21/2016",
-        "Crops": "",
-        "Livestock": "Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/21/2016"
       },
       {
-        "id": 122,
+        "id": 121,
         "Vendor": "Cal-Maine Foods, Inc.",
         "Contact": "Thomas Furlough",
         "Address": "3558 Heath Dairy Road",
@@ -1949,14 +1463,10 @@ module.exports = {
         "Zip": 27317,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "9/3/2015",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/3/2015"
       },
       {
-        "id": 123,
+        "id": 122,
         "Vendor": "Cal-Maine Foods, Inc. - Gene Powers",
         "Contact": "Thomas Furlough",
         "Address": "170 Powers Farm Rd.",
@@ -1965,14 +1475,10 @@ module.exports = {
         "Zip": 28634,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "9/21/2016",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/21/2016"
       },
       {
-        "id": 124,
+        "id": 123,
         "Vendor": "Cal-Maine Foods, Inc.- A & N Farm",
         "Contact": "Thomas Furlough",
         "Address": "3763-C Swepsonville - Saxapahaw Rd., Claremont Trail",
@@ -1981,14 +1487,10 @@ module.exports = {
         "Zip": 27253,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "3/20/2014",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/20/2014"
       },
       {
-        "id": 125,
+        "id": 124,
         "Vendor": "Cal-Maine Foods, Inc.- Jackie Hunter",
         "Contact": "Thomas Furlough",
         "Address": "1742 Hunter Dairy Rd.",
@@ -1997,14 +1499,10 @@ module.exports = {
         "Zip": 27020,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "6/8/2015",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/8/2015"
       },
       {
-        "id": 126,
+        "id": 125,
         "Vendor": "Cal-Maine Foods, Inc.- Ricky Kivett Farm",
         "Contact": "Thomas Furlough",
         "Address": "1114 Browns Crossroads Rd.",
@@ -2013,14 +1511,10 @@ module.exports = {
         "Zip": 27355,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "6/8/2015",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/8/2015"
       },
       {
-        "id": 127,
+        "id": 126,
         "Vendor": "Cal-Maine Foods, Inc./ Dave Lutterloh",
         "Contact": "Thomas Furlough",
         "Address": "5721 Holt Cross Road",
@@ -2029,14 +1523,10 @@ module.exports = {
         "Zip": 27215,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "11/4/2015",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/4/2015"
       },
       {
-        "id": 128,
+        "id": 127,
         "Vendor": "Cal-Maine Foods, Inc./ Mickey Simmons",
         "Contact": "Thomas Furlough",
         "Address": "1709 Rudy Rd",
@@ -2045,14 +1535,10 @@ module.exports = {
         "Zip": 27055,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "9/21/2016",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/21/2016"
       },
       {
-        "id": 129,
+        "id": 128,
         "Vendor": "Cal-Maine Foods, Inc./Hurley Farms",
         "Contact": "Tommy Furlough",
         "Address": "5036 Lovejoy Rd.",
@@ -2061,14 +1547,10 @@ module.exports = {
         "Zip": 27371,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "6/26/2013",
-        "Crops": "",
-        "Livestock": "Eggs, Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/26/2013"
       },
       {
-        "id": 130,
+        "id": 129,
         "Vendor": "Cal-Maine Foods, Inc./Peace Haven Farm",
         "Contact": "Tommy Furlough",
         "Address": "621 Peacehaven Rd.",
@@ -2077,14 +1559,10 @@ module.exports = {
         "Zip": 27316,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "7/5/2012",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/5/2012"
       },
       {
-        "id": 131,
+        "id": 130,
         "Vendor": "Cal-Maine Foods-Larry G. Wells Farm",
         "Contact": "Thomas Furlough",
         "Address": "2362 Gold Mine Rd",
@@ -2093,14 +1571,10 @@ module.exports = {
         "Zip": 27055,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "7/18/2016",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/18/2016"
       },
       {
-        "id": 132,
+        "id": 131,
         "Vendor": "Cal-Maine Foods-Todd Tharington Farm",
         "Contact": "Thomas Furlough",
         "Address": "343 Southard Rd",
@@ -2109,14 +1583,10 @@ module.exports = {
         "Zip": 28621,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "4/15/2016",
-        "Crops": "",
-        "Livestock": "Eggs, Laying Hens",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/15/2016"
       },
       {
-        "id": 133,
+        "id": 132,
         "Vendor": "Cameron, Fredrick A dba Cameron FArm",
         "Contact": "Ferderick Cameron",
         "Address": "311 Bella Bridge Rd",
@@ -2125,14 +1595,10 @@ module.exports = {
         "Zip": 27505,
         "Phone": "919-770-6918",
         "Email": "",
-        "Certified": "4/11/2015",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/11/2015"
       },
       {
-        "id": 134,
+        "id": 133,
         "Vendor": "Cameron, Fredrick A. dba Bluebird Hill Farm",
         "Contact": "Brian Cameron",
         "Address": "2025 Micro Tower Road",
@@ -2141,14 +1607,10 @@ module.exports = {
         "Zip": 27546,
         "Phone": "919-499-6541",
         "Email": "",
-        "Certified": "4/5/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/5/2017"
       },
       {
-        "id": 135,
+        "id": 134,
         "Vendor": "Campbell, Lloyd",
         "Contact": "Lloyd Campbell",
         "Address": "1495 Will Brown Road",
@@ -2157,14 +1619,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-742-5528",
         "Email": "",
-        "Certified": "4/18/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/18/2017"
       },
       {
-        "id": 136,
+        "id": 135,
         "Vendor": "Cane Creek Valley Farm And Co., Inc.",
         "Contact": "Julie Sizemore",
         "Address": "1448 Cane Creek Road",
@@ -2173,14 +1631,10 @@ module.exports = {
         "Zip": 28732,
         "Phone": "828-338-0188",
         "Email": "",
-        "Certified": "10/1/2015",
-        "Crops": "Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/1/2015"
       },
       {
-        "id": 137,
+        "id": 136,
         "Vendor": "Cap'n Willis Seafood Market",
         "Contact": "",
         "Address": "7803 Emerald Dr",
@@ -2189,14 +1643,10 @@ module.exports = {
         "Zip": 28594,
         "Phone": "252-354-2500",
         "Email": "",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
-        "id": 138,
+        "id": 137,
         "Vendor": "Carolina Beverage Group",
         "Contact": "",
         "Address": "110 Barley Park Lane",
@@ -2205,14 +1655,10 @@ module.exports = {
         "Zip": 28115,
         "Phone": "",
         "Email": "",
-        "Certified": "12/6/2006",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Island Fruit Flavor Energy Drink, Strawberry Flavor Energy Drink, Yachak Berry Blue - Energy Drink, Yachak Berry Red - Energy Drink, Yachak Infused Mate - Energy Drink, Yachak Ultimate Mint - Energy Drink"
+        "Certified": "12/6/2006"
       },
       {
-        "id": 139,
+        "id": 138,
         "Vendor": "Carolina Beverage Group, LLC",
         "Contact": "Austyn Black",
         "Address": "",
@@ -2221,14 +1667,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(704) 799-2337",
         "Email": "austyn.black@carolinabeveragegroup.com",
-        "Certified": "9/20/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Fruit Blend Energy Drink (Citrus), Fruit Blend Energy Drink (Grape), Fruit Blend Energy Drink (Pineapple Coconut), Fruit Blend Energy Drink (Tropical Burst)"
+        "Certified": "9/20/2017"
       },
       {
-        "id": 140,
+        "id": 139,
         "Vendor": "Carolina Dairy LLC",
         "Contact": "",
         "Address": "116 Industrial Park Drive",
@@ -2237,14 +1679,10 @@ module.exports = {
         "Zip": 27209,
         "Phone": "",
         "Email": "",
-        "Certified": "2/1/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Happy Tot Whole Milk Yogurt Pouch - Apple & Blackberry, Happy Tot Whole Milk Yogurt Pouch - Banana, Mango & Spinach, Happy Tot Whole Milk Yogurt Pouch - Banana, Strawberry, Oats, Chia, Kids Lowfat Yogurt Pouch - Blueberry, Kids Lowfat Yogurt Pouch - Choco-Mooo, Kids Lowfat Yogurt Pouch - Strawberry, Kids Lowfat Yogurt Pouch - Strawberry Banana, Lowfat Yogurt Pouch - 127525 128711 Banana, Lowfat Yogurt Pouch - 127526 128712 Mixed Berry, Lowfat Yogurt Pouch - 127528 128700 Berries, Oats & Chia, Whole Milk Yogurt Pouch - Blueberry Banana Avocado, Whole Milk Yogurt Pouch - Mango Sweet Potato, Whole Milk Yogurt Pouch - Peach Pumpkin, Whole Milk Yogurt Pouch - Pear Spinach Mango, Whole Milk Yogurt Pouch - Raspberry Strawberry Spinach, Whole Milk Yogurt Pouch - Strawberry Beet Berry, Whole Milk Yogurt Pouch - Vanilla"
+        "Certified": "2/1/2017"
       },
       {
-        "id": 141,
+        "id": 140,
         "Vendor": "Carolina Egg Companies",
         "Contact": "Dwight Mckeel",
         "Address": "10927 Cooper Rd",
@@ -2253,14 +1691,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "1/28/2011",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Eggs"
+        "Certified": "1/28/2011"
       },
       {
-        "id": 142,
+        "id": 141,
         "Vendor": "Carolina Farm Stewardship Association Dba Elma C. Lomax Incubator Farm",
         "Contact": "Aaron Newton",
         "Address": "3445 Atando Road",
@@ -2269,14 +1703,10 @@ module.exports = {
         "Zip": 28025,
         "Phone": "704-305-6654",
         "Email": "aaron@carolinafarmstewards.org",
-        "Certified": "8/9/2016",
-        "Crops": "Mixed Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/9/2016"
       },
       {
-        "id": 143,
+        "id": 142,
         "Vendor": "Carolina Heritage Vineyard And Winery",
         "Contact": "Patricia Colwell",
         "Address": "170 Heritage Vines Way",
@@ -2285,14 +1715,10 @@ module.exports = {
         "Zip": 28621,
         "Phone": "336-366-3301",
         "Email": "pkcolwell@yahoo.com",
-        "Certified": "2/19/2010",
-        "Crops": "Apples, Blueberries, Currants, Elderberries, Grapes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Alcohol: Wine (2014 Blueberry Mead, 2015 Carlos Wine, 2016 Blueberry Wine, 2016 Carlos Wine, 2016 Noble Rose Wine, 2016 Noble Wine), Mana Ginger Kombucha, Mana Kombucha, Packaging of Blueberries, Wine and Beverage Processing"
+        "Certified": "2/19/2010"
       },
       {
-        "id": 144,
+        "id": 143,
         "Vendor": "Carolina Innovative Food Ingredients, Inc.",
         "Contact": "Jamie Gable",
         "Address": "",
@@ -2301,14 +1727,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(252) 462-1556",
         "Email": "jamie.gable@cifi1.com",
-        "Certified": "8/18/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Sweet Potato Juice (Sweet Potato Juice Concentrate, Acidified w/ Lemon Juice Concentrate, Clear), Sweet Potato Juice (Sweet Potato Juice, Acidified, Cloudy, Frozen), Sweet Potato Juice (Sweet Potato Juice, Non-Acidified, Cloudy, Frozen), Sweet Potato Juice Concentrate (Sweet Potato Juice Concentrate, Acidified, Clarified (Clear), Aseptic and Frozen), Sweet Potato Juice Concentrate (Sweet Potato Juice Concentrate, Acidified, Cloudy, Aseptic), Sweet Potato Juice Concentrate (Sweet Potato Juice Concentrate, Non-Acidified, Clarified, Frozen), Sweet Potato Juice Concentrate (Sweet Potato Juice Concentrate, Non-Acidified, Cloudy, Frozen), Sweet Potato Powder (Dehydrated Sweet Potato, Fine-Grind)"
+        "Certified": "8/18/2016"
       },
       {
-        "id": 145,
+        "id": 144,
         "Vendor": "Carver Brothers Farms LLC",
         "Contact": "Hr Carver",
         "Address": "1941 McGhees Mice Rd.",
@@ -2317,14 +1739,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "336-592-0547",
         "Email": "",
-        "Certified": "7/12/2017",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/12/2017"
       },
       {
-        "id": 146,
+        "id": 145,
         "Vendor": "Cave, Preston Adam",
         "Contact": "Preston Adam Cave",
         "Address": "9455 US 601",
@@ -2333,14 +1751,10 @@ module.exports = {
         "Zip": 27017,
         "Phone": "336-374-0640",
         "Email": "paccattleco@gmail.com",
-        "Certified": "10/6/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/6/2015"
       },
       {
-        "id": 147,
+        "id": 146,
         "Vendor": "Central Carolina Community College",
         "Contact": "James Fry",
         "Address": "764 West Street",
@@ -2349,14 +1763,10 @@ module.exports = {
         "Zip": 27312,
         "Phone": "336-339-4512",
         "Email": "",
-        "Certified": "4/14/2011",
-        "Crops": "Flowers, Fruit, Herbs, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/14/2011"
       },
       {
-        "id": 148,
+        "id": 147,
         "Vendor": "Chase Packing, LLC",
         "Contact": "Teresa Buff",
         "Address": "2488 NC HWY 403 West",
@@ -2365,14 +1775,10 @@ module.exports = {
         "Zip": 28341,
         "Phone": "910-267-4531",
         "Email": "",
-        "Certified": "2/8/2012",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Blueberries, Grapes, Strawberries"
+        "Certified": "2/8/2012"
       },
       {
-        "id": 149,
+        "id": 148,
         "Vendor": "Chaudhry Halal Meats",
         "Contact": "Abdul Chaudhry",
         "Address": "380 Stock Yard Road",
@@ -2381,14 +1787,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-742-9292",
         "Email": "",
-        "Certified": "9/15/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Beef"
+        "Certified": "9/15/2015"
       },
       {
-        "id": 150,
+        "id": 149,
         "Vendor": "Chilton Properties, Inc",
         "Contact": "Drew Chilton",
         "Address": "4380 Ashland Rd",
@@ -2397,14 +1799,10 @@ module.exports = {
         "Zip": 27320,
         "Phone": "336-280-5324",
         "Email": "goldenleafac@hotmail.com",
-        "Certified": "10/13/2015",
-        "Crops": "Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/13/2015"
       },
       {
-        "id": 151,
+        "id": 150,
         "Vendor": "Chriscoe, Martha",
         "Contact": "Martha Chriscoe",
         "Address": "148 Odom Drive",
@@ -2413,14 +1811,10 @@ module.exports = {
         "Zip": 27341,
         "Phone": "910-428-4536",
         "Email": "",
-        "Certified": "4/14/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/14/2017"
       },
       {
-        "id": 152,
+        "id": 151,
         "Vendor": "Christopher Mcleod Dba Mcleod Organics",
         "Contact": "Christopher Mcleod",
         "Address": "2588 Vass Carthage Rd",
@@ -2429,14 +1823,10 @@ module.exports = {
         "Zip": 28327,
         "Phone": "910-585-0515",
         "Email": "cbmcleo2@ncsu.edu",
-        "Certified": "8/3/2015",
-        "Crops": "Sweet Potatoes, Cucumbers, Tomatoes, Cantaloupes, Watermelons, Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/3/2015"
       },
       {
-        "id": 153,
+        "id": 152,
         "Vendor": "Cindy Shore",
         "Contact": "Cindy Shore",
         "Address": "1501 Nebo Road",
@@ -2445,14 +1835,10 @@ module.exports = {
         "Zip": 27011,
         "Phone": "336-414-5775",
         "Email": "",
-        "Certified": "4/15/2015",
-        "Crops": "Herbs, Potted Plants, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/15/2015"
       },
       {
-        "id": 154,
+        "id": 153,
         "Vendor": "Clay Smith And Nancy Joyner/Redbud Farm",
         "Contact": "Clay Smith",
         "Address": "1921 Gwyn Rd",
@@ -2461,14 +1847,10 @@ module.exports = {
         "Zip": 27217,
         "Phone": "919-671-8744",
         "Email": "",
-        "Certified": "8/29/2009",
-        "Crops": "Flowers, Grains, Herbs, Potted plants, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Processed Goods"
+        "Certified": "8/29/2009"
       },
       {
-        "id": 155,
+        "id": 154,
         "Vendor": "Clayton, Johnny G",
         "Contact": "Jg Clayton",
         "Address": "1621 Community House Rd",
@@ -2477,14 +1859,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "252-430-9889",
         "Email": "jgclayton@yahoo.com",
-        "Certified": "9/12/2015",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/12/2015"
       },
       {
-        "id": 156,
+        "id": 155,
         "Vendor": "Clean Juice, LLC Dba Clean Juice",
         "Contact": "Michael Stokes",
         "Address": "8230 Poplar Tent Rd, Suite 203",
@@ -2493,14 +1871,10 @@ module.exports = {
         "Zip": 28027,
         "Phone": "704-408-4048",
         "Email": "michael@cleanjuicebar.com",
-        "Certified": "5/12/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee (Cold Brew), Juice (Cacao Milk), Juice (Cashew Milk Latte), Juice (Cleanse Box), Juice (Green), Juice (Hot Shot), Juice (Matcha Express Shot), Juice (Orange), Juice (Red), Juice (Sweet Green), Juice (White), Juice (Yellow), Restaurant and Prepared Foods (Juice Bar), Retail or Restaurant Location (Birkdale Village, Huntersville, NC), Retail or Restaurant Location (Carrollwood, Tampa, FL), Retail or Restaurant Location (Chapel Hill, Chapel Hill, NC), Retail or Restaurant Location (Clearfork, Fort Worth, TX), Retail or Restaurant Location (Davidson, Davidson, NC), Retail or Restaurant Location (Friendly Center, Greensboro, NC), Retail or Restaurant Location (Greenridge, Greenville, SC), Retail or Restaurant Location (Juice Truck, Davidson, NC), Retail or Restaurant Location (Kingsley, Fort Mill, SC), Retail or Restaurant Location (Lafayette, Lafayette, LA), Retail or Restaurant Location (Lexington Square, Lexington, SC), Retail or Restaurant Location (Mayfaire, Wilmington, NC), Retail or Restaurant Location (Mooresville, Mooresville, NC), Retail or Restaurant Location (Northlake, Charlotte, NC), Retail or Restaurant Location (Park West, Morrisville, NC), Retail or Restaurant Location (Steele Creek, Charlotte, NC), Retail or Restaurant Location (Stonecrest, Charlotte, NC), Retail or Restaurant Location (Vitality, Concord, NC), Retail or Restaurant Location (Winter Park, Winter Park, FL)"
+        "Certified": "5/12/2016"
       },
       {
-        "id": 157,
+        "id": 156,
         "Vendor": "Clement Swift Dba Clem's Organic Gardens",
         "Contact": "Clement Swift",
         "Address": "P.O. Box 231",
@@ -2509,14 +1883,10 @@ module.exports = {
         "Zip": 28768,
         "Phone": "706-254-3171",
         "Email": "clemswift@gmail.com",
-        "Certified": "5/12/2017",
-        "Crops": "Beets, Carrots, Garlic, Parsnips, Potatoes, Radishes, Squash (Winter)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/12/2017"
       },
       {
-        "id": 158,
+        "id": 157,
         "Vendor": "Clifton, Tony L",
         "Contact": "Tony L Clifton",
         "Address": "510 Parrish Rd.",
@@ -2525,14 +1895,10 @@ module.exports = {
         "Zip": 27504,
         "Phone": "919-894-7928",
         "Email": "",
-        "Certified": "4/28/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/28/2017"
       },
       {
-        "id": 159,
+        "id": 158,
         "Vendor": "Coastal NC Organics, LLC",
         "Contact": "Jason Goetz",
         "Address": "",
@@ -2541,14 +1907,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(252) 333-4582",
         "Email": "coastalnco@gmail.com",
-        "Certified": "9/27/2017",
-        "Crops": "Corn, Soybean, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/27/2017"
       },
       {
-        "id": 160,
+        "id": 159,
         "Vendor": "Coble, Alan",
         "Contact": "Alan Coble",
         "Address": "1701 Patterson Grove Road",
@@ -2557,14 +1919,10 @@ module.exports = {
         "Zip": 27316,
         "Phone": "336-8241-5232",
         "Email": "",
-        "Certified": "3/3/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/3/2017"
       },
       {
-        "id": 161,
+        "id": 160,
         "Vendor": "Coble, William dba Coble Farm",
         "Contact": "William Coble",
         "Address": "557 Center Church Road",
@@ -2573,14 +1931,10 @@ module.exports = {
         "Zip": 27312,
         "Phone": "336-254-0520",
         "Email": "",
-        "Certified": "3/23/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/23/2017"
       },
       {
-        "id": 162,
+        "id": 161,
         "Vendor": "Coconut Organics, Inc. Dba Coconut Organics",
         "Contact": "George Metrik",
         "Address": "4 Celtic Drive",
@@ -2589,14 +1943,10 @@ module.exports = {
         "Zip": 28704,
         "Phone": "866-401-2626",
         "Email": "george@coconutorganics.com",
-        "Certified": "8/9/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coconut (Coconut Nectar), Coconut (CocoSalt - Chipotle), Coconut (CocoSalt - Chocolate), Coconut (CocoSalt - Original), Coconut (CocoSalt - Pepper), Coconut (Dark Chocolate Chocolate Coconut Chips), Coconut (Original Coconut Chips), Coconut (Spicy Chipotle Coconut Chips), Coconut Oil (Coconut Oil), Sugar (Coconut Sugar)"
+        "Certified": "8/9/2016"
       },
       {
-        "id": 163,
+        "id": 162,
         "Vendor": "Cohen, Murray",
         "Contact": "Murray Cohen",
         "Address": "688 Van Thomas Rd",
@@ -2605,14 +1955,10 @@ module.exports = {
         "Zip": 27312,
         "Phone": "919-742-4433",
         "Email": "murrayswife@aol.com",
-        "Certified": "8/27/2009",
-        "Crops": "Hay",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/27/2009"
       },
       {
-        "id": 164,
+        "id": 163,
         "Vendor": "Coleman Farms",
         "Contact": "Jason Coleman",
         "Address": "1782 Ross Wood Rd",
@@ -2621,14 +1967,10 @@ module.exports = {
         "Zip": 27370,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "9/8/2014",
-        "Crops": "",
-        "Livestock": "Laying Hens (Slaughter Eligible)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/8/2014"
       },
       {
-        "id": 165,
+        "id": 164,
         "Vendor": "Coley, Winston",
         "Contact": "Winston Coley",
         "Address": "4206 Jess Harckett Rd",
@@ -2637,14 +1979,10 @@ module.exports = {
         "Zip": 27233,
         "Phone": "336-707-3436",
         "Email": "winstoncoley@gmail.com",
-        "Certified": "9/23/2014",
-        "Crops": "Corn, Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/23/2014"
       },
       {
-        "id": 166,
+        "id": 165,
         "Vendor": "Colony Gums, Inc.",
         "Contact": "JC Cuadra",
         "Address": "",
@@ -2653,14 +1991,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(704) 226-9666",
         "Email": "jc.cuadra@colonygums.com",
-        "Certified": "1/14/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Acacia Gum (Gum Arabic), Agar, Glycerin (Non-Soy Glycerine), Locust Bean Gum"
+        "Certified": "1/14/2014"
       },
       {
-        "id": 167,
+        "id": 166,
         "Vendor": "Compton Farm Organics",
         "Contact": "Vaughn Compton",
         "Address": "1002 Hurdle Mills Rd",
@@ -2669,14 +2003,10 @@ module.exports = {
         "Zip": 27231,
         "Phone": "919-428-4351",
         "Email": "vaughn@comptonfarming.com",
-        "Certified": "8/27/2014",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/27/2014"
       },
       {
-        "id": 168,
+        "id": 167,
         "Vendor": "Conyers Farm",
         "Contact": "Harold Conyers",
         "Address": "8492 Colliers Chapel Church Road",
@@ -2685,14 +2015,10 @@ module.exports = {
         "Zip": 28356,
         "Phone": "910-980-6098",
         "Email": "",
-        "Certified": "3/6/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/6/2017"
       },
       {
-        "id": 169,
+        "id": 168,
         "Vendor": "Cott Beverages",
         "Contact": "",
         "Address": "4843 International Boulevard West",
@@ -2701,14 +2027,10 @@ module.exports = {
         "Zip": 27893,
         "Phone": "",
         "Email": "",
-        "Certified": "1/22/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/22/2016"
       },
       {
-        "id": 170,
+        "id": 169,
         "Vendor": "Cottle Organics Inc",
         "Contact": "Herbie Cottle",
         "Address": "190 Cottle Lane",
@@ -2717,14 +2039,10 @@ module.exports = {
         "Zip": 28458,
         "Phone": "910-289-5034",
         "Email": "hcottle4@yahoo.com",
-        "Certified": "7/28/2009",
-        "Crops": "Beets, Carrots, Onions, Potatoes (Yukon Gold), Radishes, Rutabaga, Sweet Potatoes, Turnips, Beans (Bush Beans, Snap Beans), Corn, Peas (Green Peas), Arugula, Cabbage, Collards, Kale, Lettuce, Basil, Cucumbers, Eggplants, Squash, Strawberries, Broccoli, Corn (Sweet Corn Seed), Mustard, Rye, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/28/2009"
       },
       {
-        "id": 171,
+        "id": 170,
         "Vendor": "Cottonman.com LLC",
         "Contact": "Butch Byrum",
         "Address": "136 Mavaton Road",
@@ -2733,14 +2051,10 @@ module.exports = {
         "Zip": 27932,
         "Phone": "(252) 562-4300",
         "Email": "",
-        "Certified": "10/25/2017",
-        "Crops": "Corn, Cotton",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/25/2017"
       },
       {
-        "id": 172,
+        "id": 171,
         "Vendor": "Counter Culture Coffee",
         "Contact": "Ethan Fogleman",
         "Address": "812 Mallard Ave",
@@ -2749,14 +2063,10 @@ module.exports = {
         "Zip": 27701,
         "Phone": "919-667-7777",
         "Email": "",
-        "Certified": "3/17/2009",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee"
+        "Certified": "3/17/2009"
       },
       {
-        "id": 173,
+        "id": 172,
         "Vendor": "Creative Snack Co., LLC",
         "Contact": "Lindsay Hancock",
         "Address": "241-B Burgess Rd",
@@ -2765,14 +2075,10 @@ module.exports = {
         "Zip": 27409,
         "Phone": "(336) 430-5436",
         "Email": "",
-        "Certified": "11/25/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Re-Pack Herbs, Toasted Coconut"
+        "Certified": "11/25/2015"
       },
       {
-        "id": 174,
+        "id": 173,
         "Vendor": "Currin Farms",
         "Contact": "Ansel Currin",
         "Address": "1686 Elam Currin Road",
@@ -2781,14 +2087,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-482-9119",
         "Email": "",
-        "Certified": "7/18/2016",
-        "Crops": "Flue Cured Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/18/2016"
       },
       {
-        "id": 175,
+        "id": 174,
         "Vendor": "D.G. Smith Farms, LLC",
         "Contact": "Mary Elizabeth Smith",
         "Address": "3771 Green Sea Road",
@@ -2797,14 +2099,10 @@ module.exports = {
         "Zip": 28441,
         "Phone": "919-740-3227",
         "Email": "",
-        "Certified": "5/16/2017",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/16/2017"
       },
       {
-        "id": 176,
+        "id": 175,
         "Vendor": "Dale Carpenter Farm",
         "Contact": "Dale Carpenter",
         "Address": "2450 McRae Avenue",
@@ -2813,14 +2111,10 @@ module.exports = {
         "Zip": 28170,
         "Phone": "330-447-4261",
         "Email": "tom@hilandnaturals.com",
-        "Certified": "9/8/2017",
-        "Crops": "",
-        "Livestock": "Turkeys",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/8/2017"
       },
       {
-        "id": 177,
+        "id": 176,
         "Vendor": "Dameron Farms",
         "Contact": "John Dameron",
         "Address": "5857 Park Springs Road",
@@ -2829,14 +2123,10 @@ module.exports = {
         "Zip": 27311,
         "Phone": "434-251-1652",
         "Email": "",
-        "Certified": "8/29/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/29/2016"
       },
       {
-        "id": 178,
+        "id": 177,
         "Vendor": "Daniel and Danny Byerly",
         "Contact": "Daniel And Danny Byerly",
         "Address": "5540 Oscar Lane",
@@ -2845,14 +2135,10 @@ module.exports = {
         "Zip": 27284,
         "Phone": "336-462-5816",
         "Email": "",
-        "Certified": "10/10/2016",
-        "Crops": "Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/10/2016"
       },
       {
-        "id": 179,
+        "id": 178,
         "Vendor": "Daniel, Martin",
         "Contact": "Martin Daniel",
         "Address": "1000 Long Mill Road",
@@ -2861,14 +2147,10 @@ module.exports = {
         "Zip": 27212,
         "Phone": "336-514-0173",
         "Email": "",
-        "Certified": "8/16/2017",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/16/2017"
       },
       {
-        "id": 180,
+        "id": 179,
         "Vendor": "Danny Furr",
         "Contact": "Danny Furr",
         "Address": "385 Phaniel Church Road",
@@ -2877,14 +2159,10 @@ module.exports = {
         "Zip": 28138,
         "Phone": "330-473-5555",
         "Email": "tom@hilandnaturals.com",
-        "Certified": "9/29/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/29/2017"
       },
       {
-        "id": 181,
+        "id": 180,
         "Vendor": "Darrell Mauldin",
         "Contact": "Darrell Mauldin",
         "Address": "20942 Biles Road",
@@ -2893,14 +2171,10 @@ module.exports = {
         "Zip": 28001,
         "Phone": "330-447-4261",
         "Email": "tom@hilandnaturals.com",
-        "Certified": "9/8/2017",
-        "Crops": "",
-        "Livestock": "Turkeys",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/8/2017"
       },
       {
-        "id": 182,
+        "id": 181,
         "Vendor": "David Johnson dba Rocky Acres",
         "Contact": "David Johnson",
         "Address": "4081 McLaurin Rd.",
@@ -2909,14 +2183,10 @@ module.exports = {
         "Zip": 27207,
         "Phone": "919-799-1371",
         "Email": "",
-        "Certified": "3/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/24/2017"
       },
       {
-        "id": 183,
+        "id": 182,
         "Vendor": "Davis, Eddie",
         "Contact": "Eddie Davis",
         "Address": "2877 Lonnie Gentry Road",
@@ -2925,14 +2195,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "336-504-9698",
         "Email": "",
-        "Certified": "8/10/2016",
-        "Crops": "Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/10/2016"
       },
       {
-        "id": 184,
+        "id": 183,
         "Vendor": "Davis, Rackley",
         "Contact": "Rackley Davis",
         "Address": "133 Poe Road",
@@ -2941,14 +2207,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-663-2603",
         "Email": "",
-        "Certified": "3/21/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/21/2017"
       },
       {
-        "id": 185,
+        "id": 184,
         "Vendor": "Dean Miller Farm",
         "Contact": "Thomas Furlough",
         "Address": "3639 Wyo Rd",
@@ -2957,14 +2219,10 @@ module.exports = {
         "Zip": 27055,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "1/17/2018",
-        "Crops": "",
-        "Livestock": "Hens, Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/17/2018"
       },
       {
-        "id": 186,
+        "id": 185,
         "Vendor": "Deaton, Lynn",
         "Contact": "Lynn Deaton",
         "Address": "6607 Erect Road",
@@ -2973,14 +2231,10 @@ module.exports = {
         "Zip": 27341,
         "Phone": "336-879-3647",
         "Email": "",
-        "Certified": "4/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/24/2017"
       },
       {
-        "id": 187,
+        "id": 186,
         "Vendor": "Depalo Foods, Inc. Dba Depalo Bakery",
         "Contact": "Enrico Piraino",
         "Address": "2010 Oaks Parkway",
@@ -2989,14 +2243,10 @@ module.exports = {
         "Zip": 28012,
         "Phone": "704-827-0245",
         "Email": "enricop@depalofoods.com",
-        "Certified": "11/4/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Pizza Dough (Frozen Dough), Pizza Dough (White)"
+        "Certified": "11/4/2015"
       },
       {
-        "id": 188,
+        "id": 187,
         "Vendor": "Derek J. Godwin",
         "Contact": "Curtis Godwin",
         "Address": "5855 Timothy Road",
@@ -3005,14 +2255,10 @@ module.exports = {
         "Zip": 28334,
         "Phone": "910-237-1814",
         "Email": "marytwilks@me.com",
-        "Certified": "10/16/2015",
-        "Crops": "Sweet Potatoes, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/16/2015"
       },
       {
-        "id": 189,
+        "id": 188,
         "Vendor": "Dickerson, Rodney",
         "Contact": "Rodney Dickerson",
         "Address": "5404 Hicksboro Rd",
@@ -3021,14 +2267,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "252-432-0963",
         "Email": "rdickerson5404@gmail.com",
-        "Certified": "9/27/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/27/2016"
       },
       {
-        "id": 190,
+        "id": 189,
         "Vendor": "Dixon And Sons",
         "Contact": "Jason Dixon",
         "Address": "4133A Highway 15 South",
@@ -3037,14 +2279,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-395-2739",
         "Email": "",
-        "Certified": "9/28/2015",
-        "Crops": "Sweet Potatoes, Cucumbers, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/28/2015"
       },
       {
-        "id": 191,
+        "id": 190,
         "Vendor": "Doby, James dba Billy Doby Farm",
         "Contact": "James Doby",
         "Address": "2450 Stanton Hill Road",
@@ -3053,14 +2291,10 @@ module.exports = {
         "Zip": 28326,
         "Phone": "910-245-2298",
         "Email": "",
-        "Certified": "4/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/24/2017"
       },
       {
-        "id": 192,
+        "id": 191,
         "Vendor": "Doby, James dba James Doby Farm",
         "Contact": "James Doby",
         "Address": "820 Red Hill Road",
@@ -3069,14 +2303,10 @@ module.exports = {
         "Zip": 28326,
         "Phone": "910-245-8511",
         "Email": "",
-        "Certified": "5/2/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/2/2017"
       },
       {
-        "id": 193,
+        "id": 192,
         "Vendor": "Don Pancho Authentic Mexican Foods",
         "Contact": "Kanjana Pankhum",
         "Address": "",
@@ -3085,14 +2315,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(252) 536-7333",
         "Email": "kanjanap@resers.com",
-        "Certified": "7/9/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tortillas (6\" Yellow Corn Thick), Tortillas (10\" Classic), Tortillas (10\" Flour), Tortillas (10\" Golden Wheat), Tortillas (10\" Homestyle), Tortillas (10\" White Flour Classic Tortillas), Tortillas (10\" Whole Wheat), Tortillas (6\" Yellow Corn), Tortillas (8\" Classic), Tortillas (8\" Homestyle), Tortillas (8\" White Flour Classic Tortillas)"
+        "Certified": "7/9/2014"
       },
       {
-        "id": 194,
+        "id": 193,
         "Vendor": "Double J",
         "Contact": "Jeffrey Jackson",
         "Address": "3480 Old Mt Olive Hwy",
@@ -3101,14 +2327,10 @@ module.exports = {
         "Zip": 28365,
         "Phone": "919-802-6759",
         "Email": "mparker@butterball.com",
-        "Certified": "7/26/2017",
-        "Crops": "",
-        "Livestock": "Turkeys",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/26/2017"
       },
       {
-        "id": 195,
+        "id": 194,
         "Vendor": "Dover Foods, Inc.",
         "Contact": "Letitia Fuller",
         "Address": "353 Banner Farm Road",
@@ -3117,14 +2339,10 @@ module.exports = {
         "Zip": 28759,
         "Phone": "828-891-6203",
         "Email": "",
-        "Certified": "4/8/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Flour, Grain"
+        "Certified": "4/8/2016"
       },
       {
-        "id": 196,
+        "id": 195,
         "Vendor": "Down 2 Earth Farms LLC Dba Down 2 Earth Farms",
         "Contact": "Cecilia Redding",
         "Address": "8115 New Sharon Church Road",
@@ -3133,14 +2351,10 @@ module.exports = {
         "Zip": 27572,
         "Phone": "919-522-2285",
         "Email": "cecilia@d2efarms.com",
-        "Certified": "8/27/2015",
-        "Crops": "Alliums, Arugula, Asparagus, Beans, Beets, Blueberries, Bok Choy, Broccoli, Brussels Sprouts, Cabbage, Carrots, Cauliflower, Cilantro, Clover, Cucurbits, Edamame, Eggplant, Fennel, Garlic, Hay, Herbs, Kale, Kohlrabi, Leafy Greens, Lettuces, Melons, Okra, Onions, Parsley, Potatoes, Radishes, Rye, Spinach, Squash (Summer), Squash (Winter), Sunchokes, Tomatoes, Turnips, Vegetables, Vetch",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/27/2015"
       },
       {
-        "id": 197,
+        "id": 196,
         "Vendor": "Dunn, Tim",
         "Contact": "Tim Dunn",
         "Address": "226 Dunn Ave",
@@ -3149,14 +2363,10 @@ module.exports = {
         "Zip": 27356,
         "Phone": "910-428-4262",
         "Email": "",
-        "Certified": "3/22/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/22/2017"
       },
       {
-        "id": 198,
+        "id": 197,
         "Vendor": "Dynamite Roasting Company, LLC",
         "Contact": "",
         "Address": "PO Box 331",
@@ -3165,14 +2375,10 @@ module.exports = {
         "Zip": 28711,
         "Phone": "828-243-4085",
         "Email": "andy@dynamiteroasting.com",
-        "Certified": "8/3/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Decaffeinated coffee, Roasted coffee"
+        "Certified": "8/3/2015"
       },
       {
-        "id": 199,
+        "id": 198,
         "Vendor": "E Sense Logistics",
         "Contact": "Kether Smith",
         "Address": "105 Persimmon Hill Lane",
@@ -3181,14 +2387,10 @@ module.exports = {
         "Zip": 27278,
         "Phone": "828-450-6558",
         "Email": "",
-        "Certified": "7/16/2015",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/16/2015"
       },
       {
-        "id": 200,
+        "id": 199,
         "Vendor": "Eagle Island Seafood",
         "Contact": "",
         "Address": "2500 US-421",
@@ -3197,14 +2399,10 @@ module.exports = {
         "Zip": 28401,
         "Phone": "910-762-1193",
         "Email": "",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
-        "id": 201,
+        "id": 200,
         "Vendor": "Eastern Carolina Organics",
         "Contact": "Trace Ramsey",
         "Address": "2210 East Pettigrew Street",
@@ -3213,14 +2411,10 @@ module.exports = {
         "Zip": 27703,
         "Phone": "919-542-3264",
         "Email": "",
-        "Certified": "11/19/2010",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Fruits, Vegetables"
+        "Certified": "11/19/2010"
       },
       {
-        "id": 202,
+        "id": 201,
         "Vendor": "ECOP, LLC",
         "Contact": "Darryl Dunn",
         "Address": "2015 NC Hwy 45 North",
@@ -3229,14 +2423,10 @@ module.exports = {
         "Zip": 27860,
         "Phone": "252-935-5553",
         "Email": "darryl.dunn@perdue.com",
-        "Certified": "4/20/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Soybean Oil, Soybean, Soybean Meal"
+        "Certified": "4/20/2015"
       },
       {
-        "id": 203,
+        "id": 202,
         "Vendor": "Eden Song",
         "Contact": "Paula Hall",
         "Address": "285 Tant Road",
@@ -3245,14 +2435,10 @@ module.exports = {
         "Zip": 27597,
         "Phone": "",
         "Email": "",
-        "Certified": "7/22/2013",
-        "Crops": "Wheat Grass",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/22/2013"
       },
       {
-        "id": 204,
+        "id": 203,
         "Vendor": "Eliza Farms",
         "Contact": "John Vorus",
         "Address": "",
@@ -3261,14 +2447,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(828) 577-0043",
         "Email": "elizafarms@gmail.com",
-        "Certified": "9/26/2017",
-        "Crops": "Lion's Mane, Mushroom, Oyster Mushroom, Pioppini Mushroom, Shiitake Mushroom",
-        "Livestock": "",
-        "Wildcrops": "Boletes Species Mushrooms, Chanterelle Mushroom, Chicken of the Woods Mushroom, Lion's Mane, Lobster Mushroom, Oyster Mushroom, Reishi Mushroom, Trees, Woodlands",
-        "Handling": ""
+        "Certified": "9/26/2017"
       },
       {
-        "id": 205,
+        "id": 204,
         "Vendor": "Elizabeth L. Franklin",
         "Contact": "Elizabeth Franklin",
         "Address": "",
@@ -3277,14 +2459,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(828) 622-3430",
         "Email": "elfrank@madison.main.nc.us",
-        "Certified": "10/29/2012",
-        "Crops": "Apple, Arnica, Basil, Blackberry, Blueberry, Butternut, Calendula, Calendula, Cherry, Chestnut, Currants, Ginkgo, Ginseng, Gotu Kola, Grindelia, Hawthornberry, Lemon Balm, Miscellaneous Herbs & Spices, Mulberry, Nettle, Parsley, Plum, Raspberry, Rose, Rosehips, Tulsi, Wineberry",
-        "Livestock": "",
-        "Wildcrops": "Ginseng, Nettle",
-        "Handling": ""
+        "Certified": "10/29/2012"
       },
       {
-        "id": 206,
+        "id": 205,
         "Vendor": "Emerson, Garry",
         "Contact": "Garry Emerson",
         "Address": "699 Lee Emerson Road",
@@ -3293,14 +2471,10 @@ module.exports = {
         "Zip": 27207,
         "Phone": "919-837-5936",
         "Email": "",
-        "Certified": "3/16/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/16/2017"
       },
       {
-        "id": 207,
+        "id": 206,
         "Vendor": "Englehard Seafood",
         "Contact": "",
         "Address": "269 Goshen Back Rd",
@@ -3309,14 +2483,10 @@ module.exports = {
         "Zip": 27824,
         "Phone": "252-925-1851",
         "Email": "",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
-        "id": 208,
+        "id": 207,
         "Vendor": "Enoch, Angelo",
         "Contact": "Angelo Enoch",
         "Address": "1142 Westmoreland Ct",
@@ -3325,14 +2495,10 @@ module.exports = {
         "Zip": 27217,
         "Phone": "336-214-3161",
         "Email": "",
-        "Certified": "10/15/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/15/2015"
       },
       {
-        "id": 209,
+        "id": 208,
         "Vendor": "Estridge, Tommy dba Deer Valley Farm",
         "Contact": "Tommy Estridge",
         "Address": "1519 Winfred Brady Rd",
@@ -3341,14 +2507,10 @@ module.exports = {
         "Zip": 27208,
         "Phone": "910-585-2599",
         "Email": "",
-        "Certified": "5/12/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Contract Service for Finishing of Broiler Chickens"
+        "Certified": "5/12/2017"
       },
       {
-        "id": 210,
+        "id": 209,
         "Vendor": "Fann Farms Inc",
         "Contact": "Kent Fann",
         "Address": "220 Oscar Tate Rd",
@@ -3357,14 +2519,10 @@ module.exports = {
         "Zip": 28385,
         "Phone": "910-564-2825",
         "Email": "kent.fann@gmail.com",
-        "Certified": "9/22/2017",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/22/2017"
       },
       {
-        "id": 211,
+        "id": 210,
         "Vendor": "Farfields, LLC",
         "Contact": "George Jenkins",
         "Address": "807 North Main St",
@@ -3373,14 +2531,10 @@ module.exports = {
         "Zip": 27886,
         "Phone": "252-258-6709",
         "Email": "georgegjenkins@gmail.com",
-        "Certified": "10/9/2014",
-        "Crops": "Sweet Potatoes, Cabbage, Corn",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/9/2014"
       },
       {
-        "id": 212,
+        "id": 211,
         "Vendor": "Farmers Produce",
         "Contact": "Chuck Corns",
         "Address": "111 Imperial Drive",
@@ -3389,14 +2543,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-775-4474",
         "Email": "don.crandall@svorganic.com",
-        "Certified": "3/19/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Contract Service for Air Tempering of Frozen Organic Meat and Poultry"
+        "Certified": "3/19/2015"
       },
       {
-        "id": 213,
+        "id": 212,
         "Vendor": "FarmPak Products LLC",
         "Contact": "Jose Calderon",
         "Address": "7840 Old Bailey Highway",
@@ -3405,30 +2555,10 @@ module.exports = {
         "Zip": 27882,
         "Phone": "252-459-3101",
         "Email": "",
-        "Certified": "11/7/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Broker/Trader for Organic Produce, FarmPak Organic Sweet Potatoes"
+        "Certified": "11/7/2017"
       },
       {
-        "id": 214,
-        "Vendor": "Faucette Farms",
-        "Contact": "Mike & Tyler Faucette",
-        "Address": "5112 Hwy 150 East",
-        "City": "Browns Summit",
-        "State": "North Carolina",
-        "Zip": 27214,
-        "Phone": "336-669-5262",
-        "Email": "mike@faucettefarms.com",
-        "Certified": "1/20/2012",
-        "Crops": "Sweet Potatoes, Pecans, Nursery/Starts/Flowers/Trees: Transplants (Tobacco, Sweet Potato), Blueberries, Blueberries, Strawberries, Corn (Sweet Corn), Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
-      },
-      {
-        "id": 215,
+        "id": 213,
         "Vendor": "Faucette, Phillip W,  II",
         "Contact": "Philip Faucette II",
         "Address": "7725 Friendship Church Rd",
@@ -3437,14 +2567,10 @@ module.exports = {
         "Zip": 27214,
         "Phone": "336-337-9074",
         "Email": "fivestarturf@triad.twcbc.com",
-        "Certified": "10/7/2015",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/7/2015"
       },
       {
-        "id": 216,
+        "id": 214,
         "Vendor": "Ferrell, Joseph",
         "Contact": "Joseph Ferrell",
         "Address": "419A Dixon Road",
@@ -3453,14 +2579,10 @@ module.exports = {
         "Zip": 27521,
         "Phone": "919-868-2912",
         "Email": "",
-        "Certified": "3/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/24/2017"
       },
       {
-        "id": 217,
+        "id": 215,
         "Vendor": "Fields, Hank dba Fields Family Farm",
         "Contact": "Hank Fields",
         "Address": "1381 Cool Springs Road",
@@ -3469,14 +2591,10 @@ module.exports = {
         "Zip": 28327,
         "Phone": "910-464-4157",
         "Email": "",
-        "Certified": "3/27/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/27/2017"
       },
       {
-        "id": 218,
+        "id": 216,
         "Vendor": "Fishel Organic Farm LLC",
         "Contact": "Sanford H. Fishel III",
         "Address": "1461 John Halsey Rd.",
@@ -3485,14 +2603,10 @@ module.exports = {
         "Zip": 28631,
         "Phone": "336-384-9688",
         "Email": "shfishel@gmail.com",
-        "Certified": "6/17/2015",
-        "Crops": "Asparagus, Beans, Beets, Brassicas, Broccoli, Cabbage, Cauliflower, Chard, Corn, Fallow, Kale, Kohlrabi, Leafy Greens, Okra, Peas (Fresh), Peppers, Potatoes, Radishes, Squash, Squash (Summer), Squash (Winter), Sweet Potatoes, Tomatoes, Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/17/2015"
       },
       {
-        "id": 219,
+        "id": 217,
         "Vendor": "Fisher Farms Partnership",
         "Contact": "Beth Taylor",
         "Address": "11735 Watson Seed Farm Rd.",
@@ -3501,14 +2615,10 @@ module.exports = {
         "Zip": 27891,
         "Phone": "252-442-6235",
         "Email": "cpc.annestrickland@yahoo.com",
-        "Certified": "10/13/2014",
-        "Crops": "Sweet Potatoes, Soybeans, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/13/2014"
       },
       {
-        "id": 220,
+        "id": 218,
         "Vendor": "Flagstone Foods, Inc.",
         "Contact": "Bobbi Soukup",
         "Address": "",
@@ -3517,14 +2627,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(612) 222-3858",
         "Email": "bobbi.soukup@amportfoods.com",
-        "Certified": "6/4/2013",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Almonds (Dry Roasted Salted Almonds), Almonds (Unroasted Unsalted Whole Almonds), Cashews (Unroasted Unsalted Whole Cashews), Trail Mix, Trail Mix (Cranberries, Almonds, & Cashews Trail Mix), Trail Mix (Cranberries, Dark Chocolate, Almonds, & Cashews Trail Mix), Trail Mix (Dark Chocolate, Cherries, & Walnuts Trail Mix), Trail Mix (Raisins, Pepitas, Dark Chocolate, & Almonds Trail Mix)"
+        "Certified": "6/4/2013"
       },
       {
-        "id": 221,
+        "id": 219,
         "Vendor": "Flavor 1St Growers & Packers, LLC",
         "Contact": "Kelly Williams",
         "Address": "331 Banner Farm Road",
@@ -3533,14 +2639,10 @@ module.exports = {
         "Zip": 28759,
         "Phone": "828-890-3630",
         "Email": "",
-        "Certified": "9/17/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tomatoes"
+        "Certified": "9/17/2014"
       },
       {
-        "id": 222,
+        "id": 220,
         "Vendor": "Fogleman Dairy",
         "Contact": "Katie Johnson",
         "Address": "9144 Sylvan Road",
@@ -3549,14 +2651,10 @@ module.exports = {
         "Zip": 27298,
         "Phone": "",
         "Email": "",
-        "Certified": "10/31/2017",
-        "Crops": "Pasture",
-        "Livestock": "Broilers, all eligible for organic slaughter",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/31/2017"
       },
       {
-        "id": 223,
+        "id": 221,
         "Vendor": "Foley Farms LLC",
         "Contact": "Kenneth Foley",
         "Address": "701 Small Road",
@@ -3565,14 +2663,10 @@ module.exports = {
         "Zip": 28439,
         "Phone": "910-207-1115",
         "Email": "kgfoleyfarms@gmail.com",
-        "Certified": "10/13/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/13/2016"
       },
       {
-        "id": 224,
+        "id": 222,
         "Vendor": "Fork Mountain Farm",
         "Contact": "Thomas Charles",
         "Address": "525 South Fork Rd.",
@@ -3581,14 +2675,10 @@ module.exports = {
         "Zip": 28753,
         "Phone": "828-649-3373",
         "Email": "forkmountainfarm@hughes.net",
-        "Certified": "9/11/2015",
-        "Crops": "Apples, Arugula, Asparagus, Basil, Beans, Bell Peppers, Berries, Blueberries, Brussels Sprouts, Butternut Squash, Cabbage, Carrots, Cauliflower, Chiles, Dill, Fallow, Fennel, Frisee, Ginger, Kale, Leeks, Lettuces, Mustard Greens, Parsley, Peas (Fresh), Pumpkins, Radishes, Rutabaga, Squash (Summer), Tomatillos, Tomatoes (Cherry), Zucchini",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/11/2015"
       },
       {
-        "id": 225,
+        "id": 223,
         "Vendor": "Four Lanes Farms LLC",
         "Contact": "Daniel Adcock",
         "Address": "1285 Thomas Green Rd",
@@ -3597,14 +2687,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "919-395-2739",
         "Email": "",
-        "Certified": "9/24/2015",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/24/2015"
       },
       {
-        "id": 226,
+        "id": 224,
         "Vendor": "Fox Gap, LLC",
         "Contact": "Gary Mccurry",
         "Address": "4843 US 64",
@@ -3613,14 +2699,10 @@ module.exports = {
         "Zip": 28655,
         "Phone": "828-443-4338",
         "Email": "",
-        "Certified": "10/1/2015",
-        "Crops": "Apples, Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/1/2015"
       },
       {
-        "id": 227,
+        "id": 225,
         "Vendor": "Frank Fowlkes II & Ethan Fowlkes",
         "Contact": "Frank And Ethan Fowlkes",
         "Address": "2808 Hwy 62N",
@@ -3629,14 +2711,10 @@ module.exports = {
         "Zip": 27212,
         "Phone": "336-514-0704",
         "Email": "",
-        "Certified": "9/25/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/25/2015"
       },
       {
-        "id": 228,
+        "id": 226,
         "Vendor": "Frank Stephen Cabe/Flow-Water Farm",
         "Contact": "Thomas Furlough",
         "Address": "319 and 484 Creekwater Rd.",
@@ -3645,14 +2723,10 @@ module.exports = {
         "Zip": 28676,
         "Phone": "919-496-5121",
         "Email": "",
-        "Certified": "9/2/2015",
-        "Crops": "",
-        "Livestock": "Laying Hens, Nest Run Eggs",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/2/2015"
       },
       {
-        "id": 229,
+        "id": 227,
         "Vendor": "Frazier Farm",
         "Contact": "Marion E Frazier",
         "Address": "1643 Mulberry Academy Street",
@@ -3661,14 +2735,10 @@ module.exports = {
         "Zip": 27248,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "11/9/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/9/2016"
       },
       {
-        "id": 230,
+        "id": 228,
         "Vendor": "Frederick D. Inglis",
         "Contact": "Frederick Inglis",
         "Address": "5038 Somerset Lane",
@@ -3677,30 +2747,22 @@ module.exports = {
         "Zip": 27932,
         "Phone": "252-482-2987",
         "Email": "",
-        "Certified": "4/6/2006",
-        "Crops": "Fruit, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/6/2006"
       },
       {
-        "id": 231,
+        "id": 229,
         "Vendor": "Fresh Fountain Farms, LLC",
         "Contact": "Leslie Davidson",
-        "Address": "",
-        "City": "",
-        "State": "",
-        "Zip": null,
+        "Address": "540 Mock Mill Road",
+        "City": "Statesville",
+        "State": "North Carolina",
+        "Zip": 28677,
         "Phone": "(704) 902-4361",
         "Email": "fosterdavidson@yahoo.com",
-        "Certified": "9/15/2015",
-        "Crops": "Asparagus, Blackberry, Blueberry, Garlic, Hairy Vetch, Hay, Muscadine, Onion, Pasture, Potato, Raspberry, Wheat",
-        "Livestock": "Chickens-For Egg Production, Goats (Dairy - Converted - Dairy Only), Goats (Dairy - Last Third Gestation - Slaughter Eligible), Sheep-For Slaughter",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/15/2015"
       },
       {
-        "id": 232,
+        "id": 230,
         "Vendor": "Freshouse LLC",
         "Contact": "Charlie Lester",
         "Address": "311 Long Meadow Drive",
@@ -3709,14 +2771,10 @@ module.exports = {
         "Zip": 28147,
         "Phone": "631 591 5270",
         "Email": "clester@freshouse.com",
-        "Certified": "12/18/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Red Potatoes, Gold Potatoes, Russet Potatoes, yellow Onions, Lemons, Oranges"
+        "Certified": "12/18/2015"
       },
       {
-        "id": 233,
+        "id": 231,
         "Vendor": "Frye, Amy Lou dba Flint Hill Farm",
         "Contact": "Amy Lou Frye",
         "Address": "2864 Jess Smith Road",
@@ -3725,14 +2783,10 @@ module.exports = {
         "Zip": 27350,
         "Phone": "336-442-4251",
         "Email": "",
-        "Certified": "5/2/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/2/2017"
       },
       {
-        "id": 234,
+        "id": 232,
         "Vendor": "Fuller Farms, Inc.",
         "Contact": "Gary Fuller",
         "Address": "2694 Hester Road",
@@ -3741,14 +2795,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-939-1049",
         "Email": "",
-        "Certified": "7/5/2012",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/5/2012"
       },
       {
-        "id": 235,
+        "id": 233,
         "Vendor": "Funk, Derek dba Deep River Farm",
         "Contact": "Funk Derek",
         "Address": "422 Faith Rock Road",
@@ -3757,14 +2807,10 @@ module.exports = {
         "Zip": 27248,
         "Phone": "336-953-6675",
         "Email": "",
-        "Certified": "3/15/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/15/2017"
       },
       {
-        "id": 236,
+        "id": 234,
         "Vendor": "G.A.S. Distributors",
         "Contact": "Ric Goodman",
         "Address": "70 Bobwhite Hill",
@@ -3773,30 +2819,22 @@ module.exports = {
         "Zip": 28748,
         "Phone": "828-683-9884",
         "Email": "",
-        "Certified": "7/29/2003",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee, Dehydrated Banana and Pineapple"
+        "Certified": "7/29/2003"
       },
       {
-        "id": 237,
+        "id": 235,
         "Vendor": "Gaia Herbs, Inc.",
         "Contact": "Moses Mccord",
-        "Address": "",
-        "City": "",
-        "State": "",
-        "Zip": null,
+        "Address": "101 Gaia Herbs Rd",
+        "City": "Brevard",
+        "State": "North Carolina",
+        "Zip": 28712,
         "Phone": "(828) 577-3064",
         "Email": "mmccord@gaiaherbs.com",
-        "Certified": "4/29/2002",
-        "Crops": "Ashwaganda, Astragalus, Basil, Black Walnut Hulls, Blue Vervain, California Poppy, Echinacea, Fallow, Feverfew, Ginkgo, Gotu Kola, Grindelia, Hawthorn, Hay, Herb Seeds (Various), Herbs Transplants (Various), Lemon Balm, Marshmallow, Nettle, Oats, Oats, Passion Flower, Peppermint, Skullcap, Valerian",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Blends (Macaboost Cacao-Ginger), Blends (Macaboost Vanilla-Chai), Blends (PlantForce Liquid Iron), Blends (PlantForce Liquid Iron Honey Blend), Burdock Root Extract, Capsules (Sleep & Relax), Chaste Tree Berry Extract, Cinnamon Bark Extract, Dandelion Leaf and Root Extract, Dandelion Root Extract, Echinacea Supreme Extract, Elderberry Extract, Ginger Root Extract, Ginkgo Leaf Extract, Gotu Kola Leaf and Root Extract, Herbal Syrups (Black Elderberry Nighttime Syrup), Herbal Syrups (Black Elderberry Syrup), Herbal Syrups (Black Elderberry Syrups (Gaia Kids)), Herbal Syrups (Bronchial Welness for Kids (Gaia Kids)), Herbal Syrups (Sleep & Relax Syrup (Gaia Kids)), Herbal Tea (Essential Tulsi), Herbal Tea (Hibiscus with Mandarin Orange), Herbal Tea (Lactation Support Tea), Herbal Tea (Natural Laxative), Herbal Tea (Sinus Comfort Tea), Herbal Tea (Sleep & Relax), Herbal Tea (Throat Shield), Holy Basil Extract, Honey (Plant Force Iron Honey Blend), Lemon Balm Extract, Maca Capsules (Maca Root Capsules), Maca Powder, Marshmallow Root Extract, Milk Thistle Extract, Misc. (Golden Milk), Nettle Leaf Extract, Olive Extract, Oral Spray (Fresh Breath), Oregano Leaf Extract, Passionflower Vine Extract, Peppermint Extract, Skullcap Extract, Star Anise (Star Anise Extract), Tablets (Spirulina), Triphala Capsules, Ulva Ursi Leaf Extract, Valerian Root Extract, Wild Oats Milky Seed Extract, Wormwood Herb Extract"
+        "Certified": "4/29/2002"
       },
       {
-        "id": 238,
+        "id": 236,
         "Vendor": "Garlands Fresh Seafood Inc",
         "Contact": "",
         "Address": "2 Fisherman Rd",
@@ -3805,14 +2843,10 @@ module.exports = {
         "Zip": 28462,
         "Phone": "910-842-6492",
         "Email": "",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
-        "id": 239,
+        "id": 237,
         "Vendor": "Gaster, Chris",
         "Contact": "Chris Gaster",
         "Address": "232 Holder Rd",
@@ -3821,14 +2855,10 @@ module.exports = {
         "Zip": 27332,
         "Phone": "252-532-7195",
         "Email": "",
-        "Certified": "10/15/2015",
-        "Crops": "Corn, Rye, Soybeans, Tobacco, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/15/2015"
       },
       {
-        "id": 240,
+        "id": 238,
         "Vendor": "GC And W Hill Farms",
         "Contact": "Gary Hill",
         "Address": "6204 Pleasant Grove Church Rd.",
@@ -3837,14 +2867,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-813-3498",
         "Email": "",
-        "Certified": "9/23/2013",
-        "Crops": "Sweet Potatoes, Cucumbers, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/23/2013"
       },
       {
-        "id": 241,
+        "id": 239,
         "Vendor": "Gentle Harmony Farm, LLC",
         "Contact": "Pamela Leonard",
         "Address": "3354 Friendship Church Rd.",
@@ -3853,14 +2879,10 @@ module.exports = {
         "Zip": 29275,
         "Phone": "336-787-3223",
         "Email": "pbleonard@ptmc.net",
-        "Certified": "7/31/2012",
-        "Crops": "Basil (Tulsi), Burdock, Calendula, Comfrey, Dandelion, Echinacea, Ginseng (Ashwagandha/Indian), Hyssop, Lemon Balm, Mint (Mountain), Mullein, Peppermint, Sage (Red), Yarrow (Official), Buckwheat, Oats, Sunflowers (Hopi Black Dye), Motherwort, Feverfew, Plantains, Poppy Seed, Spilanthes, Yellow Dock, Peas:  Cow Peas- Iron and Clay",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/31/2012"
       },
       {
-        "id": 242,
+        "id": 240,
         "Vendor": "Gililand, Joseph B.",
         "Contact": "Joseph Gilland",
         "Address": "1010 Wilson Road",
@@ -3869,14 +2891,10 @@ module.exports = {
         "Zip": 27252,
         "Phone": "919-837-5564",
         "Email": "",
-        "Certified": "4/18/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/18/2017"
       },
       {
-        "id": 243,
+        "id": 241,
         "Vendor": "Glosson, John S.",
         "Contact": "John S. Glosson",
         "Address": "9680 NC 87 North",
@@ -3885,14 +2903,10 @@ module.exports = {
         "Zip": 27312,
         "Phone": "919-542-2459",
         "Email": "",
-        "Certified": "3/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/24/2017"
       },
       {
-        "id": 244,
+        "id": 242,
         "Vendor": "Gold Knob Farms",
         "Contact": "Shane Whitaker",
         "Address": "2991 Providence Church Rd",
@@ -3901,14 +2915,10 @@ module.exports = {
         "Zip": 27233,
         "Phone": "336-215-2285",
         "Email": "swwhitakerfarms@bellsouth.net",
-        "Certified": "9/25/2009",
-        "Crops": "Corn, Rye, Soybeans, Tobacco, Wheat, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/25/2009"
       },
       {
-        "id": 245,
+        "id": 243,
         "Vendor": "Golding Farms Foods, Inc.",
         "Contact": "",
         "Address": "6061 Gun Club Rd.",
@@ -3917,14 +2927,10 @@ module.exports = {
         "Zip": 27103,
         "Phone": "",
         "Email": "",
-        "Certified": "8/6/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Black Garlic Aoili, Honey, Molasses, Piri Piri Aoili, Virgin Coconut Oil, Worcestershire Sauce"
+        "Certified": "8/6/2015"
       },
       {
-        "id": 246,
+        "id": 244,
         "Vendor": "Grantham Farms, Inc.",
         "Contact": "Tommy & Annie Grantham",
         "Address": "2219 O'Berry Rd",
@@ -3933,14 +2939,10 @@ module.exports = {
         "Zip": 28365,
         "Phone": "919-922-9104",
         "Email": "granthamdaisy@yahoo.com",
-        "Certified": "7/16/2010",
-        "Crops": "Sweet Potatoes, Soybeans, Tobacco, Sweet Potato Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/16/2010"
       },
       {
-        "id": 247,
+        "id": 245,
         "Vendor": "Gray, Matthew",
         "Contact": "Matthew Gray",
         "Address": 417159,
@@ -3949,14 +2951,10 @@ module.exports = {
         "Zip": 27207,
         "Phone": "919-842-7608",
         "Email": "",
-        "Certified": "5/9/2015",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/9/2015"
       },
       {
-        "id": 248,
+        "id": 246,
         "Vendor": "Grayrock Farms LLC",
         "Contact": "Shane` Whit",
         "Address": "74 Chambers Loop Rd",
@@ -3965,14 +2963,10 @@ module.exports = {
         "Zip": 27283,
         "Phone": "336-592-3030",
         "Email": "",
-        "Certified": "8/16/2017",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/16/2017"
       },
       {
-        "id": 249,
+        "id": 247,
         "Vendor": "Great American Snacks",
         "Contact": "",
         "Address": "2701 Simpson Street",
@@ -3981,14 +2975,10 @@ module.exports = {
         "Zip": 28112,
         "Phone": "",
         "Email": "",
-        "Certified": "12/19/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Broccoli Fries, Chickpea Cauliflower Tots, Mozzarella Cheese Sticks, Sweet Potato and Broccoli Tots"
+        "Certified": "12/19/2016"
       },
       {
-        "id": 250,
+        "id": 248,
         "Vendor": "Great Eastern Sun Trading Co. Inc. Dba Macro Direct Wholesale",
         "Contact": "",
         "Address": "92 McIntosh Road",
@@ -3997,14 +2987,10 @@ module.exports = {
         "Zip": 28806,
         "Phone": "",
         "Email": "",
-        "Certified": "4/29/2002",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Arame, Pacific, Brown Rice Miso, Brown Rice Syrup, Canadian Dulse, Whole, Chickpea Miso, Chickpea Miso Powder, Freeze Dried, Milled, Chickpea Miso Powder, Freeze Dried, Unmilled, Country Barley Miso, Earl Grey Tea, Teabags, English Breakfast Tea, Teabags, Garlic, Chopped, Garlic, Pureed, Garlic, Sliced, Ginger, Chopped, Ginger, Pureed, Japanese Hojicha Roasted Green Tea, Tea Bag Cut, Japanese Hojicha Roasted Green Tea, Teabags, Japanese Kukicha Twig Tea, Loose, Japanese Kukicha Twig Tea, Tea Bag Cut, Japanese Kukicha Twig Tea, Teabags, Japanese Sencha Green Tea, Tea Bag Cut, Japanese Sencha Green Tea, Teabags, Kuzu, Mellow White Miso, Mellow White Miso Powder, Freeze Dried, Milled, Mellow White Miso Powder, Freeze Dried, Unmilled, Mikawa Mirin, Miso Tamari, Miso Tamari, Nori Pacific, Flakes Toasted, Nori Pacific, Flakes Untoasted, Nori Pacific, Hoshi Untoasted, Nori Pacific, Sushi Toasted, Nori Snack, Silver Grade Spicy, Ready to Eat, Aloo Matar, Ready to Eat, Chana Masala, Ready to Eat, Dal Makhani, Ready to Eat, Dal Tadka, Ready to Eat, Punjabi Chhole, Ready to Eat, Vegetable Biryani, Sesame Oil, Toasted, Sesame Seeds, Black, Shiitake Mushrooms, Dried Whole, Soba Noodles, Sweet White Miso, Sweet White Miso Powder, Freeze Dried, Milled, Sweet White Miso Powder, Freeze Dried, Unmilled, Traditional Red Miso, Traditional Red Miso Powder, Freeze Dried, Milled, Traditional Red Miso Powder, Freeze Dried, Unmilled, Traditional Whole Wheat Lomein Noodles, Traditional Whole Wheat Udon Noodles, Umeboshi Pickled Plums (Ryujin)"
+        "Certified": "4/29/2002"
       },
       {
-        "id": 251,
+        "id": 249,
         "Vendor": "Green Acres Farm Inc",
         "Contact": "Kelly Sink",
         "Address": "5740 Hohn Ct",
@@ -4013,14 +2999,10 @@ module.exports = {
         "Zip": 27263,
         "Phone": "336-906-4166",
         "Email": "",
-        "Certified": "12/16/2016",
-        "Crops": "Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/16/2016"
       },
       {
-        "id": 252,
+        "id": 250,
         "Vendor": "Green Heart Gardens",
         "Contact": "Lorri Bura",
         "Address": "",
@@ -4029,14 +3011,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(828) 633-2071",
         "Email": "lorreiki@aol.com",
-        "Certified": "8/16/2016",
-        "Crops": "Agrimony, American Wormseed, Angelica, Arnica, Astragalus, Balloon Vine, Basil, Basil, Blessed Thistle, Blue Vervain, Boneset, Borage, Buckwheat, Calendula, California Poppy, Castor, Catnip, Cayenne, Chamomile, Comfrey, Cone Flower, Daisy, Dandelion, Dill, Echinacea, Echinacea Augustifolia, Elecampane, Feverfew, Ginseng, Goldenseal, Greater Celandine, Henbane, Hops, Horehound, Horseradish, Horsetail, Horseweed, Hyssop, Jiaogulan, Joe-Pye Weed, Lambs Quarter, Lemon Balm, Marjoram, Marshmallow, Milk Thistle, Milkweed, Motherwort, Nasturtium, Nettle, Pansy, Passion Flower, Pennyroyal, Purslane, Sage, Self-heal, Skullcap, St. John's Wort, Stevia, Sunflower, Tansy Ragwort, Tobacco, Usnea Barbata, Valerian, Violet, Wormwood, Yarrow",
-        "Livestock": "",
-        "Wildcrops": "Black Cohosh, Bloodroot, Cardinal Flower, Cohosh, Elderberry, Geranium, Ginger, Goldenrod, Joe-Pye Weed, Lambs Quarter, Mayapple, Mullein, Mustard, Plantain, Poison Ivy, Red Clover (Trifolium pratense), Usnea Barbata, Violet, Witch Hazel, Yarrow",
-        "Handling": ""
+        "Certified": "8/16/2016"
       },
       {
-        "id": 253,
+        "id": 251,
         "Vendor": "Green Life, LLC",
         "Contact": "Julia Burbel",
         "Address": "1890 Barkley Rd",
@@ -4045,14 +3023,10 @@ module.exports = {
         "Zip": 28107,
         "Phone": "704-301-7986",
         "Email": "green_life_online@yahoo.com",
-        "Certified": "2/23/2010",
-        "Crops": "Wheatgrass",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/23/2010"
       },
       {
-        "id": 254,
+        "id": 252,
         "Vendor": "Green, Cassius Jr dba Cassius Green Farms",
         "Contact": "Cassius Green Jr",
         "Address": "1338 Silk Hope Rd",
@@ -4061,14 +3035,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-663-3382",
         "Email": "",
-        "Certified": "3/28/2017",
-        "Crops": "",
-        "Livestock": "Broilers",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/28/2017"
       },
       {
-        "id": 255,
+        "id": 253,
         "Vendor": "Greene's Farms, Inc.",
         "Contact": "Tim Greene",
         "Address": "New Way Roa",
@@ -4077,14 +3047,10 @@ module.exports = {
         "Zip": 28607,
         "Phone": "828-963-3600",
         "Email": "",
-        "Certified": "8/29/2007",
-        "Crops": "Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/29/2007"
       },
       {
-        "id": 256,
+        "id": 254,
         "Vendor": "GREENOLOGY PRODUCTS, Inc",
         "Contact": "",
         "Address": "8305 Falls of Neuse Rd., Ste 206",
@@ -4093,14 +3059,10 @@ module.exports = {
         "Zip": 27615,
         "Phone": "(919) 518-0908",
         "Email": "shanna@greenologyproducts.com",
-        "Certified": "5/26/2011",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Fabric softener, Liquid multisurface cleaner, Washing detergent"
+        "Certified": "5/26/2011"
       },
       {
-        "id": 257,
+        "id": 255,
         "Vendor": "Greentown Farms, Inc.",
         "Contact": "Tim Klaumann",
         "Address": "459 Greentown Road",
@@ -4109,14 +3071,10 @@ module.exports = {
         "Zip": 28585,
         "Phone": "252-637-2684",
         "Email": "",
-        "Certified": "10/18/2016",
-        "Crops": "Tomatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/18/2016"
       },
       {
-        "id": 258,
+        "id": 256,
         "Vendor": "Greenville Loop Seafood",
         "Contact": "",
         "Address": "5830 Greenville Loop Rd",
@@ -4125,14 +3083,10 @@ module.exports = {
         "Zip": 28409,
         "Phone": "910-791-1142",
         "Email": "",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
-        "id": 259,
+        "id": 257,
         "Vendor": "Groninger, Tommy",
         "Contact": "Tommy Groninger",
         "Address": "6453 Beulah Church Road",
@@ -4141,14 +3095,10 @@ module.exports = {
         "Zip": 27298,
         "Phone": "336-685-4198",
         "Email": "",
-        "Certified": "3/4/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/4/2017"
       },
       {
-        "id": 260,
+        "id": 258,
         "Vendor": "Gross Farms Enterprises, LLC",
         "Contact": "John Gross",
         "Address": "1606 Pickett Rd",
@@ -4157,14 +3107,10 @@ module.exports = {
         "Zip": 27332,
         "Phone": "919-499-7339",
         "Email": "johngross@grossfarms.com",
-        "Certified": "9/9/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/9/2015"
       },
       {
-        "id": 261,
+        "id": 259,
         "Vendor": "Grover Smith Farm",
         "Contact": "Grover Smith",
         "Address": "397 G & K Farm Rd",
@@ -4173,14 +3119,10 @@ module.exports = {
         "Zip": 27534,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "2/4/2011",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/4/2011"
       },
       {
-        "id": 262,
+        "id": 260,
         "Vendor": "Grover William Douglas Jr./Douglas Farm",
         "Contact": "Grover Wiliam Douglas Jr.",
         "Address": "123 Johnson Cemetery Rd",
@@ -4189,14 +3131,10 @@ module.exports = {
         "Zip": 27332,
         "Phone": "919-395-2739",
         "Email": "",
-        "Certified": "9/11/2009",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/11/2009"
       },
       {
-        "id": 263,
+        "id": 261,
         "Vendor": "H & H Farms",
         "Contact": "Trish Hewitt",
         "Address": "189 Nash County Line Rd.",
@@ -4205,14 +3143,10 @@ module.exports = {
         "Zip": 27816,
         "Phone": "252-459-8983",
         "Email": "",
-        "Certified": "4/6/2004",
-        "Crops": "Flowers, Herbs, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/6/2004"
       },
       {
-        "id": 264,
+        "id": 262,
         "Vendor": "H. Frank Grainger Farm",
         "Contact": "Brent Watts",
         "Address": "1\t2072 Sidney Cherry GroveRd",
@@ -4221,14 +3155,10 @@ module.exports = {
         "Zip": 28432,
         "Phone": "910-840-0213",
         "Email": "",
-        "Certified": "7/7/2017",
-        "Crops": "Barley, corn, soybeans, tobacco, tobacco seedlings, wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/7/2017"
       },
       {
-        "id": 265,
+        "id": 263,
         "Vendor": "Haag & Sons Seafood",
         "Contact": "",
         "Address": "7901 E Oak Island Dr",
@@ -4237,14 +3167,10 @@ module.exports = {
         "Zip": 28465,
         "Phone": "910-278-1234",
         "Email": "fishmongeroki@gmail.com",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
-        "id": 266,
+        "id": 264,
         "Vendor": "Hackney, Jason dba Heritage Poultry",
         "Contact": "Jason Hackney",
         "Address": "2357 Bonlee School Road",
@@ -4253,14 +3179,10 @@ module.exports = {
         "Zip": 27207,
         "Phone": "918-837-5139",
         "Email": "",
-        "Certified": "4/5/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/5/2017"
       },
       {
-        "id": 267,
+        "id": 265,
         "Vendor": "Hallman Farm, Inc.",
         "Contact": "Kelly Hallman",
         "Address": "993 Rawls Club Road",
@@ -4269,14 +3191,10 @@ module.exports = {
         "Zip": 27526,
         "Phone": "919-524-6262",
         "Email": "",
-        "Certified": "4/5/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/5/2017"
       },
       {
-        "id": 268,
+        "id": 266,
         "Vendor": "Ham Farms, Inc.",
         "Contact": "Mickey Holland",
         "Address": "90 Ham Produce Road",
@@ -4285,14 +3203,10 @@ module.exports = {
         "Zip": 28580,
         "Phone": "910-990-1626",
         "Email": "",
-        "Certified": "9/15/2016",
-        "Crops": "Sweet Potatoes, Squash",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/15/2016"
       },
       {
-        "id": 269,
+        "id": 267,
         "Vendor": "Ham Produce Company",
         "Contact": "Kris Radford",
         "Address": "963 Hwy 258 South",
@@ -4301,14 +3215,10 @@ module.exports = {
         "Zip": 28580,
         "Phone": "257-747-8200",
         "Email": "kris@hamfarms.com",
-        "Certified": "6/4/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Sweet Potatoes"
+        "Certified": "6/4/2015"
       },
       {
-        "id": 270,
+        "id": 268,
         "Vendor": "Hampton Blueberries Inc.",
         "Contact": "",
         "Address": "1296 Seven Creek Hwy.",
@@ -4317,14 +3227,10 @@ module.exports = {
         "Zip": 28472,
         "Phone": "",
         "Email": "",
-        "Certified": "3/17/2015",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/17/2015"
       },
       {
-        "id": 271,
+        "id": 269,
         "Vendor": "Hampton Farms",
         "Contact": "",
         "Address": "101 Vircar St.",
@@ -4333,14 +3239,10 @@ module.exports = {
         "Zip": 27877,
         "Phone": "",
         "Email": "",
-        "Certified": "5/20/2013",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Peanut Butter"
+        "Certified": "5/20/2013"
       },
       {
-        "id": 272,
+        "id": 270,
         "Vendor": "Hannah Forrest & Blueberries LLC",
         "Contact": "George Eakins",
         "Address": "2299 S NC Hwy 11",
@@ -4349,14 +3251,10 @@ module.exports = {
         "Zip": 28458,
         "Phone": "910-284-3559",
         "Email": "",
-        "Certified": "5/15/2017",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/15/2017"
       },
       {
-        "id": 273,
+        "id": 271,
         "Vendor": "Hare, Joy",
         "Contact": "Joy Hare",
         "Address": "3008 Spies Road",
@@ -4365,14 +3263,10 @@ module.exports = {
         "Zip": 27325,
         "Phone": "910-948-2082",
         "Email": "",
-        "Certified": "3/17/2014",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/17/2014"
       },
       {
-        "id": 274,
+        "id": 272,
         "Vendor": "Harland's Creek Farm",
         "Contact": "Judith Lessler",
         "Address": "97 Plantation Drive",
@@ -4381,14 +3275,10 @@ module.exports = {
         "Zip": 27312,
         "Phone": "919-542-4607",
         "Email": "lesslerjud@msn.com",
-        "Certified": "2/4/2010",
-        "Crops": "Beets, Carrots, Fennel, Garlic, Onions, Potatoes, Radishes, Sweet Potatoes, Turnips, Beans, Edamame, Green Beans, Okra, Peas, Nursery/Starts/Flowers/Trees: Flowers (Lilies, Marigold, Iris, Gladiolas,Phlox, Dahlia, Zinnia, Salvia), Arugula, Bok Choy, Cabbage, Chard, Collards, Kale, Kohlrabi, Basil, Chives, Cilantro, Dill, Lemon Balm, Lemon Verbena, Oregano, Parsley, Rosemary, Sage, Cucumbers, Eggplants, Pepper, Pumpkins, Squash, Tomatillos, Tomatoes, Zucchini, Sunflowers, Achillea, Agastache, Aquilegia, Asian Greens, Bee Balm, Celoisa, Helebores, Salad Mix",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/4/2010"
       },
       {
-        "id": 275,
+        "id": 273,
         "Vendor": "Harrington Brothers Poultry",
         "Contact": "Mike Harrington",
         "Address": "1508 Pumping Station Rd.",
@@ -4397,14 +3287,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-770-6507",
         "Email": "",
-        "Certified": "5/10/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/10/2017"
       },
       {
-        "id": 276,
+        "id": 274,
         "Vendor": "Harrington, Roy",
         "Contact": "Roy Harrington",
         "Address": "4802 Lake Hills Drive",
@@ -4413,14 +3299,10 @@ module.exports = {
         "Zip": 27896,
         "Phone": "919-775-9511",
         "Email": "roy@rccommodities.com",
-        "Certified": "10/30/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/30/2015"
       },
       {
-        "id": 277,
+        "id": 275,
         "Vendor": "Harris Teeter Inc Dba Hunter Farms",
         "Contact": "Gale Walton",
         "Address": "1900 North Main Street",
@@ -4429,14 +3311,10 @@ module.exports = {
         "Zip": 27262,
         "Phone": "",
         "Email": "",
-        "Certified": "2/17/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cream, Ice Cream: chocolate, coffee, mint chocolate chip, strawberry, vanilla, vanilla fudge swirl, Milk: Whole, 2%, 1%, skim, Sour Cream"
+        "Certified": "2/17/2014"
       },
       {
-        "id": 278,
+        "id": 276,
         "Vendor": "Harris, Douglas dba Ten O''Clock Farm",
         "Contact": "Douglas Harris",
         "Address": "4200 Dowd Road",
@@ -4445,14 +3323,10 @@ module.exports = {
         "Zip": 28327,
         "Phone": "910-690-1417",
         "Email": "",
-        "Certified": "4/27/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/27/2017"
       },
       {
-        "id": 279,
+        "id": 277,
         "Vendor": "Harvest Time Foods, Inc.",
         "Contact": "Bryan Grimes III",
         "Address": "",
@@ -4461,14 +3335,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(252) 746-6675",
         "Email": "bryan.grimes@harvesttimenc.com",
-        "Certified": "8/11/2008",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Dumpling (Flat Dumplings), Soup Base (Chicken Base 1006), Soup Base (Vegetable Base 939)"
+        "Certified": "8/11/2008"
       },
       {
-        "id": 280,
+        "id": 278,
         "Vendor": "Harvey Godfrey/Olde Carthage Farm",
         "Contact": "Jonathan Godfrey",
         "Address": "2270 US Hwy 15-510",
@@ -4477,14 +3347,10 @@ module.exports = {
         "Zip": 28327,
         "Phone": "919-770-5190",
         "Email": "",
-        "Certified": "4/30/2013",
-        "Crops": "Fruits & Vegetables and Flowers",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/30/2013"
       },
       {
-        "id": 281,
+        "id": 279,
         "Vendor": "Harvey Sholar",
         "Contact": "Harvey Sholar",
         "Address": "585 Bonham Rd",
@@ -4493,14 +3359,10 @@ module.exports = {
         "Zip": 28457,
         "Phone": "919-802-6759",
         "Email": "mparker@butterball.com",
-        "Certified": "9/20/2017",
-        "Crops": "",
-        "Livestock": "Turkeys",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/20/2017"
       },
       {
-        "id": 282,
+        "id": 280,
         "Vendor": "Hawkins, Ken",
         "Contact": "Ken Hawkins",
         "Address": "1885 Poindexter RD",
@@ -4509,14 +3371,10 @@ module.exports = {
         "Zip": 27541,
         "Phone": "336-583-5107",
         "Email": "cbhawkins@centurylink.net",
-        "Certified": "9/10/2015",
-        "Crops": "Soybeans, Tobacco, Transplants (Tobacco Transplants)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/10/2015"
       },
       {
-        "id": 283,
+        "id": 281,
         "Vendor": "Hearndon, Donald",
         "Contact": "Donald Herndon",
         "Address": "1225 Stout Acres Road",
@@ -4525,14 +3383,10 @@ module.exports = {
         "Zip": 27316,
         "Phone": "336-824-8202",
         "Email": "",
-        "Certified": "4/26/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/26/2017"
       },
       {
-        "id": 284,
+        "id": 282,
         "Vendor": "Herbal Innovations, LLC",
         "Contact": "Edward Fletcher",
         "Address": "151 Herbal Ingenuity Way",
@@ -4541,14 +3395,10 @@ module.exports = {
         "Zip": 28697,
         "Phone": "336-818-2332 x2006",
         "Email": "",
-        "Certified": "11/4/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Herb seeds/oils"
+        "Certified": "11/4/2015"
       },
       {
-        "id": 285,
+        "id": 283,
         "Vendor": "Herbal Innovations,LLC",
         "Contact": "Edward Fletcher",
         "Address": "151 Herbal Ingenuity Way",
@@ -4557,14 +3407,10 @@ module.exports = {
         "Zip": 28667,
         "Phone": "336-818-2332",
         "Email": "",
-        "Certified": "5/30/2017",
-        "Crops": "Herbs",
-        "Livestock": "",
-        "Wildcrops": "Herbs",
-        "Handling": ""
+        "Certified": "5/30/2017"
       },
       {
-        "id": 286,
+        "id": 284,
         "Vendor": "Herndon Hills Farm, Inc.",
         "Contact": "Nancy Herndon",
         "Address": "7110 Massey Chapel Rd.",
@@ -4573,14 +3419,10 @@ module.exports = {
         "Zip": 27713,
         "Phone": "919-225-8851",
         "Email": "",
-        "Certified": "3/27/2017",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/27/2017"
       },
       {
-        "id": 287,
+        "id": 285,
         "Vendor": "Hickory Meadows Organics",
         "Contact": "Peyton Mcdaniel",
         "Address": "12675 NC 48",
@@ -4589,14 +3431,10 @@ module.exports = {
         "Zip": 27891,
         "Phone": "252-266-6886",
         "Email": "pgmcdani@gmail.com",
-        "Certified": "10/23/2008",
-        "Crops": "Cucumbers, Squash (Butternut), Corn, Soybeans, Sweet Potatoes, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/23/2008"
       },
       {
-        "id": 288,
+        "id": 286,
         "Vendor": "Hickory Nut Gap Farm",
         "Contact": "Jamie Ager",
         "Address": "Sugar Hollow Orchard Dr.",
@@ -4605,14 +3443,10 @@ module.exports = {
         "Zip": 28730,
         "Phone": "828-628-1027",
         "Email": "jamie@hickorynutgapfarm.com",
-        "Certified": "8/18/2010",
-        "Crops": "Mushrooms, Asparagus, Apples, Blackberries, Blueberries, Raspberries",
-        "Livestock": "Breeding Eligible, Calves",
-        "Wildcrops": "",
-        "Handling": "Apples, Blackberries, Blueberries, Mushrooms, Raspberries, Hickory Nut Gap Meats, Sorting, Packaging On Farm Produce"
+        "Certified": "8/18/2010"
       },
       {
-        "id": 289,
+        "id": 287,
         "Vendor": "Hillshire Brands, Inc.",
         "Contact": "",
         "Address": "110 Sara Lee Road",
@@ -4621,14 +3455,10 @@ module.exports = {
         "Zip": 27886,
         "Phone": "",
         "Email": "",
-        "Certified": "5/25/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Whole Grain Blueberry Waffles, Whole Grain Flax Waffles, Whole Grain Totally Original Waffles"
+        "Certified": "5/25/2016"
       },
       {
-        "id": 290,
+        "id": 288,
         "Vendor": "Hocutt Farms Inc",
         "Contact": "Joey & Jay Hocutt",
         "Address": "8507 Bailey Rd",
@@ -4637,14 +3467,10 @@ module.exports = {
         "Zip": 27880,
         "Phone": "252-205-2936",
         "Email": "joey@triplejproduce.com",
-        "Certified": "10/15/2009",
-        "Crops": "Rye, Soybeans, Sweet Potatoes, Tobacco, Transplants (Tobacco Transplants), Transplants (Sweet Potato Transplants), Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/15/2009"
       },
       {
-        "id": 291,
+        "id": 289,
         "Vendor": "Holder, Jermey",
         "Contact": "Jeremy Holder",
         "Address": "2417 Holly Spring Church Road",
@@ -4653,14 +3479,10 @@ module.exports = {
         "Zip": 27505,
         "Phone": "919-258-9538",
         "Email": "",
-        "Certified": "3/20/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/20/2017"
       },
       {
-        "id": 292,
+        "id": 290,
         "Vendor": "Hollar And Greene Produce Company, Inc.",
         "Contact": "Tim Greene",
         "Address": "590 Oak Grove Church Road",
@@ -4669,14 +3491,10 @@ module.exports = {
         "Zip": 27030,
         "Phone": "828-264-2177",
         "Email": "",
-        "Certified": "11/12/2007",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Vegetables"
+        "Certified": "11/12/2007"
       },
       {
-        "id": 293,
+        "id": 291,
         "Vendor": "Hood Swamp Pullets",
         "Contact": "E.L. Smith",
         "Address": "151 Smith Farm Rd",
@@ -4685,14 +3503,10 @@ module.exports = {
         "Zip": 27534,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "2/10/2011",
-        "Crops": "",
-        "Livestock": "Pullets (Slaughter Eligible)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/10/2011"
       },
       {
-        "id": 294,
+        "id": 292,
         "Vendor": "Horner International",
         "Contact": "",
         "Address": "3427 Industrial Drive",
@@ -4701,14 +3515,10 @@ module.exports = {
         "Zip": 27704,
         "Phone": "347 400 7853 cell",
         "Email": "lisa.ramraj@hornerintl.com",
-        "Certified": "2/11/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Plant extracts"
+        "Certified": "2/11/2016"
       },
       {
-        "id": 295,
+        "id": 293,
         "Vendor": "Huffines, Gerry",
         "Contact": "Gerry Huffines",
         "Address": "426 Huffines Road",
@@ -4717,30 +3527,10 @@ module.exports = {
         "Zip": 27215,
         "Phone": "336-214-5894",
         "Email": "",
-        "Certified": "10/2/2015",
-        "Crops": "Tobacco, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/2/2015"
       },
       {
-        "id": 296,
-        "Vendor": "Hughes Organic Farms LLC",
-        "Contact": "Cynthia H, Justin Hughes Cooke",
-        "Address": "3985 Oakley Rd",
-        "City": "Stokes",
-        "State": "North Carolina",
-        "Zip": 27884,
-        "Phone": "602-448-3880",
-        "Email": "cindy.cooke@colliers.com",
-        "Certified": "10/12/2013",
-        "Crops": "Soybeans, Nursery/Starts/Flowers/Trees: Transplants (Vegetable), Cucumbers, Peppers (Green), Squash (Yellow), Tomatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
-      },
-      {
-        "id": 297,
+        "id": 294,
         "Vendor": "Hulin, John D Jr dba Three Girls Farm",
         "Contact": "John D Hulin Jr",
         "Address": "3208 Bethel Friends Rd.",
@@ -4749,14 +3539,10 @@ module.exports = {
         "Zip": 27205,
         "Phone": "336-626-6575",
         "Email": "",
-        "Certified": "5/9/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/9/2017"
       },
       {
-        "id": 298,
+        "id": 295,
         "Vendor": "Hunter, Anthony dba Jackie Hunter Farm",
         "Contact": "Anthony Hunter",
         "Address": "4709 marks Road",
@@ -4765,14 +3551,10 @@ module.exports = {
         "Zip": 28326,
         "Phone": "919-258-5748",
         "Email": "",
-        "Certified": "3/22/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/22/2017"
       },
       {
-        "id": 299,
+        "id": 296,
         "Vendor": "Indigo Run Farms",
         "Contact": "Sam Bellamy",
         "Address": "1590 Hickman Road N.W.",
@@ -4781,14 +3563,10 @@ module.exports = {
         "Zip": 28467,
         "Phone": "910-287-6403",
         "Email": "",
-        "Certified": "7/13/2004",
-        "Crops": "flowers and fruit, herbs, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/13/2004"
       },
       {
-        "id": 300,
+        "id": 297,
         "Vendor": "Isley, Tony",
         "Contact": "Tony Isley",
         "Address": "1433G Greensboro Chapel Hill Rd",
@@ -4797,14 +3575,10 @@ module.exports = {
         "Zip": 27349,
         "Phone": "336-376-3591",
         "Email": "",
-        "Certified": "5/5/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/5/2017"
       },
       {
-        "id": 301,
+        "id": 298,
         "Vendor": "J & W Farm",
         "Contact": "James Green",
         "Address": "4121 Lizard Lick Rd",
@@ -4813,14 +3587,10 @@ module.exports = {
         "Zip": 27591,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "2/5/2014",
-        "Crops": "",
-        "Livestock": "Laying Hens (Slaughter Eligible)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/5/2014"
       },
       {
-        "id": 302,
+        "id": 299,
         "Vendor": "J&B Herb And Plant Farms",
         "Contact": "John Wrenn",
         "Address": "620 Weldon Wrenn Rd",
@@ -4829,14 +3599,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "(336) 599-0381",
         "Email": "jbherbfarm@yahoo.com",
-        "Certified": "1/15/2015",
-        "Crops": "Transplants, Herbs",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/15/2015"
       },
       {
-        "id": 303,
+        "id": 300,
         "Vendor": "J&J Thompson Farms, Inc.",
         "Contact": "Jackie Thompson",
         "Address": "1625 Forestville Rd.",
@@ -4845,14 +3611,10 @@ module.exports = {
         "Zip": 27587,
         "Phone": "919-868-8587",
         "Email": "",
-        "Certified": "9/14/2009",
-        "Crops": "grains, soybeans, Tobacco, wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/14/2009"
       },
       {
-        "id": 304,
+        "id": 301,
         "Vendor": "J.B. Rose Organics",
         "Contact": "Joseph Daniel",
         "Address": "2640 Old Bailey Hwy",
@@ -4861,14 +3623,10 @@ module.exports = {
         "Zip": 28756,
         "Phone": "252-382-2379",
         "Email": "tobaccoroad2385@gmail.com",
-        "Certified": "8/28/2014",
-        "Crops": "Sweet Potatoes, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/28/2014"
       },
       {
-        "id": 305,
+        "id": 302,
         "Vendor": "James A. Dobson Jr. Or Samuel W. Dobson",
         "Contact": "James A. Dobson Jr.",
         "Address": "",
@@ -4877,14 +3635,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(704) 876-1887",
         "Email": "dobsonfarm5sam@gmail.com",
-        "Certified": "2/27/2014",
-        "Crops": "Alfalfa, Alfalfa-Triticale Hay, Corn, Forage, Grass, Grass, Hay, Oats, Sorghum, Soybean, Wheat",
-        "Livestock": "Cattle (Dairy - Converted - Dairy Only), Cattle-For Slaughter, Cow Milk",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/27/2014"
       },
       {
-        "id": 306,
+        "id": 303,
         "Vendor": "James Daniels dba P & J Farms",
         "Contact": "James Daniels",
         "Address": "4116 Herman Husband Rd.",
@@ -4893,14 +3647,10 @@ module.exports = {
         "Zip": 27298,
         "Phone": "336-451-1151",
         "Email": "",
-        "Certified": "4/20/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/20/2017"
       },
       {
-        "id": 307,
+        "id": 304,
         "Vendor": "James M. Sander/Wildflower Lane Farm",
         "Contact": "James Sander",
         "Address": "6531 Wildflower Lane",
@@ -4909,14 +3659,10 @@ module.exports = {
         "Zip": 27243,
         "Phone": "919-48-8951",
         "Email": "",
-        "Certified": "6/21/2012",
-        "Crops": "Fruits, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/21/2012"
       },
       {
-        "id": 308,
+        "id": 305,
         "Vendor": "James Randall Smith",
         "Contact": "Randy Smith",
         "Address": "3102 Macon Farm Rd.",
@@ -4925,14 +3671,10 @@ module.exports = {
         "Zip": 27316,
         "Phone": "336-879-4753",
         "Email": "",
-        "Certified": "4/12/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/12/2017"
       },
       {
-        "id": 309,
+        "id": 306,
         "Vendor": "James Tharrington Farm",
         "Contact": "James Tharrington",
         "Address": "9833 Edwards Rd",
@@ -4941,14 +3683,10 @@ module.exports = {
         "Zip": 27816,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "1/26/2011",
-        "Crops": "",
-        "Livestock": "Laying Hens (Slaughter Eligible)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/26/2011"
       },
       {
-        "id": 310,
+        "id": 307,
         "Vendor": "James. M. Blalock",
         "Contact": "James Blalock",
         "Address": "7511 Walnut Grove CH-Rd",
@@ -4957,14 +3695,10 @@ module.exports = {
         "Zip": 27541,
         "Phone": "919-636-0749",
         "Email": "",
-        "Certified": "8/2/2013",
-        "Crops": "Tobacco, wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/2/2013"
       },
       {
-        "id": 311,
+        "id": 308,
         "Vendor": "Java Estate Roastery, Inc.",
         "Contact": "Michael Greenwood",
         "Address": "261 Sloop Point Loop Rd.",
@@ -4973,14 +3707,10 @@ module.exports = {
         "Zip": 28443,
         "Phone": "910-270-0266",
         "Email": "mike@javaestate.com",
-        "Certified": "7/13/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee (Roasted) (Blue Surf Cafe), Coffee (Roasted) (Blue Surf Cafe Decaf), Coffee (Roasted) (Fair Trade Blend), Coffee (Roasted) (Guatemalan), Coffee (Roasted) (Honduras), Coffee (Roasted) (Mexican Swiss Water Decaf), Coffee (Roasted) (Peru), Coffee (Roasted) (Surf House Blend), Coffee (Roasted) (Surf House Blend Decaf), Coffee (Roasted) (Tidal Creek House Blend)"
+        "Certified": "7/13/2015"
       },
       {
-        "id": 312,
+        "id": 309,
         "Vendor": "JByrd Farm",
         "Contact": "Joseph Gilliland",
         "Address": "943 Wilson Road",
@@ -4989,14 +3719,10 @@ module.exports = {
         "Zip": 27252,
         "Phone": 9194781334,
         "Email": "",
-        "Certified": "3/3/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/3/2017"
       },
       {
-        "id": 313,
+        "id": 310,
         "Vendor": "Jeffrey Boykin",
         "Contact": "Jeffrey Boykin",
         "Address": "8549 Healthy Plains Church Rd",
@@ -5005,14 +3731,10 @@ module.exports = {
         "Zip": 27880,
         "Phone": "252-315-1447",
         "Email": "jeffreysboykin@aim.com",
-        "Certified": "10/12/2015",
-        "Crops": "Sweet Potatoes, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/12/2015"
       },
       {
-        "id": 314,
+        "id": 311,
         "Vendor": "Jeffrey Norvang dba Norvang FArm",
         "Contact": "Jeffery Norvant",
         "Address": "397 Sunset Hills",
@@ -5021,14 +3743,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-930-4012",
         "Email": "",
-        "Certified": "4/19/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/19/2017"
       },
       {
-        "id": 315,
+        "id": 312,
         "Vendor": "Jimbo's Jumbos Inc.",
         "Contact": "",
         "Address": "PO Box 465 185 Peanut Dr.",
@@ -5037,14 +3755,10 @@ module.exports = {
         "Zip": 27932,
         "Phone": "",
         "Email": "",
-        "Certified": "10/21/2003",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Peanut Butter, Peanut Butter, Peanuts"
+        "Certified": "10/21/2003"
       },
       {
-        "id": 316,
+        "id": 313,
         "Vendor": "JM Hockaday Farms",
         "Contact": "Johnny Hockaday",
         "Address": "2719 Horseshoe Road",
@@ -5053,14 +3767,10 @@ module.exports = {
         "Zip": 27522,
         "Phone": "919-395-2739",
         "Email": "david@cornhillfarms.com",
-        "Certified": "8/22/2014",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/22/2014"
       },
       {
-        "id": 317,
+        "id": 314,
         "Vendor": "JM Johsnon Farm",
         "Contact": "Barton Mitchell",
         "Address": "729 Bowers Store Road",
@@ -5069,14 +3779,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-742-2972",
         "Email": "",
-        "Certified": "4/14/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/14/2017"
       },
       {
-        "id": 318,
+        "id": 315,
         "Vendor": "Joe Van Gogh Coffee",
         "Contact": "Kevin Swenk",
         "Address": "505-104 Meadowland Drive",
@@ -5085,14 +3791,10 @@ module.exports = {
         "Zip": 27278,
         "Phone": "(919) 644-0111",
         "Email": "kevin@joevangogh.com",
-        "Certified": "8/11/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee"
+        "Certified": "8/11/2015"
       },
       {
-        "id": 319,
+        "id": 316,
         "Vendor": "John Howard Pope Jr & Justin Tyler Pope dba Johnny Pope Farm",
         "Contact": "John Howard Pope Jr",
         "Address": "6712 Efland-Cedar Grove Rd",
@@ -5101,14 +3803,10 @@ module.exports = {
         "Zip": 27231,
         "Phone": "919-732-9278",
         "Email": "bigdaddyrooster732@yahoo.com",
-        "Certified": "8/26/2014",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/26/2014"
       },
       {
-        "id": 320,
+        "id": 317,
         "Vendor": "John Rogers Walker/Walker Farms",
         "Contact": "Roger Walker",
         "Address": "1011 Camp Springs Road",
@@ -5117,14 +3815,10 @@ module.exports = {
         "Zip": 27320,
         "Phone": "336-616-1151",
         "Email": "",
-        "Certified": "5/8/2008",
-        "Crops": "Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/8/2008"
       },
       {
-        "id": 321,
+        "id": 318,
         "Vendor": "John W. Carter III",
         "Contact": "Billy Carter",
         "Address": "285 Robert Rd.",
@@ -5133,14 +3827,10 @@ module.exports = {
         "Zip": 27242,
         "Phone": "910-673-2666",
         "Email": "",
-        "Certified": "10/21/2002",
-        "Crops": "Flowers, Rye, Sudan Grass, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/21/2002"
       },
       {
-        "id": 322,
+        "id": 319,
         "Vendor": "Johnson Family Farm",
         "Contact": "Ellis Johnson",
         "Address": "49 Revels Road",
@@ -5149,14 +3839,10 @@ module.exports = {
         "Zip": 27526,
         "Phone": "919-796-9298",
         "Email": "",
-        "Certified": "5/10/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/10/2017"
       },
       {
-        "id": 323,
+        "id": 320,
         "Vendor": "Johnson, G. Eddie",
         "Contact": "G. Eddie Johnson",
         "Address": "224 Beth Lane",
@@ -5165,14 +3851,10 @@ module.exports = {
         "Zip": 27030,
         "Phone": "336-320-2247",
         "Email": "",
-        "Certified": "10/6/2015",
-        "Crops": "Corn, Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/6/2015"
       },
       {
-        "id": 324,
+        "id": 321,
         "Vendor": "Jones Family Farms",
         "Contact": "Jim Jones",
         "Address": "7094 Honeysuckle Lane",
@@ -5181,14 +3863,10 @@ module.exports = {
         "Zip": 27807,
         "Phone": "252-230-2084",
         "Email": "sales@jonesfarmsnc.com",
-        "Certified": "12/2/2013",
-        "Crops": "Sweet Potatoes, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/2/2013"
       },
       {
-        "id": 325,
+        "id": 322,
         "Vendor": "Joseph Grant Maness dba New Beginning",
         "Contact": "Joseph Grant Maness",
         "Address": "2343 Cedar Hill Road",
@@ -5197,14 +3875,10 @@ module.exports = {
         "Zip": 27325,
         "Phone": "910-464-5473",
         "Email": "",
-        "Certified": "4/18/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/18/2017"
       },
       {
-        "id": 326,
+        "id": 323,
         "Vendor": "JP Davenport and Son Inc.",
         "Contact": "Lawrence Davenport",
         "Address": "5961 Hwy 264E",
@@ -5213,14 +3887,10 @@ module.exports = {
         "Zip": 27834,
         "Phone": "252-752-7802",
         "Email": "",
-        "Certified": "9/13/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/13/2016"
       },
       {
-        "id": 327,
+        "id": 324,
         "Vendor": "Justin and Ann Marie Page",
         "Contact": "Justin And Ann Marie Page",
         "Address": "137 Kent Rd",
@@ -5229,14 +3899,10 @@ module.exports = {
         "Zip": 27320,
         "Phone": "336-613-1134",
         "Email": "kentpage1@gmail.com",
-        "Certified": "10/10/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/10/2016"
       },
       {
-        "id": 328,
+        "id": 325,
         "Vendor": "Justin Powell",
         "Contact": "Ryan Powell",
         "Address": "207 Cottle Lane",
@@ -5245,14 +3911,10 @@ module.exports = {
         "Zip": 28458,
         "Phone": "910-284-0172",
         "Email": "powellfarmsnc@gmail.com",
-        "Certified": "9/16/2014",
-        "Crops": "Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/16/2014"
       },
       {
-        "id": 329,
+        "id": 326,
         "Vendor": "K And K Farm",
         "Contact": "Karvie Roberts",
         "Address": "4192 Corbett Ridge Rd",
@@ -5261,14 +3923,10 @@ module.exports = {
         "Zip": 27302,
         "Phone": "336-562-5229",
         "Email": "",
-        "Certified": "7/10/2013",
-        "Crops": "Tobacco, Transplants (Tobacco)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/10/2013"
       },
       {
-        "id": 330,
+        "id": 327,
         "Vendor": "Kennedy Farm",
         "Contact": "Robert Clayton Hutchin",
         "Address": "296 Northcutt Road",
@@ -5277,14 +3935,10 @@ module.exports = {
         "Zip": 27325,
         "Phone": "919-464-3523",
         "Email": "",
-        "Certified": "3/20/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/20/2017"
       },
       {
-        "id": 331,
+        "id": 328,
         "Vendor": "Kerr Mill Holsteins",
         "Contact": "Chris Hoffner",
         "Address": "",
@@ -5293,14 +3947,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(704) 637-0963",
         "Email": "hoffnerct@yahoo.com",
-        "Certified": "12/20/2006",
-        "Crops": "Barley, Corn, Fallow, Pasture, Sorghum, Sudan Grass, Sunflower (seed), Wheat",
-        "Livestock": "Cattle (Dairy - Last Third Gestation - Slaughter Eligible), Cattle-For Slaughter, Cow Milk",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/20/2006"
       },
       {
-        "id": 332,
+        "id": 329,
         "Vendor": "King Bio Inc.",
         "Contact": "Jim Grant",
         "Address": "",
@@ -5309,14 +3959,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(828) 255-0201",
         "Email": "jgrant@kingbio.com",
-        "Certified": "7/7/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Black Cohosh Extract, Blood Root Extract, Body Balm (Eczema Symptom Relief), Body Balm (Psoriasis Symptom Relief), Body Balm (Rosacea Symptom Relief), Boneset Extract, Burdock Root Extract, Calendula Extract, Cardiospermum Extract, Cayenne Pepper Extract, Chamomile Extract (Chamomile Flower Extract), Dandelion Leaf and Root Extract, Dandelion Leaf Extract, Echinacea Angustifolia Extract, Echinacea purpurea Extract, Elder Flower Extract, Eucalaptus Extract, Eyebright Extract, Garlic Extract (Fresh Garlic Extract), Garlic Extract (Minced Garlic Extract), Goldenseal Extract, Gotu Kola Extract, Holy Basil Extract (Tulsi), Honeysuckle Extract, Horse Chestnut Extract, Ivy (Poison Ivy (Rhus Tox) Extract), Lemon Balm Extract, Licorice Extract (Licorice Root Extract), Lobelia Herb and Seed Extract, Nettle Leaf Extract, Oats - Milky Tops Extract, Onion Extract (Fresh Onion Extract), Onion Extract (Minced Onion Extract), Passionflower Vine Extract, Poke Root Extract, Rue Extract, St. John's Wort Extract, White Cedar Extract, Yellow Dock Root Extract"
+        "Certified": "7/7/2015"
       },
       {
-        "id": 333,
+        "id": 330,
         "Vendor": "Kiser Farm",
         "Contact": "Phillip Kiser",
         "Address": "6272 Picketts Mill Road",
@@ -5325,14 +3971,10 @@ module.exports = {
         "Zip": 27341,
         "Phone": "336-879-3579",
         "Email": "",
-        "Certified": "3/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/24/2017"
       },
       {
-        "id": 334,
+        "id": 331,
         "Vendor": "KLB Enterprises Inc. Dba Carolina Fine Snacka",
         "Contact": "Louisa Snyder",
         "Address": "209 Citation Court",
@@ -5341,14 +3983,10 @@ module.exports = {
         "Zip": 27409,
         "Phone": "(336) 605-0773",
         "Email": "",
-        "Certified": "7/17/2008",
-        "Crops": "Snacks",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Co-Packer"
+        "Certified": "7/17/2008"
       },
       {
-        "id": 335,
+        "id": 332,
         "Vendor": "Klooster Bros LLC Dba Banner Greenhouses",
         "Contact": "Jeff Mast",
         "Address": "2239 South Creek Rd.",
@@ -5357,14 +3995,10 @@ module.exports = {
         "Zip": 28761,
         "Phone": "828-659-3335",
         "Email": "jeffm@bannergreenhouses.com",
-        "Certified": "5/29/2015",
-        "Crops": "Vegetable Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/29/2015"
       },
       {
-        "id": 336,
+        "id": 333,
         "Vendor": "KNK Farms",
         "Contact": "Randy Smith",
         "Address": "3100 Macon Farm Road",
@@ -5373,14 +4007,10 @@ module.exports = {
         "Zip": 27316,
         "Phone": "336-736-9927",
         "Email": "",
-        "Certified": "4/7/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/7/2017"
       },
       {
-        "id": 337,
+        "id": 334,
         "Vendor": "Kristie Farm",
         "Contact": "Kristie Huneycutt",
         "Address": "22133 Sam Road",
@@ -5389,14 +4019,10 @@ module.exports = {
         "Zip": 28001,
         "Phone": "330-447-4261",
         "Email": "tom@hilandnaturals.com",
-        "Certified": "9/29/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/29/2017"
       },
       {
-        "id": 338,
+        "id": 335,
         "Vendor": "Lakeside Organics, LLC",
         "Contact": "Ben Simmons",
         "Address": "20945 US 264",
@@ -5405,14 +4031,10 @@ module.exports = {
         "Zip": 27885,
         "Phone": "252-926-1106",
         "Email": "",
-        "Certified": "9/23/2015",
-        "Crops": "Sweet Potatoes, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/23/2015"
       },
       {
-        "id": 339,
+        "id": 336,
         "Vendor": "Landmark Farms",
         "Contact": "Joey, William And Andrew Kirby",
         "Address": "5309 Carr Store Rd",
@@ -5421,14 +4043,10 @@ module.exports = {
         "Zip": 27231,
         "Phone": "336-562-3352",
         "Email": "",
-        "Certified": "9/8/2014",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/8/2014"
       },
       {
-        "id": 340,
+        "id": 337,
         "Vendor": "Larry Bolick",
         "Contact": "Larry Bolick",
         "Address": "2597 Major Hill Rd",
@@ -5437,14 +4055,10 @@ module.exports = {
         "Zip": 27253,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "9/22/2015",
-        "Crops": "",
-        "Livestock": "Laying Hens (Slaughter Eligible)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/22/2015"
       },
       {
-        "id": 341,
+        "id": 338,
         "Vendor": "Larry's Beans Inc.",
         "Contact": "Jeremy Behne",
         "Address": "1507 Gavin St.",
@@ -5453,14 +4067,10 @@ module.exports = {
         "Zip": 27608,
         "Phone": "919-828-1234 x110",
         "Email": "",
-        "Certified": "5/17/2004",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee beans"
+        "Certified": "5/17/2004"
       },
       {
-        "id": 342,
+        "id": 339,
         "Vendor": "Lasley Family Farm LLC",
         "Contact": "Trellis Or Ricky Lasley",
         "Address": "1636 Perkinson Rd",
@@ -5469,14 +4079,10 @@ module.exports = {
         "Zip": 27326,
         "Phone": "336-830-4940",
         "Email": "trellislasley@yahoo.com",
-        "Certified": "9/22/2015",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/22/2015"
       },
       {
-        "id": 343,
+        "id": 340,
         "Vendor": "Lassonde Pappas And Company Inc.",
         "Contact": "",
         "Address": "125 Industrial Park Road",
@@ -5485,14 +4091,10 @@ module.exports = {
         "Zip": 28792,
         "Phone": "",
         "Email": "",
-        "Certified": "9/17/2002",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "100% Juice Concord Grape (83001), 100% Juice Cranberry (84003), 100% Juice Prune (33700), 100% Juice Tart Cherry (82903), Apple Cranberry Juice (14302), Apple Ginger Cider (37600), Apple Juice (36900), Apple Juice (36902), Apple Juice (36905), Apple Juice (36911), Apple Juice (36915), Apple Juice (36F02), Apple Juice for Toddlers (82303), Apple Juice Honey Crisp Style (36T01), Apple Juice Toddlers (82300), Apple Juice with Vitamin C (36902), Apple Juice with Vitamin C (36915), Berry Grape Juice (88001), Berry Lemonade (46207), Black Tea with Lemon (40700), Blackberry Rose Lemonade (47300), Cherry Limeade (49100), Cranberry Cocktail (84101), Cranberry Cocktail (84102), Cranberry Grape Juice (15A00), Cranberry Grape Juice Blend (83602), Cranberry Juice (14308), Cranberry Juice Blend (14307), Cranberry Juice Cocktail (14308), Cranberry Juice from Concentrate (84003), Cranberry Mango Cocktail (20400), Cranberry Mango Juice (86100), Cranberry Pomegranate Blend (58C00), Fair Trade Black Tea Lemonade (40500), Fair Trade Lemongrass Ginger Green Tea (40P00), Fair Trade Sweetened Green Tea (40Q00), Fair Trade Unsweetened Green Tea (40N00), Fruit Punch (56026), Fruit Punch (56F02), Fruit Punch (84302), Fruit Punch (84303), Grape Juice (34104), Grape Juice Drink (34803), Grape Juice with added Vitamin C (34104), Green Tea Spearmint (40001), Half Tea & Half Lemonade (40604), Honey Crisp Style Apple Juice (36T00), Honey Crisp Style Apple Juice (36T01), Honey Green Tea (43405), Immune Refresher Carrot & Orange with Turmeric (86000), Immune Refresher Mango Apple and Orange with Baobab (85900), Immune Refresher Purple Carrot, Beet & Cherry with Elderberry & Echinacea (82802), Lemon Black Tea (40207), Lemon Flavored Sweetened Black Tea (40V01), Lemonade (46300), Lemonade (46301), Lemonade (46305), Lemonade (46307), Lemonade and Iced Tea (40602), Lemonade Berry Blend (46206), Lemonade Low Calorie (46600), Lemonade Matcha Green Tea (40T00), Light Cranberry Juice Cocktail (14L00), Light Lemonade (46600), Limeade (49003), Mango Green Tea (40M00), Mango Lemonade (46400), Mango Lemonade (46402), Mango Passionfruit Juice (84804), Mango Passionfruit Juice (84807), Matcha Mint Green Tea (40003), Moroccan Spiced Black Tea (40801), Orange Juice (61600), Orange Mango Juice (61702), Peach Chamomile Tea (40R00), Peach Oolong Tea (40H01), Pear Juice for Toddlers (85204), Raspberry Lemonade (46202), Raspberry Lemonade Low Calorie (47100), Red Tea with Mango Mandarin (43701), Spearmint Green Tea (43603), Spiced Punch (86200), Strawberry Lemonade (46801), Strawberry Lemonade (46802), Strawberry Watermelon (85502), Sweetened Green Tea with Spearmint and Other Natural Flavors (40U01), Sweetened Lemon Black Tea with Natural Flavors (40V00), Sweetened Spearmint Green Tea with Natural Flavors (40U00), Tea & Lemonade (40500), Tomato Juice (53401), Tomato Juice (53403), Tropical Punch (60F02), Tropical Punch (85901), Unsweetened Black Tea (40A02), Unsweetened Black Tea (40K00), Vanilla Rooibos Tea (43703), Vegetable Juice (54201), Watermelon Lemonade (47000), Watermelon Lemonade (47002), Watermelon Water (98501), White Grape Juice (35800), White Grape Juice (35805), White Tea with Raspberry (43601)"
+        "Certified": "9/17/2002"
       },
       {
-        "id": 344,
+        "id": 341,
         "Vendor": "Lawrence Brothers Farms, LLC",
         "Contact": "Robert Lawrence Jr",
         "Address": "2540 Tar River Rd",
@@ -5501,14 +4103,10 @@ module.exports = {
         "Zip": 27522,
         "Phone": "919-939-6352",
         "Email": "",
-        "Certified": "8/19/2009",
-        "Crops": "Tobacco, Tobacco Seedlings, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/19/2009"
       },
       {
-        "id": 345,
+        "id": 342,
         "Vendor": "Lee Johnson Farm",
         "Contact": "Lee Johnson",
         "Address": "",
@@ -5517,14 +4115,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(276) 237-0808",
         "Email": "dixiedog@surry.net",
-        "Certified": "7/26/2016",
-        "Crops": "Hay, Pasture",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/26/2016"
       },
       {
-        "id": 346,
+        "id": 343,
         "Vendor": "Lenny Boy, LLC",
         "Contact": "Townes Mozer",
         "Address": "2224 Hawkins St.",
@@ -5533,14 +4127,10 @@ module.exports = {
         "Zip": 28203,
         "Phone": "704-458-3202",
         "Email": "",
-        "Certified": "7/29/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Beer, Kombucha, Kombucha"
+        "Certified": "7/29/2015"
       },
       {
-        "id": 347,
+        "id": 344,
         "Vendor": "Lewis Brothers Farms",
         "Contact": "Brian Lewis",
         "Address": "5769 Osceola-Ossipec Road",
@@ -5549,14 +4139,10 @@ module.exports = {
         "Zip": 27214,
         "Phone": "336-362-1357",
         "Email": "blewisfarms@yahoo.com",
-        "Certified": "9/9/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/9/2016"
       },
       {
-        "id": 348,
+        "id": 345,
         "Vendor": "Lewis, Paige",
         "Contact": "Paige Lewis",
         "Address": "1274 New Lebanon Church Rd",
@@ -5565,14 +4151,10 @@ module.exports = {
         "Zip": 27230,
         "Phone": "336-63-8463",
         "Email": "",
-        "Certified": "8/21/2017",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/21/2017"
       },
       {
-        "id": 349,
+        "id": 346,
         "Vendor": "Lindley Mills, Inc.",
         "Contact": "Joe Lindley",
         "Address": "",
@@ -5581,14 +4163,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(336) 376-6190",
         "Email": "lindleymills@aol.com",
-        "Certified": "4/29/2002",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Amaranth (Lindley Mills Amaranth), Barley (malted) Flour (Lindley Mills Malted Barley Whole Grain Flour), Blended Flour (Lindley Mills Buckwheat Blend), Blended Flour (Lindley Mills High Gluten Flour), Blended Flour (Lindley Mills New Seasons All Purpose Malted Flour), Blended Flour (N/O RW Flour), Bread Flour (Lindley Mills Earth Fare Best Bread Flour), Buckwheat Flour (Lindley Mills Buckwheat Flour), Corn (Lindley Mills Yellow Corn Grits), Corn (Lindley Mills Yellow Corn Meal), Flax (brown) (Lindley Mills Flax Seed, Brown), Grain Blend (Lindley Mills Multi Grain 7 Blend), Grain Blend (Lindley Mills Multigrain 7 Blend), Millet (Lindley Mills Millet - Hulled), Oat Bran (Lindley Mills Oat Bran), Oats (Lindley Mills Rolled Oats), Rye (Lindley Mills Rye Berries), Rye (Lindley Mills Rye Chops), Rye (Lindley Mills Rye Meal), Rye Flour (Lindley Mills Dark Rye Flour), Rye Flour (Lindley Mills Light Rye Flour), Rye Flour (Lindley Mills Whole Rye Flour), Rye Flour (Whole Grain Rye Flour), Spelt (Lindley Mills Spelt Berries), Spelt Flour (Lindley Mills Spelt Flour), Spelt Flour (Lindley Mills White Spelt Flour), Spelt Flour (Lindley Mills Whole Spelt Flour), Spelt Flour (Whole Grain Spelt Flour), Sprouted Blend Flour (Lindley Mills Super Sprout Ancient Grains Flour), Sprouted Blend Flour (Lindley Mills Super Sprout Bread Blend Flour), Sprouted Buckwheat (Super Sprout), Sprouted Flour (Lindley Mills Super Sprout From White Wheat), Sprouted Flour (Lindley Mills Super Sprout Spelt Flour), Sprouted Flour (Lindley Mills Super Sprout Wheat Flour), Sprouted Flour (Super Sprout Ancient Grains), Sprouted Flour (Super Sprout Hard Whole Wheat), Sprouted Flour (Super Sprout Soft Whole Wheat), Sprouted Flour (Super Sprout Whole Spelt), Sprouted Grain Blend (Lindley Mills SF Sprouted Ancient Grains And Seeds Blend), Wheat (Lindley Mills Bran and Germ Blend), Wheat (Lindley Mills Cracked Wheat), Wheat Berries (Lindley Mills Hard Wheat Berries), Wheat Berries (Lindley Mills Soft Wheat Berries), Wheat Flour (Lindley Mills All Purpose Flour), Wheat Flour (Lindley Mills All Purpose Malted Flour), Wheat Flour (Lindley Mills Baker's Classic Flour), Wheat Flour (Lindley Mills Bakers Classic Unmalted Flour), Wheat Flour (Lindley Mills Bakers Classic with Restored Germ Flour), Wheat Flour (Lindley Mills Bread Flour), Wheat Flour (Lindley Mills Cake Flour), Wheat Flour (Lindley Mills Cracked Wheat), Wheat Flour (Lindley Mills Hi Extraction Flour), Wheat Flour (Lindley Mills High Extraction Bread Flour), Wheat Flour (Lindley Mills Malted North Carolina Wheat Bread Flour), Wheat Flour (Lindley Mills North Carolina Wheat Bread Flour), Wheat Flour (Lindley Mills Pastry Flour), Wheat Flour (Lindley Mills PQ Flour), Wheat Flour (Lindley Mills PQB PRO Flour), Wheat Flour (Lindley Mills Select Artisan Flour), Wheat Flour (Lindley Mills Select Artisan Unmalted Flour), Wheat Flour (Lindley Mills T55 Flour), Wheat Flour (Lindley Mills T65 Flour), Wheat Flour (Lindley Mills Unbleached 14% Bread Flour), Wheat Flour (Lindley Mills Unbleached Bread Flour), Wheat Flour (Lindley Mills Unbleached Pastry Flour), Wheat Flour (Lindley Mills Unbleached with Germ Flour), Wheat Flour (Lindley Mills Unbleached X Bread Flour), Wheat Flour (Lindley Mills Unbleached X Malted Flour), Wheat Flour (Lindley Mills Wheat Bran), Wheat Flour (Lindley Mills Wheat Midds), Wheat Flour (Lindley Mills White Whole Wheat Flour), Wheat Flour (Lindley Mills Whole Wheat Coarse), Wheat Flour (Lindley Mills Whole Wheat Flour), Wheat Flour (Lindley Mills Whole Wheat Pastry Flour), Wheat Flour (WS Blend Flour)"
+        "Certified": "4/29/2002"
       },
       {
-        "id": 350,
+        "id": 347,
         "Vendor": "Lineberry, Kevin",
         "Contact": "Kevin Lineberry",
         "Address": "3063 Brower Meadow Road",
@@ -5597,14 +4175,10 @@ module.exports = {
         "Zip": 27355,
         "Phone": "336-622-6613",
         "Email": "",
-        "Certified": "3/29/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/29/2017"
       },
       {
-        "id": 351,
+        "id": 348,
         "Vendor": "Lipman Produce - Custom Pak North Carolina Inc.",
         "Contact": "",
         "Address": "2123 Ridge Road",
@@ -5613,14 +4187,10 @@ module.exports = {
         "Zip": 28792,
         "Phone": "",
         "Email": "",
-        "Certified": "12/15/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cucumbers, Grape Tomatoes, Green Bell Peppers, Red & Yellow Bell Peppers, Red Bell Peppers, Round Tomatoes, Zucchini"
+        "Certified": "12/15/2014"
       },
       {
-        "id": 352,
+        "id": 349,
         "Vendor": "Little Man Farming, Inc.",
         "Contact": "Joseph Warren",
         "Address": "1921 Bearskin Rd",
@@ -5629,14 +4199,10 @@ module.exports = {
         "Zip": 28385,
         "Phone": "910-990-2060",
         "Email": "littlemanfarming@gmail.com",
-        "Certified": "8/18/2015",
-        "Crops": "Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/18/2015"
       },
       {
-        "id": 353,
+        "id": 350,
         "Vendor": "Looking Back Farms, Inc.",
         "Contact": "Ben Haines",
         "Address": "589 Chinquapin Rd",
@@ -5645,14 +4211,10 @@ module.exports = {
         "Zip": 27980,
         "Phone": "252-339-3348",
         "Email": "",
-        "Certified": "2/21/2011",
-        "Crops": "Fruit, Grains, Hay, Vegetable",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Grains"
+        "Certified": "2/21/2011"
       },
       {
-        "id": 354,
+        "id": 351,
         "Vendor": "Lucas Farm",
         "Contact": "Patricia Lucas",
         "Address": "2760 Cox Mill Rd",
@@ -5661,15 +4223,11 @@ module.exports = {
         "Zip": 27205,
         "Phone": "336-381-4490",
         "Email": "",
-        "Certified": "8/29/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/29/2017"
       },
       {
-        "id": 355,
-        "Vendor": "Lucy�S Phratry Farm, LLC",
+        "id": 352,
+        "Vendor": "Lucy’S Phratry Farm, LLC",
         "Contact": "Bernard Obie",
         "Address": "485 John Obie",
         "City": "Roxboro",
@@ -5677,14 +4235,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "919-813-8437",
         "Email": "",
-        "Certified": "3/23/2017",
-        "Crops": "Fruit, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/23/2017"
       },
       {
-        "id": 356,
+        "id": 353,
         "Vendor": "Luna's Annex LLC Dba Living Kitchen",
         "Contact": "Mckenzie Mann",
         "Address": "1438 Winnifred St.",
@@ -5693,14 +4247,10 @@ module.exports = {
         "Zip": 28203,
         "Phone": "704-750-2344",
         "Email": "mckenzie.mann@livingkitchen.com",
-        "Certified": "12/3/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cookies (Chocolate Chip), Cookies (Double Chocolate), Cookies (Ginger Spice), Cookies (Goji Cacao), Cookies (Yin Yang Macaroon), Cookies (Zesty Lemon), Food Bar (Cashew Brownie), Food Bar (Energy Bar), Food Bar (Ginger Spice), Food Bar (Goji Cacao), Granola (Cacao), Granola (Hola Granola), Nut Products (Candied Pecans)"
+        "Certified": "12/3/2015"
       },
       {
-        "id": 357,
+        "id": 354,
         "Vendor": "Lunsford Farms Organics",
         "Contact": "Edward Ronald Lunsford",
         "Address": "1378 Ridgeville Rd",
@@ -5709,14 +4259,10 @@ module.exports = {
         "Zip": 27314,
         "Phone": "336-952-5437",
         "Email": "lunsfarm@embarqmail.com",
-        "Certified": "6/6/2014",
-        "Crops": "Tobacco, Transplants (Tobacco)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/6/2014"
       },
       {
-        "id": 358,
+        "id": 355,
         "Vendor": "Lunsford, Garry",
         "Contact": "Garry Lunsford",
         "Address": "1785 Painter Rd",
@@ -5725,14 +4271,10 @@ module.exports = {
         "Zip": 27314,
         "Phone": "336-214-5929",
         "Email": "lunsfarm@embarqmail.com",
-        "Certified": "10/14/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/14/2015"
       },
       {
-        "id": 359,
+        "id": 356,
         "Vendor": "Lynn S. Holloway",
         "Contact": "Lynn Holloway",
         "Address": "7629 NC 86N",
@@ -5741,14 +4283,10 @@ module.exports = {
         "Zip": 27278,
         "Phone": "919-451-6019",
         "Email": "lsh1955@yahoo.com",
-        "Certified": "6/23/2014",
-        "Crops": "Tobacco, Transplants (Tobacco)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/23/2014"
       },
       {
-        "id": 360,
+        "id": 357,
         "Vendor": "M & M Plant Farms",
         "Contact": "Randy Massey",
         "Address": "6031 Kerr Chapel Road",
@@ -5757,14 +4295,10 @@ module.exports = {
         "Zip": 27244,
         "Phone": "336-260-9083",
         "Email": "",
-        "Certified": "5/22/2008",
-        "Crops": "Fruit, Herbs, Seedlings, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/22/2008"
       },
       {
-        "id": 361,
+        "id": 358,
         "Vendor": "Madren, Leslie and Bryant dba L & B Farms",
         "Contact": "Leslie And Bryant Madren",
         "Address": "4297 Old Cox Rd",
@@ -5773,14 +4307,10 @@ module.exports = {
         "Zip": 27205,
         "Phone": "336-879-3586",
         "Email": "",
-        "Certified": "4/26/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/26/2017"
       },
       {
-        "id": 362,
+        "id": 359,
         "Vendor": "Mae Belle Organics",
         "Contact": "Patrick Edwards",
         "Address": "470 Melton Bridge Road",
@@ -5789,14 +4319,10 @@ module.exports = {
         "Zip": 27891,
         "Phone": "252-883-5663",
         "Email": "patrickboddie@hotmail.com",
-        "Certified": "11/14/2008",
-        "Crops": "Cucumbers, Corn, Soybeans, Sweet Potatoes, Tobacco, Wheat, Sweet Potato Transplants, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/14/2008"
       },
       {
-        "id": 363,
+        "id": 360,
         "Vendor": "Mandala Naturals, LLC",
         "Contact": "Rob Lenfestey",
         "Address": "68D Kentucky Dr.",
@@ -5805,14 +4331,10 @@ module.exports = {
         "Zip": 28806,
         "Phone": "919-623-0207",
         "Email": "info@mandalanaturals.com",
-        "Certified": "6/5/2017",
-        "Crops": "Herbs, Mushrooms",
-        "Livestock": "",
-        "Wildcrops": "Herbs, Mushrooms",
-        "Handling": "Chocolate (Appalachian Wild Chai: chai spice and superfoods), Chocolate (Cacaolchemy: premium superfood blend), Chocolate (Cloud Forest: Baobab and superfoods), Chocolate (Lavender Citrus: Lavender and Orange), Chocolate (Peppermint Honey: Peppermint and Honey), Chocolate (Simplicity Chocolate)"
+        "Certified": "6/5/2017"
       },
       {
-        "id": 364,
+        "id": 361,
         "Vendor": "Marion L. Pridgen Farms Inc.",
         "Contact": "Marion Pridgen",
         "Address": "3111 NC 42",
@@ -5821,14 +4343,10 @@ module.exports = {
         "Zip": 27894,
         "Phone": "252-208-6157",
         "Email": "",
-        "Certified": "10/18/2016",
-        "Crops": "Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/18/2016"
       },
       {
-        "id": 365,
+        "id": 362,
         "Vendor": "Mark & Erwin Massengil dba Massengill Farms",
         "Contact": "Mark And Erwin Massengill",
         "Address": "8 Bizzell-Braswell Rd",
@@ -5837,14 +4355,10 @@ module.exports = {
         "Zip": 27569,
         "Phone": "919-921-6251",
         "Email": "",
-        "Certified": "7/28/2017",
-        "Crops": "Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/28/2017"
       },
       {
-        "id": 366,
+        "id": 363,
         "Vendor": "Market Solutions Group LLC",
         "Contact": "",
         "Address": "238 W Millbrook Rd",
@@ -5853,14 +4367,10 @@ module.exports = {
         "Zip": 27609,
         "Phone": "",
         "Email": "",
-        "Certified": "7/18/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Apple Pear Lactation Smoothie, Apple Tiny Wafers, Apple, Green Pea, Pineapple Freeze-Dried Snacks, Banana, Sweet Corn, Blueberry Freeze-Dried Snacks, CarrotTiny Wafers, Mango, Sweet Corn, Apple Freeze-Dried Snacks, Sweet Beet Tiny Wafers"
+        "Certified": "7/18/2014"
       },
       {
-        "id": 367,
+        "id": 364,
         "Vendor": "Mary \"L\" Farm",
         "Contact": "Richard Parker",
         "Address": "",
@@ -5869,14 +4379,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(704) 664-1687",
         "Email": "rick@marylfarm.com",
-        "Certified": "10/9/2006",
-        "Crops": "Barley, Bean (forage), Clover, Corn, Grass, Hay, Pasture, Peas, Ryegrass, Sorghum, Soybean, Sudan Grass (Grass/Legume/Forage, Sudan Grass ,), Woodlands",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/9/2006"
       },
       {
-        "id": 368,
+        "id": 365,
         "Vendor": "Mary Ann's Berry Farms LLC",
         "Contact": "",
         "Address": "535 Eddie L. Jones Rd.",
@@ -5885,14 +4391,10 @@ module.exports = {
         "Zip": 28447,
         "Phone": "",
         "Email": "",
-        "Certified": "3/17/2015",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/17/2015"
       },
       {
-        "id": 369,
+        "id": 366,
         "Vendor": "Matt Adcock Jr.",
         "Contact": "Matt Adcock Jr.",
         "Address": "4648 Range Rd",
@@ -5901,14 +4403,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-691-1794",
         "Email": "",
-        "Certified": "7/10/2013",
-        "Crops": "Flue Cured Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/10/2013"
       },
       {
-        "id": 370,
+        "id": 367,
         "Vendor": "May, Ricky & Stuart",
         "Contact": "Ricky & Stuart May",
         "Address": "919-497-6795",
@@ -5917,14 +4415,10 @@ module.exports = {
         "Zip": 27549,
         "Phone": "",
         "Email": "",
-        "Certified": "11/19/2015",
-        "Crops": "Blueberries, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Packaging - Breck's Heavenly Blueberries"
+        "Certified": "11/19/2015"
       },
       {
-        "id": 371,
+        "id": 368,
         "Vendor": "Mcclenny Farms, Inc",
         "Contact": "John Mcclenny",
         "Address": "1246 Old Harvey Sutton Rd",
@@ -5933,14 +4427,10 @@ module.exports = {
         "Zip": 28365,
         "Phone": "919-738-7059",
         "Email": "johnmcclenny@yahoo.com",
-        "Certified": "8/27/2015",
-        "Crops": "Sweet Potatoes, Transplants (Sweet Potatoes)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/27/2015"
       },
       {
-        "id": 372,
+        "id": 369,
         "Vendor": "McNeil Farm",
         "Contact": "Allison Mcneil",
         "Address": "2261 NC 42 Hwy",
@@ -5949,14 +4439,10 @@ module.exports = {
         "Zip": 27252,
         "Phone": 9198372115,
         "Email": "",
-        "Certified": "2/28/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/28/2017"
       },
       {
-        "id": 373,
+        "id": 370,
         "Vendor": "McNeil, Doug",
         "Contact": "Doug Mcneil",
         "Address": "1199 Poe Road",
@@ -5965,14 +4451,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-883-1095",
         "Email": "",
-        "Certified": "4/12/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/12/2017"
       },
       {
-        "id": 374,
+        "id": 371,
         "Vendor": "McPherson, Chris dba Mac Farm",
         "Contact": "Chris Mcpherson",
         "Address": "2429 Mt Vernon Hickory Mountain Road",
@@ -5981,14 +4463,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "336-516-1840",
         "Email": "",
-        "Certified": "3/31/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/31/2017"
       },
       {
-        "id": 375,
+        "id": 372,
         "Vendor": "McPherson, Eric",
         "Contact": "Eric Mcpherson",
         "Address": "7335 Beale Road",
@@ -5997,14 +4475,10 @@ module.exports = {
         "Zip": 27349,
         "Phone": "336-376-3062",
         "Email": "",
-        "Certified": "5/2/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chickens)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/2/2017"
       },
       {
-        "id": 376,
+        "id": 373,
         "Vendor": "Meadow Lane Beef LLC dba Meadow Lane Farm",
         "Contact": "Martha Mobley",
         "Address": "571 Leonard Farm Rd",
@@ -6013,14 +4487,10 @@ module.exports = {
         "Zip": 27549,
         "Phone": "919-495-1305",
         "Email": "",
-        "Certified": "6/28/2016",
-        "Crops": "Beets, Carrots, Radishes, Beans (French, Snap Beans), Corn, Okra, Brussels Sprouts, Kale, Lettuce, Ginger, Turmeric, Eggplants, Tomatoes, Broccoli, Cauliflower, Clover, Oats, Popcorn",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/28/2016"
       },
       {
-        "id": 377,
+        "id": 374,
         "Vendor": "Melton Manning and Sons, LLC",
         "Contact": "Greg Manning",
         "Address": "2739 S Old Franklin Road",
@@ -6029,14 +4499,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-567-8183",
         "Email": "manningfarms@embarqmail.com",
-        "Certified": "9/22/2016",
-        "Crops": "Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/22/2016"
       },
       {
-        "id": 378,
+        "id": 375,
         "Vendor": "Mike Mckinney/Mckinney Farms",
         "Contact": "Mike Mckinney",
         "Address": "228 Trails End Rd.",
@@ -6045,14 +4511,10 @@ module.exports = {
         "Zip": 27320,
         "Phone": "336-349-2216",
         "Email": "",
-        "Certified": "6/5/2008",
-        "Crops": "Soybeans, Tobacco, Tobacco Seedlings, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/5/2008"
       },
       {
-        "id": 379,
+        "id": 376,
         "Vendor": "Mike Morgan Farm",
         "Contact": "Mike Morgan",
         "Address": "7633 Harlow Rd",
@@ -6061,14 +4523,10 @@ module.exports = {
         "Zip": 27263,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "1/26/2011",
-        "Crops": "",
-        "Livestock": "Laying Hens (Slaughter Eligible)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/26/2011"
       },
       {
-        "id": 380,
+        "id": 377,
         "Vendor": "Milkco, Inc",
         "Contact": "Patrick Loomis",
         "Address": "220 Deaverview Rd",
@@ -6077,14 +4535,10 @@ module.exports = {
         "Zip": 28816,
         "Phone": "828-254-9560",
         "Email": "ploomis@milkco.com",
-        "Certified": "8/4/2009",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Milk"
+        "Certified": "8/4/2009"
       },
       {
-        "id": 381,
+        "id": 378,
         "Vendor": "Mill Branch Turkeys",
         "Contact": "Josh Barfield",
         "Address": "556 Maysville School Road",
@@ -6093,14 +4547,10 @@ module.exports = {
         "Zip": 28365,
         "Phone": "919-802-6759",
         "Email": "mparker@butterball.com",
-        "Certified": "12/19/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/19/2017"
       },
       {
-        "id": 382,
+        "id": 379,
         "Vendor": "Mill-Chem Manufacturing INC.",
         "Contact": "",
         "Address": "PO Box 1455",
@@ -6109,14 +4559,10 @@ module.exports = {
         "Zip": 27261,
         "Phone": "336-889-8038",
         "Email": "e.miller@millchem.com",
-        "Certified": "9/15/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Dishwasher detergent, Floor cleaner, Liquid multisurface cleaner, Toilet product, Washing detergent, Window cleaning product"
+        "Certified": "9/15/2016"
       },
       {
-        "id": 383,
+        "id": 380,
         "Vendor": "Miriam Sheffield Farm",
         "Contact": "Miriam Scheffield",
         "Address": "140 Trivette Road",
@@ -6125,14 +4571,10 @@ module.exports = {
         "Zip": 27325,
         "Phone": "910-464-3576",
         "Email": "",
-        "Certified": "4/28/2014",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/28/2014"
       },
       {
-        "id": 384,
+        "id": 381,
         "Vendor": "Misty Mountain Spring Water LLC",
         "Contact": "Jeff Cardin",
         "Address": "64841 S Hwy 107",
@@ -6141,14 +4583,10 @@ module.exports = {
         "Zip": 28717,
         "Phone": "276-623-5000",
         "Email": "cardinj@mistymoutainspringwater.com",
-        "Certified": "12/4/2015",
-        "Crops": "idle",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/4/2015"
       },
       {
-        "id": 385,
+        "id": 382,
         "Vendor": "Mitchell Farms",
         "Contact": "Steve Mitchell",
         "Address": "5079 NC 39",
@@ -6157,14 +4595,10 @@ module.exports = {
         "Zip": 27508,
         "Phone": "919-495-1043",
         "Email": "mitchellfarming@gmail.com",
-        "Certified": "8/15/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/15/2016"
       },
       {
-        "id": 386,
+        "id": 383,
         "Vendor": "Mitchell, Kevin",
         "Contact": "Kevin Mitchell",
         "Address": "Mallie Pearce Rd Hwy 98",
@@ -6173,14 +4607,10 @@ module.exports = {
         "Zip": 27508,
         "Phone": "919-497-7878",
         "Email": "",
-        "Certified": "8/15/2017",
-        "Crops": "Corn",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/15/2017"
       },
       {
-        "id": 387,
+        "id": 384,
         "Vendor": "Moffitt, Tim",
         "Contact": "Tim Moffitt",
         "Address": "6489 Hinshaw Town Road",
@@ -6189,14 +4619,10 @@ module.exports = {
         "Zip": 27316,
         "Phone": "336-879-2773",
         "Email": "",
-        "Certified": "4/7/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/7/2017"
       },
       {
-        "id": 388,
+        "id": 385,
         "Vendor": "MOODY DUNBAR",
         "Contact": "",
         "Address": "",
@@ -6205,14 +4631,10 @@ module.exports = {
         "Zip": null,
         "Phone": "",
         "Email": "",
-        "Certified": "10/7/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Sweet Potatoes Sweet Potato Syrup"
+        "Certified": "10/7/2015"
       },
       {
-        "id": 389,
+        "id": 386,
         "Vendor": "Morgan Farms, Inc.",
         "Contact": "Michael Morgan",
         "Address": "6521 Tom Ball Rd",
@@ -6221,14 +4643,10 @@ module.exports = {
         "Zip": 27317,
         "Phone": "336-442-0195",
         "Email": "morgansfarminc952@yahoo.com",
-        "Certified": "8/26/2015",
-        "Crops": "Sweet Potatoes, Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/26/2015"
       },
       {
-        "id": 390,
+        "id": 387,
         "Vendor": "Morris Carter Farm",
         "Contact": "Morris Carter",
         "Address": "767 Oakdale Rd",
@@ -6237,14 +4655,10 @@ module.exports = {
         "Zip": 28580,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "1/25/2011",
-        "Crops": "",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/25/2011"
       },
       {
-        "id": 391,
+        "id": 388,
         "Vendor": "Mother Murphy's Laboratories",
         "Contact": "Jessica Francisco",
         "Address": "",
@@ -6253,14 +4667,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(800) 849-1277",
         "Email": "jfrancisco@mothermurphys.com",
-        "Certified": "10/3/2006",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Acai Flavor (2518314 WONF), Acai Flavor (2521755 Powd. Nat. Acai Flavor), Berry Flavor (2521716 S.D. Mixed Berry), Blueberry Flavor (2725668 Blueberry Type Flavor O.S.), Butter Flavor (2516636 Type Flavor), Butter Flavor (2725671 Butter Type Flavor O.S.), Caramel Flavor (2416444 Type Flavor), Caramel Flavor (2521785 Caramel Type Flavor O.S.), Caramel Flavor (2521790 Caramel Flavor WONF), Chai Flavor (2318130), Cherry Flavor (2419958 - Type Flavor), Chocolate Flavor (2418129 WONF), Chocolate Flavor (2521769 Powd. Nat. Chocolate Flavor WONF), Chocolate Flavor (2521770 Powd. Nat. Chocolate Flavor WONF), Cinnamon Flavor (2416447 Nat. Cinnamon Fl. WONF), Cinnamon Flavor (2418323 Nat. Cinnamon Fl WONF O.S.), Coconut Flavor (2622317 Coconut Type Flavor), Cucumber Flavor (2622310 Cucumber Flavor WONF), Flavor Blend (2418170 S.D. Nat. Strawberry-Kiwi WONF), Flavor Blend (2521161 Allberry Type), Flavor Blend (2521177 Nat. Allberry Type Flavor), Flavor Blend (2622855M S.D. Vanilla Mint Flavor WONF), Fruit Flavor (2418347 Nat. Berry Cherry Type Fl WONF), Ginger Flavor (2622063 Pickled Ginger Flavor), Ginger Flavor (2622307 Ginger Flavor WONF), Grapefruit Extract (2621470), Lemon Extract (2115390), Lemon Extract (2215975 2X), Lemon Flavor (1911386), Lemon Flavor (2621170 S.D. Lemon Flavor WONF), Lemon Mint Flavor (2115275 S.D.), Lemon Mint Flavor (3277000), Lemongrass Flavor (2622052 Lemongrass Flavor WONF), Misc (2621466 Natural Cloud Emulsion), Misc. Flavor (2521737 Fermented Yeast Type Flavor), Orange Flavor (2521734 S.D. Orange Flavor), Orange Flavor (2620527 Bitter Orange Flavor WONF), Orange Flavor (2621709 Orange Flavor WONF), Orange Flavor (2723558 S.D. Orange Flavor), Peach Flavor (2521723 Nat. Peach Fl. WONF), Pear Flavor (2521722 WONF), Peppermint Flavor (1710569 Spray Dried), Pineapple Flavor (2621703 Pineapple Flavor WONF), Pomegranate Flavor (2518143 Type Flavor), Pomegranate Flavor (2521754 Powd. Nat. Pomegranate Flavor), Raspberry Flavor (2419141 - Type Flavor), Raspberry Flavor (2521327), Raspberry Flavor (MB2419141 - Type Flavor), Rootbeer Flavor (2716462 Nat. Rootbeer Flavor), Strawberry Flavor (2114891), Strawberry Flavor (2521361 Strawberry Flavor WONF), Tropical Flavor (2621593 Mango Passionfruit Pineapple Type Fl. WONF), Vanilla Extract (1510104 3x), Vanilla Extract (1510105 Vanilla Extract 3 Fold), Vanilla Extract (1510130 2x), Vanilla Extract (1510131 1x), Vanilla Extract (1510132 Vanilla Extract 2 Fold), Vanilla Extract (1510133 Vanilla Extract 1 Fold), Vanilla Extract (1711094 with Specks), Vanilla Extract (2216818 Red Split Beans 3X), Vanilla Flavor (1510170 Split Bourbon 3x), Vanilla Flavor (1510171 Split Bourbon 2x), Vanilla Flavor (1510172 Split Bourbon 1x), Vanilla Flavor (1510196 Split Bourbon Blend 3x), Vanilla Flavor (1710140 Spray Dried), Vanilla Flavor (1711001 2 Fold), Vanilla Flavor (1813202 Powder), Vanilla Flavor (2316627 WONF Powder), Vanilla Flavor (2317545 S.D. Natural Vanilla Flavor), Vanilla Flavor (2318115 WONF Powder), Vanilla Flavor (2318128 WONF), Vanilla Flavor (2622259 Vanilla Flavor WONF), Vanilla Flavor (2622260 Nat. Vanilla Flavor WONF), Vanilla Flavor (2622417 Vanilla Type Flavor), Vanilla Flavor (2623517 Powd. Nat. Vanilla Flavor WONF), Vanilla Flavor (MB12155 WONF Powder), Vanilla Mint Flavor (1710390 Spray Dried)"
+        "Certified": "10/3/2006"
       },
       {
-        "id": 392,
+        "id": 389,
         "Vendor": "Mt. Olive Pickle Company",
         "Contact": "Arritt Fletcher",
         "Address": "One Cucumber Blvd.",
@@ -6269,14 +4679,10 @@ module.exports = {
         "Zip": 28365,
         "Phone": "(919) 581-3639",
         "Email": "",
-        "Certified": "9/9/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Pickles"
+        "Certified": "9/9/2016"
       },
       {
-        "id": 393,
+        "id": 390,
         "Vendor": "MW Harper Farming",
         "Contact": "Marty Harper",
         "Address": "2135 John Green Smith Rd",
@@ -6285,14 +4691,10 @@ module.exports = {
         "Zip": 28525,
         "Phone": "252-560-3235",
         "Email": "farmfamily@embarqmail.com",
-        "Certified": "9/21/2015",
-        "Crops": "Sweet Potatoes, Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/21/2015"
       },
       {
-        "id": 394,
+        "id": 391,
         "Vendor": "Myers, George",
         "Contact": "George Myers",
         "Address": "7062 NC Hwy 62N",
@@ -6301,14 +4703,10 @@ module.exports = {
         "Zip": 27212,
         "Phone": "336-234-8957",
         "Email": "",
-        "Certified": "10/12/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/12/2015"
       },
       {
-        "id": 395,
+        "id": 392,
         "Vendor": "N & L Farming LLC",
         "Contact": "Nate And Laura Honeycutt",
         "Address": "111 Walnut Green Lane",
@@ -6317,14 +4715,10 @@ module.exports = {
         "Zip": 28334,
         "Phone": "910-990-4533",
         "Email": "cleverlah@gmail.com",
-        "Certified": "10/12/2016",
-        "Crops": "Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/12/2016"
       },
       {
-        "id": 396,
+        "id": 393,
         "Vendor": "Nancy Jane Iseley",
         "Contact": "Jane Iseley",
         "Address": "2960 Burch Bridge Road",
@@ -6333,14 +4727,10 @@ module.exports = {
         "Zip": 27217,
         "Phone": "336-260-0114",
         "Email": "",
-        "Certified": "6/14/2004",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/14/2004"
       },
       {
-        "id": 397,
+        "id": 394,
         "Vendor": "Nash Produce, LLC",
         "Contact": "Jeannette Edgerton",
         "Address": "6160 South N.C. Hwy 58",
@@ -6349,14 +4739,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-443-6011",
         "Email": "jeannetteedgerton@nashproduce.com",
-        "Certified": "1/8/2010",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cucumbers, Mr Yam's Organic Sweet Potatoes, Nash Produce Organic Sweet Potatoes, Tomorrow's Organics Sweet Potatoes, Trader Joe's Organic Sweet Potatoes, Wash and Pack Sweet Potatoes"
+        "Certified": "1/8/2010"
       },
       {
-        "id": 398,
+        "id": 395,
         "Vendor": "Natural Blend Vegetable Dehydration, LLC",
         "Contact": "Dennis Thomas",
         "Address": "9000 W. Marlboro Rd.",
@@ -6365,14 +4751,10 @@ module.exports = {
         "Zip": 27828,
         "Phone": "(252) 714-2471",
         "Email": "",
-        "Certified": "9/12/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Dehydrated Vegetables"
+        "Certified": "9/12/2017"
       },
       {
-        "id": 399,
+        "id": 396,
         "Vendor": "Natural Import Company",
         "Contact": "Crystal Macdonald",
         "Address": "9 Reed Street, Suite A",
@@ -6381,15 +4763,11 @@ module.exports = {
         "Zip": 28803,
         "Phone": "828-277-8870",
         "Email": "",
-        "Certified": "12/26/1998",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Packaged Foods, Grains, Miso, Sauces, Rice, Seeds"
+        "Certified": "12/26/1998"
       },
       {
-        "id": 400,
-        "Vendor": "Nature�s Way Farms, Inc",
+        "id": 397,
+        "Vendor": "Nature´s Way Farms, Inc",
         "Contact": "Mark Crawford",
         "Address": "4590 Giddensville Road",
         "City": "Faison",
@@ -6397,14 +4775,10 @@ module.exports = {
         "Zip": 28341,
         "Phone": "910-594-0096",
         "Email": "mark@nwfarms.net",
-        "Certified": "11/21/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Potatoes (Sweet)"
+        "Certified": "11/21/2017"
       },
       {
-        "id": 401,
+        "id": 398,
         "Vendor": "Nature's Healthy Harvest",
         "Contact": "Larry White",
         "Address": "124 Charlie Ranall Rd.",
@@ -6413,14 +4787,10 @@ module.exports = {
         "Zip": 28029,
         "Phone": "704-466-1998",
         "Email": "",
-        "Certified": "1/27/2016",
-        "Crops": "Wheatgrass",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/27/2016"
       },
       {
-        "id": 402,
+        "id": 399,
         "Vendor": "NCDA-Mountain Research Station",
         "Contact": "Kyle Miller",
         "Address": "265 Test Farm Road",
@@ -6429,14 +4799,10 @@ module.exports = {
         "Zip": 28786,
         "Phone": "828-456-3943",
         "Email": "mountain.resst@ncagr.gov",
-        "Certified": "9/27/2013",
-        "Crops": "Broccoli, Wheat, Cucurbitaceae",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/27/2013"
       },
       {
-        "id": 403,
+        "id": 400,
         "Vendor": "NCSU Dba Center For Environmental Farming Systems (CEFS)",
         "Contact": "Melissa Bell",
         "Address": "201 Stevens Mill Road",
@@ -6445,14 +4811,10 @@ module.exports = {
         "Zip": 27530,
         "Phone": "919-271-7557",
         "Email": "mcbell@ncsu.edu",
-        "Certified": "12/31/2010",
-        "Crops": "Grains for Research, Seeds for Research, Vegetables for Research",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/31/2010"
       },
       {
-        "id": 404,
+        "id": 401,
         "Vendor": "Neal Johnson Organics,LLC",
         "Contact": "Neal Johnson",
         "Address": "6095 Meadow Brook Road",
@@ -6461,14 +4823,10 @@ module.exports = {
         "Zip": 27504,
         "Phone": "919-669-0828",
         "Email": "chillieman@aol.com",
-        "Certified": "3/10/2010",
-        "Crops": "Potatoes, Sweet Potatoes, Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/10/2010"
       },
       {
-        "id": 405,
+        "id": 402,
         "Vendor": "Needham, Billy",
         "Contact": "Billy Needham",
         "Address": "1011 J Dowdy Rd",
@@ -6477,14 +4835,10 @@ module.exports = {
         "Zip": 28327,
         "Phone": "910-783-6581",
         "Email": "",
-        "Certified": "3/31/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/31/2017"
       },
       {
-        "id": 406,
+        "id": 403,
         "Vendor": "Needham, Jerry",
         "Contact": "Jerry Needham",
         "Address": "1240 J Dowdy Rd",
@@ -6493,14 +4847,10 @@ module.exports = {
         "Zip": 28327,
         "Phone": "910-948-4394",
         "Email": "",
-        "Certified": "2/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/24/2017"
       },
       {
-        "id": 407,
+        "id": 404,
         "Vendor": "Neill & Cori Lindley",
         "Contact": "Cori Lindley",
         "Address": "",
@@ -6509,14 +4859,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(919) 663-3037",
         "Email": "lindalefarms@embarqmail.com",
-        "Certified": "7/8/2009",
-        "Crops": "Alfalfa, Fallow, Hay, Pasture, Sorghum",
-        "Livestock": "Cattle (Dairy - Converted - Dairy Only), Cattle (Dairy - Last Third Gestation - Slaughter Eligible), Cow Milk",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/8/2009"
       },
       {
-        "id": 408,
+        "id": 405,
         "Vendor": "Nelson Bowers Farm",
         "Contact": "Nelson Bowers",
         "Address": "2235 Van Thomas Road",
@@ -6525,14 +4871,10 @@ module.exports = {
         "Zip": 27312,
         "Phone": "919-742-5046",
         "Email": "",
-        "Certified": "3/3/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/3/2017"
       },
       {
-        "id": 409,
+        "id": 406,
         "Vendor": "New Dawn",
         "Contact": "Lalon Lem Barnes III",
         "Address": "3046 Turnpike Rd",
@@ -6541,14 +4883,10 @@ module.exports = {
         "Zip": 28358,
         "Phone": "910-876-2466",
         "Email": "barnesblue@aol.com",
-        "Certified": "6/28/2013",
-        "Crops": "Blackberries, Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/28/2013"
       },
       {
-        "id": 410,
+        "id": 407,
         "Vendor": "New Sprout Organic Farm LLC",
         "Contact": "",
         "Address": "190 Eastside Drive",
@@ -6557,14 +4895,10 @@ module.exports = {
         "Zip": 28711,
         "Phone": "",
         "Email": "",
-        "Certified": "9/1/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Arugula, Beans, Green, Beans, Waxed, Yellow, Beets, Bunched, Gold, Beets, Bunched, Red, Blueberries, Broccoli, Bunch, Baby Bok Choy, Cabbage, Green, Cabbage, Napa, Cabbage, Red, Carrots, Bunched w/Tops, Cauliflower, Chard, Collards, Corn, Cucumber Slicer,"
+        "Certified": "9/1/2014"
       },
       {
-        "id": 411,
+        "id": 408,
         "Vendor": "Norman Greg Blalock",
         "Contact": "Greg Blalock",
         "Address": "481 Robert Whitfield Road",
@@ -6573,14 +4907,10 @@ module.exports = {
         "Zip": 27541,
         "Phone": "336-264-7729",
         "Email": "",
-        "Certified": "8/30/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/30/2016"
       },
       {
-        "id": 412,
+        "id": 409,
         "Vendor": "Norman Thomas French",
         "Contact": "Tommy French",
         "Address": "236 Birch Fork Rd",
@@ -6589,14 +4919,10 @@ module.exports = {
         "Zip": 27326,
         "Phone": "336-552-5022",
         "Email": "",
-        "Certified": "9/6/2016",
-        "Crops": "Soybeans, Wheat, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/6/2016"
       },
       {
-        "id": 413,
+        "id": 410,
         "Vendor": "North Carolina State Ports Authority",
         "Contact": "Dan Masters",
         "Address": "113 Arendel Street",
@@ -6605,14 +4931,10 @@ module.exports = {
         "Zip": 28557,
         "Phone": "330*473-5555",
         "Email": "",
-        "Certified": "1/16/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Contract Service - Warehouse/Storage of Organic Grains"
+        "Certified": "1/16/2017"
       },
       {
-        "id": 414,
+        "id": 411,
         "Vendor": "Norton, Scott dba Norton Farm",
         "Contact": "Scott Norton",
         "Address": "630 Reno Sharpe Store Rd",
@@ -6621,14 +4943,10 @@ module.exports = {
         "Zip": 27207,
         "Phone": "919-898-4820",
         "Email": "",
-        "Certified": "5/8/2016",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/8/2016"
       },
       {
-        "id": 415,
+        "id": 412,
         "Vendor": "Norvang, Jeffrey dba Nog's Farm",
         "Contact": "Jeffrey Norvang",
         "Address": "461 Sunset Hill Road",
@@ -6637,14 +4955,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-931-4012",
         "Email": "",
-        "Certified": "4/19/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/19/2017"
       },
       {
-        "id": 416,
+        "id": 413,
         "Vendor": "Nourishing Acres, LLC",
         "Contact": "Megan Marshall",
         "Address": "8403 NC Highway 86 North",
@@ -6653,14 +4967,10 @@ module.exports = {
         "Zip": 27231,
         "Phone": "919-717-4625",
         "Email": "",
-        "Certified": "8/11/2015",
-        "Crops": "Fruit, Herbs, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/11/2015"
       },
       {
-        "id": 417,
+        "id": 414,
         "Vendor": "Nutkao USA Inc",
         "Contact": "Barbara Dellapiana",
         "Address": "7044 NC 48",
@@ -6669,14 +4979,10 @@ module.exports = {
         "Zip": 27809,
         "Phone": "252-595-1000",
         "Email": "b.dellapiana@nutkao.com",
-        "Certified": "10/2/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Irrestistibles Organic Hazelnut Spread, Nutiva Nurture Vitality Organic Hazelnut Spread with Cocoa Classic, Nutiva Nurture Vitality Organic Hazelnut Spread with Cocoa Dark, Nutkao Organic Hazelnut Spread, Nukao Organic Hazelnut Spread 14%, Savor Organic Hazelnut and Chocolate Spread, Seven Farms Organic Creamy Hazelnut Spread with Cocoa, Sprouts Farms Market Organic Hazelnut Spread with Cocoa, Processing of Hazelnut Spread"
+        "Certified": "10/2/2015"
       },
       {
-        "id": 418,
+        "id": 415,
         "Vendor": "Oakley, Jeffrey T.",
         "Contact": "Jeffery T Oakley",
         "Address": "1361 Painter Rd",
@@ -6685,14 +4991,10 @@ module.exports = {
         "Zip": 27314,
         "Phone": "336-263-5961",
         "Email": "jtoakleyfarms@yahoo.com",
-        "Certified": "7/30/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/30/2015"
       },
       {
-        "id": 419,
+        "id": 416,
         "Vendor": "Orange Muslin LLC",
         "Contact": "Kanu Priya Visweash",
         "Address": "14712 Hawick Manor Ln.",
@@ -6701,14 +5003,10 @@ module.exports = {
         "Zip": 28134,
         "Phone": "203-300-1335",
         "Email": "kanu@orangemuslin.com",
-        "Certified": "5/9/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Ghee (Clarified Butter/Ghee)"
+        "Certified": "5/9/2017"
       },
       {
-        "id": 420,
+        "id": 417,
         "Vendor": "Organic Production Services, LLC",
         "Contact": "Robert Delorme",
         "Address": "802 Julian R. Allsbrook Hwy",
@@ -6717,14 +5015,10 @@ module.exports = {
         "Zip": 27890,
         "Phone": "291-664-4000",
         "Email": "",
-        "Certified": "2/3/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Canola Meal, Canola Oil, Soybean Meal, Soybean Oil, Processing: Soybean Meal and Soybean Oil"
+        "Certified": "2/3/2017"
       },
       {
-        "id": 421,
+        "id": 418,
         "Vendor": "Origin Food Group",
         "Contact": "",
         "Address": "306 Stamey Farm Road",
@@ -6733,14 +5027,10 @@ module.exports = {
         "Zip": 28677,
         "Phone": "",
         "Email": "",
-        "Certified": "9/4/2012",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Manufacturer of Organic Yogurt"
+        "Certified": "9/4/2012"
       },
       {
-        "id": 422,
+        "id": 419,
         "Vendor": "Otter Branch Organics",
         "Contact": "Rooks K. Wells",
         "Address": "956 Sheffield Rd.",
@@ -6749,14 +5039,10 @@ module.exports = {
         "Zip": 28458,
         "Phone": "910-289-1791",
         "Email": "rookswells547@gmail.com",
-        "Certified": "7/17/2015",
-        "Crops": "Carrots, Radishes, Okra, Lettuce, Spinach, Peppers, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/17/2015"
       },
       {
-        "id": 423,
+        "id": 420,
         "Vendor": "Overby, Edward",
         "Contact": "Edward Overby",
         "Address": "4074B Ed Harris Road",
@@ -6765,14 +5051,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-395-2739",
         "Email": "",
-        "Certified": "9/9/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/9/2015"
       },
       {
-        "id": 424,
+        "id": 421,
         "Vendor": "Owen Rouse Farms Inc",
         "Contact": "Tanya Rouse",
         "Address": "2297 S NC 11 Hwy",
@@ -6781,14 +5063,10 @@ module.exports = {
         "Zip": 28458,
         "Phone": "910-376-0625",
         "Email": "",
-        "Certified": "4/12/2017",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/12/2017"
       },
       {
-        "id": 425,
+        "id": 422,
         "Vendor": "Owen, Lee",
         "Contact": "Jonathan Owen",
         "Address": "2320 Massengil Pond Road",
@@ -6797,14 +5075,10 @@ module.exports = {
         "Zip": 27501,
         "Phone": 9192013377,
         "Email": "",
-        "Certified": "3/4/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/4/2017"
       },
       {
-        "id": 426,
+        "id": 423,
         "Vendor": "Pangaea Plants LLC",
         "Contact": "Gabriel Noard",
         "Address": "1235 Conner Road",
@@ -6813,14 +5087,10 @@ module.exports = {
         "Zip": 28746,
         "Phone": "(828) 778-4223",
         "Email": "",
-        "Certified": "8/20/2011",
-        "Crops": "Amaranth, Basil, Beans, Broccoli, Cabbage, Collards, Cucumbers, Flax, Hay, Kale, Lemon Balm, Lettuce, Passionflowers, Peanuts, Peas, Pigweed, Poke, Sunflower Seeds, Valerian, Yellow Dock, Seeds, Squash, Sunflowers, Tomatoes, Watermelons, Zucchini",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/20/2011"
       },
       {
-        "id": 427,
+        "id": 424,
         "Vendor": "Parker Farms Of Pasquotank County, Inc.",
         "Contact": "Jason Goetz",
         "Address": "",
@@ -6829,14 +5099,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(252) 333-4582",
         "Email": "parkerfarmspc@gmail.com",
-        "Certified": "4/6/2015",
-        "Crops": "Asparagus, Corn, Soybean, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/6/2015"
       },
       {
-        "id": 428,
+        "id": 425,
         "Vendor": "Parker, Randall",
         "Contact": "Randall Parker",
         "Address": "8015 Tilley Road",
@@ -6845,14 +5111,10 @@ module.exports = {
         "Zip": 27541,
         "Phone": "919-732-6366",
         "Email": "rparkerfarms@yahoo.com",
-        "Certified": "5/2/2013",
-        "Crops": "Sweet Potatoes, Asparagus, Tobacco, Transplants (Tobacco)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/2/2013"
       },
       {
-        "id": 429,
+        "id": 426,
         "Vendor": "Parrish Enterprises, Inc",
         "Contact": "Lewie Parrish",
         "Address": "5896 Taylors Store Rd",
@@ -6861,14 +5123,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "757-873-1067",
         "Email": "woody@parrishpm.com",
-        "Certified": "11/7/2014",
-        "Crops": "Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/7/2014"
       },
       {
-        "id": 430,
+        "id": 427,
         "Vendor": "Parrish, Charles",
         "Contact": "Charles Parrish",
         "Address": "496 Kipling Road",
@@ -6877,14 +5135,10 @@ module.exports = {
         "Zip": 27526,
         "Phone": "919-552-3379",
         "Email": "",
-        "Certified": "4/12/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/12/2017"
       },
       {
-        "id": 431,
+        "id": 428,
         "Vendor": "Patrick Purcell",
         "Contact": "Patrick Purcell",
         "Address": "",
@@ -6893,14 +5147,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(919) 730-3488",
         "Email": "purcellpatrick@live.com",
-        "Certified": "8/1/2017",
-        "Crops": "Cowpea, Fescue, Grass, Sorghum, Sorghum-Sudangrass, Soybean, Woodlands",
-        "Livestock": "Cattle (Dairy - Converted - Dairy Only), Cow Milk",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/1/2017"
       },
       {
-        "id": 432,
+        "id": 429,
         "Vendor": "Patterson, Timothy dba T & T Farm",
         "Contact": "Timothy Patterson",
         "Address": "1469 Patterson Road",
@@ -6909,14 +5159,10 @@ module.exports = {
         "Zip": 27505,
         "Phone": "919-258-9965",
         "Email": "",
-        "Certified": "4/11/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/11/2017"
       },
       {
-        "id": 433,
+        "id": 430,
         "Vendor": "Paul Harris LLC",
         "Contact": "Paul Harris",
         "Address": "317 Dennis Harris Road",
@@ -6925,14 +5171,10 @@ module.exports = {
         "Zip": 27511,
         "Phone": "252-432-5819",
         "Email": "prhfarms@gmail.com",
-        "Certified": "8/15/2017",
-        "Crops": "Corn, Soybeans, Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/15/2017"
       },
       {
-        "id": 434,
+        "id": 431,
         "Vendor": "Paul Johnson Farm",
         "Contact": "Paul Johnson",
         "Address": "3704 Rosser Pittman Road",
@@ -6941,14 +5183,10 @@ module.exports = {
         "Zip": 27332,
         "Phone": "919-499-5320",
         "Email": "",
-        "Certified": "4/20/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/20/2017"
       },
       {
-        "id": 435,
+        "id": 432,
         "Vendor": "Payne, Robert",
         "Contact": "Robert Payne",
         "Address": "4974 Lower Moncure Rd.",
@@ -6957,14 +5195,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-770-6128",
         "Email": "",
-        "Certified": "4/7/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/7/2017"
       },
       {
-        "id": 436,
+        "id": 433,
         "Vendor": "Peggy T. Garrett/Garrett Farm",
         "Contact": "Peggy Garrett",
         "Address": "290 Oak Grove Mt. Zion Road",
@@ -6973,14 +5207,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "336-599-3543",
         "Email": "",
-        "Certified": "10/21/2002",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/21/2002"
       },
       {
-        "id": 437,
+        "id": 434,
         "Vendor": "Perdue Foods, LLC",
         "Contact": "",
         "Address": "862 Harris Street North West",
@@ -6989,14 +5219,10 @@ module.exports = {
         "Zip": 28205,
         "Phone": "",
         "Email": "",
-        "Certified": "8/19/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Fully Cooked Shredded Boneless Skinless Chicken Breast"
+        "Certified": "8/19/2016"
       },
       {
-        "id": 438,
+        "id": 435,
         "Vendor": "Philip Smith",
         "Contact": "Philip Smith",
         "Address": "502 Trinity Church Road",
@@ -7005,14 +5231,10 @@ module.exports = {
         "Zip": 27549,
         "Phone": "919-496-2704",
         "Email": "",
-        "Certified": "12/14/2007",
-        "Crops": "Tobacco, Tobacco Seedlings, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/14/2007"
       },
       {
-        "id": 439,
+        "id": 436,
         "Vendor": "Phillip Hinson",
         "Contact": "Phillip Hinson",
         "Address": "1026 Roanoke Ch Rd",
@@ -7021,14 +5243,10 @@ module.exports = {
         "Zip": 28110,
         "Phone": "330-473-5555",
         "Email": "dan@hilandnaturals.com",
-        "Certified": "9/8/2017",
-        "Crops": "",
-        "Livestock": "Turkeys",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/8/2017"
       },
       {
-        "id": 440,
+        "id": 437,
         "Vendor": "Phillps, Vicki",
         "Contact": "Vicki Phillips",
         "Address": "123 Walter Wilson Rd.",
@@ -7037,14 +5255,10 @@ module.exports = {
         "Zip": 27207,
         "Phone": "919-837-2226",
         "Email": "",
-        "Certified": "4/12/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/12/2017"
       },
       {
-        "id": 441,
+        "id": 438,
         "Vendor": "Pierce's Greenhouse",
         "Contact": "Chris Pierce",
         "Address": "674Llassiter Rd",
@@ -7053,14 +5267,10 @@ module.exports = {
         "Zip": 27569,
         "Phone": "919-920-5763",
         "Email": "chrispierce5763@gmail.com",
-        "Certified": "9/9/2016",
-        "Crops": "Cabbage, Broccoli, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/9/2016"
       },
       {
-        "id": 442,
+        "id": 439,
         "Vendor": "Pike, Danny",
         "Contact": "Danny Pike",
         "Address": "953 Silk Hope LIberty Road",
@@ -7069,14 +5279,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-663-2919",
         "Email": "",
-        "Certified": "3/31/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/31/2017"
       },
       {
-        "id": 443,
+        "id": 440,
         "Vendor": "Pilgrim's Pride - Feed Mill",
         "Contact": "Dan Masters",
         "Address": "2607 Old Highway 421",
@@ -7085,14 +5291,10 @@ module.exports = {
         "Zip": 27355,
         "Phone": "330-473-5555",
         "Email": "",
-        "Certified": "2/10/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Processing of Bulk Poultry Feed Rations (Organic Broiler Finisher Mash, Organic Broiler Grower Mash, Organic Starter Mash)"
+        "Certified": "2/10/2017"
       },
       {
-        "id": 444,
+        "id": 441,
         "Vendor": "Pilgrim's Pride Processing Plant",
         "Contact": "Dan Moreno",
         "Address": "2607 Old Hwy 421",
@@ -7101,30 +5303,22 @@ module.exports = {
         "Zip": 27335,
         "Phone": "919-895-3455",
         "Email": "",
-        "Certified": "12/22/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Just Bare:  Boneless Skinless Chicken Fillets, Boneless Skinless Chicken Tenderloins, Boneless Skinless Chicken Thighs, Chicken Drumsticks, Kirkland Signature Organic:  Boneless Skinless Breast, Boneless Skinless Legs & Thighs, Boneless & Skinless Thighs, Drumsticks, Party Wings, Tenderloins, Young Chicken, Processing of Chicken"
+        "Certified": "12/22/2016"
       },
       {
-        "id": 445,
+        "id": 442,
         "Vendor": "Pilgrim's Sanford Processing",
         "Contact": "Bill Lovett",
-        "Address": "484�Zimmerman�Road",
+        "Address": "484 Zimmerman Road",
         "City": "Sanford",
         "State": "North Carolina",
         "Zip": 27330,
         "Phone": "330-473-5555",
         "Email": "dan@hilandnaturals.com",
-        "Certified": "12/15/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/15/2017"
       },
       {
-        "id": 446,
+        "id": 443,
         "Vendor": "Pine Knot Farms",
         "Contact": "Stanley Hughes",
         "Address": "8906 Hester Road",
@@ -7133,14 +5327,10 @@ module.exports = {
         "Zip": 27541,
         "Phone": "919-644-3276",
         "Email": "hughes36@yahoo.com",
-        "Certified": "7/28/2016",
-        "Crops": "Beets, Okra, Cabbage, Chard, Collards, Kale, Lettuce, Cucumbers, Peppers, Squash, Broccoli, Cauliflower",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/28/2016"
       },
       {
-        "id": 447,
+        "id": 444,
         "Vendor": "Pitch Pine Farm, LLC",
         "Contact": "Paige Witherington",
         "Address": "2674 Crab Creek Rd",
@@ -7149,14 +5339,10 @@ module.exports = {
         "Zip": 28766,
         "Phone": "678-764-8273",
         "Email": "",
-        "Certified": "12/17/2014",
-        "Crops": "Cover Crop, Flowers, Fruits, Herbs, Seeds, Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/17/2014"
       },
       {
-        "id": 448,
+        "id": 445,
         "Vendor": "Pittman Farm",
         "Contact": "James Edward Pittman",
         "Address": "355 Pinkney Church Rd",
@@ -7165,14 +5351,10 @@ module.exports = {
         "Zip": 27830,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "1/28/2011",
-        "Crops": "",
-        "Livestock": "House empty",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/28/2011"
       },
       {
-        "id": 449,
+        "id": 446,
         "Vendor": "Plum Granny Farm, LLC",
         "Contact": "Cheryl Ferguson",
         "Address": "1041 Flat Shoals Rd",
@@ -7181,14 +5363,10 @@ module.exports = {
         "Zip": 27021,
         "Phone": "336-994-2517",
         "Email": "",
-        "Certified": "8/9/2010",
-        "Crops": "Vegetables, Flowers, Herbs",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/9/2010"
       },
       {
-        "id": 450,
+        "id": 447,
         "Vendor": "Poindexter Organics",
         "Contact": "Frank Poindexter",
         "Address": "990 Youngs Chapel Church Rd",
@@ -7197,14 +5375,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "336-504-0889",
         "Email": "",
-        "Certified": "6/27/2014",
-        "Crops": "Tobacco, Transplants (Tobacco)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/27/2014"
       },
       {
-        "id": 451,
+        "id": 448,
         "Vendor": "Poplar Ridge Farm, LLC",
         "Contact": "Marianne Battistone",
         "Address": "1619 Waxhow Indian Trail Rd South",
@@ -7213,14 +5387,10 @@ module.exports = {
         "Zip": 28173,
         "Phone": "704-843-5744",
         "Email": "mb@poplarridgefarmnc.com",
-        "Certified": "2/26/2010",
-        "Crops": "Beets, Carrots, Horseradish, Leeks, Onions, Potatoes, Radishes, Turnips, Bok Choy, Kale, Kohlrabi, Lettuce, Spinach, Basil, Cilantro, Dill, Fennel, Garlic, Ginger, Parsley, Rosemary, Turmeric, Cucumbers, Eggplants, Pepper, Squash, Tomatoes, Blueberries, Artichokes, Broccoli, Cauliflower, Swiss Chard",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/26/2010"
       },
       {
-        "id": 452,
+        "id": 449,
         "Vendor": "Port City Java",
         "Contact": "Scott Mclean",
         "Address": "101 Portwatch Way",
@@ -7229,14 +5399,10 @@ module.exports = {
         "Zip": 28412,
         "Phone": "910-796-6646 ext 304",
         "Email": "scott.mclean@portcityjava.com",
-        "Certified": "11/12/2009",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee"
+        "Certified": "11/12/2009"
       },
       {
-        "id": 453,
+        "id": 450,
         "Vendor": "Post Consumer Brands",
         "Contact": "Tamara Myers",
         "Address": "",
@@ -7245,14 +5411,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(336) 683-5569",
         "Email": "tdmyers@postholdings.com",
-        "Certified": "12/23/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Oatmeal (Bare), Oatmeal (Maple & Brown Sugar)"
+        "Certified": "12/23/2015"
       },
       {
-        "id": 454,
+        "id": 451,
         "Vendor": "Preddy Farms, LLC",
         "Contact": "Jeff Preddy",
         "Address": "3049 Preddy Road",
@@ -7261,14 +5423,10 @@ module.exports = {
         "Zip": 27525,
         "Phone": "919-528-9861",
         "Email": "",
-        "Certified": "7/23/2005",
-        "Crops": "Grain, Tobacco, Tobacco Seedlings",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/23/2005"
       },
       {
-        "id": 455,
+        "id": 452,
         "Vendor": "Price Family Farm LLC",
         "Contact": "Jeremiah Price",
         "Address": "453 J Cook Road",
@@ -7277,14 +5435,10 @@ module.exports = {
         "Zip": 27252,
         "Phone": "919-356-9628",
         "Email": "",
-        "Certified": "3/9/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/9/2017"
       },
       {
-        "id": 456,
+        "id": 453,
         "Vendor": "Proffitt Family Cattle Company",
         "Contact": "Shelley Eagan",
         "Address": "150 Old Home Place",
@@ -7293,14 +5447,10 @@ module.exports = {
         "Zip": 28086,
         "Phone": "",
         "Email": "",
-        "Certified": "2/24/2016",
-        "Crops": "",
-        "Livestock": "Steers, Beef Cows",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/24/2016"
       },
       {
-        "id": 457,
+        "id": 454,
         "Vendor": "Pruitt Farms",
         "Contact": "Edward Pruitt",
         "Address": "7637 Cherry Grove Road",
@@ -7309,14 +5459,10 @@ module.exports = {
         "Zip": 27320,
         "Phone": "336-421-9910",
         "Email": "",
-        "Certified": "10/2/2007",
-        "Crops": "Tobacco, Tobacco Seedlings",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/2/2007"
       },
       {
-        "id": 458,
+        "id": 455,
         "Vendor": "Pure Intentions Coffee",
         "Contact": "",
         "Address": "2215 N. Tyron St., Suite A",
@@ -7325,14 +5471,10 @@ module.exports = {
         "Zip": 28206,
         "Phone": "",
         "Email": "",
-        "Certified": "2/13/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee"
+        "Certified": "2/13/2016"
       },
       {
-        "id": 459,
+        "id": 456,
         "Vendor": "Quincy Farms, Inc",
         "Contact": "Hunter Quincy",
         "Address": "3016 Harts Mill Run Rd",
@@ -7341,14 +5483,10 @@ module.exports = {
         "Zip": 27886,
         "Phone": "252-266-6457",
         "Email": "hchquincy@gmail.com",
-        "Certified": "10/9/2017",
-        "Crops": "Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/9/2017"
       },
       {
-        "id": 460,
+        "id": 457,
         "Vendor": "Ragan, Tony dba Ragan Farm",
         "Contact": "Tony Ragan",
         "Address": "636 Ragan Road",
@@ -7357,14 +5495,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-775-9276",
         "Email": "",
-        "Certified": "3/27/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/27/2017"
       },
       {
-        "id": 461,
+        "id": 458,
         "Vendor": "Ramblerill Farm, Inc.",
         "Contact": "Jane Saiers",
         "Address": "5407 Spring House Lane",
@@ -7373,14 +5507,10 @@ module.exports = {
         "Zip": 27516,
         "Phone": "919-618-6067",
         "Email": "",
-        "Certified": "8/20/2013",
-        "Crops": "Fruits and Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/20/2013"
       },
       {
-        "id": 462,
+        "id": 459,
         "Vendor": "Randy P. Harris",
         "Contact": "Randy Harris",
         "Address": "1897 Dabney Rd",
@@ -7389,14 +5519,10 @@ module.exports = {
         "Zip": 27537,
         "Phone": "919-691-0886",
         "Email": "",
-        "Certified": "10/21/2002",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/21/2002"
       },
       {
-        "id": 463,
+        "id": 460,
         "Vendor": "Rankin, Keaton",
         "Contact": "Rankin Keaton",
         "Address": "Grassy Creek Rd, 623 Pucket St",
@@ -7405,14 +5531,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-690-2839",
         "Email": "kjrankin8819@hotmail.com",
-        "Certified": "9/1/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/1/2015"
       },
       {
-        "id": 464,
+        "id": 461,
         "Vendor": "Raw Shakti Chocolate Dba Santosha Chocolate",
         "Contact": "Don Rowe",
         "Address": "335 Cummins Rd.",
@@ -7421,14 +5543,10 @@ module.exports = {
         "Zip": 28805,
         "Phone": "828-407-0947",
         "Email": "admin@rawshaktichocolate.com",
-        "Certified": "2/4/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Chocolate (Cinnamon, Cayenne & Maca), Chocolate (Citrus & Maca), Chocolate (Coconut & Hawaiian Pink Salt), Chocolate (Coconut Creme), Chocolate (Espresso), Chocolate (Goji Berries, Ginger & Ashwagandha), Chocolate (Mint & Maca), Chocolate (Rhodola & Hawaiian Red Salt), Chocolate (Single Origin Peru)"
+        "Certified": "2/4/2015"
       },
       {
-        "id": 465,
+        "id": 462,
         "Vendor": "Ray Adcock/Home Place Farm",
         "Contact": "Ray Adcock",
         "Address": "504 Walnut Grove Rd",
@@ -7437,14 +5555,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-691-4546",
         "Email": "",
-        "Certified": "7/14/2008",
-        "Crops": "Oats, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/14/2008"
       },
       {
-        "id": 466,
+        "id": 463,
         "Vendor": "Red Scout Enterprises, LLC Dba Red Scout Farm",
         "Contact": "Mary Carroll Dodd",
         "Address": "99 Temple Rd.",
@@ -7453,14 +5567,10 @@ module.exports = {
         "Zip": 28711,
         "Phone": "828-707-1155",
         "Email": "redscoutfarm@gmail.com",
-        "Certified": "5/5/2017",
-        "Crops": "Beans, Blueberries, Broccoli, Chard, Corn, Eggplant, Garlic, Kale, Lettuces, Melons, Mushrooms, Peas (Fresh), Peppers, Squash, Strawberries, Tomatoes, Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/5/2017"
       },
       {
-        "id": 467,
+        "id": 464,
         "Vendor": "Reedy Fork Farm",
         "Contact": "George Teague",
         "Address": "",
@@ -7469,14 +5579,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(336) 449-4883",
         "Email": "gyteague@gmail.com",
-        "Certified": "9/26/2006",
-        "Crops": "Barley, Corn, Forage, Grass, Pasture, Sorghum, Sorghum-Sudangrass, Sunflower (seed)",
-        "Livestock": "Beef, Cattle (Dairy - Converted - Dairy Only), Cattle (Dairy - Last Third Gestation - Slaughter Eligible), Cattle-For Slaughter, Chicken Eggs, Chickens-For Egg Production, Cow Milk",
-        "Wildcrops": "",
-        "Handling": "alfalfa Livestock Feed (Alfalfa Pellets), Faba Beans Livestock Feed, Livestock Feed (Canola Meal), Livestock Feed (Distillers Grain), Livestock Feed (Duck Blend - 14% Duck Maintenance), Livestock Feed (Duck Blend - 15% Soy Free Duck Maintenance), Livestock Feed (Duck Blend - 18% Duck Developer), Livestock Feed (Duck Blend - 18% Soy Free Duck Developer), Livestock Feed (Extender Pellets), Livestock Feed (Flax Oil), Livestock Feed (Hominy), Livestock Feed (Horse Blend - 12% Horse), Livestock Feed (Horse Blend - 17% Soy Free Horse), Livestock Feed - Barley, Livestock Feed - Beef Blend, Livestock Feed - Chicken Blend, Livestock Feed - Corn (Cracked Corn), Livestock Feed - Corn (Whole Corn), Livestock Feed - Dairy Blend, Livestock Feed - Dairy Blend (16% Cow (Dairy) Feed), Livestock Feed - Dairy Blend (16% Soy Free Cow (Dairy) Feed), Livestock Feed - Flax, Livestock Feed - Flax Meal, Livestock Feed - Goat Blend, Livestock Feed - Goat Blend (16% Goat Feed), Livestock Feed - Goat Blend (16% Soy Lactation / Starter), Livestock Feed - Goat Blend (17% Soy Free Goat Feed), Livestock Feed - Milo, Livestock Feed - Oats, Livestock Feed - Oats (Rolled Oats), Livestock Feed - Peas, Livestock Feed - Poultry Blend (16% Gluten & Soy Free Layer), Livestock Feed - Poultry Blend (16% Pullet Grower), Livestock Feed - Poultry Blend (16% Soy Free Pullet Grower), Livestock Feed - Poultry Blend (17% Layer Feed), Livestock Feed - Poultry Blend (18% Broiler Grower), Livestock Feed - Poultry Blend (18% Soy Free Broiler Grower), Livestock Feed - Poultry Blend (20% Broiler Starter), Livestock Feed - Poultry Blend (20% Chick Starter), Livestock Feed - Poultry Blend (20% Soy Free Chick Starter), Livestock Feed - Rabbit Blend (17% Rabbit), Livestock Feed - Ruminant Blend (16% Calf), Livestock Feed - Rye, Livestock Feed - Scratch, Livestock Feed - Sesame Meal, Livestock Feed - Sheep Blend, Livestock Feed - Sheep Blend (14% Sheep), Livestock Feed - Sheep Blend (17% Soy Free Sheep), Livestock Feed - Spelt, Livestock Feed - Sunflower Meal, Livestock Feed - Swine Blend, Livestock Feed - Swine Blend (16% Soy Free Swine Grower), Livestock Feed - Swine Blend (16% Swine Grower), Livestock Feed - Turkey Blend, Livestock Feed - Turkey Blend (20% Soy Free Turkey Grower), Livestock Feed - Turkey Blend (20% Turkey Grower), Livestock Feed - Turkey Blend (24% Soy Free Turkey Starter), Livestock Feed - Turkey Blend (25% Soy Free Turkey Starter), Livestock Feed - Turkey Blend (25% Turkey Starter), Livestock Feed - Wheat, Livestock Feed - Wheat Midds, Molasses Livestock Feed, Navy Bean Livestock Feed, Soybean Livestock Feed (Roasted), Sunflower Oil, Sunflower Oil Livestock Feed, Vegetable Oil Livestock Feed"
+        "Certified": "9/26/2006"
       },
       {
-        "id": 468,
+        "id": 465,
         "Vendor": "Richard Ward",
         "Contact": "Richard Ward",
         "Address": "915 Midway Road",
@@ -7485,14 +5591,10 @@ module.exports = {
         "Zip": 28472,
         "Phone": "910-640-7893",
         "Email": "",
-        "Certified": "10/21/2002",
-        "Crops": "vegetables, fruit, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/21/2002"
       },
       {
-        "id": 469,
+        "id": 466,
         "Vendor": "Richardson, Richard Jr dba Long Branch Farm",
         "Contact": "Robert Richardson, Jr",
         "Address": "370 Richardson Road",
@@ -7501,14 +5603,10 @@ module.exports = {
         "Zip": 28377,
         "Phone": "910-947-3512",
         "Email": "",
-        "Certified": "3/29/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/29/2017"
       },
       {
-        "id": 470,
+        "id": 467,
         "Vendor": "Rick Cook dba Cook Farms",
         "Contact": "Rick Cook",
         "Address": "4430 High Rock Rd",
@@ -7517,14 +5615,10 @@ module.exports = {
         "Zip": 27249,
         "Phone": "336-558-8870",
         "Email": "",
-        "Certified": "8/21/2017",
-        "Crops": "Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/21/2017"
       },
       {
-        "id": 471,
+        "id": 468,
         "Vendor": "Ridge Runner Trading Company, Inc",
         "Contact": "Casey Hayes",
         "Address": "",
@@ -7533,14 +5627,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(828) 964-3847",
         "Email": "casey@ridgerunnertrading.com",
-        "Certified": "3/17/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Processing"
+        "Certified": "3/17/2016"
       },
       {
-        "id": 472,
+        "id": 469,
         "Vendor": "Ring, William",
         "Contact": "William Ring",
         "Address": "937 Airport Rd.",
@@ -7549,30 +5639,10 @@ module.exports = {
         "Zip": 28327,
         "Phone": "910-245-7799",
         "Email": "",
-        "Certified": "3/21/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/21/2017"
       },
       {
-        "id": 473,
-        "Vendor": "River Sun Farm",
-        "Contact": "Melinda & Michael Roberts",
-        "Address": "130 Catalpa Ridge Lane",
-        "City": "Statesville",
-        "State": "North Carolina",
-        "Zip": 28625,
-        "Phone": "",
-        "Email": "riversunfarms@gmail.com",
-        "Certified": "6/10/2015",
-        "Crops": "Mushrooms, Nursery/Starts/Flowers/Trees: Flowers, Blueberries, Elderberries, Produce",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
-      },
-      {
-        "id": 474,
+        "id": 470,
         "Vendor": "River's Edge Farms",
         "Contact": "William Bruce",
         "Address": "970 Valley River Ave",
@@ -7581,14 +5651,10 @@ module.exports = {
         "Zip": 28906,
         "Phone": "",
         "Email": "",
-        "Certified": "9/25/2015",
-        "Crops": "Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/25/2015"
       },
       {
-        "id": 475,
+        "id": 471,
         "Vendor": "Riverview Farms, LLC",
         "Contact": "Kenneth Cole",
         "Address": "120 Old Bishop Farm Rd",
@@ -7597,14 +5663,10 @@ module.exports = {
         "Zip": 28704,
         "Phone": "828-687-1936",
         "Email": "",
-        "Certified": "7/27/2015",
-        "Crops": "apples, asparagus, Berries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/27/2015"
       },
       {
-        "id": 476,
+        "id": 472,
         "Vendor": "Rob Glover Farming LLC",
         "Contact": "Rob Glover",
         "Address": "10618 Liles Rd",
@@ -7613,14 +5675,10 @@ module.exports = {
         "Zip": 27807,
         "Phone": "252-205-4054",
         "Email": "rdglover@embarqmail.com",
-        "Certified": "7/12/2012",
-        "Crops": "Broccoli, Sweet Potatoes, Tobacco, Transplants (Tobacco), Transplants (Sweet Potato), Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/12/2012"
       },
       {
-        "id": 477,
+        "id": 473,
         "Vendor": "Rob Glover Farming LLC",
         "Contact": "Rob Glover",
         "Address": "10618 Liles Road",
@@ -7629,14 +5687,10 @@ module.exports = {
         "Zip": 27807,
         "Phone": "252-205-4054",
         "Email": "rdglover@embarqmail.com",
-        "Certified": "11/25/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Vegetables (Sweet Potatoes:  Rob Glover Organics Sweet Potatoes and Southern's Organic Sweet Potatoes), Washing, Packing and Storage of Organic Sweet Potatoes"
+        "Certified": "11/25/2014"
       },
       {
-        "id": 478,
+        "id": 474,
         "Vendor": "Robbins Brothers Farms, Inc.",
         "Contact": "Marsha Robbins",
         "Address": "7071 Heffner Rd",
@@ -7645,14 +5699,10 @@ module.exports = {
         "Zip": 27803,
         "Phone": "252-904-9344",
         "Email": "mkrobbins@centurylink.net",
-        "Certified": "9/5/2017",
-        "Crops": "Sweet Potatoes, Corn",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/5/2017"
       },
       {
-        "id": 479,
+        "id": 475,
         "Vendor": "Robbins, Vernette",
         "Contact": "Vernette Robbins",
         "Address": "460 Adams Rd.",
@@ -7661,14 +5711,10 @@ module.exports = {
         "Zip": 27341,
         "Phone": "336-879-2689",
         "Email": "",
-        "Certified": "3/17/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/17/2017"
       },
       {
-        "id": 480,
+        "id": 476,
         "Vendor": "Robert, Ken",
         "Contact": "Ken Roberts",
         "Address": "383 Poultry Lane",
@@ -7677,14 +5723,10 @@ module.exports = {
         "Zip": 27505,
         "Phone": "919-258-6387",
         "Email": "",
-        "Certified": "4/26/2016",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/26/2016"
       },
       {
-        "id": 481,
+        "id": 477,
         "Vendor": "Roberts, Ken dba Beagle Run",
         "Contact": "Ken Robert",
         "Address": "383 Poultry Lane",
@@ -7693,14 +5735,10 @@ module.exports = {
         "Zip": 27505,
         "Phone": "919-258-6387",
         "Email": "",
-        "Certified": "4/26/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/26/2017"
       },
       {
-        "id": 482,
+        "id": 478,
         "Vendor": "Robertson Steven",
         "Contact": "Steven Robertson",
         "Address": "1304 Falkenberry Road",
@@ -7709,14 +5747,10 @@ module.exports = {
         "Zip": 27021,
         "Phone": "336-403-7591",
         "Email": "robertsonfarm3052@gmail.com",
-        "Certified": "9/13/2016",
-        "Crops": "Corn, Soybeans, Wheat, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/13/2016"
       },
       {
-        "id": 483,
+        "id": 479,
         "Vendor": "Robinson Brothers Farm LLC",
         "Contact": "",
         "Address": "1807 Hall Town Road",
@@ -7725,14 +5759,10 @@ module.exports = {
         "Zip": 28441,
         "Phone": "",
         "Email": "",
-        "Certified": "5/18/2017",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/18/2017"
       },
       {
-        "id": 484,
+        "id": 480,
         "Vendor": "Rock Hill Farm",
         "Contact": "Mickey Clayton",
         "Address": "240 Jones Road",
@@ -7741,14 +5771,10 @@ module.exports = {
         "Zip": 27541,
         "Phone": "336-592-1425",
         "Email": "ccd.rhf@gmail.com",
-        "Certified": "9/18/2015",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/18/2015"
       },
       {
-        "id": 485,
+        "id": 481,
         "Vendor": "Rock Ridge Farms Partnership",
         "Contact": "Regan B. Dawson",
         "Address": "6611 Luther Rd",
@@ -7757,14 +5783,10 @@ module.exports = {
         "Zip": 27893,
         "Phone": "252-206-0737",
         "Email": "reboyette@gmail.com",
-        "Certified": "9/30/2014",
-        "Crops": "Soybeans, Sweet Potatoes, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/30/2014"
       },
       {
-        "id": 486,
+        "id": 482,
         "Vendor": "Rocking S Farm",
         "Contact": "",
         "Address": "567 Garvery Rd",
@@ -7773,14 +5795,10 @@ module.exports = {
         "Zip": 28663,
         "Phone": "336-363-4488",
         "Email": "rockingsfarm@yahoo.com",
-        "Certified": "10/26/2015",
-        "Crops": "Corn, Fennel, Grass, other, Peppers, Pumpkins",
-        "Livestock": "Live cattle, other, Live cattle, other",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/26/2015"
       },
       {
-        "id": 487,
+        "id": 483,
         "Vendor": "Rocky Acre Farms LLC",
         "Contact": "Roy Carver III",
         "Address": "1220 Morton Pulliam Road",
@@ -7789,14 +5807,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "336-592-0172",
         "Email": "",
-        "Certified": "6/24/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/24/2016"
       },
       {
-        "id": 488,
+        "id": 484,
         "Vendor": "Ronald C. Perry Farming, Inc.",
         "Contact": "Ronald Perry",
         "Address": "3625 Woodland Church Rd",
@@ -7805,14 +5819,10 @@ module.exports = {
         "Zip": 27587,
         "Phone": "919-669-6771",
         "Email": "",
-        "Certified": "8/8/2017",
-        "Crops": "Tobacco, grains",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/8/2017"
       },
       {
-        "id": 489,
+        "id": 485,
         "Vendor": "Ronnie Love",
         "Contact": "Ronnie Love",
         "Address": "8167 Smith Rd",
@@ -7821,14 +5831,10 @@ module.exports = {
         "Zip": 28163,
         "Phone": "330-447-4261",
         "Email": "tom@hilandnaturals.com",
-        "Certified": "2/27/2018",
-        "Crops": "",
-        "Livestock": "Turkeys",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/27/2018"
       },
       {
-        "id": 490,
+        "id": 486,
         "Vendor": "Rouse Brothers Farms, LLC",
         "Contact": "Benjamin & Travis Rouse",
         "Address": "164 Fire Tower Road",
@@ -7837,14 +5843,10 @@ module.exports = {
         "Zip": 27888,
         "Phone": "252-902-4084",
         "Email": "bcrouse0503@gmail.com",
-        "Certified": "9/19/2014",
-        "Crops": "Sweet Potatoes, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/19/2014"
       },
       {
-        "id": 491,
+        "id": 487,
         "Vendor": "Rouse Brothers Produce, Inc. Dba Uncle Henry's Organics",
         "Contact": "Owen Rouse",
         "Address": "1533 W. Charity Rd",
@@ -7853,14 +5855,10 @@ module.exports = {
         "Zip": 28458,
         "Phone": "910-376-0621",
         "Email": "tanyadrouse@gmail.com",
-        "Certified": "12/6/2011",
-        "Crops": "Beets, Radishes, Rutabaga, Turnips, Kohlrabi, Corn (Sweet Corn), Arugula, Bok Choy, Cabbage, Chard, Collards, Kale (Dino, Lacinato, red), Spinach, Cilantro, Mustard, Parsley (Italain), Squash (Yellow), Tomatoes (Grape), Zucchini, Grapes, Strawberries, Broccoli",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Uncle Henry's Organics Organic Muscadine Grapes, Bulk Boxes sold to Eastern Carolina Organics, Simple Post Harvest Handling:  Washing, Sorting, Packing, Labeling of own product in boxes (non-retail) or Plastic Clamshells (retail), Uncle Henry's Organics- Organic Grape Tomatoes"
+        "Certified": "12/6/2011"
       },
       {
-        "id": 492,
+        "id": 488,
         "Vendor": "RW Lambeth Farms Inc",
         "Contact": "Ryan Lambeth",
         "Address": "7625 Caber Rd",
@@ -7869,14 +5867,10 @@ module.exports = {
         "Zip": 27214,
         "Phone": "336-362-9057",
         "Email": "rwlambeth@hotmail.com",
-        "Certified": "8/26/2014",
-        "Crops": "Tobacco, Transplants (Tobacco), Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/26/2014"
       },
       {
-        "id": 493,
+        "id": 489,
         "Vendor": "Ryan William Wiebe",
         "Contact": "Ryan Wiebe",
         "Address": "64 Patience Park Rd.",
@@ -7885,14 +5879,10 @@ module.exports = {
         "Zip": 28714,
         "Phone": "828-284-5497",
         "Email": "",
-        "Certified": "5/29/2008",
-        "Crops": "Fruits and Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/29/2008"
       },
       {
-        "id": 494,
+        "id": 490,
         "Vendor": "S & D Coffee, Inc.",
         "Contact": "",
         "Address": "300 Concord Parkway S.",
@@ -7901,14 +5891,10 @@ module.exports = {
         "Zip": 28027,
         "Phone": "",
         "Email": "",
-        "Certified": "9/26/2005",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Alchemy Blend, Chameleon Cold Brew, Chameleon Dark, Black & Bold, Chameleon Day Breaker, Chameleon Mexican Chiapas, Chameleon, Cajun Blend, Chameleon, Single Origin, Coffee Extract #30978 (Pails), Coffee Extract #30994 (Drums), Coffee Extract, #28165, Coffee Extract, #28866, Coffee Extract, #31942, Coffee, Bishop's Blend, Coffee, Bolivian, Coffee, Breakfast Blend, Coffee, Cafe Kilimanjaro, Coffee, Caf� Terroso, Coffee, Cafe Terrosso, Coffee, Casual Classic, Coffee, Casual Classic Decaf, Coffee, Chocolate Covered Cherry Flavor, Coffee, Cinnamon Hazelnut Flavor, Coffee, Cinnamon Hazelnut Flavor Decaf, Coffee, Citavo Dark Roast, Coffee, Citavo Dark Roast Decaf, Coffee, Citavo Decaf, Coffee, Colombian, Coffee, Dark Roast, Coffee, Decaf, Coffee, Earth Song Blend, Coffee, Earth Song Blend Decaf, Coffee, Espresso Decaf RWB, Coffee, Espresso Sombra RWB, Coffee, Ethiopian, Coffee, Ethiopian Harrar, Coffee, Ethiopian Sidamo, Coffee, Ethiopian Sidamo FTO, Coffee, French Roast, Coffee, French Roast Decaf, Coffee, French Vanilla Flavor, Coffee, French Vanilla Flavor Decaf, Coffee, FT Fauna Blend, Coffee, FTO Colombia, Coffee, FTO Dark Rhapsody Decaf, Coffee, Georgia Coffee, Coffee, Global Village, Coffee, Guatemalan, Coffee, Guatemalan Huehuetenango, Coffee, Hawaiian Hazelnut Flavor, Coffee, Hazelnut, Coffee, Hazelnut Decaf, Coffee, House Blend, Coffee, House Blend Decaf, Coffee, House of Representatives, Coffee, In-Room, Coffee, In-Room Decaf, Coffee, Light Medium Roast, Coffee, Medium Dark Roast, Coffee, MyVirtual Coffee House, Coffee, Nicaraguan, Coffee, Nicaraguan Matagalpa FTO, Coffee, NY Roast, Coffee, Pantry Peru, Coffee, Peruvian, Coffee, Peruvian Decaf, Coffee, Pumpkin Spice, Coffee, Pumpkin Spice Flavor, Coffee, Saavion Blend, Coffee, Signature Roast, Coffee, Sol Caf�, Coffee, Sol Caf� Decaf, Coffee, Sumatra, Coffee, Sumatra, Coffee, Sumatra, Earth Song Blend Decaf, Guatemala, Guatemalan, Nicaragua, Nicaraguan, Tea Extract, Black #29822, Tea Extract, Black #31288, Tea Extract, Fair Trade Iyerpadi Black Tea Extract #28879, Tea Extract, Green #30082, Tea Extract, Green #31289, Tea, Black, Tea, Green"
+        "Certified": "9/26/2005"
       },
       {
-        "id": 495,
+        "id": 491,
         "Vendor": "S&D Coffee, Inc.",
         "Contact": "",
         "Address": "7955 West Winds Boulevard",
@@ -7917,14 +5903,10 @@ module.exports = {
         "Zip": 28027,
         "Phone": "",
         "Email": "",
-        "Certified": "3/17/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cold Brew Coffee, Dark, Black & Bold Coffee, Day Breaker Coffee, Mexican Chiapas Coffee"
+        "Certified": "3/17/2017"
       },
       {
-        "id": 496,
+        "id": 492,
         "Vendor": "Santa Fe Natural Tobacco Brook Cove Warehouse",
         "Contact": "Steve Matthews",
         "Address": "2285 Brook Cove Road",
@@ -7933,14 +5915,10 @@ module.exports = {
         "Zip": 27052,
         "Phone": "336-741-0226",
         "Email": "",
-        "Certified": "6/5/2013",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tobacco Strip"
+        "Certified": "6/5/2013"
       },
       {
-        "id": 497,
+        "id": 493,
         "Vendor": "Santa Fe Natural Tobacco Company",
         "Contact": "Christopher Eberle",
         "Address": "2400 Old Stantonsburg Road",
@@ -7949,14 +5927,10 @@ module.exports = {
         "Zip": 27893,
         "Phone": "252-292-7525",
         "Email": "",
-        "Certified": "2/20/2007",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tobacco Strip"
+        "Certified": "2/20/2007"
       },
       {
-        "id": 498,
+        "id": 494,
         "Vendor": "Santa Fe Natural Tobacco Company",
         "Contact": "Fielding Daniel",
         "Address": "3220 Knotts Grove Road",
@@ -7965,14 +5939,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-690-1905",
         "Email": "",
-        "Certified": "2/20/2003",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cigarettes, Loose Tobacco, Tobacco Strip"
+        "Certified": "2/20/2003"
       },
       {
-        "id": 499,
+        "id": 495,
         "Vendor": "Scott, Ronnie",
         "Contact": "Ronnie Scott",
         "Address": "14105 Siler City Glendon Rd.",
@@ -7981,14 +5951,10 @@ module.exports = {
         "Zip": 27252,
         "Phone": "919-548-2859",
         "Email": "",
-        "Certified": "3/29/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/29/2017"
       },
       {
-        "id": 500,
+        "id": 496,
         "Vendor": "Seaview Crap Company",
         "Contact": "Joe Romano, Sam Romano, Nathan King",
         "Address": "1515 Marstellar St",
@@ -7997,14 +5963,10 @@ module.exports = {
         "Zip": 28401,
         "Phone": "910-769-1554",
         "Email": "seaviewcrabcompany@gmail.com",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "Fish, Shrimp , Blue Crab, Soft Shell, Crabmeat, Dry Packed Scallops, Live Lobster,  Crawfish, Clams, Oysters(shucked and live), Conch,  mussels and more",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
-        "id": 501,
+        "id": 497,
         "Vendor": "Selina Naturally Celtic Ocean International Dba Selina Naturally",
         "Contact": "Sharon Meeker",
         "Address": "4 Celtic Dr",
@@ -8013,14 +5975,10 @@ module.exports = {
         "Zip": 28704,
         "Phone": "828-210-9125",
         "Email": "sharon@selinanaturally.com",
-        "Certified": "9/28/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Almonds (Roasted), Almonds (Raw), Black Pepper (Pepper Grinder (2oz, 1.1oz)), Chia (Seeds, 1 lb & 5 lb Bags), Flax Seed (Golden, 1 lb & 5 lb bags), Nut Butter (Almond Butter: Creamy, Crunchy), Nut Butter (Almond Hazelnut Butter (Roasted)), Pecans (Halves), Raisins, Seasoned Salt (Bouquet Herbs de Provence), Seasoned Salt (Celery), Seasoned Salt (Garlic Salt), Seasoned Salt (Pepper Salt Grinder), Seasoned Salt (Rosemary), Seasoned Salt (Smoked), Spice Blends (All Purpose Seasoning), Spice Blends (Lemon Pepper Seasoning), Spice Blends (Mexican Fiesta Seasoning), Spices (Black Pepper), Spices (Black Peppercorns, 2 oz, 8 oz & 2.5 lb bags)"
+        "Certified": "9/28/2015"
       },
       {
-        "id": 502,
+        "id": 498,
         "Vendor": "SFNTC - Essentra Filter Products",
         "Contact": "Michael Cashion",
         "Address": "303 Gallimore Dairy Road",
@@ -8029,14 +5987,10 @@ module.exports = {
         "Zip": 27409,
         "Phone": "336-478-3117",
         "Email": "",
-        "Certified": "3/18/2013",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "None"
+        "Certified": "3/18/2013"
       },
       {
-        "id": 503,
+        "id": 499,
         "Vendor": "SFNTC/Hail And Cotton GLT Factory",
         "Contact": "Fielding Daniel",
         "Address": "104 Enterprise Court",
@@ -8045,14 +5999,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-692-3111",
         "Email": "",
-        "Certified": "11/28/2011",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tobacco"
+        "Certified": "11/28/2011"
       },
       {
-        "id": 504,
+        "id": 500,
         "Vendor": "Shelton Manning and Sons LLC",
         "Contact": "Brent Manning",
         "Address": "1351 S Old Franklin Rd",
@@ -8061,14 +6011,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-885-0576",
         "Email": "",
-        "Certified": "10/18/2013",
-        "Crops": "Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/18/2013"
       },
       {
-        "id": 505,
+        "id": 501,
         "Vendor": "Shelton, Jack and Kylie dba Grantville Farms",
         "Contact": "Jack And Kylie Shelton",
         "Address": "3121 Grantville Lane",
@@ -8077,14 +6023,10 @@ module.exports = {
         "Zip": 27205,
         "Phone": "336-736-9557",
         "Email": "",
-        "Certified": "5/10/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/10/2017"
       },
       {
-        "id": 506,
+        "id": 502,
         "Vendor": "Shelton, Tim",
         "Contact": "Tim Shelton",
         "Address": "7045 Hwy 222",
@@ -8093,14 +6035,10 @@ module.exports = {
         "Zip": 27883,
         "Phone": "252-363-2829",
         "Email": "t_plow2000@yahoo.com",
-        "Certified": "9/26/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/26/2016"
       },
       {
-        "id": 507,
+        "id": 503,
         "Vendor": "Shiloh's Garden, LLC Dba Tumbling Shoals Farm",
         "Contact": "",
         "Address": "841 Sand Ridge Rd.",
@@ -8109,14 +6047,10 @@ module.exports = {
         "Zip": 28651,
         "Phone": "",
         "Email": "",
-        "Certified": "8/26/2015",
-        "Crops": "Arugula",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/26/2015"
       },
       {
-        "id": 508,
+        "id": 504,
         "Vendor": "Sklar BOV Soultions, Inc DBA BOV Solutions",
         "Contact": "William Williams",
         "Address": "1105 E Garner Bagnal Blvd",
@@ -8125,14 +6059,10 @@ module.exports = {
         "Zip": 28677,
         "Phone": "704-872-7277, J-7352-746-6731, D-323-266-7111",
         "Email": "bill@bovsolutions.com, jdaniel@bovsolutions.com, dbrown@thestarcogroup.com",
-        "Certified": "5/12/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Organic Balsamic Vinegar, Organic Extra Virgin Olive Oil, Organic Fruit Vinegar"
+        "Certified": "5/12/2017"
       },
       {
-        "id": 509,
+        "id": 505,
         "Vendor": "Smiling Hara Tempeh",
         "Contact": "Sarah Yancey",
         "Address": "735 N. Fork Rd. Bldg 1",
@@ -8141,14 +6071,10 @@ module.exports = {
         "Zip": 28709,
         "Phone": "828-545-4150",
         "Email": "sarah@eathempeh.com",
-        "Certified": "1/22/2018",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tempeh (Retail Tempeh with Hemp Hearts)"
+        "Certified": "1/22/2018"
       },
       {
-        "id": 510,
+        "id": 506,
         "Vendor": "Smith Farms",
         "Contact": "Larry G. Smith",
         "Address": "2660 Smith Rd",
@@ -8157,14 +6083,10 @@ module.exports = {
         "Zip": 27048,
         "Phone": "336-573-4155",
         "Email": "lgsnuffy@hotmail.com",
-        "Certified": "10/1/2009",
-        "Crops": "Beets, Radishes, Turnips, Asparagus, Peas, Arugula, Lettuce, Basil, Pepper, Squash, Blackberries, Rye, Collard Greens, Swiss Chard",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/1/2009"
       },
       {
-        "id": 511,
+        "id": 507,
         "Vendor": "Smith, David Randall dba D.R. Smith",
         "Contact": "David Randall Smith",
         "Address": "1957 Cleve Road",
@@ -8173,14 +6095,10 @@ module.exports = {
         "Zip": 27349,
         "Phone": "336-376-0058",
         "Email": "",
-        "Certified": "4/20/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/20/2017"
       },
       {
-        "id": 512,
+        "id": 508,
         "Vendor": "SNK Poultry",
         "Contact": "Roy Shane Joyce/ Kim Joyce",
         "Address": "457 Petty Road",
@@ -8189,14 +6107,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-548-2099",
         "Email": "",
-        "Certified": "8/29/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/29/2017"
       },
       {
-        "id": 513,
+        "id": 509,
         "Vendor": "Snow Creek Farms, LLC",
         "Contact": "Andrew Kampen",
         "Address": "964 Snow Creek Road",
@@ -8205,14 +6119,10 @@ module.exports = {
         "Zip": 28625,
         "Phone": "",
         "Email": "andrew.kampen@perdue.com",
-        "Certified": "1/5/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/5/2017"
       },
       {
-        "id": 514,
+        "id": 510,
         "Vendor": "Southeast Crescent Shipping Company",
         "Contact": "Adam Balderson",
         "Address": "113 Arendell Street",
@@ -8221,14 +6131,10 @@ module.exports = {
         "Zip": 28557,
         "Phone": "910-297-3571",
         "Email": "",
-        "Certified": "3/23/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Corn, Wheat, Soybeans"
+        "Certified": "3/23/2017"
       },
       {
-        "id": 515,
+        "id": 511,
         "Vendor": "Southern Belle Organics LLC",
         "Contact": "Brick \"Bricklyn\" Rooks",
         "Address": "475 Industrial Drive",
@@ -8237,14 +6143,10 @@ module.exports = {
         "Zip": 28320,
         "Phone": "910-231-5316",
         "Email": "brickrooks@gmail.com",
-        "Certified": "5/1/2015",
-        "Crops": "Blueberries, Collards, Lettuces",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Blueberries"
+        "Certified": "5/1/2015"
       },
       {
-        "id": 516,
+        "id": 512,
         "Vendor": "Southern Produce Distributors, Inc.",
         "Contact": "",
         "Address": "2434 Nc 50 403 Highway",
@@ -8253,14 +6155,10 @@ module.exports = {
         "Zip": 28341,
         "Phone": "",
         "Email": "",
-        "Certified": "3/22/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Sweet Potatoes"
+        "Certified": "3/22/2017"
       },
       {
-        "id": 517,
+        "id": 513,
         "Vendor": "Sow True Seed",
         "Contact": "Mary Vanegmond",
         "Address": "146 Church Streeet",
@@ -8269,14 +6167,10 @@ module.exports = {
         "Zip": 28801,
         "Phone": "828-254-0708",
         "Email": "",
-        "Certified": "5/13/2010",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Vegetable Seeds"
+        "Certified": "5/13/2010"
       },
       {
-        "id": 518,
+        "id": 514,
         "Vendor": "SPRINGHOUSE FARM",
         "Contact": "",
         "Address": "433 Silverstone Rd.",
@@ -8285,14 +6179,10 @@ module.exports = {
         "Zip": 28692,
         "Phone": "(828) 719-6825",
         "Email": "amyj@skybest.com",
-        "Certified": "2/13/2013",
-        "Crops": "Beans, Beet, Blueberries, Cabbages, Corn, Cucumbers, Eggplant, Lettuces, Pears, Peppers, Radish, Squash, Tomatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/13/2013"
       },
       {
-        "id": 519,
+        "id": 515,
         "Vendor": "SSA Cooper",
         "Contact": "Paul Lokey",
         "Address": "113 Arendell Street",
@@ -8301,14 +6191,10 @@ module.exports = {
         "Zip": 28557,
         "Phone": "",
         "Email": "",
-        "Certified": "9/30/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cereals, Pulses"
+        "Certified": "9/30/2015"
       },
       {
-        "id": 520,
+        "id": 516,
         "Vendor": "Star Snax LLC",
         "Contact": "",
         "Address": "103 B Somerset Drive North West",
@@ -8317,14 +6203,10 @@ module.exports = {
         "Zip": 28613,
         "Phone": "",
         "Email": "",
-        "Certified": "10/24/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Beet Tortilla Chip, Black Bean Tortilla Chip, Blue Corn Tortilla Chips, Buffalo Wing Tortilla Chip, Chili Salsa Tortilla Chip, Cure for the Summertime Blues Multigrain Tortilla Chips, Dude Ranch Multigrain Tortilla Chips, How Sweet Potato It Is Multigrain Tortilla Chips, Kale Spinach Tortilla Chip, Mild Green Mojo Multigrain Tortilla Chips, Multigrain Tortilla Chip, Multigrain Tortilla Chips, Peach Jalapeno Tortilla Chip, Pumpkin Seed Tortilla Chip, Purple Corn Tortilla Chips, Roasted Pepper Tortilla Chip, Sea Salt by the Seashore Multigrain Tortilla Chips, Sea Salt Red Hot Mojo Multigrain Tortilla Chips, Sublime Multigrain Tortilla Chips, Sweet Corn & Black Pepper Tortilla Chip, Sweet Potato Tortilla Chip, White Corn Tortilla Chip, Yellow Corn Tortilla Chip, Yellow Corn Tortilla Chips"
+        "Certified": "10/24/2016"
       },
       {
-        "id": 521,
+        "id": 517,
         "Vendor": "Stinson, Henry",
         "Contact": "Henry Stinson",
         "Address": "642 Delphus Stinson Road",
@@ -8333,14 +6215,10 @@ module.exports = {
         "Zip": 27252,
         "Phone": "919-837-5927",
         "Email": "",
-        "Certified": "1/18/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "1/18/2017"
       },
       {
-        "id": 522,
+        "id": 518,
         "Vendor": "Stockton Graham & Company",
         "Contact": "Brad Kirby",
         "Address": "4320 Delta Lake Drive Ste. 199",
@@ -8349,14 +6227,10 @@ module.exports = {
         "Zip": 27612,
         "Phone": "919-881-8271 x3555",
         "Email": "",
-        "Certified": "6/8/2010",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee"
+        "Certified": "6/8/2010"
       },
       {
-        "id": 523,
+        "id": 519,
         "Vendor": "Stone Family Farms Inc.",
         "Contact": "Chip Stone",
         "Address": "1038 Allensville Road",
@@ -8365,14 +6239,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "336-504-3569",
         "Email": "stonefamilyfarms@gmail.com",
-        "Certified": "8/30/2017",
-        "Crops": "Sweet Potatoes, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/30/2017"
       },
       {
-        "id": 524,
+        "id": 520,
         "Vendor": "Stone House Farms",
         "Contact": "William Wollett, Jr",
         "Address": "3348 Octavia Drive",
@@ -8381,14 +6251,10 @@ module.exports = {
         "Zip": 27804,
         "Phone": "252-904-0844",
         "Email": "stonehousefarmsandproduce@gmail.com",
-        "Certified": "12/21/2015",
-        "Crops": "Potatoes, Okra, Cabbage, Collards, Kale, Lettuce, Cucumbers, Pepper, Squash, Tomatoes, Zucchini, Corn, Oats, Swiss Chard",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/21/2015"
       },
       {
-        "id": 525,
+        "id": 521,
         "Vendor": "Strickland Organics, LLC",
         "Contact": "Clay M Strickland",
         "Address": "305 E. Arrowhead Dr.",
@@ -8397,14 +6263,10 @@ module.exports = {
         "Zip": 28328,
         "Phone": "910-590-7517",
         "Email": "cmsfarm@embarqmail.com",
-        "Certified": "9/30/2014",
-        "Crops": "Corn, Sweet Potatoes, Tobacco, Transplants (Tobacco Transplants)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/30/2014"
       },
       {
-        "id": 526,
+        "id": 522,
         "Vendor": "Summerfield Farms DFC, LLC",
         "Contact": "Stephen Mundy",
         "Address": "",
@@ -8413,14 +6275,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(828) 713-0018",
         "Email": "smundy@summerfieldfarms.com",
-        "Certified": "11/7/2014",
-        "Crops": "Asparagus, Beet, Carrot, Cucumber, Garlic, Greens, Melon, Pasture, Pasture, Pepper, Potato, Tomato, Winter squash, Woodlands, Woodlands",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/7/2014"
       },
       {
-        "id": 527,
+        "id": 523,
         "Vendor": "Sunny Creek Farm",
         "Contact": "Lisa Buchanan",
         "Address": "520 Pine Field Drive",
@@ -8429,14 +6287,10 @@ module.exports = {
         "Zip": 28782,
         "Phone": "828-863-2963",
         "Email": "",
-        "Certified": "8/5/2015",
-        "Crops": "Sprouts",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/5/2015"
       },
       {
-        "id": 528,
+        "id": 524,
         "Vendor": "Sunrise Foods International Inc.",
         "Contact": "Derek Simsic",
         "Address": "113 Arendall Street",
@@ -8445,14 +6299,10 @@ module.exports = {
         "Zip": 28557,
         "Phone": "",
         "Email": "",
-        "Certified": "10/16/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cereals, Pulses"
+        "Certified": "10/16/2015"
       },
       {
-        "id": 529,
+        "id": 525,
         "Vendor": "Sunset Market Gardens, LLC",
         "Contact": "Robert D. Williams",
         "Address": "",
@@ -8461,14 +6311,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(336) 362-1344",
         "Email": "sunsetmarketgardens@hotmail.com",
-        "Certified": "9/13/2017",
-        "Crops": "Green bean",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/13/2017"
       },
       {
-        "id": 530,
+        "id": 526,
         "Vendor": "Sweetwater Springs Organic Farm, LLC",
         "Contact": "Elias Humiston",
         "Address": "253\t632 Whitttown Rd",
@@ -8477,14 +6323,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "910-382-9622",
         "Email": "",
-        "Certified": "10/6/2017",
-        "Crops": "Vegetables, herbs, mushrooms",
-        "Livestock": "Pullets",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/6/2017"
       },
       {
-        "id": 531,
+        "id": 527,
         "Vendor": "Sykes & Sykes Inc. Dba Altar-Cross Farms",
         "Contact": "Roy Sykes",
         "Address": "4108 Ivanhoe Road",
@@ -8493,14 +6335,10 @@ module.exports = {
         "Zip": 28447,
         "Phone": "910-385-5750",
         "Email": "sykeswl@gmail.com",
-        "Certified": "4/28/2015",
-        "Crops": "Blueberries, Broccoli, Kale, Squash",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Blueberries"
+        "Certified": "4/28/2015"
       },
       {
-        "id": 532,
+        "id": 528,
         "Vendor": "T & E Farms, Inc.",
         "Contact": "Charles (Taylor) Caudle",
         "Address": "782 Lower Field Rd",
@@ -8509,14 +6347,10 @@ module.exports = {
         "Zip": 28513,
         "Phone": "252-904-3000",
         "Email": "ashlee.alston@me.com",
-        "Certified": "10/16/2015",
-        "Crops": "Sweet Potatoes, Corn, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/16/2015"
       },
       {
-        "id": 533,
+        "id": 529,
         "Vendor": "T. M. Allen Inc.",
         "Contact": "Terry Allen",
         "Address": "101 John Allen",
@@ -8525,14 +6359,10 @@ module.exports = {
         "Zip": 27574,
         "Phone": "336-598-2144",
         "Email": "",
-        "Certified": "10/21/2002",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/21/2002"
       },
       {
-        "id": 534,
+        "id": 530,
         "Vendor": "T.E. And B.T. Barham, Partners",
         "Contact": "Blake Barham",
         "Address": "11920 Louisburg Road",
@@ -8541,14 +6371,10 @@ module.exports = {
         "Zip": 27587,
         "Phone": "919-669-0161",
         "Email": "",
-        "Certified": "8/16/2011",
-        "Crops": "Soybeans, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/16/2011"
       },
       {
-        "id": 535,
+        "id": 531,
         "Vendor": "Talley Farms",
         "Contact": "Nelson Talley",
         "Address": "6309 Talley Road",
@@ -8557,14 +6383,10 @@ module.exports = {
         "Zip": 28163,
         "Phone": "330-473-5555",
         "Email": "dan@hilandnaturals.com",
-        "Certified": "9/8/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Meat Products: Turkeys, Animal Feed: Livestock Feed"
+        "Certified": "9/8/2017"
       },
       {
-        "id": 536,
+        "id": 532,
         "Vendor": "Tate Inc",
         "Contact": "Roger Tate",
         "Address": "8623 Harmony Church Rd",
@@ -8573,14 +6395,10 @@ module.exports = {
         "Zip": 27243,
         "Phone": "252-459-2143",
         "Email": "allysonp@braswellfamilyfarms.com",
-        "Certified": "9/29/2011",
-        "Crops": "",
-        "Livestock": "Laying Hens (Slaughter Eligible)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/29/2011"
       },
       {
-        "id": 537,
+        "id": 533,
         "Vendor": "Tate Inc",
         "Contact": "Roger Tate",
         "Address": "8615 Harmony Church Rd",
@@ -8589,14 +6407,10 @@ module.exports = {
         "Zip": 27243,
         "Phone": "336-269-1172",
         "Email": "cycletate@yahoo.com",
-        "Certified": "9/30/2014",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/30/2014"
       },
       {
-        "id": 538,
+        "id": 534,
         "Vendor": "Tater Anderson Farms",
         "Contact": "Larry And Frederick Anderson",
         "Address": "5873 Anderson Brs. Trail",
@@ -8605,14 +6419,10 @@ module.exports = {
         "Zip": 27302,
         "Phone": "336-421-0309",
         "Email": "ande16@bellsouth.net",
-        "Certified": "9/30/2014",
-        "Crops": "Tobacco, Transplants (Tobacco), Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/30/2014"
       },
       {
-        "id": 539,
+        "id": 535,
         "Vendor": "Taylor, Anjail",
         "Contact": "Anjail Woods",
         "Address": "5418 Jamaica Rd",
@@ -8621,14 +6431,10 @@ module.exports = {
         "Zip": 27231,
         "Phone": "336-212-6212",
         "Email": "anjailwoods78@gmail.com",
-        "Certified": "8/10/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/10/2015"
       },
       {
-        "id": 540,
+        "id": 536,
         "Vendor": "Team Summit, LLC",
         "Contact": "Brian Helfrich",
         "Address": "18635 Starcreek Drive, Unit A",
@@ -8637,14 +6443,10 @@ module.exports = {
         "Zip": 28031,
         "Phone": "704-975-4764",
         "Email": "",
-        "Certified": "5/9/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Coffee"
+        "Certified": "5/9/2017"
       },
       {
-        "id": 541,
+        "id": 537,
         "Vendor": "Terry Johnson dba Terry Johnson Farm",
         "Contact": "Terry Johnson",
         "Address": "45 Bulet Rd",
@@ -8653,14 +6455,10 @@ module.exports = {
         "Zip": 27521,
         "Phone": "910-237-1041",
         "Email": "",
-        "Certified": "3/4/2016",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/4/2016"
       },
       {
-        "id": 542,
+        "id": 538,
         "Vendor": "Terry, Iris dba Iris Terry Farm",
         "Contact": "Irs Terry",
         "Address": "7400 Siler City Snow Camp Road",
@@ -8669,14 +6467,10 @@ module.exports = {
         "Zip": 27344,
         "Phone": "919-742-5075",
         "Email": "",
-        "Certified": "4/21/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/21/2017"
       },
       {
-        "id": 543,
+        "id": 539,
         "Vendor": "Thatchmore Farm",
         "Contact": "Tom Elmore",
         "Address": "153 Dix Creek One Road",
@@ -8685,14 +6479,10 @@ module.exports = {
         "Zip": 28748,
         "Phone": "828-683-1180",
         "Email": "",
-        "Certified": "9/11/2015",
-        "Crops": "Fruits, herbs, vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/11/2015"
       },
       {
-        "id": 544,
+        "id": 540,
         "Vendor": "The Bass Farm, Inc. dba The Bass Farm Organics",
         "Contact": "Kelvin Bass",
         "Address": "6256 US 64A",
@@ -8701,14 +6491,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-903-4935",
         "Email": "bassplantfarm@aol.com",
-        "Certified": "7/17/2012",
-        "Crops": "Sweet Potatoes, Peanuts, Cucumbers, Tobacco, Transplants (Tobacco)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/17/2012"
       },
       {
-        "id": 545,
+        "id": 541,
         "Vendor": "The Crews Farm Hamilton St. LLC Dba Crews Farm",
         "Contact": "Ardis Crews",
         "Address": "410 Hamilton St",
@@ -8717,15 +6503,11 @@ module.exports = {
         "Zip": 27536,
         "Phone": "252-430-0016",
         "Email": "ardisc4242@hotmail.com",
-        "Certified": "12/2/2016",
-        "Crops": "Beans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "12/2/2016"
       },
       {
-        "id": 546,
-        "Vendor": "The Mat� Factor, LLC",
+        "id": 542,
+        "Vendor": "The Maté Factor, LLC",
         "Contact": "James Case",
         "Address": "12 Old Charlotte Hwy Ste 85",
         "City": "Asheville",
@@ -8733,14 +6515,10 @@ module.exports = {
         "Zip": 28803,
         "Phone": "828-255-8300",
         "Email": "",
-        "Certified": "4/23/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Yerba Mate"
+        "Certified": "4/23/2015"
       },
       {
-        "id": 547,
+        "id": 543,
         "Vendor": "The Organic Butcher Shop",
         "Contact": "Dorothy Adkins",
         "Address": "",
@@ -8749,14 +6527,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(910) 892-7675",
         "Email": "twinoaksheritagefarm@gmail.com",
-        "Certified": "9/26/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Processing"
+        "Certified": "9/26/2017"
       },
       {
-        "id": 548,
+        "id": 544,
         "Vendor": "The Wizard LLC Dba Macalat",
         "Contact": "John Troy",
         "Address": "5134 Boone Village Trail",
@@ -8765,14 +6539,10 @@ module.exports = {
         "Zip": 27231,
         "Phone": "336-562-3225",
         "Email": "johntroy@thewizardllc.com",
-        "Certified": "2/19/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Chocolate (Sugar Free Dark Chocolate)"
+        "Certified": "2/19/2016"
       },
       {
-        "id": 549,
+        "id": 545,
         "Vendor": "Thirteen Moons Farm",
         "Contact": "Shannon Simpson",
         "Address": "87 Maple Drive",
@@ -8781,14 +6551,10 @@ module.exports = {
         "Zip": 28805,
         "Phone": "304-573-5613",
         "Email": "thirteenmoons13@yahoo.com",
-        "Certified": "5/17/2016",
-        "Crops": "Alfalfa, Flowers, Herbs, Horseradish, Legumes, Lemon Balm, Parsnips, Rosemary, Tea, Trees, Watercress",
-        "Livestock": "",
-        "Wildcrops": "Herbs, Trees",
-        "Handling": ""
+        "Certified": "5/17/2016"
       },
       {
-        "id": 550,
+        "id": 546,
         "Vendor": "Thomas A. Owens",
         "Contact": "Thomas Owens",
         "Address": "4039 Chimney Rock Hwy",
@@ -8797,14 +6563,10 @@ module.exports = {
         "Zip": 28792,
         "Phone": "828-712-1919",
         "Email": "",
-        "Certified": "9/7/2016",
-        "Crops": "Nectarines, Peaches, Apples",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/7/2016"
       },
       {
-        "id": 551,
+        "id": 547,
         "Vendor": "Thomas Famiy Farms Inc.",
         "Contact": "David Thomas",
         "Address": "789 Johnnie ones Road",
@@ -8813,14 +6575,10 @@ module.exports = {
         "Zip": 27583,
         "Phone": "336-504-2108",
         "Email": "tffinc1@gmail.com",
-        "Certified": "8/30/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/30/2016"
       },
       {
-        "id": 552,
+        "id": 548,
         "Vendor": "Thomas N Blalock",
         "Contact": "Thomas Blalock",
         "Address": "1214 Ormond Rd",
@@ -8829,14 +6587,10 @@ module.exports = {
         "Zip": 27541,
         "Phone": "919-619-3067",
         "Email": "",
-        "Certified": "11/9/2009",
-        "Crops": "Buckwheat, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/9/2009"
       },
       {
-        "id": 553,
+        "id": 549,
         "Vendor": "Thomas, David",
         "Contact": "David Thomas",
         "Address": "2360 Riddle Road",
@@ -8845,14 +6599,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-776-7046",
         "Email": "",
-        "Certified": "2/24/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "2/24/2017"
       },
       {
-        "id": 554,
+        "id": 550,
         "Vendor": "Thomas, Isabell",
         "Contact": "Isabell Thomas",
         "Address": "369 Brown Road",
@@ -8861,14 +6611,10 @@ module.exports = {
         "Zip": 27546,
         "Phone": 9108935310,
         "Email": "",
-        "Certified": "4/17/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/17/2017"
       },
       {
-        "id": 555,
+        "id": 551,
         "Vendor": "Timberwood Organics LLC",
         "Contact": "Ray Christopher",
         "Address": "4619 Timberwood Trail",
@@ -8877,14 +6623,10 @@ module.exports = {
         "Zip": 27243,
         "Phone": "919-260-1811",
         "Email": "",
-        "Certified": "10/21/2002",
-        "Crops": "Vegetables",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/21/2002"
       },
       {
-        "id": 556,
+        "id": 552,
         "Vendor": "Tim's Farm",
         "Contact": "Tim Scotton",
         "Address": "2386 Shady Grove Ch Rd",
@@ -8893,14 +6635,10 @@ module.exports = {
         "Zip": 27355,
         "Phone": "336-622-5153",
         "Email": "",
-        "Certified": "3/2/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/2/2017"
       },
       {
-        "id": 557,
+        "id": 553,
         "Vendor": "TJ Kernodle And Josh Pinyatello",
         "Contact": "TJ Kernodle",
         "Address": "80 Lone Oak Rd",
@@ -8909,14 +6647,10 @@ module.exports = {
         "Zip": 27217,
         "Phone": "336-214-0717",
         "Email": "kernodle90@gmail.com",
-        "Certified": "9/22/2015",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/22/2015"
       },
       {
-        "id": 558,
+        "id": 554,
         "Vendor": "TNT Family Farms, Inc.",
         "Contact": "Timmy Mills",
         "Address": "11061 Edwards Rd",
@@ -8925,14 +6659,10 @@ module.exports = {
         "Zip": 27882,
         "Phone": "252-885-0920",
         "Email": "tntfamilyfarmsinc@centurylink.net",
-        "Certified": "8/28/2014",
-        "Crops": "Sweet Potatoes, Corn, Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/28/2014"
       },
       {
-        "id": 559,
+        "id": 555,
         "Vendor": "Todd Blakly dba Arrowhead Poultry",
         "Contact": "Todd Blakly",
         "Address": "6726 Carbonton Road",
@@ -8941,14 +6671,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-776-5788",
         "Email": "",
-        "Certified": "3/9/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/9/2017"
       },
       {
-        "id": 560,
+        "id": 556,
         "Vendor": "Tony C. Horton",
         "Contact": "Tony Horton",
         "Address": "102 Brantleytown Rd",
@@ -8957,14 +6683,10 @@ module.exports = {
         "Zip": 27597,
         "Phone": "919-496-8353",
         "Email": "",
-        "Certified": "6/8/2017",
-        "Crops": "Corn, wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/8/2017"
       },
       {
-        "id": 561,
+        "id": 557,
         "Vendor": "Top Of The Hill Distillery",
         "Contact": "Scott Maitland",
         "Address": "505-C West Franklin Street",
@@ -8973,14 +6695,10 @@ module.exports = {
         "Zip": 27516,
         "Phone": "919.929.8676 ext 1010",
         "Email": "scott@topodistillery.com",
-        "Certified": "9/8/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Alcohol: Gin, Rum, Vodka, Whiskey"
+        "Certified": "9/8/2016"
       },
       {
-        "id": 562,
+        "id": 558,
         "Vendor": "Transylvania Vocational Services Inc. Dba TVS",
         "Contact": "Dan Fisher",
         "Address": "11 Mountain Industrial Drive",
@@ -8989,14 +6707,10 @@ module.exports = {
         "Zip": 28712,
         "Phone": "828-884-3195",
         "Email": "danf@tvsinc.org",
-        "Certified": "3/12/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Co-packing (Client Profile Products only) (Blending, Packaging, Labeling for Dietary Supplements), Dietary Supplement (Golden Milk), Dietary Supplement (Maca Boost Cacao Ginger), Maca Powder"
+        "Certified": "3/12/2015"
       },
       {
-        "id": 563,
+        "id": 559,
         "Vendor": "Trask, William K.",
         "Contact": "William K Trask",
         "Address": "5519 Bavarian Ln & Blue Clay Rd",
@@ -9005,14 +6719,10 @@ module.exports = {
         "Zip": 28405,
         "Phone": "910-520-4073",
         "Email": "williamtrask@gmail.com",
-        "Certified": "10/29/2015",
-        "Crops": "Corn, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/29/2015"
       },
       {
-        "id": 564,
+        "id": 560,
         "Vendor": "Trey Parrish Organics",
         "Contact": "Trey Parrish",
         "Address": "3558 Heath Dairy Rd",
@@ -9021,14 +6731,10 @@ module.exports = {
         "Zip": 27317,
         "Phone": "336-963-2280",
         "Email": "tptrucking81@gmail.com",
-        "Certified": "8/22/2014",
-        "Crops": "Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/22/2014"
       },
       {
-        "id": 565,
+        "id": 561,
         "Vendor": "TRI-HISHTIL, LLC",
         "Contact": "",
         "Address": "",
@@ -9037,14 +6743,10 @@ module.exports = {
         "Zip": null,
         "Phone": "",
         "Email": "",
-        "Certified": "3/6/2018",
-        "Crops": "Cucurbit Transplants, Solanaceous Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/6/2018"
       },
       {
-        "id": 566,
+        "id": 562,
         "Vendor": "Trinity Frozen Foods",
         "Contact": "Suzanne Allen",
         "Address": "",
@@ -9053,14 +6755,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(910) 225-5785",
         "Email": "sallen@trinityfrozenfoods.com",
-        "Certified": "7/8/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Frozen French Fries, Frozen French Fries (Crispy Sweet Potato), Frozen French Fries (Sweet Potato), Frozen Potato (Diced Sweet Potatoes)"
+        "Certified": "7/8/2015"
       },
       {
-        "id": 567,
+        "id": 563,
         "Vendor": "Triple H Farms of Lee County Inc",
         "Contact": "Chris Harrington",
         "Address": "2659 San Lee Drive",
@@ -9069,14 +6767,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-770-2620",
         "Email": "",
-        "Certified": "5/10/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/10/2017"
       },
       {
-        "id": 568,
+        "id": 564,
         "Vendor": "Triple J Produce, Inc.",
         "Contact": "Joey & Jay Hocutt",
         "Address": "8507 Bailey Road",
@@ -9085,14 +6779,10 @@ module.exports = {
         "Zip": 27880,
         "Phone": "252-205-2936",
         "Email": "kristi@triplejproduce.com",
-        "Certified": "12/2/2014",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Mixed Vegetables (New Sprout Organic Farms Organic Sweet Potatoes, Organic Sweets Sweet Potatoes, Triple J Organic Sweet Potatoes), Washing, Packaging, and Storage of Organic Sweet Potatoes"
+        "Certified": "12/2/2014"
       },
       {
-        "id": 569,
+        "id": 565,
         "Vendor": "Troxler Farms",
         "Contact": "Michael Troxler",
         "Address": "7755 Ferrin Rd",
@@ -9101,14 +6791,10 @@ module.exports = {
         "Zip": 27214,
         "Phone": "336-791-3189",
         "Email": "mrtroxle@outlook.com",
-        "Certified": "8/27/2015",
-        "Crops": "Soybeans, Tobacco, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/27/2015"
       },
       {
-        "id": 570,
+        "id": 566,
         "Vendor": "Turner, Shannon Ray",
         "Contact": "Shannon Ray Turner",
         "Address": "360 Putnum Church Rd.",
@@ -9117,14 +6803,10 @@ module.exports = {
         "Zip": 28327,
         "Phone": "910-464-2320",
         "Email": "",
-        "Certified": "4/5/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/5/2017"
       },
       {
-        "id": 571,
+        "id": 567,
         "Vendor": "Twin Oaks Heritage Farm",
         "Contact": "Dorothy Adkins",
         "Address": "",
@@ -9133,14 +6815,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(910) 892-7675",
         "Email": "twinoaksfarm2012@yahoo.com",
-        "Certified": "3/19/2015",
-        "Crops": "Pasture",
-        "Livestock": "Brown Eggs (Organic Brown Eggs), Chickens-For Egg Production, Chickens-For Slaughter, Pork Cuts, Swine-For Slaughter",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/19/2015"
       },
       {
-        "id": 572,
+        "id": 568,
         "Vendor": "Twinings North America, Inc.",
         "Contact": "",
         "Address": "2812 Twining Road",
@@ -9149,14 +6827,10 @@ module.exports = {
         "Zip": 27406,
         "Phone": "",
         "Email": "",
-        "Certified": "6/1/2010",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Breakfast Blend Tea, Breakfast Blend Tea - K-Cup Packs, Chai Tea, Chai Tea - K-Cup Packs, Earl Grey Tea, Green Tea Decafeinated, Green Tea with Jasmine, Green Tea with Mint, Nightly Calm Tea, Peppermint Tea, Pure Green Tea, Pure Green Tea - K-Cup Packs, Rooibos Tea"
+        "Certified": "6/1/2010"
       },
       {
-        "id": 573,
+        "id": 569,
         "Vendor": "Tyson Family Organic Farms, Inc.",
         "Contact": "Jeff Tyson",
         "Address": "985 Evans Rd",
@@ -9165,14 +6839,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-205-9965",
         "Email": "rolling_t@embarqmail.com",
-        "Certified": "9/30/2014",
-        "Crops": "Sweet Potatoes, Cucumbers, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/30/2014"
       },
       {
-        "id": 574,
+        "id": 570,
         "Vendor": "Underwood Family Farm, Inc.",
         "Contact": "Michael Underwood",
         "Address": "917 Oak Grove Clover Hill Ch Rd.",
@@ -9181,14 +6851,10 @@ module.exports = {
         "Zip": 28090,
         "Phone": "704-477-6401",
         "Email": "",
-        "Certified": "8/20/2014",
-        "Crops": "",
-        "Livestock": "Dairy Cows, Milk, Pasture",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/20/2014"
       },
       {
-        "id": 575,
+        "id": 571,
         "Vendor": "United States Cold Storage, Inc",
         "Contact": "Jonnie Grantham",
         "Address": "240 Bruce Costin Road",
@@ -9197,14 +6863,10 @@ module.exports = {
         "Zip": 28398,
         "Phone": "910-293-7400",
         "Email": "",
-        "Certified": "11/15/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Refrigerated and Frozen Storage for Butterball LLC"
+        "Certified": "11/15/2017"
       },
       {
-        "id": 576,
+        "id": 572,
         "Vendor": "United Tobacco Co.",
         "Contact": "Christopher Eberle",
         "Address": "1510 Standtonsburg Road",
@@ -9213,14 +6875,10 @@ module.exports = {
         "Zip": 27893,
         "Phone": "252-246-9100",
         "Email": "",
-        "Certified": "7/8/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tobacco: Tobacco"
+        "Certified": "7/8/2016"
       },
       {
-        "id": 577,
+        "id": 573,
         "Vendor": "Universal Leaf North America U.S., Inc",
         "Contact": "George H. Scott",
         "Address": "3174 Boddie Mill Pond Road, PO Box 519",
@@ -9229,14 +6887,10 @@ module.exports = {
         "Zip": 27856,
         "Phone": "252-462-4310",
         "Email": "",
-        "Certified": "2/20/2003",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Tobacco Strip"
+        "Certified": "2/20/2003"
       },
       {
-        "id": 578,
+        "id": 574,
         "Vendor": "US Cotton, LLC",
         "Contact": "Laura Hickey",
         "Address": "11150 Westlake Drive",
@@ -9245,14 +6899,10 @@ module.exports = {
         "Zip": 28273,
         "Phone": "216-535-1637",
         "Email": "",
-        "Certified": "11/3/2009",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Cotton Products"
+        "Certified": "11/3/2009"
       },
       {
-        "id": 579,
+        "id": 575,
         "Vendor": "US Cotton, LLC",
         "Contact": "Mark Novelli",
         "Address": "1000 Parkdale Dr., Suite 1",
@@ -9261,14 +6911,10 @@ module.exports = {
         "Zip": 28012,
         "Phone": "216-535-1637",
         "Email": "",
-        "Certified": "4/25/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Lace"
+        "Certified": "4/25/2017"
       },
       {
-        "id": 580,
+        "id": 576,
         "Vendor": "Valley Farm",
         "Contact": "Coy Beard",
         "Address": "2794 Hannerville Rd",
@@ -9277,14 +6923,10 @@ module.exports = {
         "Zip": 27292,
         "Phone": "336-259-3009",
         "Email": "",
-        "Certified": "4/20/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/20/2017"
       },
       {
-        "id": 581,
+        "id": 577,
         "Vendor": "Vanguard Culinary Group, Inc.",
         "Contact": "",
         "Address": "716 Whitfield Street",
@@ -9293,14 +6935,10 @@ module.exports = {
         "Zip": 28306,
         "Phone": "",
         "Email": "",
-        "Certified": "8/16/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Sweet Potatoes with Maple Citrus Glaze"
+        "Certified": "8/16/2016"
       },
       {
-        "id": 582,
+        "id": 578,
         "Vendor": "Vick Family Farms",
         "Contact": "Charlotte Vick",
         "Address": "11124 Christian Road",
@@ -9309,14 +6947,10 @@ module.exports = {
         "Zip": 27896,
         "Phone": "252-237-7313",
         "Email": "",
-        "Certified": "11/14/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Sweet Potatoes"
+        "Certified": "11/14/2016"
       },
       {
-        "id": 583,
+        "id": 579,
         "Vendor": "Villari Food Group",
         "Contact": "",
         "Address": "1012 Hwy 117 South",
@@ -9325,14 +6959,10 @@ module.exports = {
         "Zip": 28398,
         "Phone": "910-293-2157 ext 6540",
         "Email": "kris.s@villarifoodgroup.com",
-        "Certified": "1/12/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Prepared pork"
+        "Certified": "1/12/2017"
       },
       {
-        "id": 584,
+        "id": 580,
         "Vendor": "W.R. Vernon Produce Company, Inc.",
         "Contact": "",
         "Address": "1035 N Cherry Street",
@@ -9341,30 +6971,10 @@ module.exports = {
         "Zip": 27101,
         "Phone": "",
         "Email": "",
-        "Certified": "9/4/2009",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Produce Previously Packaged By Certified Vendors"
+        "Certified": "9/4/2009"
       },
       {
-        "id": 585,
-        "Vendor": "W.T. Payne And Son Inc.",
-        "Contact": "Charles Payne",
-        "Address": "",
-        "City": "",
-        "State": "",
-        "Zip": null,
-        "Phone": "(704) 546-7133",
-        "Email": "ctpayne46@yahoo.com",
-        "Certified": "5/30/2007",
-        "Crops": "Barley, Hay, Pasture (Grass/Legume/Forage, Pasture,), Sorghum-Sudangrass, Soybean, Woodlands",
-        "Livestock": "Cattle (Dairy - Last Third Gestation - Slaughter Eligible), Cow Milk",
-        "Wildcrops": "",
-        "Handling": ""
-      },
-      {
-        "id": 586,
+        "id": 581,
         "Vendor": "Walker, Michael",
         "Contact": "Michael Walker",
         "Address": "3282 Jim Walker Road",
@@ -9373,14 +6983,10 @@ module.exports = {
         "Zip": 27248,
         "Phone": "336-824-2087",
         "Email": "",
-        "Certified": "3/3/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/3/2017"
       },
       {
-        "id": 587,
+        "id": 582,
         "Vendor": "Wall, Barbara",
         "Contact": "Barbara Wall",
         "Address": "2930 Byrd House Rd",
@@ -9389,14 +6995,10 @@ module.exports = {
         "Zip": 27355,
         "Phone": "336-622-4810",
         "Email": "",
-        "Certified": "4/14/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/14/2017"
       },
       {
-        "id": 588,
+        "id": 583,
         "Vendor": "Wannamaker Seeds, Inc.",
         "Contact": "Mary Jo Wannamaker",
         "Address": "670 Pacolet St.",
@@ -9405,14 +7007,10 @@ module.exports = {
         "Zip": 28773,
         "Phone": "803-707-1112",
         "Email": "",
-        "Certified": "7/29/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Edamame"
+        "Certified": "7/29/2015"
       },
       {
-        "id": 589,
+        "id": 584,
         "Vendor": "Watkins Farm",
         "Contact": "Randall Watkins",
         "Address": "4602 A Watkins Rd",
@@ -9421,14 +7019,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-691-2269",
         "Email": "rwatkinsjr@hotmail.com",
-        "Certified": "9/22/2016",
-        "Crops": "Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/22/2016"
       },
       {
-        "id": 590,
+        "id": 585,
         "Vendor": "Watkins Logistics, LLC dba Watkins Produce",
         "Contact": "Landon Watkins",
         "Address": "4585 Watkins Road",
@@ -9437,14 +7031,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-691-2986",
         "Email": "landon@watkinstobacco.com",
-        "Certified": "5/23/2016",
-        "Crops": "Cucumbers, Pepper, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "5/23/2016"
       },
       {
-        "id": 591,
+        "id": 586,
         "Vendor": "Watkins, Daniel",
         "Contact": "Daniel Watkins",
         "Address": "4181 Benson Rd",
@@ -9453,14 +7043,10 @@ module.exports = {
         "Zip": 27501,
         "Phone": "919-369-5889",
         "Email": "dwatkins4@elon.edu",
-        "Certified": "8/26/2015",
-        "Crops": "Sweet Potatoes, Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/26/2015"
       },
       {
-        "id": 592,
+        "id": 587,
         "Vendor": "Wayne Bailey, Inc.",
         "Contact": "Sean Dwyer",
         "Address": "1 Joe Brown Hwy S",
@@ -9469,14 +7055,10 @@ module.exports = {
         "Zip": 28431,
         "Phone": "910-654-2116",
         "Email": "",
-        "Certified": "10/9/2017",
-        "Crops": "Sweet potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/9/2017"
       },
       {
-        "id": 593,
+        "id": 588,
         "Vendor": "Wayne E. Bailey Produce Company",
         "Contact": "Sean Dwyer",
         "Address": "2281 Turkey Highway",
@@ -9485,14 +7067,10 @@ module.exports = {
         "Zip": 28329,
         "Phone": "910-654-2116",
         "Email": "",
-        "Certified": "4/25/2017",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Sweet potatoes"
+        "Certified": "4/25/2017"
       },
       {
-        "id": 594,
+        "id": 589,
         "Vendor": "Wayne Mays Meat Processing, Inc.",
         "Contact": "Misty Dyson",
         "Address": "",
@@ -9501,14 +7079,10 @@ module.exports = {
         "Zip": null,
         "Phone": "(828) 632-2034",
         "Email": "maysmeats@yahoo.com",
-        "Certified": "3/3/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Beef Bones, Beef Fat, Beef Liver, Beef New York Steak, Beef Parts (Beef for Stew), Beef Parts (Beef for Stir-Fry), Beef Parts (Bone-In Chuck), Beef Parts (Bone-In Ribeye), Beef Parts (Boneless Chuck Roast), Beef Parts (Bottom Round Roast), Beef Parts (Brisket), Beef Parts (Chuck Eye Steaks), Beef Parts (Chuck Steaks), Beef Parts (Cube Steaks), Beef Parts (Filet Mignon), Beef Parts (Flank Steak), Beef Parts (Flap Meat), Beef Parts (Flat Iron Steaks), Beef Parts (Inside Round), Beef Parts (London Broil), Beef Parts (Neckbone), Beef Parts (New York Strip Loin), Beef Parts (Ribeye Loin Whole), Beef Parts (Short Ribs), Beef Parts (Shoulder Petite Tender), Beef Parts (Sirloin Tip Roast), Beef Parts (Skirt Steak), Beef Parts (Tail), Beef Parts (Tongue), Beef Parts (Top Round Roast), Beef Parts (Top Round Steaks), Beef Ribeye Steak, Beef Roast (Eye of Round), Beef Roast (Rump), Beef Roast (Shoulder), Beef Sirloin Steak, Beef Sirloin Steak (Tip), Beef Trim (Boneless), Ground Beef, Ground Beef (Chuck), Ground Beef (Patties), Ground Beef (Round)"
+        "Certified": "3/3/2015"
       },
       {
-        "id": 595,
+        "id": 590,
         "Vendor": "Wayne Saunders dba Saunders Farm",
         "Contact": "Wayne Saunders",
         "Address": "778 Saunders Trail",
@@ -9517,14 +7091,10 @@ module.exports = {
         "Zip": 27205,
         "Phone": "336-580-4950",
         "Email": "",
-        "Certified": "4/12/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/12/2017"
       },
       {
-        "id": 596,
+        "id": 591,
         "Vendor": "Weavil, Lucas weavil",
         "Contact": "Luke Weavil",
         "Address": "4685 High Point Rd",
@@ -9533,14 +7103,10 @@ module.exports = {
         "Zip": 27284,
         "Phone": "336-602-5781",
         "Email": "ljweavil@gmail.com",
-        "Certified": "9/27/2016",
-        "Crops": "Soybeans, Sweet Potatoes",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/27/2016"
       },
       {
-        "id": 597,
+        "id": 592,
         "Vendor": "Webb Farms",
         "Contact": "Brian Foust",
         "Address": "3863 Ramseur Julian Rd",
@@ -9549,14 +7115,10 @@ module.exports = {
         "Zip": 27298,
         "Phone": "336-382-9278",
         "Email": "bbf530@yahoo.com",
-        "Certified": "8/25/2015",
-        "Crops": "Barley, Corn, Sorghum (Milo), Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/25/2015"
       },
       {
-        "id": 598,
+        "id": 593,
         "Vendor": "Webster's Farms, Inc.",
         "Contact": "John & Tommy Webster",
         "Address": "2133 Lindsey Bridge Rd",
@@ -9565,14 +7127,10 @@ module.exports = {
         "Zip": 27025,
         "Phone": "336-613-4253",
         "Email": "",
-        "Certified": "9/22/2016",
-        "Crops": "Barley, Soybeans, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/22/2016"
       },
       {
-        "id": 599,
+        "id": 594,
         "Vendor": "Wellspring Bakehouse",
         "Contact": "",
         "Address": "409-C Airport Blvd. Ste. 100",
@@ -9581,14 +7139,10 @@ module.exports = {
         "Zip": 27560,
         "Phone": "",
         "Email": "",
-        "Certified": "3/19/2003",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "(1001) Sourdough Bread 8/cs, (1007) Whole Wheat Sourdough Bread, (1008) Sourdough Bread 5# 3/cs, (1010) Twelve Seed & Grain Bread, (1022) Rosemary Sourdough Bread, (1030) Farm Bread PB 8/cs, (1043) Paesano Bread 7/cs, (1050) Pane Bello Bread 8/cs, (1056) French Batard Bread, (1064) Wheat Baguette Bread, (1065) French Baguette Bread PB 15/cs, (1067) Demi Baguette Bread, (1074) Challah Bread 5# 1/cs, (1081) Challah Bread Roll 2dz/cs, (1082) Challah Bread Pb 10/cs, (1084) Challah Round Bread PB 10/cs, (1085) Challah Raisin Round Bread 10/cs, (1090) Wheat Farm Bread 8/cs, (1096) Whole Wheat Rustic Bread, (1106) Seedless Rye Bread 8/cs, (1107) Jewish Rye Bread 8/cs, (1110) Caraway Rye Sourdough Bread ATB, (1111) Rye Sourdough Bread ATB, (1112) Whole Wheat Bread Roll, (1120) Italian Bread, (1131) Seeduction Bread, (1132) Seeduction Bread Roll, (1135) Big Sandwich Bread, (1140) Ciabatta PB 10/cs, (1141) Ciabatta Bread Roll 3dz/cs, (1145) French Bread, (1160) Prairie Bread 8/cs, (1161) Prairie Bread 5# 3/cs, (1162) Prairie Bread Roll PB 3dz/cs, (1176) Oatmeal Rustic Bread 8/cs, (1508) Nine Grain Bread, (1509) Flax Oat Bread, (1512) Whole Wheat Bread, (1514) Sunflower Bread, (1516) Soft White Bread, (1517) Oatmeal Bread, (1518) Prairie Bread, (1690) Focaccia Unbaked, (1695) Whole Wheat Pizza Dough PFDS 15/cs, (1696) Pizza Dough PFDS, (1697) Pizza Dough, (1698) Whole Wheat Pizza Dough, (91002) Cubed Sourdough Bread 8/cs, (91052) Black and Tan Batard Bread, (91060) Pain de Campagne Bread - Medium, (91069) Ficelle Bread, (91070) Pretzel Bread, (91100) Seeded Black Bread, (91101) Bachmeier Rye Bread, (91102) Marble Rye Bread, (91113) Deli Pumpernickel Bread, (91142) Ciabatta Bread Square PFDS, (91165) Alpine Porridge Bread, (91166) Multigrain Porridge Bread, (91167) Ancient Grains Porridge Bread, (91202) Whole Wheat Sourdough Bread DMA 18 ct, (91204) Seedless Rye Bread DMA 14 ct, (91205) Jewish Rye Bread DMA 14 ct, (91302) Hoagie Bread Roll PFDS, (91305) Pretzel Bread Roll PFDS, (91307) Bolillo Bread Roll PFDS, (91507) 4 Braid Challah Bread, (91524) Challah Raisin Unbaked Bread10/cs, (91692) Rosemary Foccacia Bread"
+        "Certified": "3/19/2003"
       },
       {
-        "id": 600,
+        "id": 595,
         "Vendor": "Whalebone Seafood Market",
         "Contact": "",
         "Address": "101 E Gray Eagle St",
@@ -9597,14 +7151,10 @@ module.exports = {
         "Zip": 27959,
         "Phone": "252-441-8808",
         "Email": "",
-        "Certified": "",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": ""
       },
       {
-        "id": 601,
+        "id": 596,
         "Vendor": "Wheeler Farms",
         "Contact": "Mark Wheeler",
         "Address": "480 Unicorn Rd",
@@ -9613,14 +7163,10 @@ module.exports = {
         "Zip": 27320,
         "Phone": "336-932-7615",
         "Email": "",
-        "Certified": "9/8/2015",
-        "Crops": "Tobacco, Wheat, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/8/2015"
       },
       {
-        "id": 602,
+        "id": 597,
         "Vendor": "White Ridge Farm Inc",
         "Contact": "Ashley White",
         "Address": "807 Rooker Dairy Rd",
@@ -9629,14 +7175,10 @@ module.exports = {
         "Zip": 27563,
         "Phone": "252-213-0336",
         "Email": "whiteridgefarm@yahoo.com",
-        "Certified": "8/21/2014",
-        "Crops": "Tobacco, Wheat",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/21/2014"
       },
       {
-        "id": 603,
+        "id": 598,
         "Vendor": "Whole Harvest Foods LLC",
         "Contact": "",
         "Address": "376 West Park Drive",
@@ -9645,14 +7187,10 @@ module.exports = {
         "Zip": 28398,
         "Phone": "",
         "Email": "",
-        "Certified": "6/2/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Soybean Oil"
+        "Certified": "6/2/2016"
       },
       {
-        "id": 604,
+        "id": 599,
         "Vendor": "Wilkins Farms, LLC",
         "Contact": "James Bradsher Wilkins",
         "Address": "201 South Main Street",
@@ -9661,14 +7199,10 @@ module.exports = {
         "Zip": 27573,
         "Phone": "919-323-5558",
         "Email": "",
-        "Certified": "8/4/2016",
-        "Crops": "Melons, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/4/2016"
       },
       {
-        "id": 605,
+        "id": 600,
         "Vendor": "William Horner/B & D Farms",
         "Contact": "William Horner",
         "Address": "207 McCullough Rd.",
@@ -9677,14 +7211,10 @@ module.exports = {
         "Zip": 27231,
         "Phone": "919-732-6036",
         "Email": "",
-        "Certified": "11/17/2008",
-        "Crops": "Blueberries, Flowers, Grains, Tobacco, Tobacco Seedlings",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "11/17/2008"
       },
       {
-        "id": 606,
+        "id": 601,
         "Vendor": "Williams Farms' Denny's Store LLC",
         "Contact": "Allen Williams",
         "Address": "4850 Denny's Store Rd",
@@ -9693,30 +7223,10 @@ module.exports = {
         "Zip": 27565,
         "Phone": "919-395-2739",
         "Email": "",
-        "Certified": "8/18/2014",
-        "Crops": "Sweet Potatoes, Tobacco, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/18/2014"
       },
       {
-        "id": 607,
-        "Vendor": "Williamson Organics",
-        "Contact": "Danny Williamson",
-        "Address": "3635 Harry Davis Rd",
-        "City": "Bullock",
-        "State": "North Carolina",
-        "Zip": 27507,
-        "Phone": "919-693-4496",
-        "Email": "",
-        "Certified": "9/13/2012",
-        "Crops": "Nursery/Starts/Flowers/Trees: Transplants (Tobacco), Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
-      },
-      {
-        "id": 608,
+        "id": 602,
         "Vendor": "Williamson Produce",
         "Contact": "Robbie Barnes",
         "Address": "1501 Ralston St. S",
@@ -9725,14 +7235,10 @@ module.exports = {
         "Zip": 27895,
         "Phone": "252-243-5700",
         "Email": "",
-        "Certified": "5/14/2014",
-        "Crops": "Watermelon",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Watermelon"
+        "Certified": "5/14/2014"
       },
       {
-        "id": 609,
+        "id": 603,
         "Vendor": "Williamson Produce, Inc.",
         "Contact": "Robbie Barnes",
         "Address": "1501 Ralston Street (B)",
@@ -9741,14 +7247,10 @@ module.exports = {
         "Zip": 27893,
         "Phone": "252-290-5736",
         "Email": "",
-        "Certified": "11/14/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Sweet Potatoes"
+        "Certified": "11/14/2016"
       },
       {
-        "id": 610,
+        "id": 604,
         "Vendor": "Williamson Produce,Inc.",
         "Contact": "Robbie Barnes",
         "Address": "P.O. Box 3508",
@@ -9757,14 +7259,10 @@ module.exports = {
         "Zip": 27893,
         "Phone": "252-243-5700",
         "Email": "",
-        "Certified": "4/7/2016",
-        "Crops": "Watermelon",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/7/2016"
       },
       {
-        "id": 611,
+        "id": 605,
         "Vendor": "Williamson, Charles",
         "Contact": "Charles Williamson",
         "Address": "3501 Huffine Mill Rd",
@@ -9773,14 +7271,10 @@ module.exports = {
         "Zip": 27249,
         "Phone": "336-337-9812",
         "Email": "",
-        "Certified": "10/17/2015",
-        "Crops": "Beets, Leeks, Turnips, Brussels Sprouts, Cabbage, Collards, Kale, Lettuce, Spinach, Pepper, Broccoli, Cauliflower, Tobacco, Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "10/17/2015"
       },
       {
-        "id": 612,
+        "id": 606,
         "Vendor": "Willis, Ronnie S.",
         "Contact": "Ronnie S. Willis",
         "Address": "4781 NC Hwy 119N",
@@ -9789,14 +7283,10 @@ module.exports = {
         "Zip": 27291,
         "Phone": "336-514-0356",
         "Email": "",
-        "Certified": "8/30/2016",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/30/2016"
       },
       {
-        "id": 613,
+        "id": 607,
         "Vendor": "Wilson Poultry LLC",
         "Contact": "Vicki Phelleps",
         "Address": "247 Wilson Farm Drive",
@@ -9805,30 +7295,10 @@ module.exports = {
         "Zip": 27207,
         "Phone": "99-548-6496",
         "Email": "",
-        "Certified": "8/22/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "8/22/2017"
       },
       {
-        "id": 614,
-        "Vendor": "Windcrest Farm",
-        "Contact": "Mary Roberts",
-        "Address": "518 Greenfield Drive",
-        "City": "Monroe",
-        "State": "North Carolina",
-        "Zip": 28112,
-        "Phone": "704-764-7746",
-        "Email": "mroberts@windcrestorganics.com",
-        "Certified": "7/29/2010",
-        "Crops": "Beets (Transplants and Produce), Carrots (Transplants and Produce), Garlic, Leeks (Transplants), Onions (Transplants), Radishes (Transplants), Turnips (Transplants), Celery (Transplants), Beans (Faba Beans), Okra (Transplants), Nursery/Starts/Flowers/Trees: Flowers (Mexican Mint Marigold - Transplants), Flowers (Transplants:  Agrostemma (Ocean Pearl), Ammi Visnaga Green Mint), Aubrieta, Bee Balm, Bells of Ireland, Borage, Canterbury Bells(Campanula), Cardoon, Chrysanthemum, Coleus, Craspedia, Cypress Vine, Eryngium (Sea Holly), Euphorbia (Snow on the Mountain), False Queen Anne's Lace (Daucus), Flowering Kale, , Giant Strawflowers, Gomphrena,  Horsetail, Iceland Poppy, Lovage, Lupine, Moldavian Balm, Portulaca, Purple Majesty, Roselle, Pyrethrum, Red Sorrel (Bloody Dock), Safflower, Salad Burnet, Scabiosa, Snapdragon, Soarwort, Tithonia, Trachelium, White Lace Flower (Orlays)), Flowers (Baby's Breath, Bachelor's Button (Corn Flower), Cosmos, Dahlia, Daisy, Delphinium Seed, Dianthus, Hollyhock, Larkspur, Marigold, Nastrurtium, Sweet Pea, Viola, Zinnia), Flowers (Stock Flowers), Arugula (Transplants), Brussels Sprouts (Transplants), Cabbage (Transplants), Chard (Transplants and Produce), Collards (Transplants and Produce), Kale (Transplants and Produce), Kohlrabi (Transplants), Lettuce (Transplants and Produce), Spinach (Transplants and Produce), Tatsoi (Transplants), Anise (Transplants), Basil (Transplants), Caraway (Transplants), Catnip (Transplants), Chamomile (Transplants), Chervil (Transplants), Chives (Transplants), Cilantro (Transplants), Comfrey (Transplants), Cress (Transplants), Cumin (Transplants), Dandelion (Transplants), Dill (Transplants), Echinacea, Fennel (Transplants), Fenugreek (Transplants), Ginger, Lavender (Transplants), Lemon Balm (Transplants), Lemon Grass (Transplants), Marjoram (Transplants), Mint (Transplants), Mustard (Transplants), Oregano (Transplants), Parsley (Transplants), Rosemary (Transplants), Rue (Transplants), Sage (Transplants), St. John's Wort (Transplants), Stevia (Transplants), Tansy (Transplants), Thyme (Transplants), Turmeric (Transplants), Yarrow (Transplants), Broccoli (Transplants), Cucumbers (Transplants and Produce), Eggplants (Transplants), Peppers (Transplants and Produce), Pumpkins (Transplants), Squash (Transplants and Produce), Tomatoes (Transplants and Produce), Cantaloupes (Transplants), Watermelons (Transplants), Blueberries, Cauliflower (Transplants), Amaranth (Transplants), Sunflowers, Calendula - Transplants, Catmint - Transplants, Cordao, Eucalyptus, Feverfew, Hyssop - Transplants, Marshmellow Plant - Transplants, Milkweed - Transplants, Motherwort - Transplants, Nettle - Transplants, Spilanthes - Transplants, Nettle - Transplants, Leeks - Transplants, Fennel - Transplants, Green Gold Bupleurm Transplants, Mizuna Transplants, Moringa Transplants, Purslane Transplants, Redbeckia Transplants, Shiso Transplants,, Valerian (Transplants)",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
-      },
-      {
-        "id": 615,
+        "id": 608,
         "Vendor": "Windy Creek Farms, Inc",
         "Contact": "Jennifer Daniels",
         "Address": "3009 Maxwell Road",
@@ -9837,14 +7307,10 @@ module.exports = {
         "Zip": 28318,
         "Phone": "910-567-2946",
         "Email": "jenndaniels88@gmail.com",
-        "Certified": "9/24/2015",
-        "Crops": "Sweet Potatoes, Cucumbers, Soybeans, Tobacco, Tobacco Transplants",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/24/2015"
       },
       {
-        "id": 616,
+        "id": 609,
         "Vendor": "Winslow Brothers Farms",
         "Contact": "Scottie Winslow",
         "Address": "786 Hickory Cross Rd",
@@ -9853,14 +7319,10 @@ module.exports = {
         "Zip": 27919,
         "Phone": "252-333-0994",
         "Email": "winslowbrosfarm@gmail.com",
-        "Certified": "4/16/2010",
-        "Crops": "Corn, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/16/2010"
       },
       {
-        "id": 617,
+        "id": 610,
         "Vendor": "Winzeler Farms LLC",
         "Contact": "Jeff Winzeler",
         "Address": "293 Dell Lane",
@@ -9869,14 +7331,10 @@ module.exports = {
         "Zip": 28448,
         "Phone": "910-549-9229",
         "Email": "",
-        "Certified": "6/28/2016",
-        "Crops": "Blueberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "6/28/2016"
       },
       {
-        "id": 618,
+        "id": 611,
         "Vendor": "Winzeler Farms, LLC",
         "Contact": "Jeff Winzeler",
         "Address": "293 Dell Lane",
@@ -9885,14 +7343,10 @@ module.exports = {
         "Zip": 28448,
         "Phone": "910-669-3307",
         "Email": "",
-        "Certified": "10/19/2015",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Blueberries"
+        "Certified": "10/19/2015"
       },
       {
-        "id": 619,
+        "id": 612,
         "Vendor": "Wise Acres Corporation",
         "Contact": "Robb Thorstenson",
         "Address": "4701 Hartis Rd",
@@ -9901,14 +7355,10 @@ module.exports = {
         "Zip": 28079,
         "Phone": "773-206-1010",
         "Email": "",
-        "Certified": "9/17/2014",
-        "Crops": "Pumpkins, Strawberries",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/17/2014"
       },
       {
-        "id": 620,
+        "id": 613,
         "Vendor": "Wollett Farms LLC",
         "Contact": "Will Wollett",
         "Address": "9304 Red Oak Rd.",
@@ -9917,14 +7367,10 @@ module.exports = {
         "Zip": 27891,
         "Phone": "252-907-9665",
         "Email": "",
-        "Certified": "9/29/2017",
-        "Crops": "Corn, Oats, Soybeans",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "9/29/2017"
       },
       {
-        "id": 621,
+        "id": 614,
         "Vendor": "Wood, Roy",
         "Contact": "Roy Wood",
         "Address": "2016 Post Office Rd.",
@@ -9933,14 +7379,10 @@ module.exports = {
         "Zip": 27330,
         "Phone": "919-775-5694",
         "Email": "",
-        "Certified": "4/13/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/13/2017"
       },
       {
-        "id": 622,
+        "id": 615,
         "Vendor": "Wright Foods Group, LLC Dba Wright Foods",
         "Contact": "",
         "Address": "1 Wright Way",
@@ -9949,14 +7391,10 @@ module.exports = {
         "Zip": 27371,
         "Phone": "",
         "Email": "",
-        "Certified": "11/17/2016",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Vegetable Broth"
+        "Certified": "11/17/2016"
       },
       {
-        "id": 623,
+        "id": 616,
         "Vendor": "Wright, Darrell",
         "Contact": "Darrell Wirght",
         "Address": "3540 Wright Farm Lane",
@@ -9965,14 +7403,10 @@ module.exports = {
         "Zip": 27248,
         "Phone": "336-824-4218",
         "Email": "",
-        "Certified": "3/20/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "3/20/2017"
       },
       {
-        "id": 624,
+        "id": 617,
         "Vendor": "Wright, Laverne",
         "Contact": "Laverne Wright",
         "Address": "2642 Holly Springs Church Rd",
@@ -9981,14 +7415,10 @@ module.exports = {
         "Zip": 27546,
         "Phone": "919-258-6995",
         "Email": "",
-        "Certified": "4/3/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/3/2017"
       },
       {
-        "id": 625,
+        "id": 618,
         "Vendor": "Yamco, LLC",
         "Contact": "William Heafy",
         "Address": "310 Kingold Blvd",
@@ -9997,14 +7427,10 @@ module.exports = {
         "Zip": 28580,
         "Phone": "252-747-9267",
         "Email": "bill@yamco.net",
-        "Certified": "6/21/2010",
-        "Crops": "",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": "Aseptic Organic Butternut Puree, Aseptic Organic Pumpkin Puree, Aseptic Organic Sweet Potato Puree, Processing of Vegetable Puree"
+        "Certified": "6/21/2010"
       },
       {
-        "id": 626,
+        "id": 619,
         "Vendor": "Yarbrough, Tim",
         "Contact": "Tim Yarbrough",
         "Address": "163 Cooper Cemetary Rd",
@@ -10013,14 +7439,10 @@ module.exports = {
         "Zip": 27214,
         "Phone": "336-583-8859",
         "Email": "teyrjy@embarqmail.com",
-        "Certified": "7/7/2015",
-        "Crops": "Tobacco",
-        "Livestock": "",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "7/7/2015"
       },
       {
-        "id": 627,
+        "id": 620,
         "Vendor": "Yow, Micheal",
         "Contact": "Michael Yow",
         "Address": "5922 Zoo Parkway",
@@ -10029,27 +7451,19 @@ module.exports = {
         "Zip": 27205,
         "Phone": "336-873-8773",
         "Email": "",
-        "Certified": "4/11/2017",
-        "Crops": "",
-        "Livestock": "Broilers (Chicken)",
-        "Wildcrops": "",
-        "Handling": ""
+        "Certified": "4/11/2017"
       }
-    ], {});
+    ])
   },
 
   down: (queryInterface, Sequelize) => {
-    return queryInterface.bulkDelete('Vendors', null, {});
-  }
-};
     /*
-      Add altering commands here.
+      Add reverting commands here.
       Return a promise to correctly handle asynchronicity.
 
       Example:
-      return queryInterface.bulkInsert('Person', [{
-        name: 'John Doe',
-        isBetaMember: false
-      }], {});
+      return queryInterface.bulkDelete('Person', null, {});
     */
-  
+    return queryInterface.dropTable("vendorData", null, {});
+  }
+};

@@ -4,11 +4,11 @@ const router = express.Router();
 import db from '../models';
 
 router.get('/api/vendors', (req, res) => {
-    db.Vendor.findAll({}).then(result => res.json(result));
+    db.vendorData.findAll({}).then(result => res.json(result));
 });
 
 router.get('/api/vendors/:id', (req, res) => {
-    db.Vendor.findOne({
+    db.vendorData.findOne({
         where: {
             id: req.params.id
         }
@@ -17,7 +17,7 @@ router.get('/api/vendors/:id', (req, res) => {
 });
 
 router.get('/api/city/:city', (req, res) => {
-    db.Vendor.findAll({
+    db.vendorData.findAll({
         where: {
             city: req.params.city
         }
@@ -25,9 +25,13 @@ router.get('/api/city/:city', (req, res) => {
         .then(result => res.json(result));
 });
 
-router.get('/api/users', (req, res) => {
-    db.Users.findAll({}).then(result => res.json(result));
+router.get('/api/crops', (req, res) => {
+    db.cropData.findAll({}).then(result => res.json(result));
 });
+
+router.get('/api/livestock', (req, res) => {
+    db.Livestock.findAll({}).then(result => res.json(result));
+})
 
 // router.post('/api/vendors', (req, res) => {
 //     // call model to create data => callback to display json result

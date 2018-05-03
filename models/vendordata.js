@@ -3,9 +3,10 @@ module.exports = (sequelize, DataTypes) => {
   var vendorData = sequelize.define('vendorData', {
     // id: DataTypes.INTEGER, autoIncrement: true, primaryKey: true, 
     id: {
-      type: DataTypes.INTEGER, 
-      primaryKey: true, 
-      autoIncrement: true},    
+      type: DataTypes.INTEGER,
+      primaryKey: true,
+      autoIncrement: true
+    },
     Vendor: DataTypes.STRING,
     Contact: DataTypes.STRING,
     Address: DataTypes.STRING,
@@ -16,14 +17,12 @@ module.exports = (sequelize, DataTypes) => {
     Email: DataTypes.STRING,
     Certified: DataTypes.STRING
   }, {
-    timestamps: false
-  });
-  // vendorData.associate = function(models) {
-  //   // associations can be defined here
-  //   vendorData.hasMany(models.cropData, {
-  //     // sourceKey: "id",
-  //     // foreignKey: "CropID"
-  //   });    
-  // };
+      timestamps: false
+    });
+  vendorData.associate = function (models) {
+    // associations can be defined here
+    vendorData.belongsToMany(models.cropData, { through: models.vendorCrops });
+    vendorData.belongsToMany(models.Livestock, { through: models.VendorLivestock});
+  };
   return vendorData;
 };

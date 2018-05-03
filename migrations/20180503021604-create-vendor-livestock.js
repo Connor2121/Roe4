@@ -8,7 +8,7 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      VendorID: {
+      vendorDatumId: {
         type: Sequelize.INTEGER
       },
       LivestockID: {

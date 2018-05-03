@@ -60,6 +60,13 @@
     $("[data-menu-underline-from-center] a").addClass("underline-from-center");
 
     $(document).ready(() => {
+
+        firebase.auth().onAuthStateChanged( user => {
+            displayPic();
+            displayVendor();
+        });
+        
+
         $('#farmer-edit-btn').on('click', e => {
             e.preventDefault();
 
@@ -101,7 +108,19 @@
                 // Handle any errors
                 console.log('Error: ', error);
             });
-        }
+        };
+
+        displayVendor = () => {
+            let userId = firebase.auth().currentUser.uid;
+            firebase.database().ref('users/' + userId).once('value', snap => {
+                $('#vendor-bio').text(snap.val().bio);
+                $('#vendor-name').text(snap.val().vendorName);
+                $('#vendor-product').text(snap.val().products);
+                $('#vendor-phone').text(snap.val().phoneNum);
+                $('#vendor-email').text(snap.val().email);
+                $('#vendor-address').text(snap.val().address);
+            });
+        };
 
         writeVendorData = (userId, bio, vendorName, products, phoneNum, email, address) => {
             firebase.database().ref('users/' + userId).update({ bio, vendorName, products, phoneNum, email, address }, 

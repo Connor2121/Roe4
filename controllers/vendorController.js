@@ -44,6 +44,28 @@ router.get('/api/vendors', (req, res) => {
     }).then(result => res.json(result));
 });
 
+router.get('/api/crops/:Name', (req, res) => {
+    db.cropData.findAll({
+        include: [{
+            model: db.vendorData
+        }],
+        where: {
+            Name: req.params.Name
+        }
+    }).then(result => res.json(result));
+});
+
+
+router.get('/api/vendors/:vendorName', (req, res) => {
+    db.vendorData.findAll({
+        where: {
+            Vendor: req.params.vendorName
+        }
+    })
+    .then(result => res.json(result));
+    //.then(result => res.render('buyerSearch', {venName: result}));
+});
+
 router.get('/api/vendors/:id', (req, res) => {
     db.vendorData.findOne({
         where: {

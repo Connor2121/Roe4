@@ -1,22 +1,22 @@
 'use strict';
 module.exports = {
   up: (queryInterface, Sequelize) => {
-    return queryInterface.createTable('cropData', {
+    return queryInterface.createTable('VendorLivestocks', {
       id: {
         allowNull: false,
         autoIncrement: true,
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      Name: {
-        type: Sequelize.STRING
+      VendorID: {
+        type: Sequelize.INTEGER
+      },
+      LivestockID: {
+        type: Sequelize.INTEGER
       }
-      // CropID: {
-      //   type: Sequelize.INTEGER
-      // }
     });
   },
   down: (queryInterface, Sequelize) => {
-    return queryInterface.dropTable('cropData');
+    return queryInterface.dropTable('VendorLivestocks');
   }
 };

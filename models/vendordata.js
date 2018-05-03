@@ -1,7 +1,11 @@
 'use strict';
 module.exports = (sequelize, DataTypes) => {
   var vendorData = sequelize.define('vendorData', {
-    id: DataTypes.INTEGER,
+    // id: DataTypes.INTEGER, autoIncrement: true, primaryKey: true, 
+    id: {
+      type: DataTypes.INTEGER, 
+      primaryKey: true, 
+      autoIncrement: true},    
     Vendor: DataTypes.STRING,
     Contact: DataTypes.STRING,
     Address: DataTypes.STRING,
@@ -14,13 +18,12 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false
   });
-  vendorData.associate = function(models) {
-    // associations can be defined here
-    vendorData.belongsToMany(models.cropData, {
-      foreignKey: {
-        allowNull: false
-      }
-    });    
-  };
+  // vendorData.associate = function(models) {
+  //   // associations can be defined here
+  //   vendorData.hasMany(models.cropData, {
+  //     // sourceKey: "id",
+  //     // foreignKey: "CropID"
+  //   });    
+  // };
   return vendorData;
 };

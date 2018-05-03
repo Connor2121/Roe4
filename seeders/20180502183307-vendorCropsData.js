@@ -2810,8 +2810,8 @@ module.exports = {
       },
       {
         "id": 560,
-        "vendorDatumId": "#VALUE!",
-        "cropDatumId": "#VALUE!"
+        "vendorDatumId": 272,
+        "cropDatumId": 250
       },
       {
         "id": 561,
@@ -4675,8 +4675,8 @@ module.exports = {
       },
       {
         "id": 933,
-        "vendorDatumId": "#VALUE!",
-        "cropDatumId": "#VALUE!"
+        "vendorDatumId": 464,
+        "cropDatumId": 256
       },
       {
         "id": 934,

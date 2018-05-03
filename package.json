@@ -18,10 +18,12 @@
   },
   "homepage": "https://github.com/rsarge47/Roe4#readme",
   "dependencies": {
+    "@sendgrid/mail": "^6.2.1",
     "babel-cli": "^6.26.0",
     "babel-preset-env": "^1.6.1",
     "babel-preset-stage-2": "^6.24.1",
     "body-parser": "^1.18.2",
+    "dotenv": "^5.0.1",
     "express": "^4.16.3",
     "express-handlebars": "^3.0.0",
     "materialize-css": "^1.0.0-beta",

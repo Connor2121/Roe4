@@ -41,13 +41,10 @@
                     Email:
                     <h6 class="venEmail"> connorgreed@gmail.com</h6>
                     Address:
-<<<<<<< HEAD
                     <h6 class="address"> </h6>
                     <!-- Modal Trigger -->
                     <button data-target="modal-contact" class="btn modal-trigger">Email Me!</button>
-=======
                     <h6 class="venAddress"> </h6>
->>>>>>> 8e886c948aa1a0fb8ec70f2dd5d473c1f7a32048
                 </div>
             </div>
 
@@ -74,30 +71,24 @@
                     <form class="col s12">
                         <div class="row">
                             <div class="input-field col s12">
-                                <input placeholder="John Doe" id="name2" type="text">
-                                <label for="first_name">Name</label>
-                            </div>
-                        </div>
-                        <div class="row">
-                            <div class="input-field col s12">
-                                <input placeholder="john@domainname.com" id="email2" type="email">
+                                <input placeholder="john@domainname.com" id="email2" type="email" name="fromEmail">
                                 <label for="email">Email</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input placeholder="In Search of Fresh Organic Food" id="subject" type="text">
+                                <input placeholder="In Search of Fresh Organic Food" id="subject" type="text" name="subject">
                                 <label for="subject">Subject</label>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea placeholder="Could I come by and pick up some food?" id="message2" class="materialize-textarea"></textarea>
+                                <textarea placeholder="Could I come by and pick up some food?" id="message2" class="materialize-textarea" name="message"></textarea>
                                 <label for="message">Message</label>
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
-                                    <button class="btn cyan waves-effect waves-light right" type="submit" name="action">Submit
+                                    <button class="btn cyan waves-effect waves-light right submitBtn" type="submit" name="action">Submit
                                         <i class="mdi-content-send right"></i>
                                     </button>
                                 </div>
@@ -111,13 +102,11 @@
 </div>
 
 <script>
-<<<<<<< HEAD
     $(document).ready(function () {
         $('.modal').modal();
         $('input#input_text, textarea#textarea2').characterCounter();
         $("[data-menu-underline-from-center] a").addClass("underline-from-center");
     });
-=======
     $("[data-menu-underline-from-center] a").addClass("underline-from-center");
 
     $(document).ready(() => {
@@ -156,7 +145,24 @@
                 console.log('Error: ', error);
             });
         }
+
+       // Sendgrid ajax post
+       $('.submitBtn').on('click', e => {
+            e.preventDefault();
+
+            let fromEmail = $('#email2').val().trim();
+            let subject = $('#subject').val().trim();
+            let message = $('#message2').val().trim();
+
+            $.post('/api/mail', {
+                fromEmail, 
+                subject, 
+                message
+            }).then(cb => {
+                $('#modal-contact').modal('close');
+            });
+
+       });
     });
 
->>>>>>> 8e886c948aa1a0fb8ec70f2dd5d473c1f7a32048
 </script>

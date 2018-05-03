@@ -150,14 +150,45 @@
     {{{ body }}}
 
 
-    <footer class="footer">
-
-    </footer>
+    <div id="engadget-footer-sitemap-container">
+        <footer id="engadget-footer-sitemap">
+            <div class="links">
+                <div class="link-column">
+                    <ul class="menu vertical">
+                        <li>
+                            <a href="#">One</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <ul class="menu vertical">
+                        <li>
+                            <a href="#">One</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <ul class="menu vertical">
+                        <li>
+                            <a href="#">One</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="link-column">
+                    <ul class="menu vertical">
+                        <li>
+                            <a href="#">One</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </footer>
+    </div>
 
 
     <script>
         ReactDOM.render(React.createElement(Icon), document.getElementById('react')); 
-    </script>        
+    </script>
 
 
     <script>
@@ -221,21 +252,21 @@
                         img.src = url;
                     })
 
-                    .catch(err => {
-                    // Handle any errors
-                    console.log('Error: ', err);
-                    });
+                        .catch(err => {
+                            // Handle any errors
+                            console.log('Error: ', err);
+                        });
                 } else {
-                console.log('Not logged in.');
-                $('.logoutBtn').hide();
-                $('.login').show();
-                let img = document.getElementById('img-circle');
-                img.src = "/images/man1.png";
-            };
-            $('#modal1').modal('close');
-        });
-    })
-    </script>    
+                    console.log('Not logged in.');
+                    $('.logoutBtn').hide();
+                    $('.login').show();
+                    let img = document.getElementById('img-circle');
+                    img.src = "/images/man1.png";
+                };
+                $('#modal1').modal('close');
+            });
+        })
+    </script>
 
 
 </body>

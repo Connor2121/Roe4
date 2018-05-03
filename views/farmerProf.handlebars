@@ -77,18 +77,12 @@
         displayVendor = () => {
             let userId = firebase.auth().currentUser.uid;
             firebase.database().ref('users/' + userId).once('value', snap => {
-                let bio = snap.val().bio;
-                let vendorName = snap.val().vendorName;
-                let products = snap.val().products;
-                let phoneNum = snap.val().phoneNum;
-                let email = snap.val().email;
-                let address = snap.val().address;
-                $('.venBio').text(bio);
-                $('.venName').text(vendorName);
-                $('.venProduct').text(products);
-                $('.venPhone').text(phoneNum);
-                $('.venEmail').text(email);
-                $('.venAddress').text(address);
+                $('.venBio').text(snap.val().bio);
+                $('.venName').text(snap.val().vendorName);
+                $('.venProduct').text(snap.val().products);
+                $('.venPhone').text(snap.val().phoneNum);
+                $('.venEmail').text(snap.val().email);
+                $('.venAddress').text(snap.val().address);
             });
         };
 

@@ -104,7 +104,7 @@
         }
 
         writeVendorData = (userId, bio, vendorName, products, phoneNum, email, address) => {
-            firebase.database().ref('users/' + userId).set({ bio, vendorName, products, phoneNum, email, address }, 
+            firebase.database().ref('users/' + userId).update({ bio, vendorName, products, phoneNum, email, address }, 
             err => {
                 window.location.replace('/vendor');
             });

@@ -234,16 +234,15 @@
                     let vendor = snap.val().vendor;
                     if(vendor === "true") {
                         $('.vendor').show();
-                        $('.manage').show();
-                        $('.buyer').hide();
+                        $('.manage').show();                        
                     } else if (vendor === "false"){
                         $('.vendor').hide();
                         $('.manage').hide();
-                        $('.buyer').show();
                     };
                 });
 
                 console.log(firebase.auth().currentUser.email, ' is currently logged in.');
+                $('.buyer').show();
                 $('.logoutBtn').show();
                 $('.login').hide();
                 firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {

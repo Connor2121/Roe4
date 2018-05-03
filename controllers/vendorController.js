@@ -3,6 +3,36 @@ const router = express.Router();
 
 import db from '../models';
 
+// Send grid
+const sgMail = require('@sendgrid/mail');
+
+router.post('/api/mail', (req, res) => {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+    const msg = {
+        to: 'mnolen5670@gmail.com',
+        from: req.body.fromEmail,
+        subject: req.body.subject,
+        text: req.body.message,
+        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    };
+    sgMail.send(msg).then(() => {
+        console.log(msg);
+        res.send("Email sent!");
+    })
+    .catch(error => {
+
+        //Log friendly error
+        console.error(error.toString());
+
+        //Extract error msg
+        const { message, code, response } = error;
+
+        //Extract response msg
+        const { headers, body } = response;
+    });;
+});
+
 router.get('/api/vendors', (req, res) => {
     db.vendorData.findAll({
         include: [{
@@ -20,7 +50,7 @@ router.get('/api/vendors/:id', (req, res) => {
             id: req.params.id
         }
     })
-    .then(result => res.json(result));
+        .then(result => res.json(result));
 });
 
 router.get('/api/city/:city', (req, res) => {
@@ -29,7 +59,7 @@ router.get('/api/city/:city', (req, res) => {
             city: req.params.city
         }
     })
-    .then(result => res.json(result));
+        .then(result => res.json(result));
 });
 
 router.get('/api/crops', (req, res) => {
@@ -60,3 +90,7 @@ router.get('/api/livestock', (req, res) => {
 // delete route
 
 export default router;
+
+
+
+

@@ -10,9 +10,12 @@ module.exports = (sequelize, DataTypes) => {
     // LivestockID: {
     //   type: DataTypes.INTEGER
     // }
-  }, {});
+  }, {
+    timestamps: false
+  });
   Livestock.associate = function(models) {
     // associations can be defined here
+    Livestock.belongsToMany(models.vendorData, {through: models.VendorLivestock});
   };
   return Livestock;
 };

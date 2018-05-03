@@ -4,7 +4,14 @@ const router = express.Router();
 import db from '../models';
 
 router.get('/api/vendors', (req, res) => {
-    db.vendorData.findAll({}).then(result => res.json(result));
+    db.vendorData.findAll({
+        include: [{
+            model: db.cropData           
+        },
+        {
+            model: db.Livestock
+        }]
+    }).then(result => res.json(result));
 });
 
 router.get('/api/vendors/:id', (req, res) => {
@@ -26,11 +33,19 @@ router.get('/api/city/:city', (req, res) => {
 });
 
 router.get('/api/crops', (req, res) => {
-    db.cropData.findAll({}).then(result => res.json(result));
+    db.cropData.findAll({
+        include: [{
+            model: db.vendorData
+        }]
+    }).then(result => res.json(result));
 });
 
 router.get('/api/livestock', (req, res) => {
-    db.Livestock.findAll({}).then(result => res.json(result));
+    db.Livestock.findAll({
+        include: [{
+            model: db.vendorData
+        }]
+    }).then(result => res.json(result));
 })
 
 // router.post('/api/vendors', (req, res) => {

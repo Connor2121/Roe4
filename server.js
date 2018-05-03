@@ -22,6 +22,8 @@ import vendors from './controllers/vendorController.js';
 app.use(pages);
 app.use(vendors);
 
-db.sequelize.sync().then( () => {
-    app.listen(PORT, () => console.log('App now listening at localhost: ', PORT));
-});
+// db.sequelize.sync().then( () => {
+//     app.listen(PORT, () => console.log('App now listening at localhost: ', PORT));
+// });
+
+app.listen(PORT, () => console.log('App now listening at localhost: ', PORT));

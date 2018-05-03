@@ -14,13 +14,10 @@ module.exports = (sequelize, DataTypes) => {
   }, {
     timestamps: false
   });
-  // cropData.associate = function(models) {
+  cropData.associate = function(models) {
   //   // associations can be defined here
-  //   cropData.hasMany(models.vendorData, {
-  //     // foreignKey: "CropID",
-  //     // targetKey: "id" 
-  //   });
-  // };
+    cropData.belongsToMany(models.vendorData, {through: models.vendorCrops});
+  };
   return cropData;
 };
 

@@ -8,10 +8,10 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      VendorID: {
+      vendorDatumId: {
         type: Sequelize.INTEGER
       },
-      CropID: {
+      cropDatumId: {
         type: Sequelize.INTEGER
       }
     });

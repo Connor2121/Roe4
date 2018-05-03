@@ -3,6 +3,36 @@ const router = express.Router();
 
 import db from '../models';
 
+// Send grid
+const sgMail = require('@sendgrid/mail');
+
+router.post('/api/mail', (req, res) => {
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY);
+
+    const msg = {
+        to: 'mnolen5670@gmail.com',
+        from: req.body.fromEmail,
+        subject: req.body.subject,
+        text: req.body.message,
+        html: '<strong>and easy to do anywhere, even with Node.js</strong>',
+    };
+    sgMail.send(msg).then(() => {
+        console.log(msg);
+        res.send("Email sent!");
+    })
+    .catch(error => {
+
+        //Log friendly error
+        console.error(error.toString());
+
+        //Extract error msg
+        const { message, code, response } = error;
+
+        //Extract response msg
+        const { headers, body } = response;
+    });;
+});
+
 router.get('/api/vendors', (req, res) => {
     db.vendorData.findAll({}).then(result => res.json(result));
 });
@@ -48,32 +78,4 @@ export default router;
 
 
 
-// Send grid
-// require("dotenv").config();
 
-// var keys = require('../keys.js');
-// const sgMail = require('@sendgrid/mail');
-// console.log('This is the key(should be undefined): ' +keys.apiKey);
-// sgMail.setApiKey(keys.apiKey);
-
-// const msg = {
-//     to: 'mnolen5670@gmail.com',
-//     from: 'test@example.com',
-//     subject: 'Sending with SendGrid is Fun',
-//     text: 'and easy to do anywhere, even with Node.js',
-//     html: '<strong>and easy to do anywhere, even with Node.js</strong>',
-// };
-// sgMail.send(msg).then(() => {
-//     Celebrate
-// })
-//     .catch(error => {
-
-//         //Log friendly error
-//         console.error(error.toString());
-
-//         //Extract error msg
-//         const { message, code, response } = error;
-
-//         //Extract response msg
-//         const { headers, body } = response;
-//     });;

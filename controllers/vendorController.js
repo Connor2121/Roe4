@@ -13,7 +13,7 @@ router.get('/api/vendors/:id', (req, res) => {
             id: req.params.id
         }
     })
-    .then(result => res.json(result));
+        .then(result => res.json(result));
 });
 
 router.get('/api/city/:city', (req, res) => {
@@ -22,7 +22,7 @@ router.get('/api/city/:city', (req, res) => {
             city: req.params.city
         }
     })
-    .then(result => res.json(result));
+        .then(result => res.json(result));
 });
 
 router.get('/api/crops', (req, res) => {
@@ -45,3 +45,7 @@ router.get('/api/livestock', (req, res) => {
 // delete route
 
 export default router;
+
+
+
+// Send grid

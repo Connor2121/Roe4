@@ -70,6 +70,15 @@ router.get('/api/crops', (req, res) => {
     }).then(result => res.json(result));
 });
 
+router.get('/api/crops/:Name', (req, res) => {
+    db.cropData.findAll({
+        where: {
+            Name: req.params.Name
+        }
+    })
+    .then(result => res.json(result));
+});
+
 router.get('/api/livestock', (req, res) => {
     db.Livestock.findAll({
         include: [{

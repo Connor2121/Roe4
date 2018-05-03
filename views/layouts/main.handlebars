@@ -150,6 +150,7 @@
     {{{ body }}}
 
 
+
     <footer class="page-footer">
         <div class="container">
             <div class="row">
@@ -169,9 +170,12 @@
             
 
 
+
     <script>
         ReactDOM.render(React.createElement(Icon), document.getElementById('react')); 
     </script>
+
+
     
     <script>
     // Initialize Firebase
@@ -191,6 +195,7 @@
             firebase.auth().signOut();
             console.log('logout');
         });
+
 
         // Add log-in event
         $('.loginBtn').on('click', e => {
@@ -237,6 +242,7 @@
                         $('.buyer').show();
                     };
                 });
+
                 console.log(firebase.auth().currentUser.email, ' is currently logged in.');
                 $('.logoutBtn').show();
                 $('.login').hide();
@@ -264,6 +270,7 @@
         });
     })
     </script>
+
 </body>
 
 <script>

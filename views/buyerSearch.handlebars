@@ -5,7 +5,7 @@
         <div class="input-field col l6 s12">
             <input placeholder="ex; Carrots" id="search_item" type="text" class="validate">
             <label for="search_item">Product</label>
-        <button id="productButton" class="button button-rounded-hover">Search</button>
+            <button id="productButton" class="button button-rounded-hover">Search</button>
         </div>
         {{!-- county select dropdown --}}
         <div class="input-field col l6 s12">
@@ -15,7 +15,7 @@
             </select>
 
             <label>City</label>
-        <button id="cityButton" class="button button-rounded-hover">Search</button>
+            <button id="cityButton" class="button button-rounded-hover">Search</button>
         </div>
     </div>
 
@@ -26,19 +26,21 @@
         </div>
     </div>
     <button id="vendorButton" class="button button-rounded-hover">Search</button>
-    
-    
-    <div class="row header-here"></div>
+
+
     <div class="row">
-        <div class="search-results">
-            {{!-- dynamically generated results go here --}} {{!-- test card --}}
-    
-        </div>
         <div class="newData">
             {{venName}}
+        </div>    
+        <div class="row header-here"></div>
+
+        <div class="search-results">
+            {{!-- dynamically generated results go here --}} {{!-- test card --}}
+
         </div>
+
     </div>
-    
+
 </div>
 
 
@@ -56,7 +58,7 @@
             let vendorName = $('#vendor').val().trim();
             console.log('base: ', base);
             console.log('vendorName: ', vendorName);
-            $.get(base + '/api/vendors/' + vendorName, result => {                
+            $.get(base + '/api/vendors/' + vendorName, result => {
                 console.log('result: ', result);
                 $('.newData').html(`<p> ${result[0].Vendor} </p>`);
             });
@@ -68,9 +70,43 @@
             let productName = $('#search_item').val().trim();
             console.log('base: ', base);
             console.log('productName: ', productName);
-            $.get(base + '/api/crops/' + productName, result => {                
-                console.log('result: ', result);
-                $('.newData').html(`<p> ${result[0].vendorData[0].Vendor} </p>`);
+            $.get(base + '/api/crops/' + productName, result => {
+                console.log('result: ', result[0].vendorData);
+                for (var i = 0; i < result[0].vendorData.length; i++) {
+                    $('.newData').append(
+                        `<ul class="collection">
+                            <li class="collection-item">
+                                <span class="title">${result[0].vendorData[i].Vendor}</span>
+                                <p>
+                                    ${result[0].vendorData[i].Address}<br>
+                                    ${result[0].vendorData[i].Phone}<br>
+                                    ${result[0].vendorData[i].Email}<br>
+                                </p>
+                                <button class='product-details' data-id=${result[0].vendorData[i].id}>Details</button>
+                                <p class='details-results'></p>
+                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                            </li>
+                        </ul>`
+                    );
+                }
+            });
+        });
+
+        $('.newData').on('click', '.product-details', function () {
+            var card = $(this).closest(".collection");
+            var id = $(this).attr('data-id');
+            var base = location.origin;
+            console.log('clicked');
+            $.get(base + '/api/vendors/id/' + id, result => {
+                return result;
+            }).then(function (result) {
+                console.log(result);
+                for (var i = 0; i < result.cropData.length; i++) {
+                    var p = $("<p>");
+                    card.find('.details-results').append(p.text(result.cropData[i].Name));
+                }
+
+
             });
         });
 

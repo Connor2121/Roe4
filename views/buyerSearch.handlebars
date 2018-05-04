@@ -5,7 +5,7 @@
         <div class="input-field col l6 s12">
             <input placeholder="ex; Carrots" id="search_item" type="text" class="validate">
             <label for="search_item">Product</label>
-        <button id="productButton" class="button button-rounded-hover">Search</button>
+            <button id="productButton" class="button button-rounded-hover">Search</button>
         </div>
         {{!-- county select dropdown --}}
         <div class="input-field col l6 s12">
@@ -15,7 +15,7 @@
             </select>
 
             <label>City</label>
-        <button id="cityButton" class="button button-rounded-hover">Search</button>
+            <button id="cityButton" class="button button-rounded-hover">Search</button>
         </div>
     </div>
 
@@ -26,23 +26,49 @@
         </div>
     </div>
     <button id="vendorButton" class="button button-rounded-hover">Search</button>
-    
-    
+
+
     <div class="row header-here"></div>
     <div class="row">
         <div class="search-results">
             {{!-- dynamically generated results go here --}} {{!-- test card --}}
-    
+
         </div>
+        {{!--
         <div class="newData">
-            {{venName}}
+            {{#each vendor}}
+            <div class="card">
+                {{Vendor}}
+                <br> {{Address}}
+                <br> {{City}}
+                <br>
+                <button>see crop data</button>
+            </div>
+            {{/each}}
+
+        </div> --}} {{> card}}
+    </div>
+
+</div>
+
+
+</div>
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
         </div>
     </div>
-    
-</div>
-
-
-</div>
+    <div class="footer-copyright">
+        <div class="container">
+            © 2018 Roe4
+            <a class="grey-text text-lighten-4 right" href="https://www.freepik.com/free-vector/eco-logos-template_1093618.htm">Freepik Logos</a>
+        </div>
+    </div>
+</footer>
 
 
 
@@ -50,15 +76,15 @@
     // initializing form selector
     $(document).ready(function () {
         $('#vendorButton').on('click', e => {
-            e.preventDefault();
+            //e.preventDefault();
             console.log('clicked it');
             let base = location.origin;
             let vendorName = $('#vendor').val().trim();
             console.log('base: ', base);
             console.log('vendorName: ', vendorName);
-            $.get(base + '/api/vendors/' + vendorName, result => {                
+            $.get(base + '/buyer/search/' + vendorName, result => {
                 console.log('result: ', result);
-                $('.newData').html(`<p> ${result[0].Vendor} </p>`);
+                $('.newData').html(result);
             });
         });
 
@@ -68,7 +94,7 @@
             let productName = $('#search_item').val().trim();
             console.log('base: ', base);
             console.log('productName: ', productName);
-            $.get(base + '/api/crops/' + productName, result => {                
+            $.get(base + '/api/crops/' + productName, result => {
                 console.log('result: ', result);
                 $('.newData').html(`<p> ${result[0].vendorData[0].Vendor} </p>`);
             });

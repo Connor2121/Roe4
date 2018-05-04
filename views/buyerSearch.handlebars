@@ -28,6 +28,7 @@
     <button id="vendorButton" class="button button-rounded-hover">Search</button>
 
 
+
     <div class="row header-here"></div>
     <div class="row">
         <div class="search-results">
@@ -47,6 +48,7 @@
             {{/each}}
 
         </div> --}} {{> card}}
+
     </div>
 
 </div>
@@ -82,7 +84,11 @@
             let vendorName = $('#vendor').val().trim();
             console.log('base: ', base);
             console.log('vendorName: ', vendorName);
+
             $.get(base + '/buyer/search/' + vendorName, result => {
+
+           
+
                 console.log('result: ', result);
                 $('.newData').html(result);
             });
@@ -95,17 +101,58 @@
             console.log('base: ', base);
             console.log('productName: ', productName);
             $.get(base + '/api/crops/' + productName, result => {
-                console.log('result: ', result);
-                $('.newData').html(`<p> ${result[0].vendorData[0].Vendor} </p>`);
+
+               
+
+                console.log('result: ', result[0].vendorData);
+                for (var i = 0; i < result[0].vendorData.length; i++) {
+                    $('.newData').append(
+                        `<ul class="collection">
+                            <li class="collection-item">
+                                <span class="title">${result[0].vendorData[i].Vendor}</span>
+                                <p>
+                                    ${result[0].vendorData[i].Address}<br>
+                                    ${result[0].vendorData[i].Phone}<br>
+                                    ${result[0].vendorData[i].Email}<br>
+                                </p>
+                                <button class='product-details' data-id=${result[0].vendorData[i].id}>Details</button>
+                                <p class='details-results'></p>
+                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                            </li>
+                        </ul>`
+                    );
+                }
+            });
+        });
+
+        $('.newData').on('click', '.product-details', function () {
+            var card = $(this).closest(".collection");
+            var id = $(this).attr('data-id');
+            var base = location.origin;
+            console.log('clicked');
+            $.get(base + '/api/vendors/id/' + id, result => {
+                return result;
+            }).then(function (result) {
+                console.log(result);
+                for (var i = 0; i < result.cropData.length; i++) {
+                    var p = $("<p>");
+                    card.find('.details-results').append(p.text(result.cropData[i].Name));
+                }
+
+
+
             });
         });
 
         $('#cityButton').on('click', e => {
             e.preventDefault();
             let base = location.origin;
-            // can't get the value out of city option!
             let city = $('#city-name option:checked').val();
             console.log('city: ', city);
+            $.get(base + '/api/city/' + city, result => {
+                console.log('result: ', result);
+                $('.newData').html(`<p> ${result[0].City} </p>`);
+            });
         });
 
 

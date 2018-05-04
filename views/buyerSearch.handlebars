@@ -9,9 +9,9 @@
         </div>
         {{!-- county select dropdown --}}
         <div class="input-field col l6 s12">
-            <select multiple>
+            <select id="city-name" multiple>
                 {{!-- TODO: dynamically generate these based on search criteria --}}
-                <option id="city-name" value="" disabled selected>Choose your option</option>
+                <option value="" disabled selected>Choose your option</option>
             </select>
 
             <label>City</label>
@@ -78,9 +78,8 @@
             e.preventDefault();
             let base = location.origin;
             // can't get the value out of city option!
-            let city = $(document).('#city-name option:checked').text();
+            let city = $('#city-name option:checked').val();
             console.log('city: ', city);
-            console.log('clicked it');
         });
 
 

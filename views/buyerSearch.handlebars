@@ -77,9 +77,12 @@
         $('#cityButton').on('click', e => {
             e.preventDefault();
             let base = location.origin;
-            // can't get the value out of city option!
             let city = $('#city-name option:checked').val();
             console.log('city: ', city);
+            $.get(base + '/api/city/' + city, result => {
+                console.log('result: ', result);
+                $('.newData').html(`<p> ${result[0].City} </p>`);
+            });
         });
 
 

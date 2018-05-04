@@ -72,10 +72,10 @@ router.get('/api/vendors/id/:id', (req, res) => {
             id: req.params.id
         },
         include: [{
-            model:db.cropData
+            model: db.cropData           
         }]
     })
-        .then(result => res.json(result));
+    .then(result => res.json(result));
 });
 
 router.get('/api/city/:city', (req, res) => {

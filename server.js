@@ -13,7 +13,10 @@ app.use(bodyParser.json());
 
 import exphbs from 'express-handlebars';
 
-app.engine('handlebars', exphbs({ defaultLayout: 'main' }));
+app.engine('handlebars', exphbs({
+    defaultLayout: 'main',
+    partialsDir: __dirname + '/views/partials'
+}));
 app.set('view engine', 'handlebars');
 
 import pages from './controllers/htmlController.js';

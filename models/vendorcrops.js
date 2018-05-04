@@ -5,8 +5,8 @@ module.exports = (sequelize, DataTypes) => {
       type: DataTypes.INTEGER, 
       primaryKey: true, 
       autoIncrement: true},
-    VendorID: DataTypes.INTEGER,
-    CropID: {
+    vendorDatumId: DataTypes.INTEGER,
+    cropDatumId: {
       type: DataTypes.INTEGER
     }
   }, {
@@ -14,7 +14,7 @@ module.exports = (sequelize, DataTypes) => {
   });
   // vendorCrops.associate = function(models) {
   //   // associations can be defined here
-  //   vendorData.belongsToMany(models.cropData, { through: vendorCrops});
+  //   vendorCrops.belongsToMany(models.cropData, { through: vendorCrops});
   //   cropData.belongsToMany(models.vendorData, { through: vendorCrops});
 
   // };

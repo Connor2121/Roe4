@@ -34,7 +34,36 @@ router.post('/api/mail', (req, res) => {
 });
 
 router.get('/api/vendors', (req, res) => {
-    db.vendorData.findAll({}).then(result => res.json(result));
+    db.vendorData.findAll({
+        include: [{
+            model: db.cropData           
+        },
+        {
+            model: db.Livestock
+        }]
+    }).then(result => res.json(result));
+});
+
+router.get('/api/crops/:Name', (req, res) => {
+    db.cropData.findAll({
+        include: [{
+            model: db.vendorData
+        }],
+        where: {
+            Name: req.params.Name
+        }
+    }).then(result => res.json(result));
+});
+
+
+router.get('/api/vendors/:vendorName', (req, res) => {
+    db.vendorData.findAll({
+        where: {
+            Vendor: req.params.vendorName
+        }
+    })
+    .then(result => res.json(result));
+    //.then(result => res.render('buyerSearch', {venName: result}));
 });
 
 router.get('/api/vendors/:id', (req, res) => {
@@ -56,11 +85,19 @@ router.get('/api/city/:city', (req, res) => {
 });
 
 router.get('/api/crops', (req, res) => {
-    db.cropData.findAll({}).then(result => res.json(result));
+    db.cropData.findAll({
+        include: [{
+            model: db.vendorData
+        }]
+    }).then(result => res.json(result));
 });
 
 router.get('/api/livestock', (req, res) => {
-    db.Livestock.findAll({}).then(result => res.json(result));
+    db.Livestock.findAll({
+        include: [{
+            model: db.vendorData
+        }]
+    }).then(result => res.json(result));
 })
 
 // router.post('/api/vendors', (req, res) => {

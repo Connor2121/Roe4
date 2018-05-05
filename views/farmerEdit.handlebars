@@ -129,7 +129,22 @@
                 zip
             }).then(cb => {
                 console.log('post sent..');
-            });
+            })
+            //.then($.put('api/vendorEdit', (req, res) => {
+            //db.vendorData.update({
+               // Vendor: req.body.vendorName,
+               // Phone: req.body.phoneNum,
+                //Email: req.body.email,
+               // Address: req.body.address,
+                //City: req.body.city,
+                //State: req.body.state,
+                //Zip: req.body.zip
+            //}, {
+            //where: {
+                //UID: req.body.UID
+            //}
+            //})
+            //}));
             //let products = $('#vendor-product').val().trim();
             // use reg expression to validate email format
             // TO DO: add form validation

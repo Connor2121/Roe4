@@ -72,9 +72,23 @@ router.post('/api/vendorEdit', (req, res) => {
         City: req.body.city,
         State: req.body.state,
         Zip: req.body.zip
-    };
+    }
+    db.vendorData.update({
+        Vendor: req.body.vendorName,
+        Bio: req.body.bio,
+        Phone: req.body.phoneNum,
+        Email: req.body.email,
+        Address: req.body.address,
+        City: req.body.city,
+        State: req.body.state,
+        Zip: req.body.zip
+    }, {
+    where: {
+        UID: req.body.uid
+    }
+    })
     console.log(placeholder);
-})
+});
 
 router.get('/api/vendors', (req, res) => {
     db.vendorData.findAll({

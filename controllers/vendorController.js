@@ -61,6 +61,21 @@ router.post('/api/signup', (req, res) => {
     console.log(placeholder);
 });
 
+router.post('/api/vendorEdit', (req, res) => {
+    let placeholder = {
+        UID: req.body.uid,
+        Bio: req.body.bio,
+        Vendor: req.body.vendorName,
+        Phone: req.body.phoneNum,
+        Email: req.body.email,
+        Address: req.body.address,
+        City: req.body.city,
+        State: req.body.state,
+        Zip: req.body.zip
+    };
+    console.log(placeholder);
+})
+
 router.get('/api/vendors', (req, res) => {
     db.vendorData.findAll({
         include: [{

@@ -73,6 +73,8 @@ router.post('/api/vendorEdit/Livestock', (req, res) => {
 
 // --------FarmerEdit adds crops to Vendor in DB
 router.post('/api/vendorEdit/Crop', (req, res) => {
+    let cropID = null;
+    let vendorID = null;
     let placeholder = {
         UID: req.body.uid,
         Name: req.body.crop
@@ -82,14 +84,31 @@ router.post('/api/vendorEdit/Crop', (req, res) => {
             Name: req.body.crop
         }
     })
-    .then(result => console.log(result.dataValues.id)),
-    db.vendorData.findOne({
+    .then(result => {
+        // console.log(result.dataValues.id)
+        cropID = result.dataValues.id;
+        console.log(cropID);
+    })
+    .then(db.vendorData.findOne({
         where: {
             UID: req.body.uid
         }
     })
+    .then(result => {
+        vendorID = result.dataValues.id;
+        console.log(vendorID);
+    })
+    .then(result => db.vendorCrops.create({
+        vendorDatumId: vendorID,
+        cropDatumId: cropID
+    })
+    .then(results => console.log(cropID, vendorID))
+    )
+    )
+
     // console.log(UID);
     console.log(placeholder);
+    
     // we want to Create a row in vendorcrops with vendorDatumId and cropDatumId
 });
 

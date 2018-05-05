@@ -64,6 +64,15 @@
                 if(!validateForm()) {
                     return;
                 };
+                
+                $.post('/api/signup', {
+                    firstName,
+                    lastName,
+                    email,
+                    pass
+                }).then(cb => {
+                    console.log('post sent..');
+                });
 
                 const auth = firebase.auth();
             

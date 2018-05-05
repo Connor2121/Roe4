@@ -22,6 +22,17 @@ router.get('/vendor/manageproducts', (req, res) => {
 router.get('/buyer/search', (req, res) => {
     res.render('buyerSearch');
 });
+router.get('/buyer/search/:vendorName', (req, res) => {
+    db.vendorData.findAll({
+        where: {
+            Vendor: req.params.vendorName
+        } 
+    })
+    .then(function (result) {
+        res.render('partials/card', {vendor: result});
+    })
+   
+});
 
 router.get('/signup', (req, res) => {
     res.render('signup');

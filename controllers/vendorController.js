@@ -1,4 +1,21 @@
 import express from 'express';
+
+// ----------Firebase Server-side----------------------
+// this may be moved at a later date
+// import firebase from 'firebase';
+// require('firebase/auth');
+// require('firebase/database');
+// const config = {
+//     apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
+//     authDomain: "nc-vfm.firebaseapp.com",
+//     databaseURL: "https://nc-vfm.firebaseio.com",
+//     projectId: "nc-vfm",
+//     storageBucket: "nc-vfm.appspot.com",
+//     messagingSenderId: "987355521805"
+// };
+// firebase.initializeApp(config);
+// ----------Firebase Server-side----------------------
+
 const router = express.Router();
 
 import db from '../models';
@@ -21,16 +38,27 @@ router.post('/api/mail', (req, res) => {
         res.send("Email sent!");
     })
     .catch(error => {
-
         //Log friendly error
         console.error(error.toString());
-
         //Extract error msg
         const { message, code, response } = error;
-
         //Extract response msg
         const { headers, body } = response;
     });;
+});
+
+// ---------Sign UP Form Post Route ------------------
+router.post('/api/signup', (req, res) => {
+    // db.TABLENAME.create ??
+    // right now this just console logs server side
+    // console log = the form values from signup page
+    let placeholder = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        pass: req.body.pass
+    };
+    console.log(placeholder);
 });
 
 router.get('/api/vendors', (req, res) => {
@@ -41,7 +69,8 @@ router.get('/api/vendors', (req, res) => {
         {
             model: db.Livestock
         }]
-    }).then(result => res.json(result));
+    })
+    .then(result => res.json(result));
 });
 
 router.get('/api/crops/:Name', (req, res) => {
@@ -52,7 +81,8 @@ router.get('/api/crops/:Name', (req, res) => {
         where: {
             Name: req.params.Name
         }
-    }).then(result => res.json(result));
+    })
+    .then(result => res.json(result));
 });
 
 
@@ -78,7 +108,7 @@ router.get('/api/vendors/id/:id', (req, res) => {
             model: db.Livestock
         }]
     })
-        .then(result => res.json(result));
+    .then(result => res.json(result));
 });
 
 router.get('/api/city/:city', (req, res) => {
@@ -87,7 +117,7 @@ router.get('/api/city/:city', (req, res) => {
             city: req.params.city
         }
     })
-        .then(result => res.json(result));
+    .then(result => res.json(result));
 });
 
 router.get('/api/crops', (req, res) => {
@@ -95,7 +125,8 @@ router.get('/api/crops', (req, res) => {
         include: [{
             model: db.vendorData
         }]
-    }).then(result => res.json(result));
+    })
+    .then(result => res.json(result));
 });
 
 router.get('/api/crops/:Name', (req, res) => {
@@ -112,8 +143,21 @@ router.get('/api/livestock', (req, res) => {
         include: [{
             model: db.vendorData
         }]
-    }).then(result => res.json(result));
-})
+    })
+    .then(result => res.json(result));
+});
+
+router.get('/api/livestock/:Name', (req, res) => {
+    db.Livestock.findAll({
+        include: [{
+            model: db.vendorData
+        }],
+        where: {
+            Name: req.params.Name
+        }
+    })
+    .then(result => res.json(result));
+});
 
 // router.post('/api/vendors', (req, res) => {
 //     // call model to create data => callback to display json result

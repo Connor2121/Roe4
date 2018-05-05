@@ -75,8 +75,20 @@ router.post('/api/vendorEdit/Livestock', (req, res) => {
 router.post('/api/vendorEdit/Crop', (req, res) => {
     let placeholder = {
         UID: req.body.uid,
-        Crop: req.body.crop
-    };
+        Name: req.body.crop
+    }
+    db.cropData.findOne({
+        where: {
+            Name: req.body.crop
+        }
+    })
+    .then(result => console.log(result.dataValues.id)),
+    db.vendorData.findOne({
+        where: {
+            UID: req.body.uid
+        }
+    })
+    // console.log(UID);
     console.log(placeholder);
     // we want to Create a row in vendorcrops with vendorDatumId and cropDatumId
 });

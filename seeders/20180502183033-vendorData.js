@@ -15,7 +15,7 @@ module.exports = {
     return queryInterface.bulkInsert("vendorData", [
       {
         "id": 1,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "A & H Organic Farm, Inc.",
         "Bio": "",
         "Image": "",
@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         "id": 2,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "A And B Farms",
         "Bio": "",
         "Image": "",
@@ -45,7 +45,7 @@ module.exports = {
       },
       {
         "id": 3,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "A Way Of Life Farm",
         "Bio": "",
         "Image": "",
@@ -60,7 +60,7 @@ module.exports = {
       },
       {
         "id": 4,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Acorn Ridge",
         "Bio": "",
         "Image": "",
@@ -75,7 +75,7 @@ module.exports = {
       },
       {
         "id": 5,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Adam Vanhoy Dba Vanhoy Family Farms",
         "Bio": "",
         "Image": "",
@@ -90,7 +90,7 @@ module.exports = {
       },
       {
         "id": 6,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ag Mart Produce NC",
         "Bio": "",
         "Image": "",
@@ -105,7 +105,7 @@ module.exports = {
       },
       {
         "id": 7,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Against The Grain",
         "Bio": "",
         "Image": "",
@@ -120,7 +120,7 @@ module.exports = {
       },
       {
         "id": 8,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Alamance Foods, Inc.",
         "Bio": "",
         "Image": "",
@@ -135,7 +135,7 @@ module.exports = {
       },
       {
         "id": 9,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Albert's Organics South East",
         "Bio": "",
         "Image": "",
@@ -150,7 +150,7 @@ module.exports = {
       },
       {
         "id": 10,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Alex Watkins Farm",
         "Bio": "",
         "Image": "",
@@ -165,7 +165,7 @@ module.exports = {
       },
       {
         "id": 11,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Alliance One International Inc.",
         "Bio": "",
         "Image": "",
@@ -180,7 +180,7 @@ module.exports = {
       },
       {
         "id": 12,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Alljuice Operating, LLC",
         "Bio": "",
         "Image": "",
@@ -195,7 +195,7 @@ module.exports = {
       },
       {
         "id": 13,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "American Miso Company Inc.",
         "Bio": "",
         "Image": "",
@@ -210,7 +210,7 @@ module.exports = {
       },
       {
         "id": 14,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Amy Hamilton/Appalachian Seeds Farm & Nursery",
         "Bio": "",
         "Image": "",
@@ -225,7 +225,7 @@ module.exports = {
       },
       {
         "id": 15,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Anderson Farms Partnership",
         "Bio": "",
         "Image": "",
@@ -240,7 +240,7 @@ module.exports = {
       },
       {
         "id": 16,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Angell Farms",
         "Bio": "",
         "Image": "",
@@ -255,7 +255,7 @@ module.exports = {
       },
       {
         "id": 17,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Anthony Hunter Farm",
         "Bio": "",
         "Image": "",
@@ -270,7 +270,7 @@ module.exports = {
       },
       {
         "id": 18,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Arbor Organic Technologies, LLC",
         "Bio": "",
         "Image": "",
@@ -285,7 +285,7 @@ module.exports = {
       },
       {
         "id": 19,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Arcadia Beverage, LLC",
         "Bio": "",
         "Image": "",
@@ -300,7 +300,7 @@ module.exports = {
       },
       {
         "id": 20,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ashe Jr, John E",
         "Bio": "",
         "Image": "",
@@ -315,7 +315,7 @@ module.exports = {
       },
       {
         "id": 21,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Asheville Kombucha Mamas Dba Buchi",
         "Bio": "",
         "Image": "",
@@ -330,7 +330,7 @@ module.exports = {
       },
       {
         "id": 22,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ashley Williams",
         "Bio": "",
         "Image": "",
@@ -345,7 +345,7 @@ module.exports = {
       },
       {
         "id": 23,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Atlantic Seafood",
         "Bio": "",
         "Image": "",
@@ -360,7 +360,7 @@ module.exports = {
       },
       {
         "id": 24,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "B & B Produce, Inc",
         "Bio": "",
         "Image": "",
@@ -375,7 +375,7 @@ module.exports = {
       },
       {
         "id": 25,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "B & P Farms",
         "Bio": "",
         "Image": "",
@@ -390,7 +390,7 @@ module.exports = {
       },
       {
         "id": 26,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "B 3 Farms LLC",
         "Bio": "",
         "Image": "",
@@ -405,7 +405,7 @@ module.exports = {
       },
       {
         "id": 27,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "B Organics, LLC",
         "Bio": "",
         "Image": "",
@@ -420,7 +420,7 @@ module.exports = {
       },
       {
         "id": 28,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "B&G Foods Snacks, Inc.",
         "Bio": "",
         "Image": "",
@@ -435,7 +435,7 @@ module.exports = {
       },
       {
         "id": 29,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "B.W. Pope Farm Inc dba Black River Farms",
         "Bio": "",
         "Image": "",
@@ -450,7 +450,7 @@ module.exports = {
       },
       {
         "id": 30,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "B.W. Pope Farm Inc.",
         "Bio": "",
         "Image": "",
@@ -465,7 +465,7 @@ module.exports = {
       },
       {
         "id": 31,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Back Forty Farm",
         "Bio": "",
         "Image": "",
@@ -480,7 +480,7 @@ module.exports = {
       },
       {
         "id": 32,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bailey Bros Ag Partnership Dba Bailey Brothers Organics",
         "Bio": "",
         "Image": "",
@@ -495,7 +495,7 @@ module.exports = {
       },
       {
         "id": 33,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Baker Family Vineyard At Moccasin Creek Farm, Inc",
         "Bio": "",
         "Image": "",
@@ -510,7 +510,7 @@ module.exports = {
       },
       {
         "id": 34,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ball Farm",
         "Bio": "",
         "Image": "",
@@ -525,7 +525,7 @@ module.exports = {
       },
       {
         "id": 35,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Balsam Gardens, LLC",
         "Bio": "",
         "Image": "",
@@ -540,7 +540,7 @@ module.exports = {
       },
       {
         "id": 36,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Barbara Walker/Walker Farms",
         "Bio": "",
         "Image": "",
@@ -555,7 +555,7 @@ module.exports = {
       },
       {
         "id": 37,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Barefoot Farm",
         "Bio": "",
         "Image": "",
@@ -570,7 +570,7 @@ module.exports = {
       },
       {
         "id": 38,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Barnes Farming Corporation",
         "Bio": "",
         "Image": "",
@@ -585,7 +585,7 @@ module.exports = {
       },
       {
         "id": 39,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Barnhardt Manufacturing Company",
         "Bio": "",
         "Image": "",
@@ -593,14 +593,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(704) 614-9654",
         "Email": "kyle.pearce@barnhardt.net",
         "Certified": "8/5/2009"
       },
       {
         "id": 40,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Barrow Farms Inc",
         "Bio": "",
         "Image": "",
@@ -615,7 +615,7 @@ module.exports = {
       },
       {
         "id": 41,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Barry Whitley",
         "Bio": "",
         "Image": "",
@@ -630,7 +630,7 @@ module.exports = {
       },
       {
         "id": 42,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bass, Steve",
         "Bio": "",
         "Image": "",
@@ -645,7 +645,7 @@ module.exports = {
       },
       {
         "id": 43,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Batista And Williamson, Inc.",
         "Bio": "",
         "Image": "",
@@ -660,7 +660,7 @@ module.exports = {
       },
       {
         "id": 44,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Battleboro Produce, Inc",
         "Bio": "",
         "Image": "",
@@ -675,7 +675,7 @@ module.exports = {
       },
       {
         "id": 45,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bay State Milling Co.",
         "Bio": "",
         "Image": "",
@@ -690,7 +690,7 @@ module.exports = {
       },
       {
         "id": 46,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bay Valley Foods, LLC",
         "Bio": "",
         "Image": "",
@@ -705,7 +705,7 @@ module.exports = {
       },
       {
         "id": 47,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Be Still Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -720,7 +720,7 @@ module.exports = {
       },
       {
         "id": 48,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Beacon Village Farm",
         "Bio": "",
         "Image": "",
@@ -728,14 +728,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "",
         "Email": "",
         "Certified": "4/30/2015"
       },
       {
         "id": 49,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Beacon Village Farm",
         "Bio": "",
         "Image": "",
@@ -750,7 +750,7 @@ module.exports = {
       },
       {
         "id": 50,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Beal, Stephen R",
         "Bio": "",
         "Image": "",
@@ -765,7 +765,7 @@ module.exports = {
       },
       {
         "id": 51,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Beard, Cory dba Beard Farm",
         "Bio": "",
         "Image": "",
@@ -780,7 +780,7 @@ module.exports = {
       },
       {
         "id": 52,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Beck, Susan",
         "Bio": "",
         "Image": "",
@@ -795,7 +795,7 @@ module.exports = {
       },
       {
         "id": 53,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bell, Ricky",
         "Bio": "",
         "Image": "",
@@ -810,7 +810,7 @@ module.exports = {
       },
       {
         "id": 54,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ben Adcock/Ben Adcock Farm",
         "Bio": "",
         "Image": "",
@@ -825,7 +825,7 @@ module.exports = {
       },
       {
         "id": 55,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bennett Brothers LLC",
         "Bio": "",
         "Image": "",
@@ -840,7 +840,7 @@ module.exports = {
       },
       {
         "id": 56,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bethel Farm",
         "Bio": "",
         "Image": "",
@@ -855,7 +855,7 @@ module.exports = {
       },
       {
         "id": 57,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Big Boss Baking Company Dba Big Boss Baking Company",
         "Bio": "",
         "Image": "",
@@ -870,7 +870,7 @@ module.exports = {
       },
       {
         "id": 58,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bill Bolton",
         "Bio": "",
         "Image": "",
@@ -885,7 +885,7 @@ module.exports = {
       },
       {
         "id": 59,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bimbo Bakeries USA",
         "Bio": "",
         "Image": "",
@@ -900,7 +900,7 @@ module.exports = {
       },
       {
         "id": 60,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bimbo Bakeries USA",
         "Bio": "",
         "Image": "",
@@ -915,7 +915,7 @@ module.exports = {
       },
       {
         "id": 61,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bissette Farms, Inc",
         "Bio": "",
         "Image": "",
@@ -930,7 +930,7 @@ module.exports = {
       },
       {
         "id": 62,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Black River Organic Farm Inc",
         "Bio": "",
         "Image": "",
@@ -945,7 +945,7 @@ module.exports = {
       },
       {
         "id": 63,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Blackburn Brothers Seafood",
         "Bio": "",
         "Image": "",
@@ -960,7 +960,7 @@ module.exports = {
       },
       {
         "id": 64,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Blakely, Larry",
         "Bio": "",
         "Image": "",
@@ -975,7 +975,7 @@ module.exports = {
       },
       {
         "id": 65,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Blue Sky Farms",
         "Bio": "",
         "Image": "",
@@ -990,7 +990,7 @@ module.exports = {
       },
       {
         "id": 66,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Blue, Lewin dba White Rock Farms",
         "Bio": "",
         "Image": "",
@@ -1005,7 +1005,7 @@ module.exports = {
       },
       {
         "id": 67,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Blueberry Hill Organics, LLC",
         "Bio": "",
         "Image": "",
@@ -1020,7 +1020,7 @@ module.exports = {
       },
       {
         "id": 68,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bobbie Chriscoe",
         "Bio": "",
         "Image": "",
@@ -1035,7 +1035,7 @@ module.exports = {
       },
       {
         "id": 69,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Body Engineering, Inc.",
         "Bio": "",
         "Image": "",
@@ -1050,7 +1050,7 @@ module.exports = {
       },
       {
         "id": 70,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Body Engineering, Inc.",
         "Bio": "",
         "Image": "",
@@ -1065,7 +1065,7 @@ module.exports = {
       },
       {
         "id": 71,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bowling Farms",
         "Bio": "",
         "Image": "",
@@ -1080,7 +1080,7 @@ module.exports = {
       },
       {
         "id": 72,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Boyette Brothers Produce, LLC",
         "Bio": "",
         "Image": "",
@@ -1095,7 +1095,7 @@ module.exports = {
       },
       {
         "id": 73,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brad Pope Organics",
         "Bio": "",
         "Image": "",
@@ -1110,7 +1110,7 @@ module.exports = {
       },
       {
         "id": 74,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brandon Pernell",
         "Bio": "",
         "Image": "",
@@ -1125,7 +1125,7 @@ module.exports = {
       },
       {
         "id": 75,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brandon, Robert",
         "Bio": "",
         "Image": "",
@@ -1140,7 +1140,7 @@ module.exports = {
       },
       {
         "id": 76,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Braswell Milling",
         "Bio": "",
         "Image": "",
@@ -1155,7 +1155,7 @@ module.exports = {
       },
       {
         "id": 77,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brent C. Strickland",
         "Bio": "",
         "Image": "",
@@ -1170,7 +1170,7 @@ module.exports = {
       },
       {
         "id": 78,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brown Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -1185,7 +1185,7 @@ module.exports = {
       },
       {
         "id": 79,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brown, Jimmy",
         "Bio": "",
         "Image": "",
@@ -1200,7 +1200,7 @@ module.exports = {
       },
       {
         "id": 80,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brown, Johnny and Brown, Matt",
         "Bio": "",
         "Image": "",
@@ -1215,7 +1215,7 @@ module.exports = {
       },
       {
         "id": 81,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brown, Rodney",
         "Bio": "",
         "Image": "",
@@ -1230,7 +1230,7 @@ module.exports = {
       },
       {
         "id": 82,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Brown, Ruby dba Horsefly Farm",
         "Bio": "",
         "Image": "",
@@ -1245,7 +1245,7 @@ module.exports = {
       },
       {
         "id": 83,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bruce Crews JR Organics",
         "Bio": "",
         "Image": "",
@@ -1260,7 +1260,7 @@ module.exports = {
       },
       {
         "id": 84,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bryan Lamm",
         "Bio": "",
         "Image": "",
@@ -1275,7 +1275,7 @@ module.exports = {
       },
       {
         "id": 85,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Bryson, Travis",
         "Bio": "",
         "Image": "",
@@ -1290,7 +1290,7 @@ module.exports = {
       },
       {
         "id": 86,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Burch Organics",
         "Bio": "",
         "Image": "",
@@ -1305,7 +1305,7 @@ module.exports = {
       },
       {
         "id": 87,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Burgess, Andrew",
         "Bio": "",
         "Image": "",
@@ -1320,7 +1320,7 @@ module.exports = {
       },
       {
         "id": 88,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Burgess, Jeff",
         "Bio": "",
         "Image": "",
@@ -1335,7 +1335,7 @@ module.exports = {
       },
       {
         "id": 89,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Burrows, Tony dba Hickory Hill Farm",
         "Bio": "",
         "Image": "",
@@ -1350,7 +1350,7 @@ module.exports = {
       },
       {
         "id": 90,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Butterball LLC",
         "Bio": "",
         "Image": "",
@@ -1365,7 +1365,7 @@ module.exports = {
       },
       {
         "id": 91,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Butterball LLC - Raeford Loccation",
         "Bio": "",
         "Image": "",
@@ -1380,7 +1380,7 @@ module.exports = {
       },
       {
         "id": 92,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Butterball, LLC",
         "Bio": "",
         "Image": "",
@@ -1395,7 +1395,7 @@ module.exports = {
       },
       {
         "id": 93,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Butterfields Butter LLC",
         "Bio": "",
         "Image": "",
@@ -1410,7 +1410,7 @@ module.exports = {
       },
       {
         "id": 94,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "C & F Foods, Inc.",
         "Bio": "",
         "Image": "",
@@ -1425,7 +1425,7 @@ module.exports = {
       },
       {
         "id": 95,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cain, Mitch dba Cain Farm",
         "Bio": "",
         "Image": "",
@@ -1440,7 +1440,7 @@ module.exports = {
       },
       {
         "id": 96,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods - Israel Farms",
         "Bio": "",
         "Image": "",
@@ -1455,7 +1455,7 @@ module.exports = {
       },
       {
         "id": 97,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods Inc. - Bowman Poultry",
         "Bio": "",
         "Image": "",
@@ -1470,7 +1470,7 @@ module.exports = {
       },
       {
         "id": 98,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc. - Gordon Bright",
         "Bio": "",
         "Image": "",
@@ -1485,7 +1485,7 @@ module.exports = {
       },
       {
         "id": 99,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc. - William Henry Vines Jr.",
         "Bio": "",
         "Image": "",
@@ -1500,7 +1500,7 @@ module.exports = {
       },
       {
         "id": 100,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Ashleigh Lemons",
         "Bio": "",
         "Image": "",
@@ -1515,7 +1515,7 @@ module.exports = {
       },
       {
         "id": 101,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Cameron Sizemore",
         "Bio": "",
         "Image": "",
@@ -1530,7 +1530,7 @@ module.exports = {
       },
       {
         "id": 102,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Chad Clark Farm",
         "Bio": "",
         "Image": "",
@@ -1545,7 +1545,7 @@ module.exports = {
       },
       {
         "id": 103,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Cynthia Vestal Farm",
         "Bio": "",
         "Image": "",
@@ -1560,7 +1560,7 @@ module.exports = {
       },
       {
         "id": 104,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Farlow Farms",
         "Bio": "",
         "Image": "",
@@ -1575,7 +1575,7 @@ module.exports = {
       },
       {
         "id": 105,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- High Pine Farm",
         "Bio": "",
         "Image": "",
@@ -1590,7 +1590,7 @@ module.exports = {
       },
       {
         "id": 106,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Jackie Rives Farm",
         "Bio": "",
         "Image": "",
@@ -1605,7 +1605,7 @@ module.exports = {
       },
       {
         "id": 107,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Paul Shaffner",
         "Bio": "",
         "Image": "",
@@ -1620,7 +1620,7 @@ module.exports = {
       },
       {
         "id": 108,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Rae-Lee Farm",
         "Bio": "",
         "Image": "",
@@ -1635,7 +1635,7 @@ module.exports = {
       },
       {
         "id": 109,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Rex Childress",
         "Bio": "",
         "Image": "",
@@ -1650,7 +1650,7 @@ module.exports = {
       },
       {
         "id": 110,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Swaney Farm",
         "Bio": "",
         "Image": "",
@@ -1665,7 +1665,7 @@ module.exports = {
       },
       {
         "id": 111,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.- Welborn Farms",
         "Bio": "",
         "Image": "",
@@ -1680,7 +1680,7 @@ module.exports = {
       },
       {
         "id": 112,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc./Cheek Family Farms",
         "Bio": "",
         "Image": "",
@@ -1695,7 +1695,7 @@ module.exports = {
       },
       {
         "id": 113,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc./Fogleman Poultry",
         "Bio": "",
         "Image": "",
@@ -1710,7 +1710,7 @@ module.exports = {
       },
       {
         "id": 114,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc./Hickory Grove Farm",
         "Bio": "",
         "Image": "",
@@ -1725,7 +1725,7 @@ module.exports = {
       },
       {
         "id": 115,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal Maine Foods, Inc.-Bumper's Fork Farm",
         "Bio": "",
         "Image": "",
@@ -1740,7 +1740,7 @@ module.exports = {
       },
       {
         "id": 116,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods Inc.",
         "Bio": "",
         "Image": "",
@@ -1755,7 +1755,7 @@ module.exports = {
       },
       {
         "id": 117,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods Inc. -- Dawn Johnson",
         "Bio": "",
         "Image": "",
@@ -1770,7 +1770,7 @@ module.exports = {
       },
       {
         "id": 118,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods Inc. - Perry Chappell Farm",
         "Bio": "",
         "Image": "",
@@ -1785,7 +1785,7 @@ module.exports = {
       },
       {
         "id": 119,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods Inc./KLP Farm",
         "Bio": "",
         "Image": "",
@@ -1800,7 +1800,7 @@ module.exports = {
       },
       {
         "id": 120,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods Inc.-JKS Farms LLC",
         "Bio": "",
         "Image": "",
@@ -1815,7 +1815,7 @@ module.exports = {
       },
       {
         "id": 121,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc.",
         "Bio": "",
         "Image": "",
@@ -1830,7 +1830,7 @@ module.exports = {
       },
       {
         "id": 122,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc. - Gene Powers",
         "Bio": "",
         "Image": "",
@@ -1845,7 +1845,7 @@ module.exports = {
       },
       {
         "id": 123,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc.- A & N Farm",
         "Bio": "",
         "Image": "",
@@ -1860,7 +1860,7 @@ module.exports = {
       },
       {
         "id": 124,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc.- Jackie Hunter",
         "Bio": "",
         "Image": "",
@@ -1875,7 +1875,7 @@ module.exports = {
       },
       {
         "id": 125,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc.- Ricky Kivett Farm",
         "Bio": "",
         "Image": "",
@@ -1890,7 +1890,7 @@ module.exports = {
       },
       {
         "id": 126,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc./ Dave Lutterloh",
         "Bio": "",
         "Image": "",
@@ -1905,7 +1905,7 @@ module.exports = {
       },
       {
         "id": 127,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc./ Mickey Simmons",
         "Bio": "",
         "Image": "",
@@ -1920,7 +1920,7 @@ module.exports = {
       },
       {
         "id": 128,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc./Hurley Farms",
         "Bio": "",
         "Image": "",
@@ -1935,7 +1935,7 @@ module.exports = {
       },
       {
         "id": 129,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods, Inc./Peace Haven Farm",
         "Bio": "",
         "Image": "",
@@ -1950,7 +1950,7 @@ module.exports = {
       },
       {
         "id": 130,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods-Larry G. Wells Farm",
         "Bio": "",
         "Image": "",
@@ -1965,7 +1965,7 @@ module.exports = {
       },
       {
         "id": 131,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cal-Maine Foods-Todd Tharington Farm",
         "Bio": "",
         "Image": "",
@@ -1980,7 +1980,7 @@ module.exports = {
       },
       {
         "id": 132,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cameron, Fredrick A dba Cameron FArm",
         "Bio": "",
         "Image": "",
@@ -1995,7 +1995,7 @@ module.exports = {
       },
       {
         "id": 133,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cameron, Fredrick A. dba Bluebird Hill Farm",
         "Bio": "",
         "Image": "",
@@ -2010,7 +2010,7 @@ module.exports = {
       },
       {
         "id": 134,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Campbell, Lloyd",
         "Bio": "",
         "Image": "",
@@ -2025,7 +2025,7 @@ module.exports = {
       },
       {
         "id": 135,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cane Creek Valley Farm And Co., Inc.",
         "Bio": "",
         "Image": "",
@@ -2040,7 +2040,7 @@ module.exports = {
       },
       {
         "id": 136,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cap'n Willis Seafood Market",
         "Bio": "",
         "Image": "",
@@ -2055,7 +2055,7 @@ module.exports = {
       },
       {
         "id": 137,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Carolina Beverage Group",
         "Bio": "",
         "Image": "",
@@ -2070,7 +2070,7 @@ module.exports = {
       },
       {
         "id": 138,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Carolina Beverage Group, LLC",
         "Bio": "",
         "Image": "",
@@ -2078,14 +2078,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(704) 799-2337",
         "Email": "austyn.black@carolinabeveragegroup.com",
         "Certified": "9/20/2017"
       },
       {
         "id": 139,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Carolina Dairy LLC",
         "Bio": "",
         "Image": "",
@@ -2100,7 +2100,7 @@ module.exports = {
       },
       {
         "id": 140,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Carolina Egg Companies",
         "Bio": "",
         "Image": "",
@@ -2115,7 +2115,7 @@ module.exports = {
       },
       {
         "id": 141,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Carolina Farm Stewardship Association Dba Elma C. Lomax Incubator Farm",
         "Bio": "",
         "Image": "",
@@ -2130,7 +2130,7 @@ module.exports = {
       },
       {
         "id": 142,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Carolina Heritage Vineyard And Winery",
         "Bio": "",
         "Image": "",
@@ -2145,7 +2145,7 @@ module.exports = {
       },
       {
         "id": 143,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Carolina Innovative Food Ingredients, Inc.",
         "Bio": "",
         "Image": "",
@@ -2153,14 +2153,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(252) 462-1556",
         "Email": "jamie.gable@cifi1.com",
         "Certified": "8/18/2016"
       },
       {
         "id": 144,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Carver Brothers Farms LLC",
         "Bio": "",
         "Image": "",
@@ -2175,7 +2175,7 @@ module.exports = {
       },
       {
         "id": 145,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cave, Preston Adam",
         "Bio": "",
         "Image": "",
@@ -2190,7 +2190,7 @@ module.exports = {
       },
       {
         "id": 146,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Central Carolina Community College",
         "Bio": "",
         "Image": "",
@@ -2205,7 +2205,7 @@ module.exports = {
       },
       {
         "id": 147,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Chase Packing, LLC",
         "Bio": "",
         "Image": "",
@@ -2220,7 +2220,7 @@ module.exports = {
       },
       {
         "id": 148,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Chaudhry Halal Meats",
         "Bio": "",
         "Image": "",
@@ -2235,7 +2235,7 @@ module.exports = {
       },
       {
         "id": 149,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Chilton Properties, Inc",
         "Bio": "",
         "Image": "",
@@ -2250,7 +2250,7 @@ module.exports = {
       },
       {
         "id": 150,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Chriscoe, Martha",
         "Bio": "",
         "Image": "",
@@ -2265,7 +2265,7 @@ module.exports = {
       },
       {
         "id": 151,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Christopher Mcleod Dba Mcleod Organics",
         "Bio": "",
         "Image": "",
@@ -2280,7 +2280,7 @@ module.exports = {
       },
       {
         "id": 152,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cindy Shore",
         "Bio": "",
         "Image": "",
@@ -2295,7 +2295,7 @@ module.exports = {
       },
       {
         "id": 153,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Clay Smith And Nancy Joyner/Redbud Farm",
         "Bio": "",
         "Image": "",
@@ -2310,7 +2310,7 @@ module.exports = {
       },
       {
         "id": 154,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Clayton, Johnny G",
         "Bio": "",
         "Image": "",
@@ -2325,7 +2325,7 @@ module.exports = {
       },
       {
         "id": 155,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Clean Juice, LLC Dba Clean Juice",
         "Bio": "",
         "Image": "",
@@ -2340,7 +2340,7 @@ module.exports = {
       },
       {
         "id": 156,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Clement Swift Dba Clem's Organic Gardens",
         "Bio": "",
         "Image": "",
@@ -2355,7 +2355,7 @@ module.exports = {
       },
       {
         "id": 157,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Clifton, Tony L",
         "Bio": "",
         "Image": "",
@@ -2370,7 +2370,7 @@ module.exports = {
       },
       {
         "id": 158,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Coastal NC Organics, LLC",
         "Bio": "",
         "Image": "",
@@ -2378,14 +2378,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(252) 333-4582",
         "Email": "coastalnco@gmail.com",
         "Certified": "9/27/2017"
       },
       {
         "id": 159,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Coble, Alan",
         "Bio": "",
         "Image": "",
@@ -2400,7 +2400,7 @@ module.exports = {
       },
       {
         "id": 160,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Coble, William dba Coble Farm",
         "Bio": "",
         "Image": "",
@@ -2415,7 +2415,7 @@ module.exports = {
       },
       {
         "id": 161,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Coconut Organics, Inc. Dba Coconut Organics",
         "Bio": "",
         "Image": "",
@@ -2430,7 +2430,7 @@ module.exports = {
       },
       {
         "id": 162,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cohen, Murray",
         "Bio": "",
         "Image": "",
@@ -2445,7 +2445,7 @@ module.exports = {
       },
       {
         "id": 163,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Coleman Farms",
         "Bio": "",
         "Image": "",
@@ -2460,7 +2460,7 @@ module.exports = {
       },
       {
         "id": 164,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Coley, Winston",
         "Bio": "",
         "Image": "",
@@ -2475,7 +2475,7 @@ module.exports = {
       },
       {
         "id": 165,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Colony Gums, Inc.",
         "Bio": "",
         "Image": "",
@@ -2483,14 +2483,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(704) 226-9666",
         "Email": "jc.cuadra@colonygums.com",
         "Certified": "1/14/2014"
       },
       {
         "id": 166,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Compton Farm Organics",
         "Bio": "",
         "Image": "",
@@ -2505,7 +2505,7 @@ module.exports = {
       },
       {
         "id": 167,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Conyers Farm",
         "Bio": "",
         "Image": "",
@@ -2520,7 +2520,7 @@ module.exports = {
       },
       {
         "id": 168,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cott Beverages",
         "Bio": "",
         "Image": "",
@@ -2535,7 +2535,7 @@ module.exports = {
       },
       {
         "id": 169,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cottle Organics Inc",
         "Bio": "",
         "Image": "",
@@ -2550,7 +2550,7 @@ module.exports = {
       },
       {
         "id": 170,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Cottonman.com LLC",
         "Bio": "",
         "Image": "",
@@ -2565,7 +2565,7 @@ module.exports = {
       },
       {
         "id": 171,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Counter Culture Coffee",
         "Bio": "",
         "Image": "",
@@ -2580,7 +2580,7 @@ module.exports = {
       },
       {
         "id": 172,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Creative Snack Co., LLC",
         "Bio": "",
         "Image": "",
@@ -2595,7 +2595,7 @@ module.exports = {
       },
       {
         "id": 173,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Currin Farms",
         "Bio": "",
         "Image": "",
@@ -2610,7 +2610,7 @@ module.exports = {
       },
       {
         "id": 174,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "D.G. Smith Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -2625,7 +2625,7 @@ module.exports = {
       },
       {
         "id": 175,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Dale Carpenter Farm",
         "Bio": "",
         "Image": "",
@@ -2640,7 +2640,7 @@ module.exports = {
       },
       {
         "id": 176,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Dameron Farms",
         "Bio": "",
         "Image": "",
@@ -2655,7 +2655,7 @@ module.exports = {
       },
       {
         "id": 177,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Daniel and Danny Byerly",
         "Bio": "",
         "Image": "",
@@ -2670,7 +2670,7 @@ module.exports = {
       },
       {
         "id": 178,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Daniel, Martin",
         "Bio": "",
         "Image": "",
@@ -2685,7 +2685,7 @@ module.exports = {
       },
       {
         "id": 179,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Danny Furr",
         "Bio": "",
         "Image": "",
@@ -2700,7 +2700,7 @@ module.exports = {
       },
       {
         "id": 180,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Darrell Mauldin",
         "Bio": "",
         "Image": "",
@@ -2715,7 +2715,7 @@ module.exports = {
       },
       {
         "id": 181,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "David Johnson dba Rocky Acres",
         "Bio": "",
         "Image": "",
@@ -2730,7 +2730,7 @@ module.exports = {
       },
       {
         "id": 182,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Davis, Eddie",
         "Bio": "",
         "Image": "",
@@ -2745,7 +2745,7 @@ module.exports = {
       },
       {
         "id": 183,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Davis, Rackley",
         "Bio": "",
         "Image": "",
@@ -2760,7 +2760,7 @@ module.exports = {
       },
       {
         "id": 184,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Dean Miller Farm",
         "Bio": "",
         "Image": "",
@@ -2775,7 +2775,7 @@ module.exports = {
       },
       {
         "id": 185,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Deaton, Lynn",
         "Bio": "",
         "Image": "",
@@ -2790,7 +2790,7 @@ module.exports = {
       },
       {
         "id": 186,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Depalo Foods, Inc. Dba Depalo Bakery",
         "Bio": "",
         "Image": "",
@@ -2805,7 +2805,7 @@ module.exports = {
       },
       {
         "id": 187,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Derek J. Godwin",
         "Bio": "",
         "Image": "",
@@ -2820,7 +2820,7 @@ module.exports = {
       },
       {
         "id": 188,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Dickerson, Rodney",
         "Bio": "",
         "Image": "",
@@ -2835,7 +2835,7 @@ module.exports = {
       },
       {
         "id": 189,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Dixon And Sons",
         "Bio": "",
         "Image": "",
@@ -2850,7 +2850,7 @@ module.exports = {
       },
       {
         "id": 190,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Doby, James dba Billy Doby Farm",
         "Bio": "",
         "Image": "",
@@ -2865,7 +2865,7 @@ module.exports = {
       },
       {
         "id": 191,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Doby, James dba James Doby Farm",
         "Bio": "",
         "Image": "",
@@ -2880,7 +2880,7 @@ module.exports = {
       },
       {
         "id": 192,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Don Pancho Authentic Mexican Foods",
         "Bio": "",
         "Image": "",
@@ -2888,14 +2888,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(252) 536-7333",
         "Email": "kanjanap@resers.com",
         "Certified": "7/9/2014"
       },
       {
         "id": 193,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Double J",
         "Bio": "",
         "Image": "",
@@ -2910,7 +2910,7 @@ module.exports = {
       },
       {
         "id": 194,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Dover Foods, Inc.",
         "Bio": "",
         "Image": "",
@@ -2925,7 +2925,7 @@ module.exports = {
       },
       {
         "id": 195,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Down 2 Earth Farms LLC Dba Down 2 Earth Farms",
         "Bio": "",
         "Image": "",
@@ -2940,7 +2940,7 @@ module.exports = {
       },
       {
         "id": 196,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Dunn, Tim",
         "Bio": "",
         "Image": "",
@@ -2955,7 +2955,7 @@ module.exports = {
       },
       {
         "id": 197,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Dynamite Roasting Company, LLC",
         "Bio": "",
         "Image": "",
@@ -2970,7 +2970,7 @@ module.exports = {
       },
       {
         "id": 198,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "E Sense Logistics",
         "Bio": "",
         "Image": "",
@@ -2985,7 +2985,7 @@ module.exports = {
       },
       {
         "id": 199,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Eagle Island Seafood",
         "Bio": "",
         "Image": "",
@@ -3000,7 +3000,7 @@ module.exports = {
       },
       {
         "id": 200,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Eastern Carolina Organics",
         "Bio": "",
         "Image": "",
@@ -3015,7 +3015,7 @@ module.exports = {
       },
       {
         "id": 201,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "ECOP, LLC",
         "Bio": "",
         "Image": "",
@@ -3030,7 +3030,7 @@ module.exports = {
       },
       {
         "id": 202,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Eden Song",
         "Bio": "",
         "Image": "",
@@ -3045,7 +3045,7 @@ module.exports = {
       },
       {
         "id": 203,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Eliza Farms",
         "Bio": "",
         "Image": "",
@@ -3053,14 +3053,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(828) 577-0043",
         "Email": "elizafarms@gmail.com",
         "Certified": "9/26/2017"
       },
       {
         "id": 204,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Elizabeth L. Franklin",
         "Bio": "",
         "Image": "",
@@ -3068,14 +3068,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(828) 622-3430",
         "Email": "elfrank@madison.main.nc.us",
         "Certified": "10/29/2012"
       },
       {
         "id": 205,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Emerson, Garry",
         "Bio": "",
         "Image": "",
@@ -3090,7 +3090,7 @@ module.exports = {
       },
       {
         "id": 206,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Englehard Seafood",
         "Bio": "",
         "Image": "",
@@ -3105,7 +3105,7 @@ module.exports = {
       },
       {
         "id": 207,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Enoch, Angelo",
         "Bio": "",
         "Image": "",
@@ -3120,7 +3120,7 @@ module.exports = {
       },
       {
         "id": 208,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Estridge, Tommy dba Deer Valley Farm",
         "Bio": "",
         "Image": "",
@@ -3135,7 +3135,7 @@ module.exports = {
       },
       {
         "id": 209,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fann Farms Inc",
         "Bio": "",
         "Image": "",
@@ -3150,7 +3150,7 @@ module.exports = {
       },
       {
         "id": 210,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Farfields, LLC",
         "Bio": "",
         "Image": "",
@@ -3165,7 +3165,7 @@ module.exports = {
       },
       {
         "id": 211,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Farmers Produce",
         "Bio": "",
         "Image": "",
@@ -3180,7 +3180,7 @@ module.exports = {
       },
       {
         "id": 212,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "FarmPak Products LLC",
         "Bio": "",
         "Image": "",
@@ -3195,7 +3195,7 @@ module.exports = {
       },
       {
         "id": 213,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Faucette, Phillip W,  II",
         "Bio": "",
         "Image": "",
@@ -3210,7 +3210,7 @@ module.exports = {
       },
       {
         "id": 214,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ferrell, Joseph",
         "Bio": "",
         "Image": "",
@@ -3225,7 +3225,7 @@ module.exports = {
       },
       {
         "id": 215,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fields, Hank dba Fields Family Farm",
         "Bio": "",
         "Image": "",
@@ -3240,7 +3240,7 @@ module.exports = {
       },
       {
         "id": 216,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fishel Organic Farm LLC",
         "Bio": "",
         "Image": "",
@@ -3255,7 +3255,7 @@ module.exports = {
       },
       {
         "id": 217,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fisher Farms Partnership",
         "Bio": "",
         "Image": "",
@@ -3270,7 +3270,7 @@ module.exports = {
       },
       {
         "id": 218,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Flagstone Foods, Inc.",
         "Bio": "",
         "Image": "",
@@ -3278,14 +3278,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(612) 222-3858",
         "Email": "bobbi.soukup@amportfoods.com",
         "Certified": "6/4/2013"
       },
       {
         "id": 219,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Flavor 1St Growers & Packers, LLC",
         "Bio": "",
         "Image": "",
@@ -3300,7 +3300,7 @@ module.exports = {
       },
       {
         "id": 220,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fogleman Dairy",
         "Bio": "",
         "Image": "",
@@ -3315,7 +3315,7 @@ module.exports = {
       },
       {
         "id": 221,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Foley Farms LLC",
         "Bio": "",
         "Image": "",
@@ -3330,7 +3330,7 @@ module.exports = {
       },
       {
         "id": 222,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fork Mountain Farm",
         "Bio": "",
         "Image": "",
@@ -3345,7 +3345,7 @@ module.exports = {
       },
       {
         "id": 223,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Four Lanes Farms LLC",
         "Bio": "",
         "Image": "",
@@ -3360,7 +3360,7 @@ module.exports = {
       },
       {
         "id": 224,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fox Gap, LLC",
         "Bio": "",
         "Image": "",
@@ -3375,7 +3375,7 @@ module.exports = {
       },
       {
         "id": 225,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Frank Fowlkes II & Ethan Fowlkes",
         "Bio": "",
         "Image": "",
@@ -3390,7 +3390,7 @@ module.exports = {
       },
       {
         "id": 226,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Frank Stephen Cabe/Flow-Water Farm",
         "Bio": "",
         "Image": "",
@@ -3405,7 +3405,7 @@ module.exports = {
       },
       {
         "id": 227,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Frazier Farm",
         "Bio": "",
         "Image": "",
@@ -3420,7 +3420,7 @@ module.exports = {
       },
       {
         "id": 228,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Frederick D. Inglis",
         "Bio": "",
         "Image": "",
@@ -3435,7 +3435,7 @@ module.exports = {
       },
       {
         "id": 229,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fresh Fountain Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -3443,14 +3443,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(704) 902-4361",
         "Email": "fosterdavidson@yahoo.com",
         "Certified": "9/15/2015"
       },
       {
         "id": 230,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Freshouse LLC",
         "Bio": "",
         "Image": "",
@@ -3465,7 +3465,7 @@ module.exports = {
       },
       {
         "id": 231,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Frye, Amy Lou dba Flint Hill Farm",
         "Bio": "",
         "Image": "",
@@ -3480,7 +3480,7 @@ module.exports = {
       },
       {
         "id": 232,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Fuller Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -3495,7 +3495,7 @@ module.exports = {
       },
       {
         "id": 233,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Funk, Derek dba Deep River Farm",
         "Bio": "",
         "Image": "",
@@ -3510,7 +3510,7 @@ module.exports = {
       },
       {
         "id": 234,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "G.A.S. Distributors",
         "Bio": "",
         "Image": "",
@@ -3525,7 +3525,7 @@ module.exports = {
       },
       {
         "id": 235,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Gaia Herbs, Inc.",
         "Bio": "",
         "Image": "",
@@ -3533,14 +3533,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(828) 577-3064",
         "Email": "mmccord@gaiaherbs.com",
         "Certified": "4/29/2002"
       },
       {
         "id": 236,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Garlands Fresh Seafood Inc",
         "Bio": "",
         "Image": "",
@@ -3555,7 +3555,7 @@ module.exports = {
       },
       {
         "id": 237,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Gaster, Chris",
         "Bio": "",
         "Image": "",
@@ -3570,7 +3570,7 @@ module.exports = {
       },
       {
         "id": 238,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "GC And W Hill Farms",
         "Bio": "",
         "Image": "",
@@ -3585,7 +3585,7 @@ module.exports = {
       },
       {
         "id": 239,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Gentle Harmony Farm, LLC",
         "Bio": "",
         "Image": "",
@@ -3600,7 +3600,7 @@ module.exports = {
       },
       {
         "id": 240,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Gililand, Joseph B.",
         "Bio": "",
         "Image": "",
@@ -3615,7 +3615,7 @@ module.exports = {
       },
       {
         "id": 241,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Glosson, John S.",
         "Bio": "",
         "Image": "",
@@ -3630,7 +3630,7 @@ module.exports = {
       },
       {
         "id": 242,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Gold Knob Farms",
         "Bio": "",
         "Image": "",
@@ -3645,7 +3645,7 @@ module.exports = {
       },
       {
         "id": 243,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Golding Farms Foods, Inc.",
         "Bio": "",
         "Image": "",
@@ -3660,7 +3660,7 @@ module.exports = {
       },
       {
         "id": 244,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Grantham Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -3675,7 +3675,7 @@ module.exports = {
       },
       {
         "id": 245,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Gray, Matthew",
         "Bio": "",
         "Image": "",
@@ -3690,7 +3690,7 @@ module.exports = {
       },
       {
         "id": 246,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Grayrock Farms LLC",
         "Bio": "",
         "Image": "",
@@ -3705,7 +3705,7 @@ module.exports = {
       },
       {
         "id": 247,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Great American Snacks",
         "Bio": "",
         "Image": "",
@@ -3720,7 +3720,7 @@ module.exports = {
       },
       {
         "id": 248,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Great Eastern Sun Trading Co. Inc. Dba Macro Direct Wholesale",
         "Bio": "",
         "Image": "",
@@ -3735,7 +3735,7 @@ module.exports = {
       },
       {
         "id": 249,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Green Acres Farm Inc",
         "Bio": "",
         "Image": "",
@@ -3750,7 +3750,7 @@ module.exports = {
       },
       {
         "id": 250,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Green Heart Gardens",
         "Bio": "",
         "Image": "",
@@ -3758,14 +3758,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(828) 633-2071",
         "Email": "lorreiki@aol.com",
         "Certified": "8/16/2016"
       },
       {
         "id": 251,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Green Life, LLC",
         "Bio": "",
         "Image": "",
@@ -3780,7 +3780,7 @@ module.exports = {
       },
       {
         "id": 252,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Green, Cassius Jr dba Cassius Green Farms",
         "Bio": "",
         "Image": "",
@@ -3795,7 +3795,7 @@ module.exports = {
       },
       {
         "id": 253,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Greene's Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -3810,7 +3810,7 @@ module.exports = {
       },
       {
         "id": 254,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "GREENOLOGY PRODUCTS, Inc",
         "Bio": "",
         "Image": "",
@@ -3825,7 +3825,7 @@ module.exports = {
       },
       {
         "id": 255,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Greentown Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -3840,7 +3840,7 @@ module.exports = {
       },
       {
         "id": 256,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Greenville Loop Seafood",
         "Bio": "",
         "Image": "",
@@ -3855,7 +3855,7 @@ module.exports = {
       },
       {
         "id": 257,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Groninger, Tommy",
         "Bio": "",
         "Image": "",
@@ -3870,7 +3870,7 @@ module.exports = {
       },
       {
         "id": 258,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Gross Farms Enterprises, LLC",
         "Bio": "",
         "Image": "",
@@ -3885,7 +3885,7 @@ module.exports = {
       },
       {
         "id": 259,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Grover Smith Farm",
         "Bio": "",
         "Image": "",
@@ -3900,7 +3900,7 @@ module.exports = {
       },
       {
         "id": 260,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Grover William Douglas Jr./Douglas Farm",
         "Bio": "",
         "Image": "",
@@ -3915,7 +3915,7 @@ module.exports = {
       },
       {
         "id": 261,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "H & H Farms",
         "Bio": "",
         "Image": "",
@@ -3930,7 +3930,7 @@ module.exports = {
       },
       {
         "id": 262,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "H. Frank Grainger Farm",
         "Bio": "",
         "Image": "",
@@ -3945,7 +3945,7 @@ module.exports = {
       },
       {
         "id": 263,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Haag & Sons Seafood",
         "Bio": "",
         "Image": "",
@@ -3960,7 +3960,7 @@ module.exports = {
       },
       {
         "id": 264,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hackney, Jason dba Heritage Poultry",
         "Bio": "",
         "Image": "",
@@ -3975,7 +3975,7 @@ module.exports = {
       },
       {
         "id": 265,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hallman Farm, Inc.",
         "Bio": "",
         "Image": "",
@@ -3990,7 +3990,7 @@ module.exports = {
       },
       {
         "id": 266,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ham Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -4005,7 +4005,7 @@ module.exports = {
       },
       {
         "id": 267,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ham Produce Company",
         "Bio": "",
         "Image": "",
@@ -4020,7 +4020,7 @@ module.exports = {
       },
       {
         "id": 268,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hampton Blueberries Inc.",
         "Bio": "",
         "Image": "",
@@ -4035,7 +4035,7 @@ module.exports = {
       },
       {
         "id": 269,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hampton Farms",
         "Bio": "",
         "Image": "",
@@ -4050,7 +4050,7 @@ module.exports = {
       },
       {
         "id": 270,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hannah Forrest & Blueberries LLC",
         "Bio": "",
         "Image": "",
@@ -4065,7 +4065,7 @@ module.exports = {
       },
       {
         "id": 271,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hare, Joy",
         "Bio": "",
         "Image": "",
@@ -4080,7 +4080,7 @@ module.exports = {
       },
       {
         "id": 272,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Harland's Creek Farm",
         "Bio": "",
         "Image": "",
@@ -4095,7 +4095,7 @@ module.exports = {
       },
       {
         "id": 273,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Harrington Brothers Poultry",
         "Bio": "",
         "Image": "",
@@ -4110,7 +4110,7 @@ module.exports = {
       },
       {
         "id": 274,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Harrington, Roy",
         "Bio": "",
         "Image": "",
@@ -4125,7 +4125,7 @@ module.exports = {
       },
       {
         "id": 275,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Harris Teeter Inc Dba Hunter Farms",
         "Bio": "",
         "Image": "",
@@ -4140,7 +4140,7 @@ module.exports = {
       },
       {
         "id": 276,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Harris, Douglas dba Ten O''Clock Farm",
         "Bio": "",
         "Image": "",
@@ -4155,7 +4155,7 @@ module.exports = {
       },
       {
         "id": 277,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Harvest Time Foods, Inc.",
         "Bio": "",
         "Image": "",
@@ -4163,14 +4163,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(252) 746-6675",
         "Email": "bryan.grimes@harvesttimenc.com",
         "Certified": "8/11/2008"
       },
       {
         "id": 278,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Harvey Godfrey/Olde Carthage Farm",
         "Bio": "",
         "Image": "",
@@ -4185,7 +4185,7 @@ module.exports = {
       },
       {
         "id": 279,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Harvey Sholar",
         "Bio": "",
         "Image": "",
@@ -4200,7 +4200,7 @@ module.exports = {
       },
       {
         "id": 280,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hawkins, Ken",
         "Bio": "",
         "Image": "",
@@ -4215,7 +4215,7 @@ module.exports = {
       },
       {
         "id": 281,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hearndon, Donald",
         "Bio": "",
         "Image": "",
@@ -4230,7 +4230,7 @@ module.exports = {
       },
       {
         "id": 282,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Herbal Innovations, LLC",
         "Bio": "",
         "Image": "",
@@ -4245,7 +4245,7 @@ module.exports = {
       },
       {
         "id": 283,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Herbal Innovations,LLC",
         "Bio": "",
         "Image": "",
@@ -4260,7 +4260,7 @@ module.exports = {
       },
       {
         "id": 284,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Herndon Hills Farm, Inc.",
         "Bio": "",
         "Image": "",
@@ -4275,7 +4275,7 @@ module.exports = {
       },
       {
         "id": 285,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hickory Meadows Organics",
         "Bio": "",
         "Image": "",
@@ -4290,7 +4290,7 @@ module.exports = {
       },
       {
         "id": 286,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hickory Nut Gap Farm",
         "Bio": "",
         "Image": "",
@@ -4305,7 +4305,7 @@ module.exports = {
       },
       {
         "id": 287,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hillshire Brands, Inc.",
         "Bio": "",
         "Image": "",
@@ -4320,7 +4320,7 @@ module.exports = {
       },
       {
         "id": 288,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hocutt Farms Inc",
         "Bio": "",
         "Image": "",
@@ -4335,7 +4335,7 @@ module.exports = {
       },
       {
         "id": 289,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Holder, Jermey",
         "Bio": "",
         "Image": "",
@@ -4350,7 +4350,7 @@ module.exports = {
       },
       {
         "id": 290,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hollar And Greene Produce Company, Inc.",
         "Bio": "",
         "Image": "",
@@ -4365,7 +4365,7 @@ module.exports = {
       },
       {
         "id": 291,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hood Swamp Pullets",
         "Bio": "",
         "Image": "",
@@ -4380,7 +4380,7 @@ module.exports = {
       },
       {
         "id": 292,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Horner International",
         "Bio": "",
         "Image": "",
@@ -4395,7 +4395,7 @@ module.exports = {
       },
       {
         "id": 293,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Huffines, Gerry",
         "Bio": "",
         "Image": "",
@@ -4410,7 +4410,7 @@ module.exports = {
       },
       {
         "id": 294,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hulin, John D Jr dba Three Girls Farm",
         "Bio": "",
         "Image": "",
@@ -4425,7 +4425,7 @@ module.exports = {
       },
       {
         "id": 295,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Hunter, Anthony dba Jackie Hunter Farm",
         "Bio": "",
         "Image": "",
@@ -4440,7 +4440,7 @@ module.exports = {
       },
       {
         "id": 296,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Indigo Run Farms",
         "Bio": "",
         "Image": "",
@@ -4455,7 +4455,7 @@ module.exports = {
       },
       {
         "id": 297,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Isley, Tony",
         "Bio": "",
         "Image": "",
@@ -4470,7 +4470,7 @@ module.exports = {
       },
       {
         "id": 298,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "J & W Farm",
         "Bio": "",
         "Image": "",
@@ -4485,7 +4485,7 @@ module.exports = {
       },
       {
         "id": 299,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "J&B Herb And Plant Farms",
         "Bio": "",
         "Image": "",
@@ -4500,7 +4500,7 @@ module.exports = {
       },
       {
         "id": 300,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "J&J Thompson Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -4515,7 +4515,7 @@ module.exports = {
       },
       {
         "id": 301,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "J.B. Rose Organics",
         "Bio": "",
         "Image": "",
@@ -4530,7 +4530,7 @@ module.exports = {
       },
       {
         "id": 302,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "James A. Dobson Jr. Or Samuel W. Dobson",
         "Bio": "",
         "Image": "",
@@ -4538,14 +4538,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(704) 876-1887",
         "Email": "dobsonfarm5sam@gmail.com",
         "Certified": "2/27/2014"
       },
       {
         "id": 303,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "James Daniels dba P & J Farms",
         "Bio": "",
         "Image": "",
@@ -4560,7 +4560,7 @@ module.exports = {
       },
       {
         "id": 304,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "James M. Sander/Wildflower Lane Farm",
         "Bio": "",
         "Image": "",
@@ -4575,7 +4575,7 @@ module.exports = {
       },
       {
         "id": 305,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "James Randall Smith",
         "Bio": "",
         "Image": "",
@@ -4590,7 +4590,7 @@ module.exports = {
       },
       {
         "id": 306,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "James Tharrington Farm",
         "Bio": "",
         "Image": "",
@@ -4605,7 +4605,7 @@ module.exports = {
       },
       {
         "id": 307,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "James. M. Blalock",
         "Bio": "",
         "Image": "",
@@ -4620,7 +4620,7 @@ module.exports = {
       },
       {
         "id": 308,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Java Estate Roastery, Inc.",
         "Bio": "",
         "Image": "",
@@ -4635,7 +4635,7 @@ module.exports = {
       },
       {
         "id": 309,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "JByrd Farm",
         "Bio": "",
         "Image": "",
@@ -4650,7 +4650,7 @@ module.exports = {
       },
       {
         "id": 310,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Jeffrey Boykin",
         "Bio": "",
         "Image": "",
@@ -4665,7 +4665,7 @@ module.exports = {
       },
       {
         "id": 311,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Jeffrey Norvang dba Norvang FArm",
         "Bio": "",
         "Image": "",
@@ -4680,7 +4680,7 @@ module.exports = {
       },
       {
         "id": 312,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Jimbo's Jumbos Inc.",
         "Bio": "",
         "Image": "",
@@ -4695,7 +4695,7 @@ module.exports = {
       },
       {
         "id": 313,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "JM Hockaday Farms",
         "Bio": "",
         "Image": "",
@@ -4710,7 +4710,7 @@ module.exports = {
       },
       {
         "id": 314,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "JM Johsnon Farm",
         "Bio": "",
         "Image": "",
@@ -4725,7 +4725,7 @@ module.exports = {
       },
       {
         "id": 315,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Joe Van Gogh Coffee",
         "Bio": "",
         "Image": "",
@@ -4740,7 +4740,7 @@ module.exports = {
       },
       {
         "id": 316,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "John Howard Pope Jr & Justin Tyler Pope dba Johnny Pope Farm",
         "Bio": "",
         "Image": "",
@@ -4755,7 +4755,7 @@ module.exports = {
       },
       {
         "id": 317,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "John Rogers Walker/Walker Farms",
         "Bio": "",
         "Image": "",
@@ -4770,7 +4770,7 @@ module.exports = {
       },
       {
         "id": 318,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "John W. Carter III",
         "Bio": "",
         "Image": "",
@@ -4785,7 +4785,7 @@ module.exports = {
       },
       {
         "id": 319,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Johnson Family Farm",
         "Bio": "",
         "Image": "",
@@ -4800,7 +4800,7 @@ module.exports = {
       },
       {
         "id": 320,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Johnson, G. Eddie",
         "Bio": "",
         "Image": "",
@@ -4815,7 +4815,7 @@ module.exports = {
       },
       {
         "id": 321,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Jones Family Farms",
         "Bio": "",
         "Image": "",
@@ -4830,7 +4830,7 @@ module.exports = {
       },
       {
         "id": 322,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Joseph Grant Maness dba New Beginning",
         "Bio": "",
         "Image": "",
@@ -4845,7 +4845,7 @@ module.exports = {
       },
       {
         "id": 323,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "JP Davenport and Son Inc.",
         "Bio": "",
         "Image": "",
@@ -4860,7 +4860,7 @@ module.exports = {
       },
       {
         "id": 324,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Justin and Ann Marie Page",
         "Bio": "",
         "Image": "",
@@ -4875,7 +4875,7 @@ module.exports = {
       },
       {
         "id": 325,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Justin Powell",
         "Bio": "",
         "Image": "",
@@ -4890,7 +4890,7 @@ module.exports = {
       },
       {
         "id": 326,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "K And K Farm",
         "Bio": "",
         "Image": "",
@@ -4905,7 +4905,7 @@ module.exports = {
       },
       {
         "id": 327,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Kennedy Farm",
         "Bio": "",
         "Image": "",
@@ -4920,7 +4920,7 @@ module.exports = {
       },
       {
         "id": 328,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Kerr Mill Holsteins",
         "Bio": "",
         "Image": "",
@@ -4928,14 +4928,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(704) 637-0963",
         "Email": "hoffnerct@yahoo.com",
         "Certified": "12/20/2006"
       },
       {
         "id": 329,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "King Bio Inc.",
         "Bio": "",
         "Image": "",
@@ -4943,14 +4943,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(828) 255-0201",
         "Email": "jgrant@kingbio.com",
         "Certified": "7/7/2015"
       },
       {
         "id": 330,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Kiser Farm",
         "Bio": "",
         "Image": "",
@@ -4965,7 +4965,7 @@ module.exports = {
       },
       {
         "id": 331,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "KLB Enterprises Inc. Dba Carolina Fine Snacka",
         "Bio": "",
         "Image": "",
@@ -4980,7 +4980,7 @@ module.exports = {
       },
       {
         "id": 332,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Klooster Bros LLC Dba Banner Greenhouses",
         "Bio": "",
         "Image": "",
@@ -4995,7 +4995,7 @@ module.exports = {
       },
       {
         "id": 333,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "KNK Farms",
         "Bio": "",
         "Image": "",
@@ -5010,7 +5010,7 @@ module.exports = {
       },
       {
         "id": 334,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Kristie Farm",
         "Bio": "",
         "Image": "",
@@ -5025,7 +5025,7 @@ module.exports = {
       },
       {
         "id": 335,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lakeside Organics, LLC",
         "Bio": "",
         "Image": "",
@@ -5040,7 +5040,7 @@ module.exports = {
       },
       {
         "id": 336,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Landmark Farms",
         "Bio": "",
         "Image": "",
@@ -5055,7 +5055,7 @@ module.exports = {
       },
       {
         "id": 337,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Larry Bolick",
         "Bio": "",
         "Image": "",
@@ -5070,7 +5070,7 @@ module.exports = {
       },
       {
         "id": 338,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Larry's Beans Inc.",
         "Bio": "",
         "Image": "",
@@ -5085,7 +5085,7 @@ module.exports = {
       },
       {
         "id": 339,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lasley Family Farm LLC",
         "Bio": "",
         "Image": "",
@@ -5100,7 +5100,7 @@ module.exports = {
       },
       {
         "id": 340,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lassonde Pappas And Company Inc.",
         "Bio": "",
         "Image": "",
@@ -5115,7 +5115,7 @@ module.exports = {
       },
       {
         "id": 341,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lawrence Brothers Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -5130,7 +5130,7 @@ module.exports = {
       },
       {
         "id": 342,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lee Johnson Farm",
         "Bio": "",
         "Image": "",
@@ -5138,14 +5138,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(276) 237-0808",
         "Email": "dixiedog@surry.net",
         "Certified": "7/26/2016"
       },
       {
         "id": 343,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lenny Boy, LLC",
         "Bio": "",
         "Image": "",
@@ -5160,7 +5160,7 @@ module.exports = {
       },
       {
         "id": 344,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lewis Brothers Farms",
         "Bio": "",
         "Image": "",
@@ -5175,7 +5175,7 @@ module.exports = {
       },
       {
         "id": 345,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lewis, Paige",
         "Bio": "",
         "Image": "",
@@ -5190,7 +5190,7 @@ module.exports = {
       },
       {
         "id": 346,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lindley Mills, Inc.",
         "Bio": "",
         "Image": "",
@@ -5198,14 +5198,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(336) 376-6190",
         "Email": "lindleymills@aol.com",
         "Certified": "4/29/2002"
       },
       {
         "id": 347,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lineberry, Kevin",
         "Bio": "",
         "Image": "",
@@ -5220,7 +5220,7 @@ module.exports = {
       },
       {
         "id": 348,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lipman Produce - Custom Pak North Carolina Inc.",
         "Bio": "",
         "Image": "",
@@ -5235,7 +5235,7 @@ module.exports = {
       },
       {
         "id": 349,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Little Man Farming, Inc.",
         "Bio": "",
         "Image": "",
@@ -5250,7 +5250,7 @@ module.exports = {
       },
       {
         "id": 350,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Looking Back Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -5265,7 +5265,7 @@ module.exports = {
       },
       {
         "id": 351,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lucas Farm",
         "Bio": "",
         "Image": "",
@@ -5280,7 +5280,7 @@ module.exports = {
       },
       {
         "id": 352,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lucy’S Phratry Farm, LLC",
         "Bio": "",
         "Image": "",
@@ -5295,7 +5295,7 @@ module.exports = {
       },
       {
         "id": 353,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Luna's Annex LLC Dba Living Kitchen",
         "Bio": "",
         "Image": "",
@@ -5310,7 +5310,7 @@ module.exports = {
       },
       {
         "id": 354,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lunsford Farms Organics",
         "Bio": "",
         "Image": "",
@@ -5325,7 +5325,7 @@ module.exports = {
       },
       {
         "id": 355,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lunsford, Garry",
         "Bio": "",
         "Image": "",
@@ -5340,7 +5340,7 @@ module.exports = {
       },
       {
         "id": 356,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Lynn S. Holloway",
         "Bio": "",
         "Image": "",
@@ -5355,7 +5355,7 @@ module.exports = {
       },
       {
         "id": 357,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "M & M Plant Farms",
         "Bio": "",
         "Image": "",
@@ -5370,7 +5370,7 @@ module.exports = {
       },
       {
         "id": 358,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Madren, Leslie and Bryant dba L & B Farms",
         "Bio": "",
         "Image": "",
@@ -5385,7 +5385,7 @@ module.exports = {
       },
       {
         "id": 359,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mae Belle Organics",
         "Bio": "",
         "Image": "",
@@ -5400,7 +5400,7 @@ module.exports = {
       },
       {
         "id": 360,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mandala Naturals, LLC",
         "Bio": "",
         "Image": "",
@@ -5415,7 +5415,7 @@ module.exports = {
       },
       {
         "id": 361,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Marion L. Pridgen Farms Inc.",
         "Bio": "",
         "Image": "",
@@ -5430,7 +5430,7 @@ module.exports = {
       },
       {
         "id": 362,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mark & Erwin Massengil dba Massengill Farms",
         "Bio": "",
         "Image": "",
@@ -5445,7 +5445,7 @@ module.exports = {
       },
       {
         "id": 363,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Market Solutions Group LLC",
         "Bio": "",
         "Image": "",
@@ -5460,7 +5460,7 @@ module.exports = {
       },
       {
         "id": 364,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mary \"L\" Farm",
         "Bio": "",
         "Image": "",
@@ -5468,14 +5468,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(704) 664-1687",
         "Email": "rick@marylfarm.com",
         "Certified": "10/9/2006"
       },
       {
         "id": 365,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mary Ann's Berry Farms LLC",
         "Bio": "",
         "Image": "",
@@ -5490,7 +5490,7 @@ module.exports = {
       },
       {
         "id": 366,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Matt Adcock Jr.",
         "Bio": "",
         "Image": "",
@@ -5505,7 +5505,7 @@ module.exports = {
       },
       {
         "id": 367,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "May, Ricky & Stuart",
         "Bio": "",
         "Image": "",
@@ -5520,7 +5520,7 @@ module.exports = {
       },
       {
         "id": 368,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mcclenny Farms, Inc",
         "Bio": "",
         "Image": "",
@@ -5535,7 +5535,7 @@ module.exports = {
       },
       {
         "id": 369,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "McNeil Farm",
         "Bio": "",
         "Image": "",
@@ -5550,7 +5550,7 @@ module.exports = {
       },
       {
         "id": 370,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "McNeil, Doug",
         "Bio": "",
         "Image": "",
@@ -5565,7 +5565,7 @@ module.exports = {
       },
       {
         "id": 371,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "McPherson, Chris dba Mac Farm",
         "Bio": "",
         "Image": "",
@@ -5580,7 +5580,7 @@ module.exports = {
       },
       {
         "id": 372,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "McPherson, Eric",
         "Bio": "",
         "Image": "",
@@ -5595,7 +5595,7 @@ module.exports = {
       },
       {
         "id": 373,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Meadow Lane Beef LLC dba Meadow Lane Farm",
         "Bio": "",
         "Image": "",
@@ -5610,7 +5610,7 @@ module.exports = {
       },
       {
         "id": 374,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Melton Manning and Sons, LLC",
         "Bio": "",
         "Image": "",
@@ -5625,7 +5625,7 @@ module.exports = {
       },
       {
         "id": 375,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mike Mckinney/Mckinney Farms",
         "Bio": "",
         "Image": "",
@@ -5640,7 +5640,7 @@ module.exports = {
       },
       {
         "id": 376,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mike Morgan Farm",
         "Bio": "",
         "Image": "",
@@ -5655,7 +5655,7 @@ module.exports = {
       },
       {
         "id": 377,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Milkco, Inc",
         "Bio": "",
         "Image": "",
@@ -5670,7 +5670,7 @@ module.exports = {
       },
       {
         "id": 378,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mill Branch Turkeys",
         "Bio": "",
         "Image": "",
@@ -5685,7 +5685,7 @@ module.exports = {
       },
       {
         "id": 379,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mill-Chem Manufacturing INC.",
         "Bio": "",
         "Image": "",
@@ -5700,7 +5700,7 @@ module.exports = {
       },
       {
         "id": 380,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Miriam Sheffield Farm",
         "Bio": "",
         "Image": "",
@@ -5715,7 +5715,7 @@ module.exports = {
       },
       {
         "id": 381,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Misty Mountain Spring Water LLC",
         "Bio": "",
         "Image": "",
@@ -5730,7 +5730,7 @@ module.exports = {
       },
       {
         "id": 382,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mitchell Farms",
         "Bio": "",
         "Image": "",
@@ -5745,7 +5745,7 @@ module.exports = {
       },
       {
         "id": 383,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mitchell, Kevin",
         "Bio": "",
         "Image": "",
@@ -5760,7 +5760,7 @@ module.exports = {
       },
       {
         "id": 384,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Moffitt, Tim",
         "Bio": "",
         "Image": "",
@@ -5775,7 +5775,7 @@ module.exports = {
       },
       {
         "id": 385,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "MOODY DUNBAR",
         "Bio": "",
         "Image": "",
@@ -5783,14 +5783,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "",
         "Email": "",
         "Certified": "10/7/2015"
       },
       {
         "id": 386,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Morgan Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -5805,7 +5805,7 @@ module.exports = {
       },
       {
         "id": 387,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Morris Carter Farm",
         "Bio": "",
         "Image": "",
@@ -5820,7 +5820,7 @@ module.exports = {
       },
       {
         "id": 388,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mother Murphy's Laboratories",
         "Bio": "",
         "Image": "",
@@ -5828,14 +5828,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(800) 849-1277",
         "Email": "jfrancisco@mothermurphys.com",
         "Certified": "10/3/2006"
       },
       {
         "id": 389,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Mt. Olive Pickle Company",
         "Bio": "",
         "Image": "",
@@ -5850,7 +5850,7 @@ module.exports = {
       },
       {
         "id": 390,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "MW Harper Farming",
         "Bio": "",
         "Image": "",
@@ -5865,7 +5865,7 @@ module.exports = {
       },
       {
         "id": 391,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Myers, George",
         "Bio": "",
         "Image": "",
@@ -5880,7 +5880,7 @@ module.exports = {
       },
       {
         "id": 392,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "N & L Farming LLC",
         "Bio": "",
         "Image": "",
@@ -5895,7 +5895,7 @@ module.exports = {
       },
       {
         "id": 393,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Nancy Jane Iseley",
         "Bio": "",
         "Image": "",
@@ -5910,7 +5910,7 @@ module.exports = {
       },
       {
         "id": 394,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Nash Produce, LLC",
         "Bio": "",
         "Image": "",
@@ -5925,7 +5925,7 @@ module.exports = {
       },
       {
         "id": 395,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Natural Blend Vegetable Dehydration, LLC",
         "Bio": "",
         "Image": "",
@@ -5940,7 +5940,7 @@ module.exports = {
       },
       {
         "id": 396,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Natural Import Company",
         "Bio": "",
         "Image": "",
@@ -5955,7 +5955,7 @@ module.exports = {
       },
       {
         "id": 397,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Nature´s Way Farms, Inc",
         "Bio": "",
         "Image": "",
@@ -5970,7 +5970,7 @@ module.exports = {
       },
       {
         "id": 398,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Nature's Healthy Harvest",
         "Bio": "",
         "Image": "",
@@ -5985,7 +5985,7 @@ module.exports = {
       },
       {
         "id": 399,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "NCDA-Mountain Research Station",
         "Bio": "",
         "Image": "",
@@ -6000,7 +6000,7 @@ module.exports = {
       },
       {
         "id": 400,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "NCSU Dba Center For Environmental Farming Systems (CEFS)",
         "Bio": "",
         "Image": "",
@@ -6015,7 +6015,7 @@ module.exports = {
       },
       {
         "id": 401,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Neal Johnson Organics,LLC",
         "Bio": "",
         "Image": "",
@@ -6030,7 +6030,7 @@ module.exports = {
       },
       {
         "id": 402,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Needham, Billy",
         "Bio": "",
         "Image": "",
@@ -6045,7 +6045,7 @@ module.exports = {
       },
       {
         "id": 403,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Needham, Jerry",
         "Bio": "",
         "Image": "",
@@ -6060,7 +6060,7 @@ module.exports = {
       },
       {
         "id": 404,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Neill & Cori Lindley",
         "Bio": "",
         "Image": "",
@@ -6068,14 +6068,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(919) 663-3037",
         "Email": "lindalefarms@embarqmail.com",
         "Certified": "7/8/2009"
       },
       {
         "id": 405,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Nelson Bowers Farm",
         "Bio": "",
         "Image": "",
@@ -6090,7 +6090,7 @@ module.exports = {
       },
       {
         "id": 406,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "New Dawn",
         "Bio": "",
         "Image": "",
@@ -6105,7 +6105,7 @@ module.exports = {
       },
       {
         "id": 407,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "New Sprout Organic Farm LLC",
         "Bio": "",
         "Image": "",
@@ -6120,7 +6120,7 @@ module.exports = {
       },
       {
         "id": 408,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Norman Greg Blalock",
         "Bio": "",
         "Image": "",
@@ -6135,7 +6135,7 @@ module.exports = {
       },
       {
         "id": 409,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Norman Thomas French",
         "Bio": "",
         "Image": "",
@@ -6150,7 +6150,7 @@ module.exports = {
       },
       {
         "id": 410,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "North Carolina State Ports Authority",
         "Bio": "",
         "Image": "",
@@ -6165,7 +6165,7 @@ module.exports = {
       },
       {
         "id": 411,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Norton, Scott dba Norton Farm",
         "Bio": "",
         "Image": "",
@@ -6180,7 +6180,7 @@ module.exports = {
       },
       {
         "id": 412,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Norvang, Jeffrey dba Nog's Farm",
         "Bio": "",
         "Image": "",
@@ -6195,7 +6195,7 @@ module.exports = {
       },
       {
         "id": 413,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Nourishing Acres, LLC",
         "Bio": "",
         "Image": "",
@@ -6210,7 +6210,7 @@ module.exports = {
       },
       {
         "id": 414,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Nutkao USA Inc",
         "Bio": "",
         "Image": "",
@@ -6225,7 +6225,7 @@ module.exports = {
       },
       {
         "id": 415,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Oakley, Jeffrey T.",
         "Bio": "",
         "Image": "",
@@ -6240,7 +6240,7 @@ module.exports = {
       },
       {
         "id": 416,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Orange Muslin LLC",
         "Bio": "",
         "Image": "",
@@ -6255,7 +6255,7 @@ module.exports = {
       },
       {
         "id": 417,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Organic Production Services, LLC",
         "Bio": "",
         "Image": "",
@@ -6270,7 +6270,7 @@ module.exports = {
       },
       {
         "id": 418,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Origin Food Group",
         "Bio": "",
         "Image": "",
@@ -6285,7 +6285,7 @@ module.exports = {
       },
       {
         "id": 419,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Otter Branch Organics",
         "Bio": "",
         "Image": "",
@@ -6300,7 +6300,7 @@ module.exports = {
       },
       {
         "id": 420,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Overby, Edward",
         "Bio": "",
         "Image": "",
@@ -6315,7 +6315,7 @@ module.exports = {
       },
       {
         "id": 421,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Owen Rouse Farms Inc",
         "Bio": "",
         "Image": "",
@@ -6330,7 +6330,7 @@ module.exports = {
       },
       {
         "id": 422,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Owen, Lee",
         "Bio": "",
         "Image": "",
@@ -6345,7 +6345,7 @@ module.exports = {
       },
       {
         "id": 423,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pangaea Plants LLC",
         "Bio": "",
         "Image": "",
@@ -6360,7 +6360,7 @@ module.exports = {
       },
       {
         "id": 424,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Parker Farms Of Pasquotank County, Inc.",
         "Bio": "",
         "Image": "",
@@ -6368,14 +6368,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(252) 333-4582",
         "Email": "parkerfarmspc@gmail.com",
         "Certified": "4/6/2015"
       },
       {
         "id": 425,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Parker, Randall",
         "Bio": "",
         "Image": "",
@@ -6390,7 +6390,7 @@ module.exports = {
       },
       {
         "id": 426,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Parrish Enterprises, Inc",
         "Bio": "",
         "Image": "",
@@ -6405,7 +6405,7 @@ module.exports = {
       },
       {
         "id": 427,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Parrish, Charles",
         "Bio": "",
         "Image": "",
@@ -6420,7 +6420,7 @@ module.exports = {
       },
       {
         "id": 428,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Patrick Purcell",
         "Bio": "",
         "Image": "",
@@ -6428,14 +6428,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(919) 730-3488",
         "Email": "purcellpatrick@live.com",
         "Certified": "8/1/2017"
       },
       {
         "id": 429,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Patterson, Timothy dba T & T Farm",
         "Bio": "",
         "Image": "",
@@ -6450,7 +6450,7 @@ module.exports = {
       },
       {
         "id": 430,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Paul Harris LLC",
         "Bio": "",
         "Image": "",
@@ -6465,7 +6465,7 @@ module.exports = {
       },
       {
         "id": 431,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Paul Johnson Farm",
         "Bio": "",
         "Image": "",
@@ -6480,7 +6480,7 @@ module.exports = {
       },
       {
         "id": 432,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Payne, Robert",
         "Bio": "",
         "Image": "",
@@ -6495,7 +6495,7 @@ module.exports = {
       },
       {
         "id": 433,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Peggy T. Garrett/Garrett Farm",
         "Bio": "",
         "Image": "",
@@ -6510,7 +6510,7 @@ module.exports = {
       },
       {
         "id": 434,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Perdue Foods, LLC",
         "Bio": "",
         "Image": "",
@@ -6525,7 +6525,7 @@ module.exports = {
       },
       {
         "id": 435,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Philip Smith",
         "Bio": "",
         "Image": "",
@@ -6540,7 +6540,7 @@ module.exports = {
       },
       {
         "id": 436,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Phillip Hinson",
         "Bio": "",
         "Image": "",
@@ -6555,7 +6555,7 @@ module.exports = {
       },
       {
         "id": 437,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Phillps, Vicki",
         "Bio": "",
         "Image": "",
@@ -6570,7 +6570,7 @@ module.exports = {
       },
       {
         "id": 438,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pierce's Greenhouse",
         "Bio": "",
         "Image": "",
@@ -6585,7 +6585,7 @@ module.exports = {
       },
       {
         "id": 439,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pike, Danny",
         "Bio": "",
         "Image": "",
@@ -6600,7 +6600,7 @@ module.exports = {
       },
       {
         "id": 440,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pilgrim's Pride - Feed Mill",
         "Bio": "",
         "Image": "",
@@ -6615,7 +6615,7 @@ module.exports = {
       },
       {
         "id": 441,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pilgrim's Pride Processing Plant",
         "Bio": "",
         "Image": "",
@@ -6630,7 +6630,7 @@ module.exports = {
       },
       {
         "id": 442,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pilgrim's Sanford Processing",
         "Bio": "",
         "Image": "",
@@ -6645,7 +6645,7 @@ module.exports = {
       },
       {
         "id": 443,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pine Knot Farms",
         "Bio": "",
         "Image": "",
@@ -6660,7 +6660,7 @@ module.exports = {
       },
       {
         "id": 444,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pitch Pine Farm, LLC",
         "Bio": "",
         "Image": "",
@@ -6675,7 +6675,7 @@ module.exports = {
       },
       {
         "id": 445,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pittman Farm",
         "Bio": "",
         "Image": "",
@@ -6690,7 +6690,7 @@ module.exports = {
       },
       {
         "id": 446,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Plum Granny Farm, LLC",
         "Bio": "",
         "Image": "",
@@ -6705,7 +6705,7 @@ module.exports = {
       },
       {
         "id": 447,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Poindexter Organics",
         "Bio": "",
         "Image": "",
@@ -6720,7 +6720,7 @@ module.exports = {
       },
       {
         "id": 448,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Poplar Ridge Farm, LLC",
         "Bio": "",
         "Image": "",
@@ -6735,7 +6735,7 @@ module.exports = {
       },
       {
         "id": 449,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Port City Java",
         "Bio": "",
         "Image": "",
@@ -6750,7 +6750,7 @@ module.exports = {
       },
       {
         "id": 450,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Post Consumer Brands",
         "Bio": "",
         "Image": "",
@@ -6758,14 +6758,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(336) 683-5569",
         "Email": "tdmyers@postholdings.com",
         "Certified": "12/23/2015"
       },
       {
         "id": 451,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Preddy Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -6780,7 +6780,7 @@ module.exports = {
       },
       {
         "id": 452,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Price Family Farm LLC",
         "Bio": "",
         "Image": "",
@@ -6795,7 +6795,7 @@ module.exports = {
       },
       {
         "id": 453,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Proffitt Family Cattle Company",
         "Bio": "",
         "Image": "",
@@ -6810,7 +6810,7 @@ module.exports = {
       },
       {
         "id": 454,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pruitt Farms",
         "Bio": "",
         "Image": "",
@@ -6825,7 +6825,7 @@ module.exports = {
       },
       {
         "id": 455,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Pure Intentions Coffee",
         "Bio": "",
         "Image": "",
@@ -6840,7 +6840,7 @@ module.exports = {
       },
       {
         "id": 456,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Quincy Farms, Inc",
         "Bio": "",
         "Image": "",
@@ -6855,7 +6855,7 @@ module.exports = {
       },
       {
         "id": 457,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ragan, Tony dba Ragan Farm",
         "Bio": "",
         "Image": "",
@@ -6870,7 +6870,7 @@ module.exports = {
       },
       {
         "id": 458,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ramblerill Farm, Inc.",
         "Bio": "",
         "Image": "",
@@ -6885,7 +6885,7 @@ module.exports = {
       },
       {
         "id": 459,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Randy P. Harris",
         "Bio": "",
         "Image": "",
@@ -6900,7 +6900,7 @@ module.exports = {
       },
       {
         "id": 460,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rankin, Keaton",
         "Bio": "",
         "Image": "",
@@ -6915,7 +6915,7 @@ module.exports = {
       },
       {
         "id": 461,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Raw Shakti Chocolate Dba Santosha Chocolate",
         "Bio": "",
         "Image": "",
@@ -6930,7 +6930,7 @@ module.exports = {
       },
       {
         "id": 462,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ray Adcock/Home Place Farm",
         "Bio": "",
         "Image": "",
@@ -6945,7 +6945,7 @@ module.exports = {
       },
       {
         "id": 463,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Red Scout Enterprises, LLC Dba Red Scout Farm",
         "Bio": "",
         "Image": "",
@@ -6960,7 +6960,7 @@ module.exports = {
       },
       {
         "id": 464,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Reedy Fork Farm",
         "Bio": "",
         "Image": "",
@@ -6968,14 +6968,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(336) 449-4883",
         "Email": "gyteague@gmail.com",
         "Certified": "9/26/2006"
       },
       {
         "id": 465,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Richard Ward",
         "Bio": "",
         "Image": "",
@@ -6990,7 +6990,7 @@ module.exports = {
       },
       {
         "id": 466,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Richardson, Richard Jr dba Long Branch Farm",
         "Bio": "",
         "Image": "",
@@ -7005,7 +7005,7 @@ module.exports = {
       },
       {
         "id": 467,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rick Cook dba Cook Farms",
         "Bio": "",
         "Image": "",
@@ -7020,7 +7020,7 @@ module.exports = {
       },
       {
         "id": 468,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ridge Runner Trading Company, Inc",
         "Bio": "",
         "Image": "",
@@ -7028,14 +7028,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(828) 964-3847",
         "Email": "casey@ridgerunnertrading.com",
         "Certified": "3/17/2016"
       },
       {
         "id": 469,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ring, William",
         "Bio": "",
         "Image": "",
@@ -7050,7 +7050,7 @@ module.exports = {
       },
       {
         "id": 470,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "River's Edge Farms",
         "Bio": "",
         "Image": "",
@@ -7065,7 +7065,7 @@ module.exports = {
       },
       {
         "id": 471,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Riverview Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -7080,7 +7080,7 @@ module.exports = {
       },
       {
         "id": 472,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rob Glover Farming LLC",
         "Bio": "",
         "Image": "",
@@ -7095,7 +7095,7 @@ module.exports = {
       },
       {
         "id": 473,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rob Glover Farming LLC",
         "Bio": "",
         "Image": "",
@@ -7110,7 +7110,7 @@ module.exports = {
       },
       {
         "id": 474,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Robbins Brothers Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -7125,7 +7125,7 @@ module.exports = {
       },
       {
         "id": 475,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Robbins, Vernette",
         "Bio": "",
         "Image": "",
@@ -7140,7 +7140,7 @@ module.exports = {
       },
       {
         "id": 476,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Robert, Ken",
         "Bio": "",
         "Image": "",
@@ -7155,7 +7155,7 @@ module.exports = {
       },
       {
         "id": 477,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Roberts, Ken dba Beagle Run",
         "Bio": "",
         "Image": "",
@@ -7170,7 +7170,7 @@ module.exports = {
       },
       {
         "id": 478,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Robertson Steven",
         "Bio": "",
         "Image": "",
@@ -7185,7 +7185,7 @@ module.exports = {
       },
       {
         "id": 479,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Robinson Brothers Farm LLC",
         "Bio": "",
         "Image": "",
@@ -7200,7 +7200,7 @@ module.exports = {
       },
       {
         "id": 480,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rock Hill Farm",
         "Bio": "",
         "Image": "",
@@ -7215,7 +7215,7 @@ module.exports = {
       },
       {
         "id": 481,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rock Ridge Farms Partnership",
         "Bio": "",
         "Image": "",
@@ -7230,7 +7230,7 @@ module.exports = {
       },
       {
         "id": 482,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rocking S Farm",
         "Bio": "",
         "Image": "",
@@ -7245,7 +7245,7 @@ module.exports = {
       },
       {
         "id": 483,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rocky Acre Farms LLC",
         "Bio": "",
         "Image": "",
@@ -7260,7 +7260,7 @@ module.exports = {
       },
       {
         "id": 484,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ronald C. Perry Farming, Inc.",
         "Bio": "",
         "Image": "",
@@ -7275,7 +7275,7 @@ module.exports = {
       },
       {
         "id": 485,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ronnie Love",
         "Bio": "",
         "Image": "",
@@ -7290,7 +7290,7 @@ module.exports = {
       },
       {
         "id": 486,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rouse Brothers Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -7305,7 +7305,7 @@ module.exports = {
       },
       {
         "id": 487,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Rouse Brothers Produce, Inc. Dba Uncle Henry's Organics",
         "Bio": "",
         "Image": "",
@@ -7320,7 +7320,7 @@ module.exports = {
       },
       {
         "id": 488,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "RW Lambeth Farms Inc",
         "Bio": "",
         "Image": "",
@@ -7335,7 +7335,7 @@ module.exports = {
       },
       {
         "id": 489,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Ryan William Wiebe",
         "Bio": "",
         "Image": "",
@@ -7350,7 +7350,7 @@ module.exports = {
       },
       {
         "id": 490,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "S & D Coffee, Inc.",
         "Bio": "",
         "Image": "",
@@ -7365,7 +7365,7 @@ module.exports = {
       },
       {
         "id": 491,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "S&D Coffee, Inc.",
         "Bio": "",
         "Image": "",
@@ -7380,7 +7380,7 @@ module.exports = {
       },
       {
         "id": 492,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Santa Fe Natural Tobacco Brook Cove Warehouse",
         "Bio": "",
         "Image": "",
@@ -7395,7 +7395,7 @@ module.exports = {
       },
       {
         "id": 493,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Santa Fe Natural Tobacco Company",
         "Bio": "",
         "Image": "",
@@ -7410,7 +7410,7 @@ module.exports = {
       },
       {
         "id": 494,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Santa Fe Natural Tobacco Company",
         "Bio": "",
         "Image": "",
@@ -7425,7 +7425,7 @@ module.exports = {
       },
       {
         "id": 495,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Scott, Ronnie",
         "Bio": "",
         "Image": "",
@@ -7440,7 +7440,7 @@ module.exports = {
       },
       {
         "id": 496,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Seaview Crap Company",
         "Bio": "",
         "Image": "",
@@ -7455,7 +7455,7 @@ module.exports = {
       },
       {
         "id": 497,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Selina Naturally Celtic Ocean International Dba Selina Naturally",
         "Bio": "",
         "Image": "",
@@ -7470,7 +7470,7 @@ module.exports = {
       },
       {
         "id": 498,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "SFNTC - Essentra Filter Products",
         "Bio": "",
         "Image": "",
@@ -7485,7 +7485,7 @@ module.exports = {
       },
       {
         "id": 499,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "SFNTC/Hail And Cotton GLT Factory",
         "Bio": "",
         "Image": "",
@@ -7500,7 +7500,7 @@ module.exports = {
       },
       {
         "id": 500,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Shelton Manning and Sons LLC",
         "Bio": "",
         "Image": "",
@@ -7515,7 +7515,7 @@ module.exports = {
       },
       {
         "id": 501,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Shelton, Jack and Kylie dba Grantville Farms",
         "Bio": "",
         "Image": "",
@@ -7530,7 +7530,7 @@ module.exports = {
       },
       {
         "id": 502,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Shelton, Tim",
         "Bio": "",
         "Image": "",
@@ -7545,7 +7545,7 @@ module.exports = {
       },
       {
         "id": 503,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Shiloh's Garden, LLC Dba Tumbling Shoals Farm",
         "Bio": "",
         "Image": "",
@@ -7560,7 +7560,7 @@ module.exports = {
       },
       {
         "id": 504,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Sklar BOV Soultions, Inc DBA BOV Solutions",
         "Bio": "",
         "Image": "",
@@ -7575,7 +7575,7 @@ module.exports = {
       },
       {
         "id": 505,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Smiling Hara Tempeh",
         "Bio": "",
         "Image": "",
@@ -7590,7 +7590,7 @@ module.exports = {
       },
       {
         "id": 506,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Smith Farms",
         "Bio": "",
         "Image": "",
@@ -7605,7 +7605,7 @@ module.exports = {
       },
       {
         "id": 507,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Smith, David Randall dba D.R. Smith",
         "Bio": "",
         "Image": "",
@@ -7620,7 +7620,7 @@ module.exports = {
       },
       {
         "id": 508,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "SNK Poultry",
         "Bio": "",
         "Image": "",
@@ -7635,7 +7635,7 @@ module.exports = {
       },
       {
         "id": 509,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Snow Creek Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -7650,7 +7650,7 @@ module.exports = {
       },
       {
         "id": 510,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Southeast Crescent Shipping Company",
         "Bio": "",
         "Image": "",
@@ -7665,7 +7665,7 @@ module.exports = {
       },
       {
         "id": 511,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Southern Belle Organics LLC",
         "Bio": "",
         "Image": "",
@@ -7680,7 +7680,7 @@ module.exports = {
       },
       {
         "id": 512,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Southern Produce Distributors, Inc.",
         "Bio": "",
         "Image": "",
@@ -7695,7 +7695,7 @@ module.exports = {
       },
       {
         "id": 513,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Sow True Seed",
         "Bio": "",
         "Image": "",
@@ -7710,7 +7710,7 @@ module.exports = {
       },
       {
         "id": 514,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "SPRINGHOUSE FARM",
         "Bio": "",
         "Image": "",
@@ -7725,7 +7725,7 @@ module.exports = {
       },
       {
         "id": 515,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "SSA Cooper",
         "Bio": "",
         "Image": "",
@@ -7740,7 +7740,7 @@ module.exports = {
       },
       {
         "id": 516,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Star Snax LLC",
         "Bio": "",
         "Image": "",
@@ -7755,7 +7755,7 @@ module.exports = {
       },
       {
         "id": 517,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Stinson, Henry",
         "Bio": "",
         "Image": "",
@@ -7770,7 +7770,7 @@ module.exports = {
       },
       {
         "id": 518,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Stockton Graham & Company",
         "Bio": "",
         "Image": "",
@@ -7785,7 +7785,7 @@ module.exports = {
       },
       {
         "id": 519,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Stone Family Farms Inc.",
         "Bio": "",
         "Image": "",
@@ -7800,7 +7800,7 @@ module.exports = {
       },
       {
         "id": 520,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Stone House Farms",
         "Bio": "",
         "Image": "",
@@ -7815,7 +7815,7 @@ module.exports = {
       },
       {
         "id": 521,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Strickland Organics, LLC",
         "Bio": "",
         "Image": "",
@@ -7830,7 +7830,7 @@ module.exports = {
       },
       {
         "id": 522,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Summerfield Farms DFC, LLC",
         "Bio": "",
         "Image": "",
@@ -7838,14 +7838,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(828) 713-0018",
         "Email": "smundy@summerfieldfarms.com",
         "Certified": "11/7/2014"
       },
       {
         "id": 523,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Sunny Creek Farm",
         "Bio": "",
         "Image": "",
@@ -7860,7 +7860,7 @@ module.exports = {
       },
       {
         "id": 524,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Sunrise Foods International Inc.",
         "Bio": "",
         "Image": "",
@@ -7875,7 +7875,7 @@ module.exports = {
       },
       {
         "id": 525,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Sunset Market Gardens, LLC",
         "Bio": "",
         "Image": "",
@@ -7883,14 +7883,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(336) 362-1344",
         "Email": "sunsetmarketgardens@hotmail.com",
         "Certified": "9/13/2017"
       },
       {
         "id": 526,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Sweetwater Springs Organic Farm, LLC",
         "Bio": "",
         "Image": "",
@@ -7905,7 +7905,7 @@ module.exports = {
       },
       {
         "id": 527,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Sykes & Sykes Inc. Dba Altar-Cross Farms",
         "Bio": "",
         "Image": "",
@@ -7920,7 +7920,7 @@ module.exports = {
       },
       {
         "id": 528,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "T & E Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -7935,7 +7935,7 @@ module.exports = {
       },
       {
         "id": 529,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "T. M. Allen Inc.",
         "Bio": "",
         "Image": "",
@@ -7950,7 +7950,7 @@ module.exports = {
       },
       {
         "id": 530,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "T.E. And B.T. Barham, Partners",
         "Bio": "",
         "Image": "",
@@ -7965,7 +7965,7 @@ module.exports = {
       },
       {
         "id": 531,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Talley Farms",
         "Bio": "",
         "Image": "",
@@ -7980,7 +7980,7 @@ module.exports = {
       },
       {
         "id": 532,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Tate Inc",
         "Bio": "",
         "Image": "",
@@ -7995,7 +7995,7 @@ module.exports = {
       },
       {
         "id": 533,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Tate Inc",
         "Bio": "",
         "Image": "",
@@ -8010,7 +8010,7 @@ module.exports = {
       },
       {
         "id": 534,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Tater Anderson Farms",
         "Bio": "",
         "Image": "",
@@ -8025,7 +8025,7 @@ module.exports = {
       },
       {
         "id": 535,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Taylor, Anjail",
         "Bio": "",
         "Image": "",
@@ -8040,7 +8040,7 @@ module.exports = {
       },
       {
         "id": 536,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Team Summit, LLC",
         "Bio": "",
         "Image": "",
@@ -8055,7 +8055,7 @@ module.exports = {
       },
       {
         "id": 537,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Terry Johnson dba Terry Johnson Farm",
         "Bio": "",
         "Image": "",
@@ -8070,7 +8070,7 @@ module.exports = {
       },
       {
         "id": 538,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Terry, Iris dba Iris Terry Farm",
         "Bio": "",
         "Image": "",
@@ -8085,7 +8085,7 @@ module.exports = {
       },
       {
         "id": 539,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Thatchmore Farm",
         "Bio": "",
         "Image": "",
@@ -8100,7 +8100,7 @@ module.exports = {
       },
       {
         "id": 540,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "The Bass Farm, Inc. dba The Bass Farm Organics",
         "Bio": "",
         "Image": "",
@@ -8115,7 +8115,7 @@ module.exports = {
       },
       {
         "id": 541,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "The Crews Farm Hamilton St. LLC Dba Crews Farm",
         "Bio": "",
         "Image": "",
@@ -8130,7 +8130,7 @@ module.exports = {
       },
       {
         "id": 542,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "The Maté Factor, LLC",
         "Bio": "",
         "Image": "",
@@ -8145,7 +8145,7 @@ module.exports = {
       },
       {
         "id": 543,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "The Organic Butcher Shop",
         "Bio": "",
         "Image": "",
@@ -8153,14 +8153,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(910) 892-7675",
         "Email": "twinoaksheritagefarm@gmail.com",
         "Certified": "9/26/2017"
       },
       {
         "id": 544,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "The Wizard LLC Dba Macalat",
         "Bio": "",
         "Image": "",
@@ -8175,7 +8175,7 @@ module.exports = {
       },
       {
         "id": 545,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Thirteen Moons Farm",
         "Bio": "",
         "Image": "",
@@ -8190,7 +8190,7 @@ module.exports = {
       },
       {
         "id": 546,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Thomas A. Owens",
         "Bio": "",
         "Image": "",
@@ -8205,7 +8205,7 @@ module.exports = {
       },
       {
         "id": 547,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Thomas Famiy Farms Inc.",
         "Bio": "",
         "Image": "",
@@ -8220,7 +8220,7 @@ module.exports = {
       },
       {
         "id": 548,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Thomas N Blalock",
         "Bio": "",
         "Image": "",
@@ -8235,7 +8235,7 @@ module.exports = {
       },
       {
         "id": 549,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Thomas, David",
         "Bio": "",
         "Image": "",
@@ -8250,7 +8250,7 @@ module.exports = {
       },
       {
         "id": 550,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Thomas, Isabell",
         "Bio": "",
         "Image": "",
@@ -8265,7 +8265,7 @@ module.exports = {
       },
       {
         "id": 551,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Timberwood Organics LLC",
         "Bio": "",
         "Image": "",
@@ -8280,7 +8280,7 @@ module.exports = {
       },
       {
         "id": 552,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Tim's Farm",
         "Bio": "",
         "Image": "",
@@ -8295,7 +8295,7 @@ module.exports = {
       },
       {
         "id": 553,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "TJ Kernodle And Josh Pinyatello",
         "Bio": "",
         "Image": "",
@@ -8310,7 +8310,7 @@ module.exports = {
       },
       {
         "id": 554,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "TNT Family Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -8325,7 +8325,7 @@ module.exports = {
       },
       {
         "id": 555,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Todd Blakly dba Arrowhead Poultry",
         "Bio": "",
         "Image": "",
@@ -8340,7 +8340,7 @@ module.exports = {
       },
       {
         "id": 556,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Tony C. Horton",
         "Bio": "",
         "Image": "",
@@ -8355,7 +8355,7 @@ module.exports = {
       },
       {
         "id": 557,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Top Of The Hill Distillery",
         "Bio": "",
         "Image": "",
@@ -8370,7 +8370,7 @@ module.exports = {
       },
       {
         "id": 558,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Transylvania Vocational Services Inc. Dba TVS",
         "Bio": "",
         "Image": "",
@@ -8385,7 +8385,7 @@ module.exports = {
       },
       {
         "id": 559,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Trask, William K.",
         "Bio": "",
         "Image": "",
@@ -8400,7 +8400,7 @@ module.exports = {
       },
       {
         "id": 560,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Trey Parrish Organics",
         "Bio": "",
         "Image": "",
@@ -8415,7 +8415,7 @@ module.exports = {
       },
       {
         "id": 561,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "TRI-HISHTIL, LLC",
         "Bio": "",
         "Image": "",
@@ -8423,14 +8423,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "",
         "Email": "",
         "Certified": "3/6/2018"
       },
       {
         "id": 562,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Trinity Frozen Foods",
         "Bio": "",
         "Image": "",
@@ -8438,14 +8438,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(910) 225-5785",
         "Email": "sallen@trinityfrozenfoods.com",
         "Certified": "7/8/2015"
       },
       {
         "id": 563,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Triple H Farms of Lee County Inc",
         "Bio": "",
         "Image": "",
@@ -8460,7 +8460,7 @@ module.exports = {
       },
       {
         "id": 564,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Triple J Produce, Inc.",
         "Bio": "",
         "Image": "",
@@ -8475,7 +8475,7 @@ module.exports = {
       },
       {
         "id": 565,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Troxler Farms",
         "Bio": "",
         "Image": "",
@@ -8490,7 +8490,7 @@ module.exports = {
       },
       {
         "id": 566,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Turner, Shannon Ray",
         "Bio": "",
         "Image": "",
@@ -8505,7 +8505,7 @@ module.exports = {
       },
       {
         "id": 567,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Twin Oaks Heritage Farm",
         "Bio": "",
         "Image": "",
@@ -8513,14 +8513,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(910) 892-7675",
         "Email": "twinoaksfarm2012@yahoo.com",
         "Certified": "3/19/2015"
       },
       {
         "id": 568,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Twinings North America, Inc.",
         "Bio": "",
         "Image": "",
@@ -8535,7 +8535,7 @@ module.exports = {
       },
       {
         "id": 569,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Tyson Family Organic Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -8550,7 +8550,7 @@ module.exports = {
       },
       {
         "id": 570,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Underwood Family Farm, Inc.",
         "Bio": "",
         "Image": "",
@@ -8565,7 +8565,7 @@ module.exports = {
       },
       {
         "id": 571,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "United States Cold Storage, Inc",
         "Bio": "",
         "Image": "",
@@ -8580,7 +8580,7 @@ module.exports = {
       },
       {
         "id": 572,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "United Tobacco Co.",
         "Bio": "",
         "Image": "",
@@ -8595,7 +8595,7 @@ module.exports = {
       },
       {
         "id": 573,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Universal Leaf North America U.S., Inc",
         "Bio": "",
         "Image": "",
@@ -8610,7 +8610,7 @@ module.exports = {
       },
       {
         "id": 574,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "US Cotton, LLC",
         "Bio": "",
         "Image": "",
@@ -8625,7 +8625,7 @@ module.exports = {
       },
       {
         "id": 575,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "US Cotton, LLC",
         "Bio": "",
         "Image": "",
@@ -8640,7 +8640,7 @@ module.exports = {
       },
       {
         "id": 576,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Valley Farm",
         "Bio": "",
         "Image": "",
@@ -8655,7 +8655,7 @@ module.exports = {
       },
       {
         "id": 577,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Vanguard Culinary Group, Inc.",
         "Bio": "",
         "Image": "",
@@ -8670,7 +8670,7 @@ module.exports = {
       },
       {
         "id": 578,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Vick Family Farms",
         "Bio": "",
         "Image": "",
@@ -8685,7 +8685,7 @@ module.exports = {
       },
       {
         "id": 579,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Villari Food Group",
         "Bio": "",
         "Image": "",
@@ -8700,7 +8700,7 @@ module.exports = {
       },
       {
         "id": 580,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "W.R. Vernon Produce Company, Inc.",
         "Bio": "",
         "Image": "",
@@ -8715,7 +8715,7 @@ module.exports = {
       },
       {
         "id": 581,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Walker, Michael",
         "Bio": "",
         "Image": "",
@@ -8730,7 +8730,7 @@ module.exports = {
       },
       {
         "id": 582,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wall, Barbara",
         "Bio": "",
         "Image": "",
@@ -8745,7 +8745,7 @@ module.exports = {
       },
       {
         "id": 583,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wannamaker Seeds, Inc.",
         "Bio": "",
         "Image": "",
@@ -8760,7 +8760,7 @@ module.exports = {
       },
       {
         "id": 584,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Watkins Farm",
         "Bio": "",
         "Image": "",
@@ -8775,7 +8775,7 @@ module.exports = {
       },
       {
         "id": 585,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Watkins Logistics, LLC dba Watkins Produce",
         "Bio": "",
         "Image": "",
@@ -8790,7 +8790,7 @@ module.exports = {
       },
       {
         "id": 586,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Watkins, Daniel",
         "Bio": "",
         "Image": "",
@@ -8805,7 +8805,7 @@ module.exports = {
       },
       {
         "id": 587,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wayne Bailey, Inc.",
         "Bio": "",
         "Image": "",
@@ -8820,7 +8820,7 @@ module.exports = {
       },
       {
         "id": 588,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wayne E. Bailey Produce Company",
         "Bio": "",
         "Image": "",
@@ -8835,7 +8835,7 @@ module.exports = {
       },
       {
         "id": 589,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wayne Mays Meat Processing, Inc.",
         "Bio": "",
         "Image": "",
@@ -8843,14 +8843,14 @@ module.exports = {
         "Address": "",
         "City": "",
         "State": "",
-        "Zip": "",
+        "Zip": null,
         "Phone": "(828) 632-2034",
         "Email": "maysmeats@yahoo.com",
         "Certified": "3/3/2015"
       },
       {
         "id": 590,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wayne Saunders dba Saunders Farm",
         "Bio": "",
         "Image": "",
@@ -8865,7 +8865,7 @@ module.exports = {
       },
       {
         "id": 591,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Weavil, Lucas weavil",
         "Bio": "",
         "Image": "",
@@ -8880,7 +8880,7 @@ module.exports = {
       },
       {
         "id": 592,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Webb Farms",
         "Bio": "",
         "Image": "",
@@ -8895,7 +8895,7 @@ module.exports = {
       },
       {
         "id": 593,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Webster's Farms, Inc.",
         "Bio": "",
         "Image": "",
@@ -8910,7 +8910,7 @@ module.exports = {
       },
       {
         "id": 594,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wellspring Bakehouse",
         "Bio": "",
         "Image": "",
@@ -8925,7 +8925,7 @@ module.exports = {
       },
       {
         "id": 595,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Whalebone Seafood Market",
         "Bio": "",
         "Image": "",
@@ -8940,7 +8940,7 @@ module.exports = {
       },
       {
         "id": 596,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wheeler Farms",
         "Bio": "",
         "Image": "",
@@ -8955,7 +8955,7 @@ module.exports = {
       },
       {
         "id": 597,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "White Ridge Farm Inc",
         "Bio": "",
         "Image": "",
@@ -8970,7 +8970,7 @@ module.exports = {
       },
       {
         "id": 598,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Whole Harvest Foods LLC",
         "Bio": "",
         "Image": "",
@@ -8985,7 +8985,7 @@ module.exports = {
       },
       {
         "id": 599,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wilkins Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -9000,7 +9000,7 @@ module.exports = {
       },
       {
         "id": 600,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "William Horner/B & D Farms",
         "Bio": "",
         "Image": "",
@@ -9015,7 +9015,7 @@ module.exports = {
       },
       {
         "id": 601,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Williams Farms' Denny's Store LLC",
         "Bio": "",
         "Image": "",
@@ -9030,7 +9030,7 @@ module.exports = {
       },
       {
         "id": 602,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Williamson Produce",
         "Bio": "",
         "Image": "",
@@ -9045,7 +9045,7 @@ module.exports = {
       },
       {
         "id": 603,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Williamson Produce, Inc.",
         "Bio": "",
         "Image": "",
@@ -9060,7 +9060,7 @@ module.exports = {
       },
       {
         "id": 604,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Williamson Produce,Inc.",
         "Bio": "",
         "Image": "",
@@ -9075,7 +9075,7 @@ module.exports = {
       },
       {
         "id": 605,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Williamson, Charles",
         "Bio": "",
         "Image": "",
@@ -9090,7 +9090,7 @@ module.exports = {
       },
       {
         "id": 606,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Willis, Ronnie S.",
         "Bio": "",
         "Image": "",
@@ -9105,7 +9105,7 @@ module.exports = {
       },
       {
         "id": 607,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wilson Poultry LLC",
         "Bio": "",
         "Image": "",
@@ -9120,7 +9120,7 @@ module.exports = {
       },
       {
         "id": 608,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Windy Creek Farms, Inc",
         "Bio": "",
         "Image": "",
@@ -9135,7 +9135,7 @@ module.exports = {
       },
       {
         "id": 609,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Winslow Brothers Farms",
         "Bio": "",
         "Image": "",
@@ -9150,7 +9150,7 @@ module.exports = {
       },
       {
         "id": 610,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Winzeler Farms LLC",
         "Bio": "",
         "Image": "",
@@ -9165,7 +9165,7 @@ module.exports = {
       },
       {
         "id": 611,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Winzeler Farms, LLC",
         "Bio": "",
         "Image": "",
@@ -9180,7 +9180,7 @@ module.exports = {
       },
       {
         "id": 612,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wise Acres Corporation",
         "Bio": "",
         "Image": "",
@@ -9195,7 +9195,7 @@ module.exports = {
       },
       {
         "id": 613,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wollett Farms LLC",
         "Bio": "",
         "Image": "",
@@ -9210,7 +9210,7 @@ module.exports = {
       },
       {
         "id": 614,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wood, Roy",
         "Bio": "",
         "Image": "",
@@ -9225,7 +9225,7 @@ module.exports = {
       },
       {
         "id": 615,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wright Foods Group, LLC Dba Wright Foods",
         "Bio": "",
         "Image": "",
@@ -9240,7 +9240,7 @@ module.exports = {
       },
       {
         "id": 616,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wright, Darrell",
         "Bio": "",
         "Image": "",
@@ -9255,7 +9255,7 @@ module.exports = {
       },
       {
         "id": 617,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Wright, Laverne",
         "Bio": "",
         "Image": "",
@@ -9270,7 +9270,7 @@ module.exports = {
       },
       {
         "id": 618,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Yamco, LLC",
         "Bio": "",
         "Image": "",
@@ -9285,7 +9285,7 @@ module.exports = {
       },
       {
         "id": 619,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Yarbrough, Tim",
         "Bio": "",
         "Image": "",
@@ -9300,7 +9300,7 @@ module.exports = {
       },
       {
         "id": 620,
-        "Firebase": "",
+        "UID": "",
         "Vendor": "Yow, Micheal",
         "Bio": "",
         "Image": "",

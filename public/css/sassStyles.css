@@ -2,6 +2,14 @@ nav, .page-footer {
   background-color: green;
 }
 
+.page-footer {
+  background: url("/images/footer.jpg") no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
 body {
   font-family: Cabin Sketch, cursive;
 }
@@ -29,11 +37,11 @@ body {
   grid-template-rows: 50% 50%;
 }
 
-.newData {
+.results-grid {
   display: grid;
   grid-gap: 0px 20px;
-  grid-template-columns: 50% 50%;
-  grid-template-rows: 20% 20% 20% 20% 20%;
+  grid-template-columns: 25% 25% 25% 25%;
+  grid-template-rows: 50% 50%;
 }
 
 .card {

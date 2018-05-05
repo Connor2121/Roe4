@@ -1,5 +1,18 @@
 <br>
 <div class="container">
+    
+    <div class="nav-extend">
+        <div class="nav-content">
+            <ul class="tabs tabs-transparent">
+                <li class="tab"><a href="#test1">Test 1</a></li>
+                <li class="tab"><a class="active" href="#test2">Test 2</a></li>
+                <li class="tab disabled"><a href="#test3">Disabled Tab</a></li>
+                <li class="tab"><a href="#test4">Test 4</a></li>
+            </ul>
+        </div>
+    </div>
+    
+
     <div class="row">
         {{!-- roduct search input --}}
         <div class="input-field col l6 s12">
@@ -27,8 +40,14 @@
     </div>
     <button id="vendorButton" class="button button-rounded-hover">Search</button>
 
-
-
+   <div class="row">
+       <div class="col l12">
+            <ul class="collapsible productData">
+                    
+            </ul>
+       </div>
+   </div>
+    
     <div class="row header-here"></div>
     <div class="row">
         <div class="search-results">
@@ -36,7 +55,7 @@
 
         </div>
         {{!--
-        <div class="newData">
+        <div class="col l12 newData">
             {{#each vendor}}
             <div class="card">
                 {{Vendor}}
@@ -54,7 +73,7 @@
 </div>
 
 
-</div>
+
 <footer class="page-footer">
     <div class="container">
         <div class="row">
@@ -72,11 +91,27 @@
     </div>
 </footer>
 
-
+{{!-- <ul class="collection">
+    <li class="collection-item">
+        <span class="title">${result[0].vendorData[i].Vendor}</span>
+        <p>
+            ${result[0].vendorData[i].Address}
+            <br> ${result[0].vendorData[i].Phone}
+            <br> ${result[0].vendorData[i].Email}
+            <br>
+        </p>
+        <button class='product-details' data-id=${result[0].vendorData[i].id}>Details</button>
+        <p class='details-results'></p>
+        <a href="#!" class="secondary-content">
+            <i class="material-icons">grade</i>
+        </a>
+    </li>
+</ul> --}}
 
 <script>
     // initializing form selector
     $(document).ready(function () {
+
         $('#vendorButton').on('click', e => {
             //e.preventDefault();
             console.log('clicked it');
@@ -101,32 +136,38 @@
             console.log('base: ', base);
             console.log('productName: ', productName);
             $.get(base + '/api/crops/' + productName, result => {
-
-               
-
                 console.log('result: ', result[0].vendorData);
                 for (var i = 0; i < result[0].vendorData.length; i++) {
-                    $('.newData').append(
-                        `<ul class="collection">
-                            <li class="collection-item">
-                                <span class="title">${result[0].vendorData[i].Vendor}</span>
-                                <p>
-                                    ${result[0].vendorData[i].Address}<br>
-                                    ${result[0].vendorData[i].Phone}<br>
-                                    ${result[0].vendorData[i].Email}<br>
-                                </p>
-                                <button class='product-details' data-id=${result[0].vendorData[i].id}>Details</button>
-                                <p class='details-results'></p>
-                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
-                            </li>
-                        </ul>`
+                    $('.productData').append(
+                        `<li class="product-details" data-id=${result[0].vendorData[i].id}>
+                            <div class="collapsible-header">
+                                <div class="col l6">
+                                    ${result[0].vendorData[i].Vendor}
+                                    <br>
+                                    ${result[0].vendorData[i].Address}
+                                    <br>
+                                    ${result[0].vendorData[i].City}
+                                </div>
+                                <div class="col l6">
+                                    ${result[0].vendorData[i].Phone}
+                                    <br> 
+                                    ${result[0].vendorData[i].Email}
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="results-grid details-results">
+                                   
+                                </div>
+                            </div>
+                        </li>`
                     );
                 }
+                $('.collapsible').collapsible();
             });
         });
 
-        $('.newData').on('click', '.product-details', function () {
-            var card = $(this).closest(".collection");
+        $('.productData').on('click', '.product-details', function () {
+            var card = $(this).find('.details-results');
             var id = $(this).attr('data-id');
             var base = location.origin;
             console.log('clicked');
@@ -136,11 +177,8 @@
                 console.log(result);
                 for (var i = 0; i < result.cropData.length; i++) {
                     var p = $("<p>");
-                    card.find('.details-results').append(p.text(result.cropData[i].Name));
+                    card.append(p.text(result.cropData[i].Name));
                 }
-
-
-
             });
         });
 

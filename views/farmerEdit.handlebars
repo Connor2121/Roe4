@@ -25,13 +25,25 @@
     <!-- Product Section --->
     <div class="vendor-product row">
         <div class="col s7 current-product box">
-            Products
+            Crops
             <div class="product-card">
                 <div class="card-body">
                     <textarea id="vendor-product" class="materialize-textarea">Sweet Potatoes. A lot of them
                     </textarea>
                 </div>
             </div>
+            <button id="crops-edit-btn" class="button button-rounded-hover">Submit Crops Edits</button>
+
+        </div>
+        <div class="col s7 current-product box">
+            Livestock
+            <div class="product-card">
+                <div class="card-body">
+                    <textarea id="vendor-product" class="materialize-textarea">Cows. A lot of them
+                    </textarea>
+                </div>
+            </div>
+            <button id="livestock-edit-btn" class="button button-rounded-hover">Submit Livestock Edits</button>
 
         </div>
         <div class="col s1"></div>
@@ -50,7 +62,7 @@
     <div class="vendor-footer row">
         <div class="col-md-12">
             <footer>
-<button id="farmer-edit-btn" class="button button-rounded-hover">Submit Changes</button>
+<button id="farmer-edit-btn" class="button button-rounded-hover">Submit Info Edits</button>
             </footer>
         </div>
     </div>
@@ -99,6 +111,39 @@
             // post vendor profile data to firebase
             writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
         });
+
+        $('#crops-edit-btn').on('click', e => {
+            e.preventDefault();
+
+            let bio = $('#vendor-bio').val().trim();
+            let vendorName = $('#vendor-name').val().trim();
+            let products = $('#vendor-product').val().trim();
+            let phoneNum = $('#vendor-phone').val().trim();
+            // use reg expression to validate email format
+            let email = $('#vendor-email').val().trim();
+            let address = $('#vendor-address').val().trim();
+            // TO DO: add form validation
+
+            // post vendor profile data to firebase
+            writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+        });
+
+        $('#livestock-edit-btn').on('click', e => {
+            e.preventDefault();
+
+            let bio = $('#vendor-bio').val().trim();
+            let vendorName = $('#vendor-name').val().trim();
+            let products = $('#vendor-product').val().trim();
+            let phoneNum = $('#vendor-phone').val().trim();
+            // use reg expression to validate email format
+            let email = $('#vendor-email').val().trim();
+            let address = $('#vendor-address').val().trim();
+            // TO DO: add form validation
+
+            // post vendor profile data to firebase
+            writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+        });
+
 
         const imageButton = document.getElementById('fileButtonVendor');
         // Listen for file selection

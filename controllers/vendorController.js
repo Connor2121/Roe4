@@ -103,6 +103,9 @@ router.get('/api/vendors/id/:id', (req, res) => {
         },
         include: [{
             model: db.cropData           
+        },
+        {
+            model: db.Livestock
         }]
     })
     .then(result => res.json(result));
@@ -122,6 +125,15 @@ router.get('/api/crops', (req, res) => {
         include: [{
             model: db.vendorData
         }]
+    })
+    .then(result => res.json(result));
+});
+
+router.get('/api/crops/:Name', (req, res) => {
+    db.cropData.findAll({
+        where: {
+            Name: req.params.Name
+        }
     })
     .then(result => res.json(result));
 });

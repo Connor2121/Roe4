@@ -82,6 +82,9 @@
                     console.log('new uid: ' + firebase.auth().currentUser.uid);
                     writeUserData(firebase.auth().currentUser.uid, firstName, lastName, email);
                     // user data is not being sent to firebase when 
+                    //adjust writeUserData to create vendor in MySQL
+                    //add UID column in vendorData
+                    //store UID from firebase
                     
                 }).catch(e => {
                     alert(e.message);            
@@ -111,6 +114,8 @@
                     window.location.replace('/');
                 });
             };
+            // Change out function to create vendor in MySQL instead of firebase
+            
 
             // function to clear email and password inputs
             clrTxt = () => {

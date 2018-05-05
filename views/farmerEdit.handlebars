@@ -153,13 +153,12 @@
         $('#livestock-edit-btn').on('click', e => {
             e.preventDefault();
 
-            let bio = $('#vendor-bio').val().trim();
-            let vendorName = $('#vendor-name').val().trim();
-            let products = $('#vendor-product').val().trim();
-            let phoneNum = $('#vendor-phone').val().trim();
-            // use reg expression to validate email format
-            let email = $('#vendor-email').val().trim();
-            let address = $('#vendor-address').val().trim();
+            let uid = firebase.auth().currentUser.uid;
+            let livestock = $('#vendor-livestock').val().trim();
+            $.post('/api/vendorEdit/Livestock', {
+                uid,
+                livestock
+            })
             // TO DO: add form validation
 
             // post vendor profile data to firebase

@@ -127,25 +127,7 @@
                 city,
                 state,
                 zip
-            }).then(cb => {
-                console.log('post sent..');
-            })
-            //.then($.put('api/vendorEdit', (req, res) => {
-            //db.vendorData.update({
-               // Vendor: req.body.vendorName,
-               // Phone: req.body.phoneNum,
-                //Email: req.body.email,
-               // Address: req.body.address,
-                //City: req.body.city,
-                //State: req.body.state,
-                //Zip: req.body.zip
-            //}, {
-            //where: {
-                //UID: req.body.UID
-            //}
-            //})
-            //}));
-            //let products = $('#vendor-product').val().trim();
+            });            
             // use reg expression to validate email format
             // TO DO: add form validation
 
@@ -156,17 +138,16 @@
         $('#crops-edit-btn').on('click', e => {
             e.preventDefault();
 
-            let bio = $('#vendor-bio').val().trim();
-            let vendorName = $('#vendor-name').val().trim();
-            let products = $('#vendor-product').val().trim();
-            let phoneNum = $('#vendor-phone').val().trim();
-            // use reg expression to validate email format
-            let email = $('#vendor-email').val().trim();
-            let address = $('#vendor-address').val().trim();
+            let uid = firebase.auth().currentUser.uid;
+            let crop = $('#vendor-crop').val().trim();
+            $.post('/api/vendorEdit/Crop', {
+                uid,
+                crop
+            });
             // TO DO: add form validation
 
             // post vendor profile data to firebase
-            writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+            // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
         });
 
         $('#livestock-edit-btn').on('click', e => {
@@ -182,7 +163,7 @@
             // TO DO: add form validation
 
             // post vendor profile data to firebase
-            writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+            // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
         });
 
 

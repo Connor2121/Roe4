@@ -61,6 +61,17 @@ router.post('/api/signup', (req, res) => {
     console.log(placeholder);
 });
 
+// --------FarmerEdit adds crops to Vendor in DB
+router.post('/api/vendorEdit/Crop', (req, res) => {
+    let placeholder = {
+        UID: req.body.uid,
+        Crop: req.body.crop
+    };
+    console.log(placeholder);
+    // we want to Create a row in vendorcrops with vendorDatumId and cropDatumId
+});
+
+// --------FarmerEdit page updates DB with vendor information
 router.post('/api/vendorEdit', (req, res) => {
     let placeholder = {
         UID: req.body.uid,

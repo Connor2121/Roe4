@@ -7,7 +7,7 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
-    Firebase: DataTypes.STRING,
+    UID: DataTypes.STRING,
     Vendor: DataTypes.STRING,
     Bio: DataTypes.TEXT,
     Contact: DataTypes.STRING,

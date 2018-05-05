@@ -1,12 +1,21 @@
-<div class="newData">
-    {{#each vendor}}
-    <div class="card">
-        {{Vendor}}
-        <br> {{Address}}
-        <br> {{City}}
-        <br>
-        <button>see crop data</button>
-    </div>
-    {{/each}}
 
-</div>
+    {{#each vendor}}
+    <ul class="collection">
+        <li class="collection-item">
+            <span class="title">{{Vendor}}</span>
+            <p>
+                    {{Address}}
+                <br> {{Phone}}
+                <br> {{Email}}
+                <br>
+            </p>
+            <button class='product-details' data-id={{id}}>Details</button>
+            <p class='details-results'></p>
+            <a href="#!" class="secondary-content">
+                <i class="material-icons" data-id={{id}}>grade</i>
+            </a>
+        </li>
+    </ul> 
+
+{{/each}}
+

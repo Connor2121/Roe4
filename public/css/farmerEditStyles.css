@@ -23,3 +23,7 @@
 .regular-descript {
     padding-bottom: 20px;
 }
+#vendorPhoto {
+    height: 300px;
+    width: 400px;
+}

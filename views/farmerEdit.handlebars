@@ -25,13 +25,25 @@
     <!-- Product Section --->
     <div class="vendor-product row">
         <div class="col s7 current-product box">
-            Products
+            Crops
             <div class="product-card">
                 <div class="card-body">
-                    <textarea id="vendor-product" class="materialize-textarea">Sweet Potatoes. A lot of them
+                    <textarea id="vendor-crop" class="materialize-textarea">Sweet Potatoes. A lot of them
                     </textarea>
                 </div>
             </div>
+            <button id="crops-edit-btn" class="button button-rounded-hover">Submit Crops Edits</button>
+
+        </div>
+        <div class="col s7 current-product box">
+            Livestock
+            <div class="product-card">
+                <div class="card-body">
+                    <textarea id="vendor-livestock" class="materialize-textarea">Cows. A lot of them
+                    </textarea>
+                </div>
+            </div>
+            <button id="livestock-edit-btn" class="button button-rounded-hover">Submit Livestock Edits</button>
 
         </div>
         <div class="col s1"></div>
@@ -40,9 +52,17 @@
             <div class="product-card">
                 <div class="card-body">
                     Phone:
-                    <textarea id="vendor-phone" class="materialize-textarea"> 777-777-7777</textarea> Email:
-                    <textarea id="vendor-email" class="materialize-textarea"> connorgreed@gmail.com</textarea> Address:
+                    <textarea id="vendor-phone" class="materialize-textarea"> 777-777-7777</textarea> 
+                    Email:
+                    <textarea id="vendor-email" class="materialize-textarea"> connorgreed@gmail.com</textarea>
+                    Street Address:
                     <textarea id="vendor-address" class="materialize-textarea"> </textarea>
+                    City:
+                    <textarea id="vendor-city" class="materialize-textarea"> </textarea>
+                    State:
+                    <textarea id="vendor-state" class="materialize-textarea"> </textarea>
+                    Zip:
+                    <textarea id="vendor-zip" class="materialize-textarea"> </textarea>
                 </div>
             </div>
         </div>
@@ -50,7 +70,7 @@
     <div class="vendor-footer row">
         <div class="col-md-12">
             <footer>
-<button id="farmer-edit-btn" class="button button-rounded-hover">Submit Changes</button>
+<button id="farmer-edit-btn" class="button button-rounded-hover">Submit Info Edits</button>
             </footer>
         </div>
     </div>
@@ -87,18 +107,64 @@
         $('#farmer-edit-btn').on('click', e => {
             e.preventDefault();
 
+            let uid = firebase.auth().currentUser.uid;
             let bio = $('#vendor-bio').val().trim();
             let vendorName = $('#vendor-name').val().trim();
-            let products = $('#vendor-product').val().trim();
             let phoneNum = $('#vendor-phone').val().trim();
-            // use reg expression to validate email format
             let email = $('#vendor-email').val().trim();
             let address = $('#vendor-address').val().trim();
+            let city = $('#vendor-city').val().trim();
+            let state = $('#vendor-state').val().trim();
+            let zip = $('#vendor-zip').val().trim();
+
+            $.post('/api/vendorEdit', {
+                uid,
+                bio,
+                vendorName,
+                phoneNum,
+                email,
+                address,
+                city,
+                state,
+                zip
+            });            
+            // use reg expression to validate email format
             // TO DO: add form validation
 
             // post vendor profile data to firebase
-            writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+            // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
         });
+
+        $('#crops-edit-btn').on('click', e => {
+            e.preventDefault();
+
+            let uid = firebase.auth().currentUser.uid;
+            let crop = $('#vendor-crop').val().trim();
+            $.post('/api/vendorEdit/Crop', {
+                uid,
+                crop
+            });
+            // TO DO: add form validation
+
+            // post vendor profile data to firebase
+            // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+        });
+
+        $('#livestock-edit-btn').on('click', e => {
+            e.preventDefault();
+
+            let uid = firebase.auth().currentUser.uid;
+            let livestock = $('#vendor-livestock').val().trim();
+            $.post('/api/vendorEdit/Livestock', {
+                uid,
+                livestock
+            })
+            // TO DO: add form validation
+
+            // post vendor profile data to firebase
+            // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+        });
+
 
         const imageButton = document.getElementById('fileButtonVendor');
         // Listen for file selection

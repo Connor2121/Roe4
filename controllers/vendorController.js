@@ -1,4 +1,21 @@
 import express from 'express';
+
+// ----------Firebase Server-side----------------------
+// this may be moved at a later date
+// import firebase from 'firebase';
+// require('firebase/auth');
+// require('firebase/database');
+// const config = {
+//     apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
+//     authDomain: "nc-vfm.firebaseapp.com",
+//     databaseURL: "https://nc-vfm.firebaseio.com",
+//     projectId: "nc-vfm",
+//     storageBucket: "nc-vfm.appspot.com",
+//     messagingSenderId: "987355521805"
+// };
+// firebase.initializeApp(config);
+// ----------Firebase Server-side----------------------
+
 const router = express.Router();
 
 import db from '../models';
@@ -21,16 +38,108 @@ router.post('/api/mail', (req, res) => {
         res.send("Email sent!");
     })
     .catch(error => {
-
         //Log friendly error
         console.error(error.toString());
-
         //Extract error msg
         const { message, code, response } = error;
-
         //Extract response msg
         const { headers, body } = response;
     });;
+});
+
+// ---------Sign UP Form Post Route ------------------
+router.post('/api/signup', (req, res) => {
+    // db.TABLENAME.create ??
+    // right now this just console logs server side
+    // console log = the form values from signup page
+    let placeholder = {
+        firstName: req.body.firstName,
+        lastName: req.body.lastName,
+        email: req.body.email,
+        pass: req.body.pass
+    };
+    console.log(placeholder);
+});
+
+// --------FarmerEdit adds livestock to Vendor in DB
+router.post('/api/vendorEdit/Livestock', (req, res) => {
+    let placeholder = {
+        UID: req.body.uid,
+        Livestock: req.body.livestock
+    };
+    console.log(placeholder);
+    // we want to Create a row in vendorlivestocks with vendorDatumId and LivestockID
+});
+
+// --------FarmerEdit adds crops to Vendor in DB
+router.post('/api/vendorEdit/Crop', (req, res) => {
+    let cropID = null;
+    let vendorID = null;
+    let placeholder = {
+        UID: req.body.uid,
+        Name: req.body.crop
+    }
+    db.cropData.findOne({
+        where: {
+            Name: req.body.crop
+        }
+    })
+    .then(result => {
+        // console.log(result.dataValues.id)
+        cropID = result.dataValues.id;
+        console.log(cropID);
+    })
+    .then(db.vendorData.findOne({
+        where: {
+            UID: req.body.uid
+        }
+    })
+    .then(result => {
+        vendorID = result.dataValues.id;
+        console.log(vendorID);
+    })
+    .then(result => db.vendorCrops.create({
+        vendorDatumId: vendorID,
+        cropDatumId: cropID
+    })
+    .then(results => console.log(cropID, vendorID))
+    )
+    )
+
+    // console.log(UID);
+    console.log(placeholder);
+    
+    // we want to Create a row in vendorcrops with vendorDatumId and cropDatumId
+});
+
+// --------FarmerEdit page updates DB with vendor information
+router.post('/api/vendorEdit', (req, res) => {
+    let placeholder = {
+        UID: req.body.uid,
+        Bio: req.body.bio,
+        Vendor: req.body.vendorName,
+        Phone: req.body.phoneNum,
+        Email: req.body.email,
+        Address: req.body.address,
+        City: req.body.city,
+        State: req.body.state,
+        Zip: req.body.zip
+    }
+    db.vendorData.update({
+        Vendor: req.body.vendorName,
+        Bio: req.body.bio,
+        Phone: req.body.phoneNum,
+        Email: req.body.email,
+        Address: req.body.address,
+        City: req.body.city,
+        State: req.body.state,
+        Zip: req.body.zip
+    }, {
+    where: {
+        UID: req.body.uid
+    }
+    })
+    console.log(placeholder);
 });
 
 router.get('/api/vendors', (req, res) => {
@@ -41,7 +150,8 @@ router.get('/api/vendors', (req, res) => {
         {
             model: db.Livestock
         }]
-    }).then(result => res.json(result));
+    })
+    .then(result => res.json(result));
 });
 
 router.get('/api/crops/:Name', (req, res) => {
@@ -52,7 +162,8 @@ router.get('/api/crops/:Name', (req, res) => {
         where: {
             Name: req.params.Name
         }
-    }).then(result => res.json(result));
+    })
+    .then(result => res.json(result));
 });
 
 
@@ -73,6 +184,9 @@ router.get('/api/vendors/id/:id', (req, res) => {
         },
         include: [{
             model: db.cropData           
+        },
+        {
+            model: db.Livestock
         }]
     })
     .then(result => res.json(result));
@@ -84,7 +198,7 @@ router.get('/api/city/:city', (req, res) => {
             city: req.params.city
         }
     })
-        .then(result => res.json(result));
+    .then(result => res.json(result));
 });
 
 router.get('/api/crops', (req, res) => {
@@ -92,7 +206,17 @@ router.get('/api/crops', (req, res) => {
         include: [{
             model: db.vendorData
         }]
-    }).then(result => res.json(result));
+    })
+    .then(result => res.json(result));
+});
+
+router.get('/api/crops/:Name', (req, res) => {
+    db.cropData.findAll({
+        where: {
+            Name: req.params.Name
+        }
+    })
+    .then(result => res.json(result));
 });
 
 router.get('/api/livestock', (req, res) => {
@@ -100,8 +224,21 @@ router.get('/api/livestock', (req, res) => {
         include: [{
             model: db.vendorData
         }]
-    }).then(result => res.json(result));
-})
+    })
+    .then(result => res.json(result));
+});
+
+router.get('/api/livestock/:Name', (req, res) => {
+    db.Livestock.findAll({
+        include: [{
+            model: db.vendorData
+        }],
+        where: {
+            Name: req.params.Name
+        }
+    })
+    .then(result => res.json(result));
+});
 
 // router.post('/api/vendors', (req, res) => {
 //     // call model to create data => callback to display json result

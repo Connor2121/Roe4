@@ -8,11 +8,20 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
+      UID: {
+        type: Sequelize.STRING
+      },
       Vendor: {
         type: Sequelize.STRING
       },
+      Bio: {
+        type: Sequelize.TEXT
+      },
       Contact: {
         type: Sequelize.STRING
+      },
+      Image: {
+        type: Sequelize.TEXT,
       },
       Address: {
         type: Sequelize.STRING

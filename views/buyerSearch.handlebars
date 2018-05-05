@@ -38,19 +38,10 @@
             {{!-- dynamically generated results go here --}} {{!-- test card --}}
 
         </div>
-        {{!--
         <div class="newData">
-            {{#each vendor}}
-            <div class="card">
-                {{Vendor}}
-                <br> {{Address}}
-                <br> {{City}}
-                <br>
-                <button>see crop data</button>
-            </div>
-            {{/each}}
-
-        </div> --}} {{> card}}
+            {{> card}}
+        </div>
+        
 
     </div>
 
@@ -81,7 +72,7 @@
     // initializing form selector
     $(document).ready(function () {
         $('#vendorButton').on('click', e => {
-            //e.preventDefault();
+            e.preventDefault();
             console.log('clicked it');
             let base = location.origin;
             let vendorName = $('#vendor').val().trim();
@@ -120,7 +111,7 @@
                                 </p>
                                 <button class='product-details' data-id=${result[0].vendorData[i].id}>Details</button>
                                 <p class='details-results'></p>
-                                <a href="#!" class="secondary-content"><i class="material-icons">grade</i></a>
+                                <a href="#!" class="secondary-content" ><i class="material-icons" data-id=${result[0].vendorData[i].id}>grade</i></a>
                             </li>
                         </ul>`
                     );
@@ -147,14 +138,49 @@
             });
         });
 
+         $('.newData').on('click', '.product-details', function () {
+            var card = $(this).closest(".collection");
+            var id = $(this).attr('data-id');
+            var base = location.origin;
+            console.log('clicked');
+            $.get(base + '/api/vendors/id/' + id, result => {
+                return result;
+            }).then(function (result) {
+                console.log(result);
+                for (var i = 0; i < result.Livestock.length; i++) {
+                    var p = $("<p>");
+                    card.find('.details-results').append(p.text(result.Livestock[i].Name));
+                }
+
+
+
+            });
+        });
+
         $('#cityButton').on('click', e => {
             e.preventDefault();
             let base = location.origin;
-            let city = $('#city-name option:checked').val();
+            let city = $('#city-name option:checked').val().trim();
             console.log('city: ', city);
             $.get(base + '/api/city/' + city, result => {
                 console.log('city result: ', result);
-                $('.newData').html(`<p> ${result[0].City} </p>`);
+                for (var i = 0; i < result[0].vendorData.length; i++) {
+                    $('.newData').append(
+                        `<ul class="collection">
+                            <li class="collection-item">
+                                <span class="title">${result[0].vendorData[i].Vendor}</span>
+                                <p>
+                                    ${result[0].vendorData[i].Address}<br>
+                                    ${result[0].vendorData[i].Phone}<br>
+                                    ${result[0].vendorData[i].Email}<br>
+                                </p>
+                                <button class='product-details' data-id=${result[0].vendorData[i].id}>Details</button>
+                                <p class='details-results'></p>
+                                <a href="#!" class="secondary-content" ><i class="material-icons" data-id=${result[0].vendorData[i].id}>grade</i></a>
+                            </li>
+                        </ul>`
+                    );
+                }
             });
         });
 
@@ -164,7 +190,23 @@
             console.log('livestock: ', livestock);
             $.get(base + '/api/livestock/' + livestock, result => {
                 console.log('livestock result: ', result);
-                $('.newData').html(`<p> ${result} </p>`);
+               for (var i = 0; i < result[0].vendorData.length; i++) {
+                    $('.newData').append(
+                        `<ul class="collection">
+                            <li class="collection-item">
+                                <span class="title">${result[0].vendorData[i].Vendor}</span>
+                                <p>
+                                    ${result[0].vendorData[i].Address}<br>
+                                    ${result[0].vendorData[i].Phone}<br>
+                                    ${result[0].vendorData[i].Email}<br>
+                                </p>
+                                <button class='product-details' data-id=${result[0].vendorData[i].id}>Details</button>
+                                <p class='details-results'></p>
+                                <a href="#!" class="secondary-content" ><i class="material-icons" data-id=${result[0].vendorData[i].id}>grade</i></a>
+                            </li>
+                        </ul>`
+                    );
+                }
             })
         })
 

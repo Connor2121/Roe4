@@ -1,11 +1,7 @@
 {
   "development": {
     "username": "root",
-<<<<<<< HEAD
     "password": "root",
-=======
-    "password": null,
->>>>>>> b0c57dc417388b8c0084e016a739583dd9d95d16
     "database": "vfm",
     "host": "127.0.0.1",
     "dialect": "mysql"

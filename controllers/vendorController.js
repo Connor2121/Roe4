@@ -66,11 +66,17 @@ router.get('/api/vendors/:vendorName', (req, res) => {
     //.then(result => res.render('buyerSearch', {venName: result}));
 });
 
-router.get('/api/vendors/:id', (req, res) => {
+router.get('/api/vendors/id/:id', (req, res) => {
     db.vendorData.findOne({
         where: {
             id: req.params.id
-        }
+        },
+        include: [{
+            model: db.cropData           
+        },
+        {
+            model: db.Livestock
+        }]
     })
         .then(result => res.json(result));
 });

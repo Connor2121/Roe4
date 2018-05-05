@@ -7441,7 +7441,7 @@ module.exports = {
       {
         "id": 496,
         "UID": "",
-        "Vendor": "Seaview Crap Company",
+        "Vendor": "Seaview Crab Company",
         "Bio": "",
         "Image": "",
         "Contact": "Joe Romano, Sam Romano, Nathan King",

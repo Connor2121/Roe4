@@ -7,8 +7,11 @@ module.exports = (sequelize, DataTypes) => {
       primaryKey: true,
       autoIncrement: true
     },
+    UID: DataTypes.STRING,
     Vendor: DataTypes.STRING,
+    Bio: DataTypes.TEXT,
     Contact: DataTypes.STRING,
+    Image: DataTypes.TEXT,
     Address: DataTypes.STRING,
     City: DataTypes.STRING,
     State: DataTypes.STRING,

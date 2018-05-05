@@ -9312,6 +9312,21 @@ module.exports = {
         "Phone": "336-873-8773",
         "Email": "",
         "Certified": "4/11/2017"
+      },
+      {
+        "id": 621,
+        "UID": "CctE3Cv5GGUFrmnQynw75rLF5363",
+        "Vendor": "",
+        "Bio": "",
+        "Image": "",
+        "Contact": "",
+        "Address": "",
+        "City": "",
+        "State": "",
+        "Zip": null,
+        "Phone": "",
+        "Email": "",
+        "Certified": ""
       }
     ])
   },

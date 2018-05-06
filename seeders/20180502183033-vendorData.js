@@ -9342,6 +9342,21 @@ module.exports = {
         "Phone": "571-867-5309",
         "Email": "lindt151@gmail.com",
         "Certified": ""
+      },
+      {
+        "id": 623,
+        "UID": "AmsezWBwVFRjtTlv2lWAWcWIS443",
+        "Vendor": "Johnson Poultry",
+        "Bio": "Johnson Poultry is an Eco-Friendly poultry farm. All our livestock are treated well from start to finish. Free-range organic birds with on-site slaughter allows the quality of our produt to show in any use.",
+        "Image": "",
+        "Contact": "Asia Johnson",
+        "Address": "5050 Mountain Dr.",
+        "City": "Charlotte",
+        "State": "NC",
+        "Zip": 28269,
+        "Phone": "540-867-5309",
+        "Email": "asiajohnson761@gmail.com",
+        "Certified": ""
       }
     ])
   },

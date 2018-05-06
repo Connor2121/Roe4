@@ -80,9 +80,6 @@
             console.log('vendorName: ', vendorName);
 
             $.get(base + '/buyer/search/' + vendorName, result => {
-
-           
-
                 console.log('result: ', result);
                 $('.newData').html(result);
             });
@@ -95,9 +92,6 @@
             console.log('base: ', base);
             console.log('productName: ', productName);
             $.get(base + '/api/crops/' + productName, result => {
-
-               
-
                 console.log('result: ', result[0].vendorData);
                 for (var i = 0; i < result[0].vendorData.length; i++) {
                     $('.newData').append(
@@ -164,19 +158,19 @@
             console.log('city: ', city);
             $.get(base + '/api/city/' + city, result => {
                 console.log('city result: ', result);
-                for (var i = 0; i < result[0].vendorData.length; i++) {
+                for (var i = 0; i < result.length; i++) {
                     $('.newData').append(
                         `<ul class="collection">
                             <li class="collection-item">
-                                <span class="title">${result[0].vendorData[i].Vendor}</span>
+                                <span class="title">${result[i].Vendor}</span>
                                 <p>
-                                    ${result[0].vendorData[i].Address}<br>
-                                    ${result[0].vendorData[i].Phone}<br>
-                                    ${result[0].vendorData[i].Email}<br>
+                                    ${result[i].Address}<br>
+                                    ${result[i].Phone}<br>
+                                    ${result[i].Email}<br>
                                 </p>
-                                <button class='product-details' data-id=${result[0].vendorData[i].id}>Details</button>
+                                <button class='product-details' data-id=${result[i].id}>Details</button>
                                 <p class='details-results'></p>
-                                <a href="#!" class="secondary-content" ><i class="material-icons" data-id=${result[0].vendorData[i].id}>grade</i></a>
+                                <a href="#!" class="secondary-content" ><i class="material-icons" data-id=${result[i].id}>grade</i></a>
                             </li>
                         </ul>`
                     );

@@ -3,8 +3,6 @@ import express from 'express';
 // ----------Firebase Server-side----------------------
 // this may be moved at a later date
 // import firebase from 'firebase';
-// require('firebase/auth');
-// require('firebase/database');
 // const config = {
 //     apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
 //     authDomain: "nc-vfm.firebaseapp.com",

@@ -167,6 +167,16 @@ router.get('/api/vendors/id/:id', (req, res) => {
     .then(result => res.json(result));
 });
 
+// this route is for displaying vendor info on farmerEdit page
+router.get('/api/vendors/uid/:uid', (req, res) => {
+    db.vendorData.findOne({
+        where: {
+            UID: req.params.uid
+        }
+    })
+    .then(result => res.json(result));
+});
+
 router.get('/api/city/:city', (req, res) => {
     db.vendorData.findAll({
         where: {

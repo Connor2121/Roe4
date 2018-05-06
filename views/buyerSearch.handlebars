@@ -271,17 +271,26 @@
                     $('.productData').append(
                         `<li class="product-details" data-id=${result[i].id}>
                             <div class="collapsible-header">
-                                <div class="col l6">
+                                <div class="col l5">
                                     ${result[i].Vendor}
                                     <br>
                                     ${result[i].Address}
                                     <br>
                                     ${result[i].City}
                                 </div>
-                                <div class="col l6">
+                                <div class="col l5">
                                     ${result[i].Phone}
                                     <br> 
                                     ${result[i].Email}
+                                </div>
+                                <!-- Switch -->
+                                <div class="switch" data-id=${result[i].id}>
+                                    <label>
+                                    
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    Favorite
+                                    </label>
                                 </div>
                             </div>
                             <div class="collapsible-body">

@@ -2,7 +2,7 @@ nav, .page-footer {
   background-color: green;
 }
 
-.page-footer {
+.search-div {
   background: url("/images/footer.jpg") no-repeat center center fixed;
   -webkit-background-size: cover;
   -moz-background-size: cover;
@@ -62,6 +62,27 @@ body {
 
 .card-image {
   padding: 10px 5px 0px;
+}
+
+.tabs > .tab > a.active {
+  color: white;
+  background-color: orange;
+}
+
+.tabs > .tab > a {
+  color: white;
+}
+
+.tabs > .tab > a:hover {
+  color: white;
+}
+
+.tabs {
+  background-color: orange;
+}
+
+.tabs > .indicator {
+  background-color: green !important;
 }
 
 /*# sourceMappingURL=public/css/sassStyles.css.map */

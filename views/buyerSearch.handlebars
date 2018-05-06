@@ -132,19 +132,18 @@
         $.get(location.origin + "/api/vendors", function (data) {
             $(".header-here").append(
                 `<h4 class='header-font'>Featured Vendors</h4>`);
-            console.log(data);
             for(var i = 620; i<data.length; i++) {
                 var vendor = data[i].Vendor;
                 var city = data[i].City;
                 var phone = data[i].Phone;
                 var address = data[i].Address;
-                var crops = data[i].Crops;
-                var image = '/images/whitelogo';
+                var bio = data[i].Bio;
+                var image = data[i].Image;
                 $(".search-results").append(
                     `<div class='card'>
                         <div class='flex'>
                             <div class='card-image waves-effect waves-block waves-light'>
-                                <img class='activator' src="${image+ [i] + '.png'}">
+                                <img class='activator' src="${image}">
                             </div>
                             <div class="card-content">
                                 <span class="header-font card-title activator grey-text text-darken-4">
@@ -160,11 +159,11 @@
                                 <i class="material-icons right">close</i>
                             </span>
                             <br>
-                            <p>${address}</p>
-                            <p>${city}</p>
-                            <p>${phone}</p>
+                            ${address}<br>
+                            ${city}<br>
+                            ${phone}<br>
                             <br>
-                            <p>${crops}</p>
+                            ${bio}
                         </div>
                     </div>`
                 );

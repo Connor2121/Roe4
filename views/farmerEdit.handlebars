@@ -116,6 +116,18 @@
             let city = $('#vendor-city').val().trim();
             let state = $('#vendor-state').val().trim();
             let zip = $('#vendor-zip').val().trim();
+            validateForm = () => {
+                let isValid = true;
+                if (bio === '' || vendorName === '' || phoneNum === '' || email === '' || 
+                address === '' || city === '' || state === '' || zip === '') {
+                    alert('Please input all Vendor Information.');
+                    isValid = false;
+                }
+                return isValid;
+            }
+            if(!validateForm()) {
+                return;
+            };
 
             $.post('/api/vendorEdit', {
                 uid,
@@ -129,7 +141,6 @@
                 zip
             });            
             // use reg expression to validate email format
-            // TO DO: add form validation
 
             // post vendor profile data to firebase
             // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
@@ -140,11 +151,21 @@
 
             let uid = firebase.auth().currentUser.uid;
             let crop = $('#vendor-crop').val().trim();
+            validateForm = () => {
+                let isValid = true;
+                if (crop === '') {
+                    alert('Please input a crop to add.');
+                    isValid = false;
+                }
+                return isValid;
+            }
+            if(!validateForm()) {
+                return;
+            };
             $.post('/api/vendorEdit/Crop', {
                 uid,
                 crop
             });
-            // TO DO: add form validation
 
             // post vendor profile data to firebase
             // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
@@ -155,11 +176,21 @@
 
             let uid = firebase.auth().currentUser.uid;
             let livestock = $('#vendor-livestock').val().trim();
+            validateForm = () => {
+                let isValid = true;
+                if (livestock === '') {
+                    alert('Please input a livestock to add.');
+                    isValid = false;
+                }
+                return isValid;
+            }
+            if(!validateForm()) {
+                return;
+            };
             $.post('/api/vendorEdit/Livestock', {
                 uid,
                 livestock
-            })
-            // TO DO: add form validation
+            });
 
             // post vendor profile data to firebase
             // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
@@ -179,6 +210,7 @@
                 displayPic();
             });
         });
+
         // use url of image uploaded by user to display profile picture
         displayPic = () => {
             firebase.storage().ref('vendor_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(url => {
@@ -211,5 +243,5 @@
                 window.location.replace('/vendor');
             });
         };
-    })
+    });
 </script>

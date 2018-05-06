@@ -38,4 +38,8 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+router.get('/henderson', (req, res) => {
+    res.render('hendersonProf');
+});
+
 export default router;

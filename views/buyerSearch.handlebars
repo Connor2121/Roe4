@@ -257,9 +257,34 @@
             let vendorName = $('#vendor').val().trim();
             console.log('base: ', base);
             console.log('vendorName: ', vendorName);
-            $.get(base + '/buyer/search/' + vendorName, result => {
-                console.log('result: ', result);
-                $('.newData').html(result);
+            $.get(base + '/api/vendors/' + vendorName, result => {
+                for (var i = 0; i < result.length; i++) {
+                    $('.productData').append(
+                        `<li class="product-details" data-id=${result[i].id}>
+                            <div class="collapsible-header">
+                                <div class="col l6">
+                                    ${result[i].Vendor}
+                                    <br>
+                                    ${result[i].Address}
+                                    <br>
+                                    ${result[i].City}
+                                </div>
+                                <div class="col l6">
+                                    ${result[i].Phone}
+                                    <br> 
+                                    ${result[i].Email}
+                                </div>
+                            </div>
+                            <div class="collapsible-body">
+                                <div class="results-grid details-results">
+                                   
+                                </div>
+                            </div>
+                        </li>`
+                    );
+                }
+                $('.collapsible').collapsible();
+                $('.productArea').show();
             });
         });
 

@@ -1,3 +1,8 @@
+.hide {
+  display: none;
+  visibility: hidden;
+}
+
 /*!
  * react-loading-button v1.0.0
  * MIT Licensed

@@ -28,7 +28,7 @@
             Crops
             <div class="product-card">
                 <div class="card-body">
-                    <textarea id="vendor-crop" class="materialize-textarea">Sweet Potatoes</textarea>
+                    <textarea placeholder="Sweet Potatoes" id="vendor-crop" class="materialize-textarea"></textarea>
                 </div>
             </div>
             <button id="crops-edit-btn" class="button button-rounded-hover">Submit Crops Edits</button>
@@ -38,7 +38,7 @@
             Livestock
             <div class="product-card">
                 <div class="card-body">
-                    <textarea id="vendor-livestock" class="materialize-textarea">Dairy Cows</textarea>
+                    <textarea placeholder="Dairy Cows" id="vendor-livestock" class="materialize-textarea"></textarea>
                 </div>
             </div>
             <button id="livestock-edit-btn" class="button button-rounded-hover">Submit Livestock Edits</button>
@@ -138,10 +138,7 @@
                 state,
                 zip
             });            
-            // use reg expression to validate email format
-
-            // post vendor profile data to firebase
-            // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
+            // TODO: use reg expression to validate email format
         });
 
         $('#crops-edit-btn').on('click', e => {
@@ -164,9 +161,6 @@
                 uid,
                 crop
             });
-
-            // post vendor profile data to firebase
-            // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
         });
 
         $('#livestock-edit-btn').on('click', e => {
@@ -189,9 +183,6 @@
                 uid,
                 livestock
             });
-
-            // post vendor profile data to firebase
-            // writeVendorData(firebase.auth().currentUser.uid, bio, vendorName, products, phoneNum, email, address);
         });
 
 
@@ -225,16 +216,20 @@
 
         displayVendor = () => {
             let userId = firebase.auth().currentUser.uid;
-            firebase.database().ref('users/' + userId).once('value', snap => {
-                $('#vendor-bio').text(snap.val().bio);
-                $('#vendor-name').text(snap.val().vendorName);
-                $('#vendor-product').text(snap.val().products);
-                $('#vendor-phone').text(snap.val().phoneNum);
-                $('#vendor-email').text(snap.val().email);
-                $('#vendor-address').text(snap.val().address);
+            let base = location.origin;
+            $.get(base + '/api/vendors/uid/' + userId, result => {
+                $('#vendor-bio').text(result.Bio);
+                $('#vendor-name').text(result.Vendor);
+                $('#vendor-phone').text(result.Phone);
+                $('#vendor-email').text(result.Email);
+                $('#vendor-address').text(result.Address);
+                $('#vendor-city').text(result.City);
+                $('#vendor-state').text(result.State);
+                $('#vendor-zip').text(result.Zip);
             });
         };
 
+        // this function is for storing vendor profile data to firebase
         writeVendorData = (userId, bio, vendorName, products, phoneNum, email, address) => {
             firebase.database().ref('users/' + userId).update({ bio, vendorName, products, phoneNum, email, address }, 
             err => {

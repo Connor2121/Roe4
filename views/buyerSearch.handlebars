@@ -129,21 +129,22 @@
         $('select').formSelect();
 
         // dynamically generate cards with featured vendors (vendors that are users)
-        $.getJSON("/js/searchPrePopulate.json", function (data) {
+        $.get(location.origin + "/api/vendors", function (data) {
             $(".header-here").append(
                 `<h4 class='header-font'>Featured Vendors</h4>`);
-            $.each(data, function (index, value) {
-                var vendor = value.Vendor;
-                var city = value.City;
-                var phone = value.Phone;
-                var address = value.Address;
-                var crops = value.Crops;
+            console.log(data);
+            for(var i = 620; i<data.length; i++) {
+                var vendor = data[i].Vendor;
+                var city = data[i].City;
+                var phone = data[i].Phone;
+                var address = data[i].Address;
+                var crops = data[i].Crops;
                 var image = '/images/whitelogo';
                 $(".search-results").append(
                     `<div class='card'>
                         <div class='flex'>
                             <div class='card-image waves-effect waves-block waves-light'>
-                                <img class='activator' src="${image + index + '.png'}">
+                                <img class='activator' src="${image+ [i] + '.png'}">
                             </div>
                             <div class="card-content">
                                 <span class="header-font card-title activator grey-text text-darken-4">
@@ -167,8 +168,7 @@
                         </div>
                     </div>`
                 );
-
-            });
+            };
         });
 
         //====================================================
@@ -188,17 +188,26 @@
                     $('.productData').append(
                         `<li class="product-details" data-id=${result[0].vendorData[i].id}>
                             <div class="collapsible-header">
-                                <div class="col l6">
+                                <div class="col l5">
                                     ${result[0].vendorData[i].Vendor}
                                     <br>
                                     ${result[0].vendorData[i].Address}
                                     <br>
                                     ${result[0].vendorData[i].City}
                                 </div>
-                                <div class="col l6">
+                                <div class="col l5">
                                     ${result[0].vendorData[i].Phone}
                                     <br> 
                                     ${result[0].vendorData[i].Email}
+                                </div>
+                                <!-- Switch -->
+                                <div class="switch" data-id=${result[0].vendorData[i].id}>
+                                    <label>
+                                    
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    Favorite
+                                    </label>
                                 </div>
                             </div>
                             <div class="collapsible-body">
@@ -276,17 +285,26 @@
                     $('.productData').append(
                         `<li class="product-details" data-id=${result[i].id}>
                             <div class="collapsible-header">
-                                <div class="col l6">
+                                <div class="col l5">
                                     ${result[i].Vendor}
                                     <br>
                                     ${result[i].Address}
                                     <br>
                                     ${result[i].City}
                                 </div>
-                                <div class="col l6">
+                                <div class="col l5">
                                     ${result[i].Phone}
                                     <br> 
                                     ${result[i].Email}
+                                </div>
+                                <!-- Switch -->
+                                <div class="switch" data-id=${result[i].id}>
+                                    <label>
+                                    
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    Favorite
+                                    </label>
                                 </div>
                             </div>
                             <div class="collapsible-body">
@@ -315,17 +333,26 @@
                     $('.livestockData').append(
                         `<li class="livestock-details" data-id=${result[0].vendorData[i].id}>
                             <div class="collapsible-header">
-                                <div class="col l6">
+                                <div class="col l5">
                                     ${result[0].vendorData[i].Vendor}
                                     <br>
                                     ${result[0].vendorData[i].Address}
                                     <br>
                                     ${result[0].vendorData[i].City}
                                 </div>
-                                <div class="col l6">
+                                <div class="col l5">
                                     ${result[0].vendorData[i].Phone}
                                     <br> 
                                     ${result[0].vendorData[i].Email}
+                                </div>
+                                <!-- Switch -->
+                                <div class="switch" data-id=${result[0].vendorData[i].id}>
+                                    <label>
+                                    
+                                    <input type="checkbox">
+                                    <span class="lever"></span>
+                                    Favorite
+                                    </label>
                                 </div>
                             </div>
                             <div class="collapsible-body">

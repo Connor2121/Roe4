@@ -49,19 +49,19 @@
 
                     </li>
                     <li>
-                        <a class="buyer" href="/buyer">Buyer Profile</a>
+                        <a class="buyer hide" href="/buyer">Buyer Profile</a>
                     </li>
                     <li>
-                        <a class="vendor" href="/vendor">Vendor Profile</a>
+                        <a class="vendor hide" href="/vendor">Vendor Profile</a>
                     </li>
                     <li>
                         <a href="/buyer/search">Search</a>
                     </li>
                     <li>
-                        <a class="manage" href="/vendor/manageproducts">Manage Products</a>
+                        <a class="manage hide" href="/vendor/manageproducts">Manage Products</a>
                     </li>
                     <li>
-                        <a class='modal-trigger login' href="#modal1">Login / Sign up</a>
+                        <a class='modal-trigger login show' href="#modal1">Login / Sign up</a>
                     </li>
                     <li>
                         <a href="/buyer" class='image-div'>
@@ -69,7 +69,7 @@
                         </a>
                     </li>
                     <li>
-                        <a href="#" class="logoutBtn">Logout</a>
+                        <a href="#" class="logoutBtn hide">Logout</a>
                     </li>
                 </ul>
             </div>
@@ -150,15 +150,10 @@
     {{{ body }}}
 
 
-
-
     <script>
-        ReactDOM.render(React.createElement(Icon), document.getElementById('react')); 
-    </script>
 
+    ReactDOM.render(React.createElement(Icon), document.getElementById('react'));
 
-    
-    <script>
     // Initialize Firebase
     const config = {
         apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
@@ -171,12 +166,23 @@
     firebase.initializeApp(config);
 
     $(document).ready( () => {
+        // Initializing modal
+        $('#modal1').modal();
+        $('.parallax').parallax();
+
         // log-out button
         $('.logoutBtn').on('click', e => {
             firebase.auth().signOut();
             console.log('logout');
+            $('.login').removeClass('hide');
+            $('.buyer').addClass('hide');
+            $('.logoutBtn').addClass('hide');
+            $('.vendor').addClass('hide');
+            $('.manage').addClass('hide');
+            let img = document.getElementById('img-circle');
+            img.src = "/images/man1.png";
+            window.location.replace('/');
         });
-
 
         // Add log-in event
         $('.loginBtn').on('click', e => {
@@ -201,31 +207,30 @@
             // sign-in
             const promise = firebase.auth().signInWithEmailAndPassword(email, pass);
             // promise.catch(e => console.log(e.message));
-            promise.catch(function(event) {
-                console.log(event.message);
+            promise.catch(e => {
+                console.log(e.message);
+                alert(e.message);
             });            
         });
 
-        // add realtime listener to check if a user is logged in
-        // find conditional to see if logged in or not
+        // realtime listener to check if a user is logged in
         firebase.auth().onAuthStateChanged(firebaseUser => {
             if(firebaseUser) {
+                // check if user is a Vendor
                 let userId = firebase.auth().currentUser.uid;
                 firebase.database().ref('users/' + userId).once('value', snap => {
                     let vendor = snap.val().vendor;
                     if(vendor === "true") {
-                        $('.vendor').show();
-                        $('.manage').show();                        
-                    } else if (vendor === "false"){
-                        $('.vendor').hide();
-                        $('.manage').hide();
+                        $('.vendor').removeClass('hide');
+                        $('.manage').removeClass('hide');                        
                     };
                 });
 
                 console.log(firebase.auth().currentUser.email, ' is currently logged in.');
-                $('.buyer').show();
-                $('.logoutBtn').show();
-                $('.login').hide();
+                $('.buyer').removeClass('hide');
+                $('.logoutBtn').removeClass('hide');
+                $('.login').addClass('hide');
+                
                 firebase.storage().ref('profile_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(function(url) {
                     console.log(url);            
                     // insert url into image src
@@ -238,13 +243,6 @@
                 });
             } else {
                 console.log('Not logged in.');
-                $('.manage').hide();
-                $('.vendor').hide();
-                $('.buyer').hide();
-                $('.logoutBtn').hide();
-                $('.login').show();
-                let img = document.getElementById('img-circle');
-                img.src = "/images/man1.png";
             };
             $('#modal1').modal('close');
         });
@@ -252,16 +250,5 @@
     </script>
 
 </body>
-
-
-<script>
-    // Initializing modal
-    $(document).ready(function () {
-        $('#modal1').modal();
-        $('.parallax').parallax();
-    });
-</script>
-
-
             
 </html>

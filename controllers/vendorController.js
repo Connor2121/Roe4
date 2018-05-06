@@ -63,31 +63,15 @@ router.post('/api/signup', (req, res) => {
 
 // --------FarmerEdit adds livestock to Vendor in DB
 router.post('/api/vendorEdit/Livestock', (req, res) => {
-    let placeholder = {
-        UID: req.body.uid,
-        Livestock: req.body.livestock
-    };
-    console.log(placeholder);
-    // we want to Create a row in vendorlivestocks with vendorDatumId and LivestockID
-});
-
-// --------FarmerEdit adds crops to Vendor in DB
-router.post('/api/vendorEdit/Crop', (req, res) => {
-    let cropID = null;
+    let livestockID = null;
     let vendorID = null;
-    let placeholder = {
-        UID: req.body.uid,
-        Name: req.body.crop
-    }
-    db.cropData.findOne({
+    db.Livestock.findOne({
         where: {
-            Name: req.body.crop
+            Name: req.body.livestock
         }
     })
     .then(result => {
-        // console.log(result.dataValues.id)
-        cropID = result.dataValues.id;
-        console.log(cropID);
+        livestockID = result.dataValues.id;
     })
     .then(db.vendorData.findOne({
         where: {
@@ -96,35 +80,41 @@ router.post('/api/vendorEdit/Crop', (req, res) => {
     })
     .then(result => {
         vendorID = result.dataValues.id;
-        console.log(vendorID);
+    })
+    .then(result => db.VendorLivestock.create({
+        vendorDatumId: vendorID,
+        LivestockID: livestockID
+    })));
+});
+
+// --------FarmerEdit adds crops to Vendor in DB
+router.post('/api/vendorEdit/Crop', (req, res) => {
+    let cropID = null;
+    let vendorID = null;
+    db.cropData.findOne({
+        where: {
+            Name: req.body.crop
+        }
+    })
+    .then(result => {
+        cropID = result.dataValues.id;
+    })
+    .then(db.vendorData.findOne({
+        where: {
+            UID: req.body.uid
+        }
+    })
+    .then(result => {
+        vendorID = result.dataValues.id;
     })
     .then(result => db.vendorCrops.create({
         vendorDatumId: vendorID,
         cropDatumId: cropID
-    })
-    .then(results => console.log(cropID, vendorID))
-    )
-    )
-
-    // console.log(UID);
-    console.log(placeholder);
-    
-    // we want to Create a row in vendorcrops with vendorDatumId and cropDatumId
+    })));
 });
 
 // --------FarmerEdit page updates DB with vendor information
 router.post('/api/vendorEdit', (req, res) => {
-    let placeholder = {
-        UID: req.body.uid,
-        Bio: req.body.bio,
-        Vendor: req.body.vendorName,
-        Phone: req.body.phoneNum,
-        Email: req.body.email,
-        Address: req.body.address,
-        City: req.body.city,
-        State: req.body.state,
-        Zip: req.body.zip
-    }
     db.vendorData.update({
         Vendor: req.body.vendorName,
         Bio: req.body.bio,
@@ -134,12 +124,11 @@ router.post('/api/vendorEdit', (req, res) => {
         City: req.body.city,
         State: req.body.state,
         Zip: req.body.zip
-    }, {
-    where: {
-        UID: req.body.uid
-    }
-    })
-    console.log(placeholder);
+    }, 
+    {
+        where: {
+            UID: req.body.uid
+    }});
 });
 
 router.get('/api/vendors', (req, res) => {
@@ -154,19 +143,6 @@ router.get('/api/vendors', (req, res) => {
     .then(result => res.json(result));
 });
 
-router.get('/api/crops/:Name', (req, res) => {
-    db.cropData.findAll({
-        include: [{
-            model: db.vendorData
-        }],
-        where: {
-            Name: req.params.Name
-        }
-    })
-    .then(result => res.json(result));
-});
-
-
 router.get('/api/vendors/:vendorName', (req, res) => {
     db.vendorData.findAll({
         where: {
@@ -174,7 +150,6 @@ router.get('/api/vendors/:vendorName', (req, res) => {
         }
     })
     .then(result => res.json(result));
-    //.then(result => res.render('buyerSearch', {venName: result}));
 });
 
 router.get('/api/vendors/id/:id', (req, res) => {
@@ -188,6 +163,16 @@ router.get('/api/vendors/id/:id', (req, res) => {
         {
             model: db.Livestock
         }]
+    })
+    .then(result => res.json(result));
+});
+
+// this route is for displaying vendor info on farmerEdit page
+router.get('/api/vendors/uid/:uid', (req, res) => {
+    db.vendorData.findOne({
+        where: {
+            UID: req.params.uid
+        }
     })
     .then(result => res.json(result));
 });
@@ -212,6 +197,9 @@ router.get('/api/crops', (req, res) => {
 
 router.get('/api/crops/:Name', (req, res) => {
     db.cropData.findAll({
+        include: [{
+            model: db.vendorData
+        }],
         where: {
             Name: req.params.Name
         }
@@ -239,17 +227,6 @@ router.get('/api/livestock/:Name', (req, res) => {
     })
     .then(result => res.json(result));
 });
-
-// router.post('/api/vendors', (req, res) => {
-//     // call model to create data => callback to display json result
-//     res.json({ "json": "object" });
-// });
-
-// router.put('/api/vendors/:id', (req, res) => {
-//     call model to update data => callback to send res.status
-// });
-
-// delete route
 
 export default router;
 

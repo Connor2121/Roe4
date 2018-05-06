@@ -42,4 +42,12 @@ router.get('/henderson', (req, res) => {
     res.render('hendersonProf');
 });
 
+router.get('/infused', (req, res) => {
+    res.render('infusedProf');
+});
+
+router.get('/johnson', (req, res) => {
+    res.render('johnsonProf');
+});
+
 export default router;

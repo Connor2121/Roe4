@@ -13,6 +13,7 @@
     padding: 1.25rem;
     background: #fefefe;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    background-color: seashell;
   }
   .vendor-profile-basic .vendor-profile-basic-intro .vendor-profile-basic-intro-pic {
     border-radius: 10%;
@@ -32,6 +33,7 @@
     padding: 1.25rem;
     background: #fefefe;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    background-color: seashell;
   }
   /*------------ Footer ------------------------------*/
   .vendor-footer {
@@ -40,5 +42,9 @@
     padding: 2rem;
     background: #fefefe;
     box-shadow: 0 3px 6px #999, 0 3px 6px #999;
+    background-color: seashell;
+  }
+  .card-body{
+      margin-top: 10px;
   }
   

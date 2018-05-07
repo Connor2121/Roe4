@@ -75,14 +75,6 @@
             </ul>
        </div>
    </div>
-
-   <div class="row livestockArea">
-       <div class="col l12">
-            <ul class="collapsible livestockData">
-                    
-            </ul>
-       </div>
-   </div>
     
     <div class="row header-here"></div>
     <div class="row">
@@ -97,22 +89,7 @@
 
 </div>
 
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2018 Roe4
-            <a class="grey-text text-lighten-4 right" href="https://www.freepik.com/free-vector/eco-logos-template_1093618.htm">Freepik Logos</a>
-        </div>
-    </div>
-</footer>
+
 
 <script>
     // initializing form selector
@@ -180,10 +157,7 @@
             $('.productData').empty();
             let base = location.origin;
             let productName = $('#search_item').val().trim();
-            console.log('base: ', base);
-            console.log('productName: ', productName);
             $.get(base + '/api/crops/' + productName, result => {
-                console.log('result: ', result[0].vendorData);
                 for (var i = 0; i < result[0].vendorData.length; i++) {
                     $('.productData').append(
                         `<li class="product-details" data-id=${result[0].vendorData[i].id}>
@@ -230,11 +204,9 @@
             var id = $(this).attr('data-id');
             var base = location.origin;
             card.empty();
-            console.log('clicked');
             $.get(base + '/api/vendors/id/' + id, result => {
                 return result;
             }).then(function (result) {
-                console.log(result);
                 for (var i = 0; i < result.cropData.length; i++) {
                     var p = $("<p>");
                     card.append(p.text(result.cropData[i].Name));
@@ -247,11 +219,9 @@
             var id = $(this).attr('data-id');
             var base = location.origin;
             card.empty();
-            console.log('clicked');
             $.get(base + '/api/vendors/id/' + id, result => {
                 return result;
             }).then(function (result) {
-                console.log(result);
                 for (var i = 0; i < result.Livestock.length; i++) {
                     var p = $("<p>");
                     card.find('.details-results').append(p.text(result.Livestock[i].Name));
@@ -261,11 +231,11 @@
 
         $('#vendorButton').on('click', e => {
             e.preventDefault();
+
+            $('.productData').empty();
             console.log('clicked it');
             let base = location.origin;
             let vendorName = $('#vendor').val().trim();
-            console.log('base: ', base);
-            console.log('vendorName: ', vendorName);
             $.get(base + '/api/vendors/' + vendorName, result => {
                 for (var i = 0; i < result.length; i++) {
                     $('.productData').append(
@@ -312,9 +282,7 @@
             $('.productData').empty();
             let base = location.origin;
             let city = $('#city-name option:checked').val().trim();
-            console.log('city: ', city);
             $.get(base + '/api/city/' + city, result => {
-                console.log('city result: ', result);
                 for (var i = 0; i < result.length; i++) {
                     $('.productData').append(
                         `<li class="product-details" data-id=${result[i].id}>
@@ -357,14 +325,12 @@
 
         //livestock search
         $('#livestockButton').on('click', e => {
-            $('.livestockData').empty();
+            $('.productData').empty();
             let base = location.origin;
             let livestock = $('#livestock').val().trim();
-            console.log('livestock: ', livestock);
             $.get(base + '/api/livestock/' + livestock, result => {
-                console.log('livestock result: ', result);
                for (var i = 0; i < result[0].vendorData.length; i++) {
-                    $('.livestockData').append(
+                    $('.productData').append(
                         `<li class="livestock-details" data-id=${result[0].vendorData[i].id}>
                             <div class="collapsible-header">
                                 <div class="col l5">
@@ -403,7 +369,7 @@
         });
 
         //showing full list of livestock in collapsible
-        $('.livestockData').on('click', '.livestock-details', function () {
+        $('.productData').on('click', '.livestock-details', function () {
             var card = $(this).find('.details-results');
             var id = $(this).attr('data-id');
             var base = location.origin;
@@ -431,9 +397,10 @@
             } else if (!$('.favorite').prop('checked')) {
                 console.log('it is not checked');
                 // remove vendor from favorites in firebase
-                let favRef = firebase.database().ref('users/' + firebase.auth().currentUser.uid);
-                let query = favRef.orderByChild('favorites').equalTo(vendor);
+                let favRef = firebase.database().ref('users/' + firebase.auth().currentUser.uid).child('favorites');
+                let query = favRef.orderByValue().equalTo(vendor);
                 query.once('value').then(function(snapshot) {
+                    console.log(snapshot.val());
                     snapshot.forEach(function(childSnap) {
                         favRef.child(childSnap.key).remove();
                     });

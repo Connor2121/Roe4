@@ -1,3 +1,4 @@
 node_modules
 package-lock.json
 sendgrid.env
+config/firebase-admin-key.json

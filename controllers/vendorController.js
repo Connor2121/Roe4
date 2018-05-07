@@ -1,21 +1,13 @@
 import express from 'express';
+import admin from 'firebase-admin';
+import serviceAccount from '../config/firebase-admin-key.json';
 
-// ----------Firebase Server-side----------------------
-// this may be moved at a later date
-// import firebase from 'firebase';
-// const config = {
-//     apiKey: "AIzaSyCpN-SRkG3HrYkJgClTHwJKu6k4_KYx4So",
-//     authDomain: "nc-vfm.firebaseapp.com",
-//     databaseURL: "https://nc-vfm.firebaseio.com",
-//     projectId: "nc-vfm",
-//     storageBucket: "nc-vfm.appspot.com",
-//     messagingSenderId: "987355521805"
-// };
-// firebase.initializeApp(config);
-// ----------Firebase Server-side----------------------
+admin.initializeApp({
+  credential: admin.credential.cert(serviceAccount),
+  databaseURL: 'https://nc-vfm.firebaseio.com/'
+});
 
 const router = express.Router();
-
 import db from '../models';
 
 // Send grid
@@ -240,7 +232,3 @@ router.get('/api/livestock/:Name', (req, res) => {
 });
 
 export default router;
-
-
-
-

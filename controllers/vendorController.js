@@ -25,12 +25,13 @@ router.post('/api/mail', (req, res) => {
     sgMail.setApiKey(process.env.SENDGRID_API_KEY);
 
     const msg = {
-        to: 'mnolen5670@gmail.com',
+        to: req.body.toEmail,
         from: req.body.fromEmail,
         subject: req.body.subject,
         text: req.body.message,
         html: '<strong>and easy to do anywhere, even with Node.js</strong>',
     };
+    console.log(msg);
     sgMail.send(msg).then(() => {
         console.log(msg);
         res.send("Email sent!");

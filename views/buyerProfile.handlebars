@@ -19,28 +19,10 @@
     <div class="row">
         {{!-- Need to add JS to dynamically load this info from firebase --}}
         <table>
-            <thead>
-                <tr>
-                    <th>Product</th>
-                    <th>Vendor</th>
-                </tr>
-            </thead>
+            <h3>Favorites:</h3>
+            <ul class="favorites">
 
-            <tbody id="searched">
-                <tr>
-                    <td>Carrots</td>
-                    <td>Farmer John</td>
-
-                </tr>
-                <tr>
-                    <td>Beets</td>
-                    <td>Dwight Schrute</td>
-                </tr>
-                <tr>
-                    <td>Corn</td>
-                    <td>Farmer Joe</td>
-                </tr>
-            </tbody>
+            </ul>
         </table>
     </div>
 
@@ -70,7 +52,7 @@
         
         firebase.auth().onAuthStateChanged(user => {
             if (user) {
-                // displaySearches();
+                displayFavorites();
                 displayUser();
                 displayPic();
             }
@@ -116,17 +98,10 @@
             })
         }
         // displays last 5 search criteria from form
-        function displaySearches() {
+        function displayFavorites() {
             let userId = firebase.auth().currentUser.uid;
-            firebase.database().ref('users/' + userId).child('searches').limitToLast(5).on('child_added', function (snap) {
-                let count = $('#searched tr').length;
-                if (count > 4) {
-                    $('#searched tr:last').remove();
-                }
-                $('#searched').prepend('<tr class="trow"><td> ' +
-                    snap.val().degree_type + ' </td><td> ' +
-                    snap.val().program + ' </td><td> ' +
-                    snap.val().max_tuition + ' </td></tr>');
+            firebase.database().ref('users/' + userId).child('favorites').on('child_added', function (snap) {
+                $('.favorites').prepend('<li>' + snap.val() + '</li>');
             }, function (errorObject) {
                 console.log('The read failed: ' + errorObject.code);
             });

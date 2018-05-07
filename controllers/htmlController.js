@@ -38,6 +38,10 @@ router.get('/signup', (req, res) => {
     res.render('signup');
 });
 
+router.get('/vendorProfile/:id', (req, res) => {
+    res.render('farmerProf');
+});
+
 router.get('/henderson', (req, res) => {
     res.render('hendersonProf');
 });

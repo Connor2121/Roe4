@@ -126,7 +126,19 @@ router.post('/api/vendorEdit', (req, res) => {
     {
         where: {
             UID: req.body.uid
-    }});
+        }
+    });
+});
+
+router.post('/api/vendorEdit/photo', (req, res) => {
+    db.vendorData.update({
+        Image: req.body.url
+    },
+    {
+        where: {
+            UID: req.body.uid
+        }
+    });
 });
 
 router.get('/api/vendors', (req, res) => {

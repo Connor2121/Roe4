@@ -3,20 +3,26 @@
     <div class="vendor-profile-basic row">
         <div class="col s5">
             <div class="vendor-profile-basic-intro">
-                <img id="vendorProfPhoto" class="vendor-profile-basic-intro-pic" src="http://www.yourdictionary.com/images/definitions/lg/4320.farmer.jpg" alt="profile-image"
-                />
                 <div class="vendor-profile-basic-name">
-                    <h3 class="venName">Vendor Name</h3>
+                    <h3 id="vendor-name">Henderson Farms</h3>
                 </div>
+                <img id="vendorPhoto" class="vendor-profile-basic-intro-pic" src="https://images.readwrite.com/wp-content/uploads/2018/03/iStock-506164764-e1481059583622.jpg" alt="profile-image"
+                /> 
             </div>
         </div>
         <div class="col s7">
-            <div class="vendor-profile-basic-more">Bio
+            <div class="vendor-profile-basic-more">
                 <div class="vendor-profile-basic-about">
-                    <p class="venBio">
-                        Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptatem libero fugit, pariatur maxime! Optio enim, deserunt
-                        quia molestiae fugiat delectus, dolore et esse nostrum, quod autem necessitatibus fugit soluta repellendus.
-                    </p>
+                    <h4>Bio:</h4>
+                    <div class="input-field ">
+                        <h7 id="vendor-bio">
+                        Here at Henderson Farms we pride ourselves on organically grown produce.  We never use harmful chemicals on ANY of our crops.
+                        </h7>
+                    </div>
+                    <h4>Ask for:</h4>
+                    <h7 id="vendor-bio">
+                    David Henderson
+                    </h7>
                 </div>
             </div>
         </div>
@@ -24,43 +30,63 @@
     <!-- Product Section --->
     <div class="vendor-product row">
         <div class="col s7 current-product box">
-            Products
+            <h5>Crops:</h5>
             <div class="product-card">
                 <div class="card-body">
-                    <h6 class="venProduct">Sweet Potatoes. A lot of them.</h6>
+                    <p placeholder="Sweet Potatoes" id="vendor-crop">
+                        Carrots<br>
+                        Turnips<br>
+                        Potatoes<br>
+                        Beans<br>
+                    </p>
                 </div>
             </div>
 
+        </div>
+        <div class="col s7 current-product box">
+            <h5>Livestock:</h5>
+            <div class="product-card">
+                <div class="card-body">
+                    <p placeholder="Dairy Cows" id="vendor-livestock">
+                        Beef<br>
+                        Broilers (Chicken)<br>
+                        Eggs<br>
+                        Milk<br>
+                    </p>
+                </div>
+            </div>
         </div>
         <div class="col s1"></div>
         <div class="col s4 contact-info box">
-            Contact info
+            <h5>Contact info</h5>
+            <hr>
             <div class="product-card">
                 <div class="card-body">
-                    Phone:
-                    <h6 class="venPhone"> 777-777-7777</h6>
-                    Email:
-                    <h6 class="venEmail"> connorgreed@gmail.com</h6>
-                    Address:
-                    <h6 class="address"> </h6>
-                    <!-- Modal Trigger -->
+                    <h6>Phone:</h6>
+                    <p id="vendor-phone">703-867-5309</p> 
+                    <hr>
+                    <h6>Email:</h6>
+                    <p id="vendor-email"> hendersondavid969@gmail.com</p>
                     <button data-target="modal-contact" class="btn modal-trigger">Email Me!</button>
-                    <h6 class="venAddress"> </h6>
+                    <hr>
+                    <h6 class="venAddress"></h6>
+                    <h6>Street Address:</h6>
+                    <p id="vendor-address">4582 Clifton Dr</p>
+                    <hr>
+                    <h6>City:</h6>
+                    <p id="vendor-city">Charlotte</p>
+                    <hr>
+                    <h6>State:</h6>
+                    <p id="vendor-state">North Carolina</p>
+                    <hr>
+                    <h6>Zip:</h6>
+                    <p id="vendor-zip">28269</p>
+                    <hr>
                 </div>
             </div>
-
-        </div>
-    </div>
-    <div class="vendor-footer row">
-        <div class="col-md-12">
-            <footer>
-                <button id="farmer-edit-btn" class="button button-rounded-hover">Edit Profile</button>
-            </footer>
         </div>
     </div>
 </div>
-
-
 
 <!-- Contact Modal -->
 <div id="modal-contact" class="modal">
@@ -104,46 +130,36 @@
 
 
 <script>
-    $(document).ready(function () {
-        $('.modal').modal();
-        $('input#input_text, textarea#textarea2').characterCounter();
-        $("[data-menu-underline-from-center] a").addClass("underline-from-center");
-    });
-    $("[data-menu-underline-from-center] a").addClass("underline-from-center");
+    
 
     $(document).ready(() => {
-        firebase.auth().onAuthStateChanged( user => {
-            displayVendor();
-            displayVendorPic();
-        });
+        $('.modal').modal();
+        $('input#input_text, textarea#textarea2').characterCounter();
+        $("[data-menu-underline-from-center] a").addClass("underline-from-center");    
+        $("[data-menu-underline-from-center] a").addClass("underline-from-center");
 
+        let urlId = window.location.href.slice(-3);
+        console.log('urlId: ', urlId);
+        
+        
         displayVendor = () => {
-            let userId = firebase.auth().currentUser.uid;
-            firebase.database().ref('users/' + userId).once('value', snap => {
-                $('.venBio').text(snap.val().bio);
-                $('.venName').text(snap.val().vendorName);
-                $('.venProduct').text(snap.val().products);
-                $('.venPhone').text(snap.val().phoneNum);
-                $('.venEmail').text(snap.val().email);
-                $('.venAddress').text(snap.val().address);
+            let base = location.origin;
+            $.get(base + '/api/vendors/id/' + urlId , result => {
+                $('#vendor-bio').text(result.Bio);
+                $('#vendor-name').text(result.Vendor);
+                $('#vendor-phone').text(result.Phone);
+                $('#vendor-email').text(result.Email);
+                $('#vendor-address').text(result.Address);
+                $('#vendor-city').text(result.City);
+                $('#vendor-state').text(result.State);
+                $('#vendor-zip').text(result.Zip);
             });
         };
 
-        displayVendorPic = () => {
-            firebase.storage().ref('vendor_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(url => {
-                console.log(url);
+        displayVendor();
 
-                // insert url into image src
-                let img = document.getElementById('vendorProfPhoto');
-                img.src = url;
-            }).catch(function (error) {
-                // Handle any errors
-                console.log('Error: ', error);
-            });
-        }
-
-       // Sendgrid ajax post
-       $('.submitBtn').on('click', e => {
+        // Sendgrid ajax post
+        $('.submitBtn').on('click', e => {
             e.preventDefault();
 
             let fromEmail = $('#email2').val().trim();
@@ -158,7 +174,7 @@
                 $('#modal-contact').modal('close');
             });
 
-       });
+        });
     });
 
 </script>

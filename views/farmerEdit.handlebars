@@ -84,8 +84,7 @@
         firebase.auth().onAuthStateChanged( user => {
             displayPic();
             displayVendor();
-        });
-        
+        });        
 
         $('#farmer-edit-btn').on('click', e => {
             e.preventDefault();
@@ -146,6 +145,7 @@
                 uid,
                 crop
             });
+            $('#vendor-crop').text('');
         });
 
         $('#livestock-edit-btn').on('click', e => {
@@ -168,6 +168,7 @@
                 uid,
                 livestock
             });
+            $('#vendor-livestock').text('');
         });
 
 
@@ -216,14 +217,6 @@
                 $('#vendor-city').text(result.City);
                 $('#vendor-state').text(result.State);
                 $('#vendor-zip').text(result.Zip);
-            });
-        };
-
-        // this function is for storing vendor profile data to firebase
-        writeVendorData = (userId, bio, vendorName, products, phoneNum, email, address) => {
-            firebase.database().ref('users/' + userId).update({ bio, vendorName, products, phoneNum, email, address }, 
-            err => {
-                window.location.replace('/vendor');
             });
         };
     });

@@ -157,10 +157,7 @@
             $('.productData').empty();
             let base = location.origin;
             let productName = $('#search_item').val().trim();
-            console.log('base: ', base);
-            console.log('productName: ', productName);
             $.get(base + '/api/crops/' + productName, result => {
-                console.log('result: ', result[0].vendorData);
                 for (var i = 0; i < result[0].vendorData.length; i++) {
                     $('.productData').append(
                         `<li class="product-details" data-id=${result[0].vendorData[i].id}>
@@ -207,11 +204,9 @@
             var id = $(this).attr('data-id');
             var base = location.origin;
             card.empty();
-            console.log('clicked');
             $.get(base + '/api/vendors/id/' + id, result => {
                 return result;
             }).then(function (result) {
-                console.log(result);
                 for (var i = 0; i < result.cropData.length; i++) {
                     var p = $("<p>");
                     card.append(p.text(result.cropData[i].Name));
@@ -224,11 +219,9 @@
             var id = $(this).attr('data-id');
             var base = location.origin;
             card.empty();
-            console.log('clicked');
             $.get(base + '/api/vendors/id/' + id, result => {
                 return result;
             }).then(function (result) {
-                console.log(result);
                 for (var i = 0; i < result.Livestock.length; i++) {
                     var p = $("<p>");
                     card.find('.details-results').append(p.text(result.Livestock[i].Name));
@@ -238,12 +231,11 @@
 
         $('#vendorButton').on('click', e => {
             e.preventDefault();
+
             $('.productData').empty();
             console.log('clicked it');
             let base = location.origin;
             let vendorName = $('#vendor').val().trim();
-            console.log('base: ', base);
-            console.log('vendorName: ', vendorName);
             $.get(base + '/api/vendors/' + vendorName, result => {
                 for (var i = 0; i < result.length; i++) {
                     $('.productData').append(
@@ -290,9 +282,7 @@
             $('.productData').empty();
             let base = location.origin;
             let city = $('#city-name option:checked').val().trim();
-            console.log('city: ', city);
             $.get(base + '/api/city/' + city, result => {
-                console.log('city result: ', result);
                 for (var i = 0; i < result.length; i++) {
                     $('.productData').append(
                         `<li class="product-details" data-id=${result[i].id}>
@@ -338,9 +328,7 @@
             $('.productData').empty();
             let base = location.origin;
             let livestock = $('#livestock').val().trim();
-            console.log('livestock: ', livestock);
             $.get(base + '/api/livestock/' + livestock, result => {
-                console.log('livestock result: ', result);
                for (var i = 0; i < result[0].vendorData.length; i++) {
                     $('.productData').append(
                         `<li class="livestock-details" data-id=${result[0].vendorData[i].id}>
@@ -409,9 +397,10 @@
             } else if (!$('.favorite').prop('checked')) {
                 console.log('it is not checked');
                 // remove vendor from favorites in firebase
-                let favRef = firebase.database().ref('users/' + firebase.auth().currentUser.uid);
-                let query = favRef.orderByChild('favorites').equalTo(vendor);
+                let favRef = firebase.database().ref('users/' + firebase.auth().currentUser.uid).child('favorites');
+                let query = favRef.orderByValue().equalTo(vendor);
                 query.once('value').then(function(snapshot) {
+                    console.log(snapshot.val());
                     snapshot.forEach(function(childSnap) {
                         favRef.child(childSnap.key).remove();
                     });

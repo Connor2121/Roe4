@@ -2,10 +2,10 @@ import express from 'express';
 import admin from 'firebase-admin';
 // import serviceAccount from '../config/firebase-admin-key.json';
 
-admin.initializeApp({
-  credential: admin.credential.cert(serviceAccount),
-  databaseURL: 'https://nc-vfm.firebaseio.com/'
-});
+// admin.initializeApp({
+//   credential: admin.credential.cert(serviceAccount),
+//   databaseURL: 'https://nc-vfm.firebaseio.com/'
+// });
 
 const router = express.Router();
 import db from '../models';

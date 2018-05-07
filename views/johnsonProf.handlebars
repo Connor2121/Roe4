@@ -3,10 +3,10 @@
         <div class="col s5">
             <div class="vendor-profile-basic-intro">
                 <div class="vendor-profile-basic-name">
-                    <h3 id="vendor-name" class="materialize-textarea">Henderson Farms</h3>
+                    <h3 id="vendor-name" class="materialize-textarea">Johnson Poultry</h3>
                 </div>
-                <img id="vendorPhoto" class="vendor-profile-basic-intro-pic" src="http://www.yourdictionary.com/images/definitions/lg/4320.farmer.jpg" alt="profile-image"
-                /> 
+                <img id="vendorPhoto" class="vendor-profile-basic-intro-pic" src="https://rumpydog.files.wordpress.com/2014/05/chicken-farm-essick_66070_990x742.jpg"
+                    alt="profile-image" />
             </div>
         </div>
         <div class="col s7">
@@ -15,12 +15,12 @@
                     <h4>Bio:</h4>
                     <div class="input-field ">
                         <h7 id="vendor-bio" class="materialize-textarea">
-                        Here at Henderson Farms we pride ourselves on organically grown produce.  We never use harmful chemicals on ANY of our crops.
-                        </h7>
+                            Johnson Poultry is an Eco-Friendly poultry farm. All our livestock are treated well from start to finish. Free-range organic
+                            birds with on-site slaughter allows the quality of our produt to show in any use. </h7>
                     </div>
                     <h4>Ask for:</h4>
                     <h7 id="vendor-bio" class="materialize-textarea">
-                    David Henderson
+                        Asia Johnson 
                     </h7>
                 </div>
             </div>
@@ -33,10 +33,11 @@
             <div class="product-card">
                 <div class="card-body">
                     <p placeholder="Sweet Potatoes" id="vendor-crop" class="materialize-textarea">
-                        Carrots<br>
-                        Turnips<br>
-                        Potatoes<br>
-                        Beans<br>
+                        Carrots
+                        <br> Turnips
+                        <br> Potatoes
+                        <br> Beans
+                        <br>
                     </p>
                 </div>
             </div>
@@ -47,10 +48,11 @@
             <div class="product-card">
                 <div class="card-body">
                     <p placeholder="Dairy Cows" id="vendor-livestock" class="materialize-textarea">
-                        Beef<br>
-                        Broilers (Chicken)<br>
-                        Eggs<br>
-                        Milk<br>
+                        Beef
+                        <br> Broilers (Chicken)
+                        <br> Eggs
+                        <br> Milk
+                        <br>
                     </p>
                 </div>
             </div>
@@ -62,7 +64,7 @@
             <div class="product-card">
                 <div class="card-body">
                     <h6>Phone:</h6>
-                    <p id="vendor-phone" class="materialize-textarea">703-867-5309</p> 
+                    <p id="vendor-phone" class="materialize-textarea">703-867-5309</p>
                     <hr>
                     <h6>Email:</h6>
                     <p id="vendor-email" class="materialize-textarea"> hendersondavid969@gmail.com</p>
@@ -126,21 +128,21 @@
     </div>
 </div>
 <footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">Footer Content</h5>
+                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copyright">
         <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-            </div>
+            © 2018 Roe4
+            <a class="grey-text text-lighten-4 right" href="https://www.freepik.com/free-vector/eco-logos-template_1093618.htm">Freepik Logos</a>
         </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2018 Roe4
-                <a class="grey-text text-lighten-4 right" href="https://www.freepik.com/free-vector/eco-logos-template_1093618.htm">Freepik Logos</a>
-            </div>
-        </div>
-    </footer>
+    </div>
+</footer>
 
 <script>
     $(document).ready(function () {
@@ -151,7 +153,7 @@
     $("[data-menu-underline-from-center] a").addClass("underline-from-center");
 
     $(document).ready(() => {
-        firebase.auth().onAuthStateChanged( user => {
+        firebase.auth().onAuthStateChanged(user => {
             displayVendor();
             displayVendorPic();
         });
@@ -181,8 +183,8 @@
             });
         }
 
-       // Sendgrid ajax post
-       $('.submitBtn').on('click', e => {
+        // Sendgrid ajax post
+        $('.submitBtn').on('click', e => {
             e.preventDefault();
 
             let fromEmail = $('#email2').val().trim();
@@ -190,14 +192,14 @@
             let message = $('#message2').val().trim();
 
             $.post('/api/mail', {
-                fromEmail, 
-                subject, 
+                fromEmail,
+                subject,
                 message
             }).then(cb => {
                 $('#modal-contact').modal('close');
             });
 
-       });
+        });
     });
 
 </script>

@@ -165,13 +165,16 @@
             let subject = $('#subject').val().trim();
             let message = $('#message2').val().trim();
             $.post('/api/mail', {
+
                 toEmail,
                 fromEmail, 
                 subject, 
+
                 message
             }).then(cb => {
                 $('#modal-contact').modal('close');
             });
+
         });
     });
 

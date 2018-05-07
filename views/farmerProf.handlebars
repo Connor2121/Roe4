@@ -89,19 +89,22 @@
                             <div class="input-field col s12">
                                 <input placeholder="john@domainname.com" id="email2" type="email" name="fromEmail" class="validate">
                                 <label for="email">Email</label>
-                                <span class="helper-text" data-error="wrong" data-success="right">Helper text</span>
+                                <span class="helper-text" data-error="Please enter a valid email." data-success="">Enter your email</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input placeholder="In Search of Fresh Organic Food" id="subject" type="text" name="subject">
+                                <input placeholder="In Search of Fresh Organic Food" id="subject" type="text" name="subject" class="validate">
                                 <label for="subject">Subject</label>
+                                <span class="helper-text" data-error="Please enter a subject." data-success="">Enter a subject</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea placeholder="Could I come by and pick up some food?" id="message2" class="materialize-textarea" name="message"></textarea>
+                                <textarea placeholder="Could I come by and pick up some food?" id="message2" class="materialize-textarea validate" name="message"></textarea>
                                 <label for="message">Message</label>
+                                <span class="helper-text" data-error="Please enter a valid message." data-success="">Enter your message</span>
+
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">
@@ -157,11 +160,10 @@
         // Sendgrid ajax post
         $('.submitBtn').on('click', e => {
             e.preventDefault();
-            let toEmail = $('.venEmail').text().trim();
+            let toEmail = $('#vendor-email').text().trim();
             let fromEmail = $('#email2').val().trim();
             let subject = $('#subject').val().trim();
             let message = $('#message2').val().trim();
-            console.log(toEmail);
             $.post('/api/mail', {
                 toEmail,
                 fromEmail, 

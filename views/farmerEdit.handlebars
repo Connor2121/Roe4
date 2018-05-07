@@ -204,6 +204,11 @@
         displayPic = () => {
             firebase.storage().ref('vendor_photo/' + firebase.auth().currentUser.uid).getDownloadURL().then(url => {
                 console.log(url);
+                let uid = firebase.auth().currentUser.uid;
+                $.post('/api/vendorEdit/photo', {
+                    uid,
+                    url
+                });
 
                 // insert url into image src
                 let img = document.getElementById('vendorPhoto');

@@ -1,20 +1,21 @@
 <br>
 <div class="container profile">
-    {{!-- Photo and Name --}}
-    <div class="row">
-        <input type='file' id='fileButton'>
-    </div>
+    <div class="vendor-profile-basic row">
+        <div class="col s5">
+            <div class="vendor-profile-basic-intro">
+                <img id="userPhoto" class="vendor-profile-basic-intro-pic" src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png"
+                    alt="profile-image" />
+                <input type='file' id='fileButton'>
 
-    <div class="row">
-        <h3 id='firstName' class='header-font'>Name</h3>
-        <h3 id='lastName' class='header-font'>Here</h3>
+            </div>
+        </div>
+        <div class="col s7">
+            <div class="user-profile-basic-name">
+                <h3 id='firstName' class='header-font'>Name</h3>
+                <h3 id='lastName' class='header-font'>Here</h3>
+            </div>
+        </div>
     </div>
-
-    <div class="row">
-        <img src="http://www.personalbrandingblog.com/wp-content/uploads/2017/08/blank-profile-picture-973460_640-300x300.png" style='width:200px;height:200px;'
-            alt="User Photo" id='userPhoto'>
-    </div>
-
     {{!-- Display previous serches here from Firebase --}}
     <div class="row">
         {{!-- Need to add JS to dynamically load this info from firebase --}}
@@ -25,31 +26,12 @@
             </ul>
         </table>
     </div>
-
 </div>
-<footer class="page-footer">
-        <div class="container">
-            <div class="row">
-                <div class="col l6 s12">
-                    <h5 class="white-text">Footer Content</h5>
-                    <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-                </div>
-            </div>
-        </div>
-        <div class="footer-copyright">
-            <div class="container">
-                © 2018 Roe4
-                <a class="grey-text text-lighten-4 right" href="https://www.freepik.com/free-vector/eco-logos-template_1093618.htm">Freepik Logos</a>
-            </div>
-        </div>
-    </footer>
-
-
 
 <script>
     $(document).ready(function () {
         $('.sidenav').sidenav();
-        
+
         firebase.auth().onAuthStateChanged(user => {
             if (user) {
                 displayFavorites();

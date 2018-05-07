@@ -165,11 +165,10 @@
         // Sendgrid ajax post
         $('.submitBtn').on('click', e => {
             e.preventDefault();
-            let toEmail = $('.venEmail').text().trim();
+            let toEmail = $('#vendor-email').text().trim();
             let fromEmail = $('#email2').val().trim();
             let subject = $('#subject').val().trim();
             let message = $('#message2').val().trim();
-            console.log(toEmail);
             $.post('/api/mail', {
                 toEmail,
                 fromEmail, 

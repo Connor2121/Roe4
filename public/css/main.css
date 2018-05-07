@@ -2,6 +2,10 @@
   display: none;
   visibility: hidden;
 }
+#userPhoto {
+  height: 300px;
+  width: 300px;
+}
 
 /*!
  * react-loading-button v1.0.0

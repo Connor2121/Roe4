@@ -1,5 +1,5 @@
 import express from 'express';
-// import admin from 'firebase-admin';
+import admin from 'firebase-admin';
 // import serviceAccount from '../config/firebase-admin-key.json';
 
 admin.initializeApp({

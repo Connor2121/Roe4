@@ -105,14 +105,17 @@
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <input placeholder="In Search of Fresh Organic Food" id="subject" type="text" name="subject">
+                                <input placeholder="In Search of Fresh Organic Food" id="subject" type="text" name="subject" class="validate">
                                 <label for="subject">Subject</label>
+                                <span class="helper-text" data-error="Please enter a subject." data-success="">Enter a subject</span>
                             </div>
                         </div>
                         <div class="row">
                             <div class="input-field col s12">
-                                <textarea placeholder="Could I come by and pick up some food?" id="message2" class="materialize-textarea" name="message"></textarea>
+                                <textarea placeholder="Could I come by and pick up some food?" id="message2" class="materialize-textarea validate" name="message"></textarea>
                                 <label for="message">Message</label>
+                                <span class="helper-text" data-error="Please enter a valid message." data-success="">Enter your message</span>
+
                             </div>
                             <div class="row">
                                 <div class="input-field col s12">

@@ -75,14 +75,6 @@
             </ul>
        </div>
    </div>
-
-   <div class="row livestockArea">
-       <div class="col l12">
-            <ul class="collapsible livestockData">
-                    
-            </ul>
-       </div>
-   </div>
     
     <div class="row header-here"></div>
     <div class="row">
@@ -97,22 +89,7 @@
 
 </div>
 
-<footer class="page-footer">
-    <div class="container">
-        <div class="row">
-            <div class="col l6 s12">
-                <h5 class="white-text">Footer Content</h5>
-                <p class="grey-text text-lighten-4">You can use rows and columns here to organize your footer content.</p>
-            </div>
-        </div>
-    </div>
-    <div class="footer-copyright">
-        <div class="container">
-            © 2018 Roe4
-            <a class="grey-text text-lighten-4 right" href="https://www.freepik.com/free-vector/eco-logos-template_1093618.htm">Freepik Logos</a>
-        </div>
-    </div>
-</footer>
+
 
 <script>
     // initializing form selector
@@ -254,6 +231,9 @@
 
         $('#vendorButton').on('click', e => {
             e.preventDefault();
+
+            $('.productData').empty();
+            console.log('clicked it');
             let base = location.origin;
             let vendorName = $('#vendor').val().trim();
             $.get(base + '/api/vendors/' + vendorName, result => {
@@ -345,12 +325,12 @@
 
         //livestock search
         $('#livestockButton').on('click', e => {
-            $('.livestockData').empty();
+            $('.productData').empty();
             let base = location.origin;
             let livestock = $('#livestock').val().trim();
             $.get(base + '/api/livestock/' + livestock, result => {
-                for (var i = 0; i < result[0].vendorData.length; i++) {
-                    $('.livestockData').append(
+               for (var i = 0; i < result[0].vendorData.length; i++) {
+                    $('.productData').append(
                         `<li class="livestock-details" data-id=${result[0].vendorData[i].id}>
                             <div class="collapsible-header">
                                 <div class="col l5">
@@ -389,7 +369,7 @@
         });
 
         //showing full list of livestock in collapsible
-        $('.livestockData').on('click', '.livestock-details', function () {
+        $('.productData').on('click', '.livestock-details', function () {
             var card = $(this).find('.details-results');
             var id = $(this).attr('data-id');
             var base = location.origin;

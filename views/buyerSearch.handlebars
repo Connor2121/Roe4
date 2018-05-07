@@ -67,7 +67,7 @@
 </div>
 
 
-<div class="container">
+<div class="container search-result-data">
    <div class="row productArea">
        <div class="col l12">
             <ul class="collapsible productData">
@@ -200,10 +200,10 @@
                                     ${result[0].vendorData[i].Email}
                                 </div>
                                 <!-- Switch -->
-                                <div class="switch" data-id=${result[0].vendorData[i].id}>
+                                <div class="switch">
                                     <label>
                                     
-                                    <input type="checkbox">
+                                    <input type="checkbox" class="favorite" data-id="${result[0].vendorData[i].Vendor}">
                                     <span class="lever"></span>
                                     Favorite
                                     </label>
@@ -283,10 +283,10 @@
                                     ${result[i].Email}
                                 </div>
                                 <!-- Switch -->
-                                <div class="switch" data-id=${result[i].id}>
+                                <div class="switch">
                                     <label>
                                     
-                                    <input type="checkbox">
+                                    <input type="checkbox" class="favorite" data-id="${result[i].Vendor}">
                                     <span class="lever"></span>
                                     Favorite
                                     </label>
@@ -331,10 +331,10 @@
                                     ${result[i].Email}
                                 </div>
                                 <!-- Switch -->
-                                <div class="switch" data-id=${result[i].id}>
+                                <div class="switch">
                                     <label>
                                     
-                                    <input type="checkbox">
+                                    <input type="checkbox" class="favorite" data-id="${result[i].Vendor}">
                                     <span class="lever"></span>
                                     Favorite
                                     </label>
@@ -379,10 +379,10 @@
                                     ${result[0].vendorData[i].Email}
                                 </div>
                                 <!-- Switch -->
-                                <div class="switch" data-id=${result[0].vendorData[i].id}>
+                                <div class="switch">
                                     <label>
                                     
-                                    <input type="checkbox">
+                                    <input type="checkbox" class="favorite" data-id="${result[0].vendorData[i].Vendor}">
                                     <span class="lever"></span>
                                     Favorite
                                     </label>
@@ -417,6 +417,35 @@
                     card.append(p.text(result.Livestock[i].Name));
                 }
             });
+        });
+
+        // Favorite button
+        $('.search-result-data').on('click', '.favorite', function() {
+            let vendor = $(this).attr('data-id');
+            console.log('my log: ', vendor);
+            if ($('.favorite').prop('checked')) {
+                console.log('it is checked');
+                // add vendor to favorites in firebase
+                firebase.database().ref('users/' + firebase.auth().currentUser.uid).child('favorites').push(vendor);
+            } else if (!$('.favorite').prop('checked')) {
+                console.log('it is not checked');
+                // remove vendor from favorites in firebase
+                let favRef = firebase.database().ref('users/' + firebase.auth().currentUser.uid);
+                let query = favRef.orderByChild('favorites').equalTo(vendor);
+                query.once('value').then(function(snapshot) {
+                    snapshot.forEach(function(childSnap) {
+                        favRef.child(childSnap.key).remove();
+                    });
+                });
+                // favRef.orderByChild("favorites").equalTo(vendor).on("value", function(snapshot) {
+                // snapshot.forEach(function(data) {
+                //     var record = data.val();
+                //     if(record["name"] == vendor) {
+                //         ref.child(data.key()).remove();
+                //     }
+                //});
+                //});
+            };
         });
     });
 </script>

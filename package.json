@@ -1,17 +1,17 @@
 {
   "name": "roe4",
   "version": "1.0.0",
-  "description": "",
+  "description": "Virtual Farmers Market",
   "main": "index.js",
   "scripts": {
-    "start": "",
+    "start": "babel-node server.js",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/rsarge47/Roe4.git"
   },
-  "author": "",
+  "author": "Roe4",
   "license": "ISC",
   "bugs": {
     "url": "https://github.com/rsarge47/Roe4/issues"

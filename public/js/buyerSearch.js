@@ -99,7 +99,7 @@ $(document).ready(function () {
             }
             $('.collapsible').collapsible();
             $('.productArea').show();
-
+            $('#search_item').val('');
         });
     });
 
@@ -198,6 +198,7 @@ $(document).ready(function () {
             }
             $('.collapsible').collapsible();
             $('.productArea').show();
+            $('#vendor').val('');
         });
     });
 
@@ -295,6 +296,7 @@ $(document).ready(function () {
             };
             $('.collapsible').collapsible();
             $('.productArea').show();
+            $('#livestock').val('');
         });
     });
 

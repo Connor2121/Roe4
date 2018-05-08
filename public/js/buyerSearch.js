@@ -120,6 +120,22 @@ $(document).ready(function () {
         });
     });
 
+    //get vendor livestock to dispay in collapsible
+    $('.productData').on('click', '.product-details', function () {
+        var card = $(this).find('.details-livestock-results');
+        var id = $(this).attr('data-id');
+        var base = location.origin;
+        card.empty();
+        $.get(base + '/api/vendors/id/' + id, result => {
+            return result;
+        }).then(function (result) {
+            for (var i = 0; i < result.Livestock.length; i++) {
+                var p = $("<p>");
+                card.append(p.text(result.Livestock[i].Name));
+            }
+        });
+    });
+
     $('.newData').on('click', '.product-details', function () {
         var card = $(this).closest(".collection");
         var id = $(this).attr('data-id');
@@ -169,8 +185,13 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="collapsible-body">
+                            <h5>Crops:</h5>
                             <div class="results-grid details-results">
                                
+                            </div>
+                            <h5>Livestock:</h5>
+                            <div class="results-grid details-livestock-results">
+                                
                             </div>
                         </div>
                     </li>`
@@ -215,8 +236,13 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="collapsible-body">
+                            <h5>Crops:</h5>
                             <div class="results-grid details-results">
                                
+                            </div>
+                            <h5>Livestock:</h5>
+                            <div class="results-grid details-livestock-results">
+                                
                             </div>
                         </div>
                     </li>`

@@ -66,7 +66,7 @@ $(document).ready(() => {
             uid,
             crop
         });
-        $('#vendor-crop').text('');
+        $('#vendor-crop').val('');
     });
 
     $('#livestock-edit-btn').on('click', e => {
@@ -89,7 +89,7 @@ $(document).ready(() => {
             uid,
             livestock
         });
-        $('#vendor-livestock').text('');
+        $('#vendor-livestock').val('');
     });
 
 

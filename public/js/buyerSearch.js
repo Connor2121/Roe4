@@ -259,7 +259,7 @@ $(document).ready(function () {
         let base = location.origin;
         let livestock = $('#livestock').val().trim();
         $.get(base + '/api/livestock/' + livestock, result => {
-           for (var i = 0; i < result[0].vendorData.length; i++) {
+            for (var i = 0; i < result[0].vendorData.length; i++) {
                 $('.productData').append(
                     `<li class="livestock-details" data-id=${result[0].vendorData[i].id}>
                         <div class="collapsible-header">
@@ -292,10 +292,10 @@ $(document).ready(function () {
                         </div>
                     </li>`
                 );
-            }
+            };
             $('.collapsible').collapsible();
             $('.productArea').show();
-        })
+        });
     });
 
     //showing full list of livestock in collapsible

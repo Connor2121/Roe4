@@ -2,7 +2,6 @@
 $(document).ready(function () {
     $('.tabs').tabs();
     $('.productArea').hide();
-    $('.livestockArea').hide();
 
     // dynamically add cities in NC to dropdown
     var cities = ['ALBERMARLE', 'ANGIER', 'ARCHDALE', 'ARDEN', 'ASHEBORO', 'ASHEVILLE', 'AUTRYVILLE', 'AYDEN', 'BAILEY', 'BARNARDSVILLE', 'BATTLEBORO', 'BEAR CREEK', 'BELMONT', 'BELVIDERE', 'BENNETT', 'BENSON', 'BISCOE', 'BLACK MOUNTAIN', 'BLADENBORO', 'BLANCH', 'BOOMER', 'BOONE', 'BOONVILLE', 'BOSTIC', 'BREVARD', 'BROADWAY', 'BROWNS SUMMIT', 'BUNN', 'BURLINGTON', 'BURNSVILLE', 'CALABASH', 'CAMERON', 'CAROLINA BEACH', 'CARTHAGE', 'CASHIERS', 'CASTALIA', 'CEDAR GROVE', 'CHADBOURN', 'CHAPEL HILL', 'CHARLOTTE', 'CLARENDON', 'CLAYTON', 'CLIMAX', 'CLINTON', 'COATS', 'CONCORD', 'CONOVER', 'CORNELIUS', 'CREEDMOOR', 'DEEP RUN', 'DENTON', 'DOBSON', 'DUNN', 'DURHAM', 'EAGLE SPRINGS', 'EDEN', 'EDENTON', 'EFLAND', 'ELKIN', 'ELON', 'EMERALD ISLE', 'ENGELHARD', 'FAIR BLUFF', 'FAIRVIEW', 'FAISON', 'FARMVILLE', 'FAYETTEVILLE', 'FLETCHER', 'FRANKLINTON', 'FRANKLINVILLE', 'FREMONT', 'FUQUAY-VARINA', 'GARLAND', 'GASTONIA', 'GIBSONVILLE', 'GOLD', 'GOLDSBORO', 'GOLDSTON', 'GRAHAM', 'GRASSY CREEK', 'GREENSBORO', 'GREENVILLE', 'HAMPSTEAD', 'HAMPTONVILLE', 'HARMONY', 'HENDERSON', 'HENDERSONVILLE', 'HIGH POINT', 'HILLSBOROUGH', 'HURDLE MILLS', 'INDIAN TRAIL', 'IVANHOE', 'JONESVILLE', 'KELLY', 'KERNERSVILLE', 'KING', 'KINGS', 'LAKE LURE', 'LAWNDALE', 'LEASBURG', 'LEICESTER', 'LELAND', 'LEXINGTON', 'LIBERTY', 'LILLINGTON', 'LINCOLNTON', 'LINDEN', 'LOUISBURG', 'LUMBERTON', 'MACON', 'MADISON', 'MAGNOLIA', 'MARSHALL', 'MATTHEWS', 'MEBANE', 'MIDLAND', 'MILLERS CREEK', 'MILLINGPORT', 'MILLS RIVER', 'MONROE', 'MOORESVILLE', 'MOREHEAD', 'MOREHEAD CITY', 'MORGANTON', 'MORRISVILLE', 'MOUNT AIRY', 'MOUNT PLEASANT', 'MT OLIVE', 'MURPHY', 'NAGS HEAD', 'NASHVILLE', 'NEBO', 'NEW LONDON', 'NORLINA', 'OAK ISLAND', 'OXFORD', 'PANTEGO', 'PELHAM', 'PENROSE', 'PINEVILLE', 'PINEY CREEK', 'PISGAH FOREST', 'PITTSBORO', 'PRINCETON', 'PROSPECT HILL', 'RAEFORD', 'RALEIGH', 'RAMSEUR', 'RANDLEMAN', 'REIDSVILLE', 'RICH SQUARE', 'ROBBINS', 'ROCKWELL', 'ROCKY MOUNT', 'RONDA', 'ROSE HILL', 'ROUGEMONT', 'ROXBORO', 'RUFFIN', 'RUTHERFORDTON', 'SALEMBURG', 'SALISBURY', 'SALUDA', 'SANFORD', 'SEAGROVE', 'SEVERN', 'SILER', 'SILER CITY', 'SIMS', 'SNOW CAMP', 'SNOW HILL', 'SOPHIA', 'SOUTH CARTHAGE', 'SPRING HOPE', 'STALEY', 'STANTONBURG', 'STAR', 'STATELY', 'STATESVILLE', 'STEM', 'STONEVILLE', 'SUPPLY', 'SWAN QUARTER', 'TARBORO', 'THOMASVILLE', 'TIMBERLAKE', 'TRENTON', 'TRINITY', 'TROY', 'TRYON', 'TYNER', 'UNION GROVE', 'VALDESE', 'VASS', 'VILAS', 'WADESBORO', 'WAKE FOREST', 'WALNUT COVE', 'WALSTONBURG', 'WARRENTON', 'WARSAW', 'WAXHAW', 'WAYNESVILLE', 'WELDON', 'WENDELL', 'WHITAKERS', 'WHITEVILLE', 'WILKESBORO', 'WILMINGTON', 'WILSON', 'WINSTON-SALEM', 'YADKINVILLE', 'ZEBULON', 'ZIONVILLE'];
@@ -136,20 +135,20 @@ $(document).ready(function () {
         });
     });
 
-    $('.newData').on('click', '.product-details', function () {
-        var card = $(this).closest(".collection");
-        var id = $(this).attr('data-id');
-        var base = location.origin;
-        card.empty();
-        $.get(base + '/api/vendors/id/' + id, result => {
-            return result;
-        }).then(function (result) {
-            for (var i = 0; i < result.Livestock.length; i++) {
-                var p = $("<p>");
-                card.find('.details-results').append(p.text(result.Livestock[i].Name));
-            }
-        });
-    });
+    // $('.newData').on('click', '.product-details', function () {
+    //     var card = $(this).closest(".collection");
+    //     var id = $(this).attr('data-id');
+    //     var base = location.origin;
+    //     card.empty();
+    //     $.get(base + '/api/vendors/id/' + id, result => {
+    //         return result;
+    //     }).then(function (result) {
+    //         for (var i = 0; i < result.Livestock.length; i++) {
+    //             var p = $("<p>");
+    //             card.find('.details-results').append(p.text(result.Livestock[i].Name));
+    //         }
+    //     });
+    // });
 
     $('#vendorButton').on('click', e => {
         e.preventDefault();
@@ -287,8 +286,8 @@ $(document).ready(function () {
                             </div>
                         </div>
                         <div class="collapsible-body">
-                            <div class="results-grid details-results">
-                            
+                            <div class="results-grid details-livestock-results">
+                               
                             </div>
                         </div>
                     </li>`
@@ -301,7 +300,7 @@ $(document).ready(function () {
 
     //showing full list of livestock in collapsible
     $('.productData').on('click', '.livestock-details', function () {
-        var card = $(this).find('.details-results');
+        var card = $(this).find('.details-livestock-results');
         var id = $(this).attr('data-id');
         var base = location.origin;
         card.empty();

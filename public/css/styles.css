@@ -216,6 +216,11 @@ left: 125px;
 top: 50px;
 }
 
+.contact-info{
+  position: relative;
+  bottom: 80px;
+}
+
 
 
 #react {

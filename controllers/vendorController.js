@@ -68,14 +68,14 @@ router.post('/api/vendorEdit/Livestock', (req, res) => {
         where: {
             UID: req.body.uid
         }
-    })
+    }))
     .then(result => {
         vendorID = result.dataValues.id;
     })
     .then(result => db.VendorLivestock.create({
         vendorDatumId: vendorID,
         LivestockID: livestockID
-    })));
+    }));
 });
 
 // --------FarmerEdit adds crops to Vendor in DB
@@ -94,14 +94,14 @@ router.post('/api/vendorEdit/Crop', (req, res) => {
         where: {
             UID: req.body.uid
         }
-    })
+    }))
     .then(result => {
         vendorID = result.dataValues.id;
     })
     .then(result => db.vendorCrops.create({
         vendorDatumId: vendorID,
         cropDatumId: cropID
-    })));
+    }));
 });
 
 // --------FarmerEdit page updates DB with vendor information

@@ -4,8 +4,7 @@
     <div class="vendor-profile-basic row">
         <div class="col s5">
             <div class="vendor-profile-basic-intro">
-                <img id="vendorPhoto" class="vendor-profile-basic-intro-pic" src="" alt="profile-image"
-                /> 
+                <img id="vendorPhoto" class="vendor-profile-basic-intro-pic" src="" alt="profile-image" />
                 <input type='file' id='fileButtonVendor'>
                 <div class="vendor-profile-basic-name">
                     <textarea id="vendor-name" class="materialize-textarea">Vendor Name</textarea>
@@ -24,7 +23,7 @@
     </div>
     <!-- Product Section --->
     <div class="vendor-product row">
-        <div class="col s7 current-product box">
+        <div class="col s7 current-product prod-container box">
             Crops
             <div class="product-card">
                 <div class="card-body">
@@ -32,34 +31,30 @@
                 </div>
             </div>
             <button id="crops-edit-btn" class="button button-rounded-hover">Submit Crops Edits</button>
-
-        </div>
-        <div class="col s7 current-product box">
-            Livestock
-            <div class="product-card">
-                <div class="card-body">
-                    <textarea placeholder="Dairy Cows" id="vendor-livestock" class="materialize-textarea"></textarea>
+            <div class="current-product livestock">
+                Livestock
+                <div class="product-card">
+                    <div class="card-body">
+                        <textarea placeholder="Dairy Cows" id="vendor-livestock" class="materialize-textarea"></textarea>
+                    </div>
                 </div>
+                <button id="livestock-edit-btn" class="button button-rounded-hover">Submit Livestock Edits</button>
+
             </div>
-            <button id="livestock-edit-btn" class="button button-rounded-hover">Submit Livestock Edits</button>
 
         </div>
+
         <div class="col s1"></div>
         <div class="col s4 contact-info box">
             Contact info
             <div class="product-card">
                 <div class="card-body">
                     Phone:
-                    <textarea id="vendor-phone" class="materialize-textarea"> 777-777-7777</textarea> 
-                    Email:
-                    <textarea id="vendor-email" class="materialize-textarea"> connorgreed@gmail.com</textarea>
-                    Street Address:
-                    <textarea id="vendor-address" class="materialize-textarea"> </textarea>
-                    City:
-                    <textarea id="vendor-city" class="materialize-textarea"> </textarea>
-                    State:
-                    <textarea id="vendor-state" class="materialize-textarea"> </textarea>
-                    Zip:
+                    <textarea id="vendor-phone" class="materialize-textarea"> 777-777-7777</textarea> Email:
+                    <textarea id="vendor-email" class="materialize-textarea"> connorgreed@gmail.com</textarea> Street Address:
+                    <textarea id="vendor-address" class="materialize-textarea"> </textarea> City:
+                    <textarea id="vendor-city" class="materialize-textarea"> </textarea> State:
+                    <textarea id="vendor-state" class="materialize-textarea"> </textarea> Zip:
                     <textarea id="vendor-zip" class="materialize-textarea"> </textarea>
                 </div>
             </div>
@@ -68,7 +63,7 @@
     <div class="vendor-footer row">
         <div class="col-md-12">
             <footer>
-<button id="farmer-edit-btn" class="button button-rounded-hover">Submit Info Edits</button>
+                <button id="farmer-edit-btn" class="button button-rounded-hover">Submit Info Edits</button>
             </footer>
         </div>
     </div>

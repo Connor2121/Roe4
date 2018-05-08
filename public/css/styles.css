@@ -216,10 +216,15 @@ left: 125px;
 top: 50px;
 }
 
-.contact-info{
-  position: relative;
-  bottom: 80px;
+.livestock{
+  padding-top: 30px;
+  padding-bottom: 20px;
+  
 }
+.crops{
+  padding-top: 50px;
+}
+
 
 
 
